@@ -1,25 +1,217 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import React, { Component, useState } from "react";
+import Timer from "./components/Countdown/Timer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Nav from "./components/navbar";
+import { Fade } from "react-awesome-reveal";
 
-function App() {
+import Fadetitle from "./components/Fade";
+import Footer from "./components/Footer";
+
+import "./styles.css";
+
+export default function App() {
+  const [lang, setLang] = useState("français");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container" id="navcontainer">
+        <Nav />
+      </div>
+
+      <div className="container" id="banner">
+        <div className="accroche">
+          <Fadetitle />
+        </div>
+        <div className="bannerbutton">
+          <a
+            href="https://drive.google.com/file/d/1cuqIWFdV92YhCVb6wRPh-mlzObRxbFDa/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="button">ROADMAP</button>
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="button">WHITEPAPER</button>
+          </a>
+        </div>
+      </div>
+      <div className="container" id="count">
+        <h3 style={{ color: "red" }}>24 Septembre 2022</h3>
+        <h1>VENTE PRIVÉE</h1>
+        <Timer />
+      </div>
+      {/* // ----- Roadmap */}
+      <div id="roadmap">
+        <h1>ROADMAP</h1>
+        <Fade duration={3000}>
+          <div className="container" id="roadmapDiv">
+            <img src={"./roadmap.jpg"} id="roadmapPic" />
+          </div>
+        </Fade>
+      </div>
+
+      {/* // ------ produit */}
+      <div id="produit">
+        <h1>PRODUITS</h1>
+        <Fade duration={3000}>
+          <div className="container" id="produitDiv">
+            <div className="container" id="product">
+              <a
+                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                target="_blank"
+              >
+                <img className="profilePic" src={"./LOGO.jpg"} />
+              </a>
+              <p className="name">Produit1</p>
+            </div>
+            <div>
+              <p className="description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
+            </div>
+          </div>
+          <div className="container" id="produitDiv">
+            <div>
+              <p className="description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
+            </div>
+            <div className="container" id="product">
+              <a
+                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                target="_blank"
+              >
+                <img className="profilePic" src={"./LOGO.jpg"} />
+              </a>
+              <p className="name">Produit1</p>
+            </div>
+          </div>
+        </Fade>
+      </div>
+
+      {/* // ----- team */}
+
+      <div id="team">
+        <Fade duration={5000}>
+          <div className="container" id="profileDiv">
+            <div className="profileCard">
+              <a
+                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                target="_blank"
+              >
+                <img className="profilePic" src={"./basile1.jpg"} />
+              </a>
+              <p className="name">Basile</p>
+              <p className="legend">Community Manager</p>
+            </div>
+            <div className="profileCard">
+              <a
+                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                target="_blank"
+              >
+                <img className="profilePic" src={"./guillaume1.jpg"} />
+              </a>
+              <p className="name">Guillaume</p>
+              <p className="legend">Community Manager</p>
+            </div>
+            <div className="profileCard">
+              <a
+                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                target="_blank"
+              >
+                <img className="profilePic" src={"./jeasonV1.jpg"} />
+              </a>
+              <p className="name">Jeason</p>
+              <p className="legend">Community Manager</p>
+            </div>
+            <div className="profileCard">
+              <a
+                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                target="_blank"
+              >
+                <img className="profilePic" src={"./charlotte1.jpg"} />
+              </a>
+              <p className="name">Charlotte</p>
+              <p className="legend">Graphiste</p>
+            </div>
+            <div className="profileCard">
+              <a
+                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                target="_blank"
+              >
+                <img className="profilePic" src={"./amaury1.jpg"} />
+              </a>
+              <p className="name">Amaury</p>
+              <p className="legend">Développeur</p>
+            </div>
+            <div className="profileCard">
+              <a
+                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                target="_blank"
+              >
+                <img className="profilePic" src={"./LOGO.jpg"} />
+              </a>
+              <p className="name">Jean-Baptiste</p>
+              <p className="legend">Développeur</p>
+            </div>
+            <div className="profileCard">
+              <a
+                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                target="_blank"
+              >
+                <img className="profilePic" src={"./LOGO.jpg"} />
+              </a>
+              <p className="name">XXX</p>
+              <p className="legend">Xxxxx</p>
+            </div>
+            <div className="profileCard">
+              <a
+                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                target="_blank"
+              >
+                <img className="profilePic" src={"./LOGO.jpg"} />
+              </a>
+              <p className="name">XXX</p>
+              <p className="legend">Xxxxx</p>
+            </div>
+            <div className="profileCard">
+              <a
+                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                target="_blank"
+              >
+                <img className="profilePic" src={"./LOGO.jpg"} />
+              </a>
+              <p className="name">Gilles</p>
+              <p className="legend">Xxxxx</p>
+            </div>
+          </div>
+        </Fade>
+      </div>
+      <Footer />
     </div>
   );
 }
-
-export default App;

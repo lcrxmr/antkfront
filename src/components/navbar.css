@@ -1,0 +1,24 @@
+.navbar{
+    margin-top: 0px;
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+}
+
+#navbarbrand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+#navlogo{
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#navtext{
+    font-size: 30px;
+    font-weight: 600;
+}
