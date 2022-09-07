@@ -14,8 +14,10 @@
     "react-animations": "^1.0.0",
     "react-awesome-reveal": "^4.0.1",
     "react-bootstrap": "^2.5.0",
+    "react-card-slider-component": "^1.0.9",
     "react-dom": "^18.2.0",
     "react-iframe": "^1.8.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"

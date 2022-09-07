@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "./components/navbar";
 import { Fade } from "react-awesome-reveal";
 import Iframe from 'react-iframe'
+import ReactCardSlider from 'react-card-slider-component';
 
 import Fadetitle from "./components/Fade";
 import Footer from "./components/Footer";
@@ -14,6 +15,12 @@ import "./styles.css";
 
 export default function App() {
   const [lang, setLang] = useState("français");
+  const slides = [
+    {image:"https://picsum.photos/200/300",title:"promo 1",description:"This is a description",clickEvent:"sliderClick"},
+    {image:"https://picsum.photos/600/500",title:"promo 2",description:"This is a second description",clickEvent:"sliderClick"},
+    {image:"https://picsum.photos/700/600",title:"promo 3",description:"This is a third description",clickEvent:"sliderClick"},
+    {image:"https://picsum.photos/700/600",title:"promo 4",description:"This is a third description",clickEvent:"sliderClick"},
+]
 
   var eng = () => {
     setLang('english')
@@ -23,31 +30,32 @@ export default function App() {
     setLang('français')
   }
 
-  // if(lang == 'français'){
-  //   return()
-  // }
+
+  if(lang == 'français'){
+    
+  }
 
   return (
     <div className="App">
+      {/* <div className="container" id="langButton">
       <button onClick={fr} className="lang">FR</button>
       <button onClick={eng} className="lang">ENG</button>
+      </div> */}
+      
       <div className="container" id="navcontainer">
         
         <Nav />
+        {/* <div className="container" id="langButton">
+      <button onClick={fr} className="lang">FR</button>
+      <button onClick={eng} className="lang">ENG</button>
+      </div> */}
       </div>
       {/* // ------ banner */}
-      <div className="container" id="banner">
+      <div  id="banner">
         <div className="accroche">
           <Fadetitle />
         </div>
         <div className="bannerbutton">
-          <a
-            href="https://drive.google.com/file/d/1cuqIWFdV92YhCVb6wRPh-mlzObRxbFDa/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="button">ROADMAP</button>
-          </a>
           <a
             href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
             target="_blank"
@@ -57,20 +65,15 @@ export default function App() {
           </a>
         </div>
       </div>
+
+      
+
       {/* // ---- compte a rebours  */}
       <div className="container" id="count">
         <h3 style={{ color: "red" }}>24 Septembre 2022</h3>
         <h1>VENTE PRIVÉE</h1>
         <Timer />
-      </div>
-      {/* // ----- Roadmap */}
-      <div id="roadmap">
-        <h1>ROADMAP</h1>
-        <Fade duration={3000}>
-          <div className="container" id="roadmapDiv">
-            <img src={"./roadmap.jpg"} id="roadmapPic" />
-          </div>
-        </Fade>
+        {/* <ReactCardSlider slides={slides}/> */}
       </div>
 
       {/* // ------ produit */}
@@ -126,6 +129,16 @@ export default function App() {
               </a>
               <p className="name">Produit1</p>
             </div>
+          </div>
+        </Fade>
+      </div>
+
+      {/* // ----- Roadmap */}
+      <div id="roadmap">
+        <h1>ROADMAP</h1>
+        <Fade duration={3000}>
+          <div className="container" id="roadmapDiv">
+            <img src={"./roadmap.jpg"} id="roadmapPic" />
           </div>
         </Fade>
       </div>
@@ -229,7 +242,7 @@ export default function App() {
         </Fade>
       </div>
       {/* // ----- Newsletter  */}
-      <div id="newsDiv">
+      {/* <div id="newsDiv">
         <h1>NEWSLETTER</h1>
       <Iframe url="https://form.jotform.com/222491824586363"
         width="90%"
@@ -238,8 +251,8 @@ export default function App() {
         className="newsletter"
         display="initial"
         position="relative"/>
-      </div>
+      </div> */}
       <Footer />
-    </div>
+//     </div>
   );
 }

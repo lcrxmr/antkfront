@@ -3,15 +3,16 @@ import React , {Component} from "react";
 import styled, {keyframes} from "styled-components"
 import { bounce, fadeIn} from 'react-animations'
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./Fade.css";
 
 const Fade = styled.div`animation: 3s ${keyframes`${fadeIn}`} 1`
 
 export default class ReactAnimations extends Component {
     render() {
         return (
-            <Fade><h1>
+            <Fade><h1 id="titre">
             Sécurisez <br /> votre animal <br />
-            dans la blockchain
+            dans la <br />blockchain
           </h1></Fade>
         )
     }
