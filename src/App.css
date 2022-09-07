@@ -38,6 +38,22 @@
   }
 }
 
+.lang{
+  color: #000;
+  background-color: goldenrod;
+  border: black solid 2px;
+  border-radius: 15px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.lang:hover,
+.lang:focus,
+.lang:active {
+  background-color:rgb(242, 60, 60);
+  border-color: black;
+  outline: none;
+}
+
 #navcontainer{
   display: flex;
   flex-direction: row;
@@ -214,4 +230,13 @@ border-radius: 50%;
   font-size: 15px;
   font-style: italic;
   color: #000;
+}
+
+.newsletter{
+  margin-top: 0px;
+}
+
+#newsDiv{
+  padding-top: 10px;
+  background-color: aquamarine;
 }

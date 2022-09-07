@@ -5,6 +5,7 @@ import Timer from "./components/Countdown/Timer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "./components/navbar";
 import { Fade } from "react-awesome-reveal";
+import Iframe from 'react-iframe'
 
 import Fadetitle from "./components/Fade";
 import Footer from "./components/Footer";
@@ -14,12 +15,27 @@ import "./styles.css";
 export default function App() {
   const [lang, setLang] = useState("français");
 
+  var eng = () => {
+    setLang('english')
+  }
+
+  var fr = () => {
+    setLang('français')
+  }
+
+  // if(lang == 'français'){
+  //   return()
+  // }
+
   return (
     <div className="App">
+      <button onClick={fr} className="lang">FR</button>
+      <button onClick={eng} className="lang">ENG</button>
       <div className="container" id="navcontainer">
+        
         <Nav />
       </div>
-
+      {/* // ------ banner */}
       <div className="container" id="banner">
         <div className="accroche">
           <Fadetitle />
@@ -41,6 +57,7 @@ export default function App() {
           </a>
         </div>
       </div>
+      {/* // ---- compte a rebours  */}
       <div className="container" id="count">
         <h3 style={{ color: "red" }}>24 Septembre 2022</h3>
         <h1>VENTE PRIVÉE</h1>
@@ -210,6 +227,17 @@ export default function App() {
             </div>
           </div>
         </Fade>
+      </div>
+      {/* // ----- Newsletter  */}
+      <div id="newsDiv">
+        <h1>NEWSLETTER</h1>
+      <Iframe url="https://form.jotform.com/222491824586363"
+        width="90%"
+        height="300px"
+        id="myId"
+        className="newsletter"
+        display="initial"
+        position="relative"/>
       </div>
       <Footer />
     </div>
