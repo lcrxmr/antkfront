@@ -13,7 +13,7 @@ export default function Footer () {
               <span className="ml-3 h5 font-weight-bold">ANTK</span>
             </a>
             <p className="my-3" style={{ width: '250px' }}>
-              La technologie au service des animaux
+              Technology at the service of animals
             </p>
             <CDBBox display="flex" className="mt-4">
               <CDBBtn flat color="dark">
@@ -32,13 +32,13 @@ export default function Footer () {
               ANTK
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-              <CDBFooterLink href="/">A propos</CDBFooterLink>
+              <CDBFooterLink href="/">About Us</CDBFooterLink>
               <CDBFooterLink href="/">Contact</CDBFooterLink>
             </CDBBox>
           </CDBBox>
           <CDBBox>
             <p className="h5 mb-4" style={{ fontWeight: '600' }}>
-              Aide
+              Help
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
               <CDBFooterLink href="/">Contact</CDBFooterLink>
@@ -46,7 +46,7 @@ export default function Footer () {
           </CDBBox>
           <CDBBox>
             <p className="h5 mb-4" style={{ fontWeight: '600' }}>
-              Produits
+              Products
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
               <CDBFooterLink href="/">Roadmap</CDBFooterLink>

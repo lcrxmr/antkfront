@@ -1,16 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React, { Component, useState } from "react";
-import Timer from "./components/Countdown/Timer";
+import Timer from "./components/Countdown/enTimer";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Nav from "./components/navbar";
+import Nav from "./components/englishNavbar";
 import { Fade } from "react-awesome-reveal";
 import Iframe from 'react-iframe'
 import ReactCardSlider from 'react-card-slider-component';
 import { Routes, Route, Link } from "react-router-dom";
 
-import Fadetitle from "./components/Fade";
-import Footer from "./components/Footer";
+import Fadetitle from "./components/enFade";
+import Footer from "./components/enFooter";
 
 import "./styles.css";
 
@@ -38,13 +38,13 @@ export default function English() {
 
   return (
     <div className="App">
-      <div className="container" id="langButton">
-      <Link to="/">
-      <button className="lang">FR</button>
-      </Link>
-      <Link to="/eng">
-      <button className="lang">ENG</button>
-      </Link>
+      <div id="langButton">
+        <Link to="/">
+          <button className="lang">FR</button>
+        </Link>
+        <Link to="/eng">
+          <button className="lang">EN</button>
+        </Link>
       </div>
       
       <div className="container" id="navcontainer">
@@ -75,15 +75,15 @@ export default function English() {
 
       {/* // ---- compte a rebours  */}
       <div className="container" id="count">
-        <h3 style={{ color: "red" }}>24 Septembre 2022</h3>
-        <h1>VENTE PRIVÉE</h1>
+        <h3 style={{ color: "red" }}>September 24th 2022</h3>
+        <h1>PRIVATE SALE</h1>
         <Timer />
         {/* <ReactCardSlider slides={slides}/> */}
       </div>
 
       {/* // ------ produit */}
       <div id="produit">
-        <h1>PRODUITS</h1>
+        <h1>PRODUCTS</h1>
         <Fade duration={3000}>
           <div className="container" id="produitDiv">
             <div className="container" id="product">
@@ -93,7 +93,7 @@ export default function English() {
               >
                 <img className="profilePic" src={"./LOGO.jpg"} />
               </a>
-              <p className="name">Produit1</p>
+              <p className="name">Product1</p>
             </div>
             <div>
               <p className="description">
@@ -132,7 +132,7 @@ export default function English() {
               >
                 <img className="profilePic" src={"./LOGO.jpg"} />
               </a>
-              <p className="name">Produit1</p>
+              <p className="name">Product2</p>
             </div>
           </div>
         </Fade>
@@ -151,6 +151,7 @@ export default function English() {
       {/* // ----- team */}
 
       <div id="team">
+      <h1>TEAM</h1>
         <Fade duration={5000}>
           <div className="container" id="profileDiv">
             <div className="profileCard">
@@ -191,7 +192,7 @@ export default function English() {
                 <img className="profilePic" src={"./charlotte1.jpg"} />
               </a>
               <p className="name">Charlotte</p>
-              <p className="legend">Graphiste</p>
+              <p className="legend">Graphist</p>
             </div>
             <div className="profileCard">
               <a
@@ -201,7 +202,7 @@ export default function English() {
                 <img className="profilePic" src={"./amaury1.jpg"} />
               </a>
               <p className="name">Amaury</p>
-              <p className="legend">Développeur</p>
+              <p className="legend">Developer</p>
             </div>
             <div className="profileCard">
               <a
@@ -211,7 +212,7 @@ export default function English() {
                 <img className="profilePic" src={"./LOGO.jpg"} />
               </a>
               <p className="name">Jean-Baptiste</p>
-              <p className="legend">Développeur</p>
+              <p className="legend">Developer</p>
             </div>
             <div className="profileCard">
               <a
@@ -258,6 +259,6 @@ export default function English() {
         position="relative"/>
       </div> */}
       <Footer />
-//     </div>
+ </div>
   );
 }

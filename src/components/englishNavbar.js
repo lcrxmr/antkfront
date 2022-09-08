@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./navbar.css";
 
-export default function frNav() {
+export default function enNav() {
   return (
     <Navbar
       bg="transparent"
@@ -32,7 +32,7 @@ export default function frNav() {
             style={{ marginLeft: "auto" }}
             id="navtext"
           >
-            <Nav.Link href="#produit">Produits</Nav.Link>
+            <Nav.Link href="#produit">Products</Nav.Link>
             <Nav.Link href="#Roadmap">Tokenomics</Nav.Link>
             <Nav.Link
               href="https://drive.google.com/file/d/1cuqIWFdV92YhCVb6wRPh-mlzObRxbFDa/view?usp=sharing"
@@ -40,7 +40,7 @@ export default function frNav() {
             >
               Roadmap
             </Nav.Link>
-            <Nav.Link href="#team">Équipe</Nav.Link>
+            <Nav.Link href="#team">Team</Nav.Link>
             {/* <Nav.Link
               href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
               target="_blank"

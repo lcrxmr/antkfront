@@ -3,6 +3,7 @@
   text-align: center;
   overflow: auto;
   font-family: 'Fjalla One', sans-serif;
+  position: relative;
 }
 
 .App-logo {
@@ -44,14 +45,21 @@ body{
   font-family: 'Fjalla One', sans-serif;
 }
 
+.langContainer{
+  width: 100vw;
+  position: relative;
+}
+
 #langButton{
   margin-top: 10px;
   margin-bottom: 0;
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
   height: 30px;
-  margin-right: 0px;
+  margin-right: 20px;
+  margin-left: auto;
+  position:absolute;
+  top:0;
+  right:0;
+ 
 }
 
 .lang{
@@ -206,6 +214,8 @@ background: linear-gradient(242deg, rgba(244, 189, 67, 1) 0%, rgba(220,0,255,0.7
 
 
 #team{
+
+  padding-top: 20px;
   margin-top: 0px;
   width: 100vw;
   height: fit-content;
