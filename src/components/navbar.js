@@ -41,7 +41,7 @@ export default function frNav() {
             >
               Whitepaper
             </Nav.Link>
-            <Nav.Link to="/pdf/tokenomics.pdf" target = "_blank">Tokenomics</Nav.Link>
+            <Nav.Link href="#tokenomics" target = "_blank">Tokenomics</Nav.Link>
             <Nav.Link
               href="https://drive.google.com/file/d/1cuqIWFdV92YhCVb6wRPh-mlzObRxbFDa/view?usp=sharing"
               target="_blank"

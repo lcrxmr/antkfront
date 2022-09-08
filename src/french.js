@@ -207,6 +207,18 @@ export default function French() {
           </div>
         </Fade>
       </div>
+
+{/* // ------ Tokenomis  */}
+
+<div id="roadmap">
+        <h1>TOKENOMICS</h1>
+        <Fade duration={3000}>
+          <div className="container" id="roadmapDiv">
+            <img src={"./Diagramme.png"} id="diagrammePic" />
+          </div>
+        </Fade>
+      </div>
+
       {/* // ----- team */}
       <div id="team">
       <h1>ÉQUIPE</h1>
