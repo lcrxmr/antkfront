@@ -40,9 +40,18 @@
     transform: rotate(360deg);
   }
 }
+html, body {
+  overflow-x: hidden;
+}
 
 body{
   font-family: 'Fjalla One', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .langContainer{
@@ -86,6 +95,7 @@ body{
   margin-top: 0px;
   margin-bottom: 50px;
   font-family: 'Fjalla One', sans-serif;
+  width: 100vw !important;
 }
 
 #banner{
@@ -101,10 +111,70 @@ body{
 
 .accroche{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   padding-top: 20px;
   font-family: 'Fjalla One', sans-serif;
+}
+
+#socials{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-left: 20px;
+  margin-top: 100px;
+  background-color: rgba(255, 216, 0, 0.3);
+  border-radius: 40px;
+  
+}
+
+.footerBox{
+  padding-top: 20px;
+}
+
+#socialsFooter{
+  margin-top: 100px;
+}
+
+.socialiconFooter{
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.socialiconFooter:hover,
+.socialiconFooter:focus,
+.socialiconFooter:active {
+  border: solid black 2px;
+  border-radius: 50%;
+}
+
+.socialicon{
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+}
+
+.socialicon2{
+  display: flex;
+  flex-direction: row;
+}
+
+.socialicon:hover,
+.socialicon:focus,
+.socialicon:active {
+  border: solid gold 2px;
+  border-radius: 50%;
+}
+
+.socialicon2:hover,
+.socialicon2:focus,
+.socialicon2:active {
+  border: solid gold 2px;
+  border-radius: 50%;
 }
 
 .bannerbutton{
@@ -112,7 +182,7 @@ body{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 250px;
+  margin-top: 100px;
   margin-left: 20px;
   margin-right: 20px;
   font-family: 'Fjalla One', sans-serif;
@@ -145,6 +215,20 @@ body{
   margin-bottom: 50px;
 }
 
+#about{
+  margin-top: 0px;
+  padding-bottom: 50px;
+  padding-top: 10px;
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(255,0,221);
+background: linear-gradient(0deg, rgba(255,0,221,1) 0%, rgba(270, 192, 68, 1) 43%);
+}
+
+
 #roadmap{
   margin-top: 0px;
   padding-bottom: 50px;
@@ -154,7 +238,8 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-background: linear-gradient(242deg, rgb(245, 203, 13) 0%, rgba(255,255,255,1) 37%);
+  background: rgb(41,212,242);
+  background: linear-gradient(0deg, rgba(41,212,242,1) 0%, rgba(255,255,255,1) 43%);
 }
 
 
@@ -186,7 +271,8 @@ background: linear-gradient(242deg, rgb(245, 203, 13) 0%, rgba(255,255,255,1) 37
   display: flex;
   flex-direction: column;
   align-items: center;
-background: linear-gradient(242deg, rgba(244, 189, 67, 1) 0%, rgba(220,0,255,0.7637648809523809) 56%);
+  background: rgb(255,0,221);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,221,1) 45%);
 }
 
 #produitDiv{
@@ -222,7 +308,8 @@ background: linear-gradient(242deg, rgba(244, 189, 67, 1) 0%, rgba(220,0,255,0.7
   display: flex;
   flex-direction: column;
   align-items: center;
-background: linear-gradient(242deg, rgb(255, 141, 60) 0%, rgb(45, 146, 254) 43%);
+  background: rgb(41,212,242);
+background: linear-gradient(0deg, rgb(255, 199, 44) 0%, rgba(41,212,242,1) 43%);
   font-family: 'Fjalla One', sans-serif;
   
 }

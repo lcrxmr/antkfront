@@ -8,6 +8,7 @@ import { Fade } from "react-awesome-reveal";
 import Iframe from 'react-iframe'
 import ReactCardSlider from 'react-card-slider-component';
 import { Routes, Route, Link } from "react-router-dom";
+import { SocialIcon } from 'react-social-icons';
 
 import Fadetitle from "./components/enFade";
 import Footer from "./components/enFooter";
@@ -56,9 +57,14 @@ export default function English() {
       </div> */}
       </div>
       {/* // ------ banner */}
-      <div  id="banner">
+      <div id="banner">
         <div className="accroche">
           <Fadetitle />
+          <div id="socials">
+          <SocialIcon url="https://twitter.com/animalnationtk" className="socialicon"/>
+          <SocialIcon url="https://linktr.ee/animalnationtk" className="socialicon"/>
+          <SocialIcon url="https://t.me/ANTKofficialchannel" className="socialicon2"/>
+        </div>
         </div>
         <div className="bannerbutton">
           <a
@@ -79,6 +85,37 @@ export default function English() {
         <h1>PRIVATE SALE</h1>
         <Timer />
         {/* <ReactCardSlider slides={slides}/> */}
+      </div>
+
+      <div id="about">
+        <h1>À propos</h1>
+        <Fade duration={3000}>
+          <div className="container" id="produitDiv">
+            <div className="container" id="product">
+              <a
+                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                target="_blank"
+              >
+                <img className="profilePic" src={"./LOGO.jpg"} />
+              </a>
+              <p className="name">Produit1</p>
+            </div>
+            <div>
+              <p className="description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
+            </div>
+          </div>
+        </Fade>
       </div>
 
       {/* // ------ produit */}
@@ -156,7 +193,7 @@ export default function English() {
           <div className="container" id="profileDiv">
             <div className="profileCard">
               <a
-                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+               href="https://www.linkedin.com/in/basileclinet/"
                 target="_blank"
               >
                 <img className="profilePic" src={"./basile1.jpg"} />
@@ -166,7 +203,7 @@ export default function English() {
             </div>
             <div className="profileCard">
               <a
-                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                href="https://www.linkedin.com/in/glarochette/"
                 target="_blank"
               >
                 <img className="profilePic" src={"./guillaume1.jpg"} />
@@ -176,7 +213,7 @@ export default function English() {
             </div>
             <div className="profileCard">
               <a
-                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                href="https://www.linkedin.com/in/jeason-bacoul-742510225/"
                 target="_blank"
               >
                 <img className="profilePic" src={"./jeasonV1.jpg"} />
@@ -186,7 +223,7 @@ export default function English() {
             </div>
             <div className="profileCard">
               <a
-                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                href="https://www.linkedin.com/in/cbtna/?_l=fr_FR"
                 target="_blank"
               >
                 <img className="profilePic" src={"./charlotte1.jpg"} />
@@ -206,7 +243,7 @@ export default function English() {
             </div>
             <div className="profileCard">
               <a
-                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                href="/"
                 target="_blank"
               >
                 <img className="profilePic" src={"./LOGO.jpg"} />
@@ -216,13 +253,13 @@ export default function English() {
             </div>
             <div className="profileCard">
               <a
-                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
+                href="https://www.linkedin.com/in/gilles-a-7b220a23a"
                 target="_blank"
               >
                 <img className="profilePic" src={"./LOGO.jpg"} />
               </a>
-              <p className="name">XXX</p>
-              <p className="legend">Xxxxx</p>
+              <p className="name">Gilles</p>
+              <p className="legend">Co-Founder</p>
             </div>
             <div className="profileCard">
               <a
