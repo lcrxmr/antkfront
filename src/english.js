@@ -66,7 +66,7 @@ export default function English() {
           <SocialIcon url="https://t.me/ANTKofficialchannel" className="socialicon2"/>
         </div>
         </div>
-        <div className="bannerbutton">
+        {/* <div className="bannerbutton">
           <a
             href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
             target="_blank"
@@ -74,7 +74,7 @@ export default function English() {
           >
             <button className="button">WHITEPAPER</button>
           </a>
-        </div>
+        </div> */}
       </div>
 
       
@@ -83,12 +83,28 @@ export default function English() {
       <div className="container" id="count">
         <h3 style={{ color: "red" }}>September 24th 2022</h3>
         <h1>PRIVATE SALE</h1>
+        <div >
+        <a
+            href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="button">BUY</button>
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="buttonSales">WHITEPAPER</button>
+          </a>
+        </div>
         <Timer />
         {/* <ReactCardSlider slides={slides}/> */}
       </div>
 
       <div id="about">
-        <h1>À propos</h1>
+        <h1>THE ANIMAL NATION APP...</h1>
         <Fade duration={3000}>
           <div className="container" id="produitDiv">
             <div className="container" id="product">

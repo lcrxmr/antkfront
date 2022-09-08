@@ -10,7 +10,7 @@ export default function Footer () {
         <CDBBox display="flex" justifyContent="around" className="flex-wrap">
           <CDBBox>
             <a href="/" className="d-flex align-items-center p-0 text-dark">
-              <img alt="logo" src={"./LOGO.jpg"} width="100px" id='logo'/>
+              <img alt="logo" src={"./LOGO.png"} width="120px" id='logo'/>
               <span className="ml-3 h5 font-weight-bold">ANTK</span>
             </a>
             <p className="my-3" style={{ width: '250px' }}>

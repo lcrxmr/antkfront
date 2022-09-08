@@ -73,7 +73,7 @@ body{
 
 .lang{
   color: #000;
-  background-color: goldenrod;
+  background-color: white;
   border: black solid 2px;
   border-radius: 15px;
   margin-top: 5px;
@@ -93,7 +93,7 @@ body{
   display: flex;
   flex-direction: row;
   margin-top: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   font-family: 'Fjalla One', sans-serif;
   width: 100vw !important;
 }
@@ -166,14 +166,14 @@ body{
 .socialicon:hover,
 .socialicon:focus,
 .socialicon:active {
-  border: solid gold 2px;
+  border: solid rgba(250,226,121,1);
   border-radius: 50%;
 }
 
 .socialicon2:hover,
 .socialicon2:focus,
 .socialicon2:active {
-  border: solid gold 2px;
+  border: solid rgba(250,226,121,1);
   border-radius: 50%;
 }
 
@@ -190,6 +190,7 @@ body{
 }
 
 .button{
+  font-size: 18px;
   color: white;
   background-color:rgb(242, 60, 60);
   border: solid white 3px;
@@ -204,15 +205,46 @@ body{
 .button:hover,
 .button:focus,
 .button:active {
-  background-color: rgba(255, 216, 0, 1);
+  background-color: rgba(250,226,121,1);
   border: solid black 3px;
   color: #000;
   outline: none;
 }
 
+
+
+.buttonSales{
+  color: white;
+  font-size: 18px;
+  background-color:black;
+  border: solid white 3px;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.buttonSales:hover,
+.buttonSales:focus,
+.buttonSales:active {
+  background-color: rgba(250,226,121,1);
+  border: solid black 3px;
+  color: #000;
+  outline: none;
+}
+
+
+
 #count{
   margin-top: 50px;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #about{
@@ -224,8 +256,8 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgb(255,0,221);
-background: linear-gradient(0deg, rgba(255,0,221,1) 0%, rgba(270, 192, 68, 1) 43%);
+  background: rgba(250,226,121,1);
+  background: linear-gradient(0deg, rgba(255,0,221,1) 0%, rgba(250,226,121,1) 5%);
 }
 
 
@@ -239,7 +271,7 @@ background: linear-gradient(0deg, rgba(255,0,221,1) 0%, rgba(270, 192, 68, 1) 43
   flex-direction: column;
   align-items: center;
   background: rgb(41,212,242);
-  background: linear-gradient(0deg, rgba(41,212,242,1) 0%, rgba(255,255,255,1) 43%);
+  background: linear-gradient(0deg, rgba(41,212,242,1) 0%, rgba(255,255,255,1) 5%);
 }
 
 
@@ -272,7 +304,7 @@ background: linear-gradient(0deg, rgba(255,0,221,1) 0%, rgba(270, 192, 68, 1) 43
   flex-direction: column;
   align-items: center;
   background: rgb(255,0,221);
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,221,1) 45%);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,221,1) 5%);
 }
 
 #produitDiv{
@@ -286,16 +318,30 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,221,1) 45%)
   align-items: center;
   width: 90%;
   min-width: fit-content;
+  height: 400px ;
+  min-height:max max-content;
   background-color: white;
   border-radius: 30px;
+  overflow: hidden;
+}
+
+#descriptionDiv{
+  overflow: hidden;
+  word-wrap: break-word;
+  max-height: fit-content;
 }
 
 .description{
+  overflow: hidden;
+  word-break:break-all;
   color: #000;
   font-size: 18px;
   margin-left: 50px;
   margin-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-family: 'Fjalla One', sans-serif;
+  
 }
 
 
@@ -309,7 +355,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,221,1) 45%)
   flex-direction: column;
   align-items: center;
   background: rgb(41,212,242);
-background: linear-gradient(0deg, rgb(255, 199, 44) 0%, rgba(41,212,242,1) 43%);
+background: linear-gradient(0deg, rgb(255, 199, 44) 0%, rgba(41,212,242,1) 0%);
   font-family: 'Fjalla One', sans-serif;
   
 }
@@ -365,4 +411,12 @@ border-radius: 50%;
 #newsDiv{
   padding-top: 10px;
   background-color: aquamarine;
+}
+
+.pdfClass{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -15,11 +15,11 @@ export default function enNav() {
     >
       <Container>
         <Navbar.Brand href="#home" id="navbarbrand">
-          <img
+        <img
             alt=""
-            src={"./LOGO.jpg"}
-            width={100}
-            height={100}
+            src={"./LOGO.png"}
+            width={120}
+            height={120}
             className="d-inline-block align-top"
             id="navlogo"
           />{" "}
@@ -33,7 +33,13 @@ export default function enNav() {
             id="navtext"
           >
             <Nav.Link href="#produit">Products</Nav.Link>
-            <Nav.Link href="#Roadmap">Tokenomics</Nav.Link>
+            <Nav.Link
+              href="https://drive.google.com/file/d/1cuqIWFdV92YhCVb6wRPh-mlzObRxbFDa/view?usp=sharing"
+              target="_blank"
+            >
+              Whitepaper
+            </Nav.Link>
+            <Nav.Link href="/tokenomics">Tokenomics</Nav.Link>
             <Nav.Link
               href="https://drive.google.com/file/d/1cuqIWFdV92YhCVb6wRPh-mlzObRxbFDa/view?usp=sharing"
               target="_blank"
@@ -41,6 +47,18 @@ export default function enNav() {
               Roadmap
             </Nav.Link>
             <Nav.Link href="#team">Team</Nav.Link>
+            <Nav.Link>
+              Help
+            </Nav.Link>
+            <Nav.Link>
+            <a
+            href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="button">BUY</button>
+          </a>
+            </Nav.Link>
             {/* <Nav.Link
               href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
               target="_blank"

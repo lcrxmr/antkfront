@@ -71,7 +71,7 @@ export default function French() {
           <SocialIcon url="https://t.me/ANTKofficialchannel" className="socialicon2"/>
         </div>
         </div>
-        <div className="bannerbutton">
+        {/* <div className="bannerbutton">
           <a
             href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
             target="_blank"
@@ -79,12 +79,30 @@ export default function French() {
           >
             <button className="button">WHITEPAPER</button>
           </a>
-        </div>
+        </div> */}
       </div>
       {/* // ---- compte a rebours  */}
       <div className="container" id="count">
         <h3 style={{ color: "red" }}>24 Septembre 2022</h3>
-        <h1>VENTE PRIVÉE</h1>
+        <h1 className="vente">VENTE PRIVÉE </h1>
+        <div >
+        <a
+            href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="button">BUY</button>
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="buttonSales">WHITEPAPER</button>
+          </a>
+        </div>
+        
+          <br/>
         <Timer />
         {/* <ReactCardSlider slides={slides}/> */}
       </div>
@@ -92,8 +110,8 @@ export default function French() {
       {/* // ----- About  */}
 
       <div id="about">
-        <h1>À propos</h1>
-        <Fade duration={3000}>
+        <h1>L'APPLICATION ANIMAL NATION...</h1>
+        <Fade duration={1000}>
           <div className="container" id="produitDiv">
             <div className="container" id="product">
               <a
@@ -127,7 +145,7 @@ export default function French() {
       <div id="produit">
         <h1>PRODUITS</h1>
         <Fade duration={3000}>
-          <div className="container" id="produitDiv">
+        <div className="container" id="produitDiv">
             <div className="container" id="product">
               <a
                 href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
@@ -137,8 +155,8 @@ export default function French() {
               </a>
               <p className="name">Produit1</p>
             </div>
-            <div>
-              <p className="description">
+            <div className="descriptionDiv">
+              <p className="description" >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -152,6 +170,7 @@ export default function French() {
               </p>
             </div>
           </div>
+            
           <div className="container" id="produitDiv">
             <div>
               <p className="description">

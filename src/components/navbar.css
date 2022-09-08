@@ -1,9 +1,10 @@
 .navbar{
-    margin-top: 0px;
+    margin-top: 20px;
   width: 100vw !important;
   height: fit-content;
   display: flex;
   background-color: transparent;
+  margin-bottom: 50px;
 }
 
 
@@ -24,13 +25,20 @@
     color: black !important;
     }
 
+    .nav-link:hover,
+    .nav-link:focus,
+    .nav-link:active {
+    color:white !important;
+    }
+
 #navtext{
     font-size: 25px;
     font-weight: 600;
+    align-items: center;
 }
 
 
 .navbar-collapse {
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
+    border-radius: 40px;
   }
