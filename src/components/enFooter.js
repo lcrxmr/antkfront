@@ -5,7 +5,7 @@ import "./Footer.css";
 
 export default function Footer () {
   return (
-    <CDBFooter className="shadow" justifyContent="center">
+    <CDBFooter className="shadow" justifyContent="center" id="aide">
       <CDBBox className="footerBox" display="flex" flex="column"   style={{ width: '90%' }}>
         <CDBBox display="flex" justifyContent="around" className="flex-wrap">
           <CDBBox>
@@ -22,7 +22,7 @@ export default function Footer () {
               ANTK
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-              <CDBFooterLink href="/">A propos</CDBFooterLink>
+              <CDBFooterLink href="#about">A propos</CDBFooterLink>
             </CDBBox>
           </CDBBox>
           <CDBBox>
@@ -30,17 +30,17 @@ export default function Footer () {
               Aide
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-              <CDBFooterLink href="/">Contact</CDBFooterLink>
-              <CDBFooterLink href="/">Conditions Générales</CDBFooterLink>
-              <CDBFooterLink href="/">FAQ</CDBFooterLink>
+              <CDBFooterLink onClick={() => window.location = 'mailto:contact@antk.io'} id="email">Contact</CDBFooterLink>
+              <CDBFooterLink href="https://drive.google.com/file/d/1Syx8wGtlQdcC5VAyCSRLZWA41Wpx5QdX/view?usp=sharing" target="_blank">Conditions Générales</CDBFooterLink>
+              <CDBFooterLink href="https://drive.google.com/file/d/1p2QrpVgWB9KzuPgHOaOec37lWutj7co4/view?usp=sharing" target="_blank">FAQ</CDBFooterLink>
             </CDBBox>
           </CDBBox>
         </CDBBox>
       </CDBBox>
       <div id="socialsFooter">
-          <SocialIcon url="https://twitter.com/animalnationtk" className="socialiconFooter"/>
-          <SocialIcon url="https://linktr.ee/animalnationtk" className="socialiconFooter"/>
-          <SocialIcon url="https://t.me/ANTKofficialchannel" className="socialiconFooter"/>
+          <SocialIcon url="https://twitter.com/animalnationtk" className="socialiconFooter" target="_blank"/>
+          <SocialIcon url="https://linktr.ee/animalnationtk" className="socialiconFooter" target="_blank"/>
+          <SocialIcon url="https://t.me/ANTKofficialchannel" className="socialiconFooter" target="_blank"/>
         </div>
         <small className="text-center mt-5">&copy; ANTK 2022. All rights reserved.</small>
     </CDBFooter>

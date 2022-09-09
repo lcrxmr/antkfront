@@ -5,10 +5,10 @@ import Timer from "./components/Countdown/enTimer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "./components/englishNavbar";
 import { Fade } from "react-awesome-reveal";
-import Iframe from 'react-iframe'
-import ReactCardSlider from 'react-card-slider-component';
+import Iframe from "react-iframe";
+import ReactCardSlider from "react-card-slider-component";
 import { Routes, Route, Link } from "react-router-dom";
-import { SocialIcon } from 'react-social-icons';
+import { SocialIcon } from "react-social-icons";
 
 import Fadetitle from "./components/enFade";
 import Footer from "./components/enFooter";
@@ -16,27 +16,6 @@ import Footer from "./components/enFooter";
 import "./styles.css";
 
 export default function English() {
-  const [lang, setLang] = useState("français");
-  const slides = [
-    {image:"https://picsum.photos/200/300",title:"promo 1",description:"This is a description",clickEvent:"sliderClick"},
-    {image:"https://picsum.photos/600/500",title:"promo 2",description:"This is a second description",clickEvent:"sliderClick"},
-    {image:"https://picsum.photos/700/600",title:"promo 3",description:"This is a third description",clickEvent:"sliderClick"},
-    {image:"https://picsum.photos/700/600",title:"promo 4",description:"This is a third description",clickEvent:"sliderClick"},
-]
-
-  var eng = () => {
-    setLang('english')
-  }
-
-  var fr = () => {
-    setLang('français')
-  }
-
-
-  if(lang == 'français'){
-    
-  }
-
   return (
     <div className="App">
       <div id="langButton">
@@ -47,9 +26,8 @@ export default function English() {
           <button className="lang">EN</button>
         </Link>
       </div>
-      
+
       <div className="container" id="navcontainer">
-        
         <Nav />
         {/* <div className="container" id="langButton">
       <button onClick={fr} className="lang">FR</button>
@@ -61,10 +39,22 @@ export default function English() {
         <div className="accroche">
           <Fadetitle />
           <div id="socials">
-          <SocialIcon url="https://twitter.com/animalnationtk" className="socialicon"/>
-          <SocialIcon url="https://linktr.ee/animalnationtk" className="socialicon"/>
-          <SocialIcon url="https://t.me/ANTKofficialchannel" className="socialicon2"/>
-        </div>
+            <SocialIcon
+              url="https://twitter.com/animalnationtk"
+              className="socialicon"
+              target="_blank"
+            />
+            <SocialIcon
+              url="https://linktr.ee/animalnationtk"
+              className="socialicon"
+              target="_blank"
+            />
+            <SocialIcon
+              url="https://t.me/ANTKofficialchannel"
+              className="socialicon2"
+              target="_blank"
+            />
+          </div>
         </div>
         {/* <div className="bannerbutton">
           <a
@@ -77,22 +67,20 @@ export default function English() {
         </div> */}
       </div>
 
-      
-
       {/* // ---- compte a rebours  */}
       <div className="container" id="count">
         <h3 style={{ color: "red" }}>September 24th 2022</h3>
         <h1>PRIVATE SALE</h1>
-        <div >
-        <a
-            href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
+        <div>
+          <a
+            href="https://drive.google.com/file/d/1p2QrpVgWB9KzuPgHOaOec37lWutj7co4/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
             <button className="button">BUY</button>
           </a>
           <a
-            href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
+            href="https://drive.google.com/file/d/1p2QrpVgWB9KzuPgHOaOec37lWutj7co4/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -108,26 +96,15 @@ export default function English() {
         <Fade duration={3000}>
           <div className="container" id="produitDiv">
             <div className="container" id="product">
-              <a
-                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
-                target="_blank"
-              >
-                <img className="profilePic" src={"./LOGO.jpg"} />
-              </a>
-              <p className="name">Produit1</p>
+              <img className="animalPic" src={"./logo.png"} />
+
+              <p className="name">Animal Nation Token</p>
             </div>
             <div>
               <p className="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                Animal Nation is a blockchain application with an animal
+                recognition module that will allow access to a set of functions
+                and games focused on the protection and discovery of animals.
               </p>
             </div>
           </div>
@@ -140,52 +117,53 @@ export default function English() {
         <Fade duration={3000}>
           <div className="container" id="produitDiv">
             <div className="container" id="product">
-              <a
-                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
-                target="_blank"
-              >
-                <img className="profilePic" src={"./LOGO.jpg"} />
-              </a>
-              <p className="name">Product1</p>
+              <p className="prodname">Love to earn</p>
+              <img className="animalPic" src={"./chat.png"} />
             </div>
             <div>
               <p className="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                Receive ANTK token rewards when you spend time with your pet.
               </p>
             </div>
           </div>
+
           <div className="container" id="produitDiv">
             <div>
               <p className="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                Receive ANTK token rewards when you help find a lost animal.
               </p>
             </div>
             <div className="container" id="product">
-              <a
-                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
-                target="_blank"
-              >
-                <img className="profilePic" src={"./LOGO.jpg"} />
-              </a>
-              <p className="name">Product2</p>
+              <img className="animalPic" src={"./chien.png"} />
+
+              <p className="prodname">Find to earn</p>
+            </div>
+          </div>
+
+          <div className="container" id="produitDiv">
+            <div className="container" id="product">
+              <p className="prodname">Keep to earn</p>
+              <img className="animalPic" src={"./oiseau.png"} />
+            </div>
+            <div>
+              <p className="description">
+                Get photos of your pet when you go on vacation without it and
+                earn tokens for the person who looks after your pet.
+              </p>
+            </div>
+          </div>
+
+          <div className="container" id="produitDiv">
+            <div>
+              <p className="description">
+                A universe of games that will use animal facial recognition to
+                discover the world of animals and make you win tokens.
+              </p>
+            </div>
+            <div className="container" id="product">
+              <img className="animalPic" src={"./tigre.png"} />
+
+              <p className="prodname">Play to earn</p>
             </div>
           </div>
         </Fade>
@@ -196,7 +174,18 @@ export default function English() {
         <h1>ROADMAP</h1>
         <Fade duration={3000}>
           <div className="container" id="roadmapDiv">
-            <img src={"./roadmap.jpg"} id="roadmapPic" />
+            <img src={"./roadmap-ENG.png"} id="roadmapPic" />
+          </div>
+        </Fade>
+      </div>
+
+      {/* // ------ Tokenomis  */}
+
+      <div id="tokenomics">
+        <h1>TOKENOMICS</h1>
+        <Fade duration={3000}>
+          <div className="container" id="tokenomicsDiv">
+            <img src={"./tokenomics-détouré.png"} id="diagrammePic" />
           </div>
         </Fade>
       </div>
@@ -204,12 +193,12 @@ export default function English() {
       {/* // ----- team */}
 
       <div id="team">
-      <h1>TEAM</h1>
+        <h1>TEAM</h1>
         <Fade duration={5000}>
           <div className="container" id="profileDiv">
             <div className="profileCard">
               <a
-               href="https://www.linkedin.com/in/basileclinet/"
+                href="https://www.linkedin.com/in/basileclinet/"
                 target="_blank"
               >
                 <img className="profilePic" src={"./basile1.jpg"} />
@@ -258,11 +247,8 @@ export default function English() {
               <p className="legend">Developer</p>
             </div>
             <div className="profileCard">
-              <a
-                href="/"
-                target="_blank"
-              >
-                <img className="profilePic" src={"./LOGO.jpg"} />
+              <a href="/" target="_blank">
+                <img className="profilePic" src={"./logo.png"} />
               </a>
               <p className="name">Jean-Baptiste</p>
               <p className="legend">Developer</p>
@@ -272,12 +258,12 @@ export default function English() {
                 href="https://www.linkedin.com/in/gilles-a-7b220a23a"
                 target="_blank"
               >
-                <img className="profilePic" src={"./LOGO.jpg"} />
+                <img className="profilePic" src={"./gilles.jpg"} />
               </a>
               <p className="name">Gilles</p>
               <p className="legend">Co-Founder</p>
             </div>
-            <div className="profileCard">
+            {/* <div className="profileCard">
               <a
                 href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
                 target="_blank"
@@ -296,7 +282,7 @@ export default function English() {
               </a>
               <p className="name">Gilles</p>
               <p className="legend">Xxxxx</p>
-            </div>
+            </div> */}
           </div>
         </Fade>
       </div>
@@ -312,6 +298,6 @@ export default function English() {
         position="relative"/>
       </div> */}
       <Footer />
- </div>
+    </div>
   );
 }

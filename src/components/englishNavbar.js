@@ -34,30 +34,26 @@ export default function enNav() {
           >
             <Nav.Link href="#produit">Products</Nav.Link>
             <Nav.Link
-              href="https://drive.google.com/file/d/1cuqIWFdV92YhCVb6wRPh-mlzObRxbFDa/view?usp=sharing"
+              href="https://drive.google.com/file/d/1p2QrpVgWB9KzuPgHOaOec37lWutj7co4/view?usp=sharing"
               target="_blank"
             >
               Whitepaper
             </Nav.Link>
-            <Nav.Link href="/tokenomics">Tokenomics</Nav.Link>
+            <Nav.Link href="#tokenomics">Tokenomics</Nav.Link>
             <Nav.Link
-              href="https://drive.google.com/file/d/1cuqIWFdV92YhCVb6wRPh-mlzObRxbFDa/view?usp=sharing"
-              target="_blank"
+              href="#roadmap"
             >
               Roadmap
             </Nav.Link>
             <Nav.Link href="#team">Team</Nav.Link>
-            <Nav.Link>
+            <Nav.Link href="#aide">
               Help
             </Nav.Link>
-            <Nav.Link>
-            <a
-            href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
+            <Nav.Link 
+            href="https://drive.google.com/file/d/1p2QrpVgWB9KzuPgHOaOec37lWutj7co4/view?usp=sharing"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             <button className="button">BUY</button>
-          </a>
             </Nav.Link>
             {/* <Nav.Link
               href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"

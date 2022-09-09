@@ -16,33 +16,7 @@ import Footer from "./components/Footer";
 import "./styles.css";
 
 export default function French() {
-  const [lang, setLang] = useState("français");
-  const slides = [
-    {
-      image: "https://picsum.photos/200/300",
-      title: "promo 1",
-      description: "This is a description",
-      clickEvent: "sliderClick",
-    },
-    {
-      image: "https://picsum.photos/600/500",
-      title: "promo 2",
-      description: "This is a second description",
-      clickEvent: "sliderClick",
-    },
-    {
-      image: "https://picsum.photos/700/600",
-      title: "promo 3",
-      description: "This is a third description",
-      clickEvent: "sliderClick",
-    },
-    {
-      image: "https://picsum.photos/700/600",
-      title: "promo 4",
-      description: "This is a third description",
-      clickEvent: "sliderClick",
-    },
-  ];
+
 
   return (
     <div className="App">
@@ -66,20 +40,11 @@ export default function French() {
         <div className="accroche">
           <Fadetitle />
           <div id="socials">
-          <SocialIcon url="https://twitter.com/animalnationtk" className="socialicon"/>
-          <SocialIcon url="https://linktr.ee/animalnationtk" className="socialicon"/>
-          <SocialIcon url="https://t.me/ANTKofficialchannel" className="socialicon2"/>
+          <SocialIcon url="https://twitter.com/animalnationtk" className="socialicon" target="_blank"/>
+          <SocialIcon url="https://linktr.ee/animalnationtk" className="socialicon" target="_blank"/>
+          <SocialIcon url="https://t.me/ANTKofficialchannel" className="socialicon2" target="_blank"/>
         </div>
         </div>
-        {/* <div className="bannerbutton">
-          <a
-            href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="button">WHITEPAPER</button>
-          </a>
-        </div> */}
       </div>
       {/* // ---- compte a rebours  */}
       <div className="container" id="count">
@@ -87,14 +52,14 @@ export default function French() {
         <h1 className="vente">VENTE PRIVÉE </h1>
         <div >
         <a
-            href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
+            href="https://drive.google.com/file/d/1p2QrpVgWB9KzuPgHOaOec37lWutj7co4/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
             <button className="button">BUY</button>
           </a>
           <a
-            href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
+            href="https://drive.google.com/file/d/1p2QrpVgWB9KzuPgHOaOec37lWutj7co4/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -114,107 +79,109 @@ export default function French() {
         <Fade duration={1000}>
           <div className="container" id="produitDiv">
             <div className="container" id="product">
-              <a
-                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
-                target="_blank"
-              >
-                <img className="profilePic" src={"./LOGO.jpg"} />
-              </a>
-              <p className="name">Produit1</p>
+
+                <img className="animalPic" src={"./LOGO.png"} />
+
+              <p className="name">Animal Nation Token</p>
             </div>
             <div>
               <p className="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+              Animal Nation est une application de la blockchain avec un
+module de reconnaissance animale qui va permettre
+d'accéder à un ensemble de fonctions et de jeux centrés sur
+la protection et la découverte des animaux.
               </p>
             </div>
           </div>
         </Fade>
       </div>
+
+
 
 
       {/* // ------ produit */}
       <div id="produit">
         <h1>PRODUITS</h1>
         <Fade duration={3000}>
-        <div className="container" id="produitDiv">
+          <div className="container" id="produitDiv">
             <div className="container" id="product">
-              <a
-                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
-                target="_blank"
-              >
-                <img className="profilePic" src={"./LOGO.jpg"} />
-              </a>
-              <p className="name">Produit1</p>
+            <p className="prodname">Love to earn</p>
+
+                <img className="animalPic" src={"./chat.png"} />
+
             </div>
-            <div className="descriptionDiv">
-              <p className="description" >
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+            <div>
+              <p className="description">
+                Recevez des récompenses en token ANTK lorsque vous passer du
+                temps avec votre animal.
               </p>
             </div>
           </div>
-            
+
           <div className="container" id="produitDiv">
             <div>
               <p className="description">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+                Recevez des récompenses en token ANTK lorsque aidez à retrouver
+                un animal perdu.
               </p>
             </div>
             <div className="container" id="product">
-              <a
-                href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
-                target="_blank"
-              >
-                <img className="profilePic" src={"./LOGO.jpg"} />
-              </a>
-              <p className="name">Produit1</p>
+
+                <img className="animalPic" src={"./chien.png"} />
+
+              <p className="prodname">Find to earn</p>
+            </div>
+          </div>
+
+          <div className="container" id="produitDiv">
+            <div className="container" id="product">
+            <p className="prodname">Keep to earn</p>
+                <img className="animalPic" src={"./oiseau.png"} />
+            </div>
+            <div>
+              <p className="description">
+                Recevez des photos de votre animal lorsque vous partez en
+                vacances sans lui et faites gagner des tokens à la personne qui
+                s'occupe de votre animal
+              </p>
+            </div>
+          </div>
+
+          <div className="container" id="produitDiv">
+            <div>
+              <p className="description">
+                Un univers de jeux qui vont utiliser la reconnaissance faciale
+                animale pour découvrir le monde de animaux et vous faire gagner
+                des tokens.
+              </p>
+            </div>
+            <div className="container" id="product">
+
+                <img className="animalPic" src={"./tigre.png"} />
+
+              <p className="prodname">Play to earn</p>
             </div>
           </div>
         </Fade>
       </div>
-      {/* // ----- Roadmap */}
-      <div id="roadmap">
+
+     {/* // ----- Roadmap */}
+     <div id="roadmap">
         <h1>ROADMAP</h1>
         <Fade duration={3000}>
           <div className="container" id="roadmapDiv">
-            <img src={"./roadmap.jpg"} id="roadmapPic" />
+            <img src={"./roadmap-fr.png"} id="roadmapPic" />
           </div>
         </Fade>
       </div>
 
 {/* // ------ Tokenomis  */}
 
-<div id="roadmap">
+<div id="tokenomics">
         <h1>TOKENOMICS</h1>
         <Fade duration={3000}>
-          <div className="container" id="roadmapDiv">
-            <img src={"./Diagramme.png"} id="diagrammePic" />
+          <div className="container" id="tokenomicsDiv">
+            <img src={"./tokenomics-détouré.png"} id="diagrammePic" />
           </div>
         </Fade>
       </div>
@@ -289,12 +256,12 @@ export default function French() {
                 href="https://www.linkedin.com/in/gilles-a-7b220a23a"
                 target="_blank"
               >
-                <img className="profilePic" src={"./LOGO.jpg"} />
+                <img className="profilePic" src={"./gilles.jpg"} />
               </a>
               <p className="name">Gilles</p>
               <p className="legend">Co-Fondateur</p>
             </div>
-            <div className="profileCard">
+            {/* <div className="profileCard">
               <a
                 href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
                 target="_blank"
@@ -313,7 +280,7 @@ export default function French() {
               </a>
               <p className="name">Gilles</p>
               <p className="legend">Xxxxx</p>
-            </div>
+            </div> */}
           </div>
         </Fade>
       </div>
