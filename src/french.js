@@ -181,7 +181,7 @@ la protection et la découverte des animaux.
         <h1>TOKENOMICS</h1>
         <Fade duration={3000}>
           <div className="container" id="tokenomicsDiv">
-            <img src={"./tokenomics-détouré.png"} id="diagrammePic" />
+            <img src={"./tokenomicsdet.png"}id="diagrammePic" />
           </div>
         </Fade>
       </div>
