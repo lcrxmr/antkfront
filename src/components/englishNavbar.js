@@ -34,7 +34,7 @@ export default function enNav() {
           >
             <Nav.Link href="#produit">Products</Nav.Link>
             <Nav.Link
-              href="https://drive.google.com/file/d/1yZ4-cEphUdjlfFpiiUAvl2TIIepm4UTa/view?usp=sharing"
+              href="/white-eng.pdf"
               target="_blank"
             >
               Whitepaper
@@ -49,10 +49,7 @@ export default function enNav() {
             <Nav.Link href="#aide">
               Help
             </Nav.Link>
-            <Nav.Link 
-            href="https://drive.google.com/file/d/1p2QrpVgWB9KzuPgHOaOec37lWutj7co4/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer">
+            <Nav.Link >
             <button className="button">BUY</button>
             </Nav.Link>
             {/* <Nav.Link

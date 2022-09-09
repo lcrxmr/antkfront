@@ -51,15 +51,11 @@ export default function French() {
         <h3 style={{ color: "red" }}>24 Septembre 2022</h3>
         <h1 className="vente">VENTE PRIVÉE </h1>
         <div >
-        <a
-            href="https://drive.google.com/file/d/1p2QrpVgWB9KzuPgHOaOec37lWutj7co4/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+
             <button className="button">BUY</button>
-          </a>
+
           <a
-            href="https://drive.google.com/file/d/1p2QrpVgWB9KzuPgHOaOec37lWutj7co4/view?usp=sharing"
+            href="/white-fr.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

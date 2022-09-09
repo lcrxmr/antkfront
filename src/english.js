@@ -72,15 +72,11 @@ export default function English() {
         <h3 style={{ color: "red" }}>September 24th 2022</h3>
         <h1>PRIVATE SALE</h1>
         <div>
-          <a
-            href="https://drive.google.com/file/d/1p2QrpVgWB9KzuPgHOaOec37lWutj7co4/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+
             <button className="button">BUY</button>
-          </a>
+
           <a
-            href="https://drive.google.com/file/d/1p2QrpVgWB9KzuPgHOaOec37lWutj7co4/view?usp=sharing"
+            href="/white-eng.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
