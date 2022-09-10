@@ -9,7 +9,7 @@ export default function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<French />} />
-        <Route path="eng" element={<English />} />
+        <Route path="/eng" element={<English />} />
       </Routes>
     </div>
   );

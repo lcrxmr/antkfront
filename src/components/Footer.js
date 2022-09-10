@@ -32,7 +32,7 @@ export default function Footer () {
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
               <CDBFooterLink onClick={() => window.location = 'mailto:contact@antk.io'} id="email">Contact</CDBFooterLink>
               <CDBFooterLink href="/cdgfr.pdf" target="_blank">Conditions Générales</CDBFooterLink>
-              <CDBFooterLink href="/white-fr.pdf" target="_blank">FAQ</CDBFooterLink>
+              <CDBFooterLink href="/">FAQ</CDBFooterLink>
             </CDBBox>
           </CDBBox>
         </CDBBox>

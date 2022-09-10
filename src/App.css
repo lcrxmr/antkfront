@@ -1,38 +1,37 @@
 
-html, body{
+.App{
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  margin-left:  0px;
+  margin-right: 0px;
+  overflow: auto;
+  text-align: center;
+  font-family: 'Fjalla One', sans-serif;
+  position: relative;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;
 }
 .view {
   width: 100%;
   height: 100%;
+  margin-left:  0px;
+  margin-right: 0px;
   overflow: scroll;
 }
 
-.App {
-  text-align: center;
-  overflow: auto;
-  font-family: 'Fjalla One', sans-serif;
-  position: relative;
-}
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-@viewport {
+/* @viewport {
   zoom: 1.0;
   min-width: extend-to-zoom;
   max-width: 100vw;
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -65,7 +64,7 @@ body{
   font-family: 'Fjalla One', sans-serif;
   position: relative;
   overflow-x: hidden;
-  width: 100%;
+  width: 100vw;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -80,7 +79,7 @@ body{
   margin-top: 10px;
   margin-bottom: 0;
   height: 30px;
-  margin-right: 20px;
+  margin-right: 10px;
   margin-left: auto;
   position:absolute;
   top:0;
@@ -92,9 +91,13 @@ body{
   color: #000;
   background-color: white;
   border: black solid 2px;
-  border-radius: 15px;
+  border-radius: 40px;
   margin-top: 5px;
-  margin-right: 5px;
+  margin-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-family: 'Fjalla One', sans-serif;
   
 }
@@ -110,6 +113,8 @@ body{
   display: flex;
   flex-direction: row;
   margin-top: 0px;
+  padding-top: 0px;
+  margin-right: 150px;
   margin-bottom: 0px;
   font-family: 'Fjalla One', sans-serif;
   width: 100vw !important;
@@ -269,6 +274,7 @@ body{
   padding-bottom: 50px;
   padding-top: 10px;
   width: 100vw;
+  min-width: fit-content;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -280,9 +286,12 @@ body{
 
 #roadmap{
   margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
   padding-bottom: 50px;
   padding-top: 10px;
-  width: 100vw;
+  width: 100%;
+  min-width: fit-content;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -300,50 +309,20 @@ body{
   flex-direction: row;
   justify-content:flex-start;
   align-items: center;
-  width: 90%;
+  width: 80vw;
   min-width: fit-content;
   background-color: white;
   border-radius: 30px;
 }
 
 #roadmapPic{
-  width: 100vw ;
+  width: 100% ;
   border-radius: 40px;
   border: solid 2px black;
 }
 
-/* #produit{
-  margin-top: 0px;
-  padding-bottom: 50px;
-  padding-top: 10px;
-  width: 100vw;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgb(255,0,221);
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,221,1) 5%);
-} */
 
-#produit1{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  width: 100vw;
-  height: 600px;
-  border: solid #000 1px;
-}
-#produit1Titre{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
+
 
 .nameTitre{
   margin-top: 0px;
@@ -362,33 +341,45 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,221,1) 5%);
 
 
 #produit{
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
   margin-top: 0px;
   padding-bottom: 50px;
   padding-top: 10px;
-  width: 100vw;
   height: fit-content;
   display: flex;
+  max-width: 100vw;
+  min-width: fit-content;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(237,70,207,1) 5%);
 }
 
 #produitDiv{
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: row;
-  justify-content:flex-start;
   align-items: center;
-  width: 90%;
-  min-width: fit-content;
+  justify-content: center;
+  /* max-width: 80%;
+  min-width: fit-content; */
   height: 400px;
   background-color: rgba(70, 173, 237, 1);
   border-radius: 30px;
   margin-bottom: 50px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
 }
+
+
 
 .description{
   color: #000;
@@ -484,7 +475,9 @@ border-radius: 50%;
 }
 
 .animalPic{
-  height: 200px;
+  width: 200px;
+  margin-left: 0px;
+  margin-right: 0Px;
 }
 
 .name{
@@ -499,7 +492,7 @@ border-radius: 50%;
 .prodname{
   margin-top: 20px;
   line-height: 2px;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
   color: #000;
   font-family: 'Fjalla One', sans-serif;

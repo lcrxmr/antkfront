@@ -18,8 +18,10 @@ import "./styles.css";
 export default function French() {
 
 
-  return (
+  return ( 
     <div className="App">
+      
+      <div className="container" id="navcontainer">
       <div id="langButton">
         <Link to="/">
           <button className="lang">FR</button>
@@ -28,7 +30,6 @@ export default function French() {
           <button className="lang">EN</button>
         </Link>
       </div>
-      <div className="container" id="navcontainer">
         <Nav />
         {/* <div className="container" id="langButton">
       <button onClick={fr} className="lang">FR</button>
@@ -100,7 +101,7 @@ la protection et la découverte des animaux.
         <h1>PRODUITS</h1>
         <Fade duration={3000}>
           <div className="container" id="produitDiv">
-            <div className="container" id="product">
+            <div className="container" >
             <p className="prodname">Love to earn</p>
 
                 <img className="animalPic" src={"./chat.png"} />
@@ -108,7 +109,7 @@ la protection et la découverte des animaux.
             </div>
             <div>
               <p className="description">
-                Recevez des récompenses en token ANTK lorsque vous passer du
+                Recevez des récompenses en token ANTK lorsque vous passez du
                 temps avec votre animal.
               </p>
             </div>
@@ -117,7 +118,7 @@ la protection et la découverte des animaux.
           <div className="container" id="produitDiv">
             <div>
               <p className="description">
-                Recevez des récompenses en token ANTK lorsque aidez à retrouver
+                Recevez des récompenses en token ANTK lorsque vous aidez à retrouver
                 un animal perdu.
               </p>
             </div>
@@ -147,7 +148,7 @@ la protection et la découverte des animaux.
             <div>
               <p className="description">
                 Un univers de jeux qui vont utiliser la reconnaissance faciale
-                animale pour découvrir le monde de animaux et vous faire gagner
+                animal pour découvrir le monde des animaux et vous faire gagner
                 des tokens.
               </p>
             </div>
