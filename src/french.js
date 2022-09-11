@@ -6,9 +6,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "./components/navbar";
 import { Fade } from "react-awesome-reveal";
 import Iframe from "react-iframe";
-import ReactCardSlider from "react-card-slider-component";  
+import ReactCardSlider from "react-card-slider-component";
 import { Routes, Route, Link } from "react-router-dom";
-import { SocialIcon } from 'react-social-icons';
+import { SocialIcon } from "react-social-icons";
 
 import Fadetitle from "./components/Fade";
 import Footer from "./components/Footer";
@@ -16,20 +16,17 @@ import Footer from "./components/Footer";
 import "./styles.css";
 
 export default function French() {
-
-
-  return ( 
+  return (
     <div className="App">
-      
       <div className="container" id="navcontainer">
-      <div id="langButton">
-        <Link to="/">
-          <button className="lang">FR</button>
-        </Link>
-        <Link to="/eng">
-          <button className="lang">EN</button>
-        </Link>
-      </div>
+        <div id="langButton">
+          <Link to="/">
+            <button className="lang">FR</button>
+          </Link>
+          <Link to="/eng">
+            <button className="lang">EN</button>
+          </Link>
+        </div>
         <Nav />
         {/* <div className="container" id="langButton">
       <button onClick={fr} className="lang">FR</button>
@@ -41,30 +38,37 @@ export default function French() {
         <div className="accroche">
           <Fadetitle />
           <div id="socials">
-          <SocialIcon url="https://twitter.com/animalnationtk" className="socialicon" target="_blank"/>
-          <SocialIcon url="https://linktr.ee/animalnationtk" className="socialicon" target="_blank"/>
-          <SocialIcon url="https://t.me/ANTKofficialchannel" className="socialicon2" target="_blank"/>
-        </div>
+            <SocialIcon
+              url="https://twitter.com/animalnationtk"
+              className="socialicon"
+              target="_blank"
+            />
+            <SocialIcon
+              url="https://linktr.ee/animalnationtk"
+              className="socialicon"
+              target="_blank"
+            />
+            <SocialIcon
+              url="https://t.me/ANTKofficialchannel"
+              className="socialicon2"
+              target="_blank"
+            />
+          </div>
         </div>
       </div>
       {/* // ---- compte a rebours  */}
       <div className="container" id="count">
         <h3 style={{ color: "red" }}>24 Septembre 2022</h3>
         <h1 className="vente">VENTE PRIVÉE </h1>
-        <div >
+        <div>
+          <button className="button">BUY</button>
 
-            <button className="button">BUY</button>
-
-          <a
-            href="/white-fr.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="/white-fr.pdf" target="_blank" rel="noopener noreferrer">
             <button className="buttonSales">WHITEPAPER</button>
           </a>
         </div>
-        
-          <br/>
+
+        <br />
         <Timer />
         {/* <ReactCardSlider slides={slides}/> */}
       </div>
@@ -72,40 +76,35 @@ export default function French() {
       {/* // ----- About  */}
 
       <div id="about">
-        <h1>L'APPLICATION ANIMAL NATION...</h1>
+        <h1>L'APPLICATION ANIMAL NATION</h1>
         <Fade duration={1000}>
           <div className="container" id="produitDiv">
             <div className="container" id="product">
-
-                <img className="animalPic" src={"./LOGO.png"} />
+              <img className="animalPic" src={"./LOGO.png"} />
 
               <p className="name">Animal Nation Token</p>
             </div>
             <div>
               <p className="description">
-              Animal Nation est une application de la blockchain avec un
-module de reconnaissance animale qui va permettre
-d'accéder à un ensemble de fonctions et de jeux centrés sur
-la protection et la découverte des animaux.
+                Animal Nation est une application blockchain avec un module de
+                reconnaissance animale qui va permettre d'accéder à un ensemble
+                de fonctions et de jeux centrés sur la protection et la
+                découverte des animaux.
               </p>
             </div>
           </div>
         </Fade>
       </div>
 
-
-
-
       {/* // ------ produit */}
       <div id="produit">
         <h1>PRODUITS</h1>
         <Fade duration={3000}>
           <div className="container" id="produitDiv">
-            <div className="container" >
-            <p className="prodname">Love to earn</p>
+            <div className="container">
+              <p className="prodname">Love to earn</p>
 
-                <img className="animalPic" src={"./chat.png"} />
-
+              <img className="animalPic" src={"./chat.png"} />
             </div>
             <div>
               <p className="description">
@@ -118,13 +117,12 @@ la protection et la découverte des animaux.
           <div className="container" id="produitDiv">
             <div>
               <p className="description">
-                Recevez des récompenses en token ANTK lorsque vous aidez à retrouver
-                un animal perdu.
+                Recevez des récompenses en token ANTK lorsque vous aidez à
+                retrouver un animal perdu.
               </p>
             </div>
             <div className="container" id="product">
-
-                <img className="animalPic" src={"./chien.png"} />
+              <img className="animalPic" src={"./chien.png"} />
 
               <p className="prodname">Find to earn</p>
             </div>
@@ -132,8 +130,8 @@ la protection et la découverte des animaux.
 
           <div className="container" id="produitDiv">
             <div className="container" id="product">
-            <p className="prodname">Keep to earn</p>
-                <img className="animalPic" src={"./oiseau.png"} />
+              <p className="prodname">Keep to earn</p>
+              <img className="animalPic" src={"./oiseau.png"} />
             </div>
             <div>
               <p className="description">
@@ -148,13 +146,12 @@ la protection et la découverte des animaux.
             <div>
               <p className="description">
                 Un univers de jeux qui vont utiliser la reconnaissance faciale
-                animal pour découvrir le monde des animaux et vous faire gagner
+                animale pour découvrir le monde des animaux et vous faire gagner
                 des tokens.
               </p>
             </div>
             <div className="container" id="product">
-
-                <img className="animalPic" src={"./tigre.png"} />
+              <img className="animalPic" src={"./tigre.png"} />
 
               <p className="prodname">Play to earn</p>
             </div>
@@ -162,9 +159,9 @@ la protection et la découverte des animaux.
         </Fade>
       </div>
 
-     {/* // ----- Roadmap */}
-     <div id="roadmap">
-        <h1>ROADMAP</h1>
+      {/* // ----- Roadmap */}
+      <div id="roadmap">
+        <h1 id="roadmaptitle">ROADMAP</h1>
         <Fade duration={3000}>
           <div className="container" id="roadmapDiv">
             <img src={"./roadmap-fr.png"} id="roadmapPic" />
@@ -172,20 +169,20 @@ la protection et la découverte des animaux.
         </Fade>
       </div>
 
-{/* // ------ Tokenomis  */}
+      {/* // ------ Tokenomis  */}
 
-<div id="tokenomics">
+      <div id="tokenomics">
         <h1>TOKENOMICS</h1>
         <Fade duration={3000}>
           <div className="container" id="tokenomicsDiv">
-            <img src={"./tokenomicsdet.png"}id="diagrammePic" />
+            <img src={"./tokenomicsdet.png"} id="diagrammePic" />
           </div>
         </Fade>
       </div>
 
       {/* // ----- team */}
       <div id="team">
-      <h1>ÉQUIPE</h1>
+        <h1>ÉQUIPE</h1>
         <Fade duration={5000}>
           <div className="container" id="profileDiv">
             <div className="profileCard">
@@ -216,7 +213,7 @@ la protection et la découverte des animaux.
                 <img className="profilePic" src={"./jeasonV1.jpg"} />
               </a>
               <p className="name">Jeason</p>
-              <p className="legend">Community Manager</p>
+              <p className="legend">Lead Community Manager</p>
             </div>
             <div className="profileCard">
               <a
@@ -239,14 +236,11 @@ la protection et la découverte des animaux.
               <p className="legend">Développeur</p>
             </div>
             <div className="profileCard">
-              <a
-                href="/"
-                target="_blank"
-              >
+              <a href="/" target="_blank">
                 <img className="profilePic" src={"./LOGO.jpg"} />
               </a>
               <p className="name">Jean-Baptiste</p>
-              <p className="legend">Développeur</p>
+              <p className="legend">Développeur Blockchain</p>
             </div>
             <div className="profileCard">
               <a

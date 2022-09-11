@@ -88,7 +88,7 @@ export default function English() {
       </div>
 
       <div id="about">
-        <h1>THE ANIMAL NATION APP...</h1>
+        <h1>THE ANIMAL NATION APP</h1>
         <Fade duration={3000}>
           <div className="container" id="produitDiv">
             <div className="container" id="product">
@@ -167,7 +167,7 @@ export default function English() {
 
       {/* // ----- Roadmap */}
       <div id="roadmap">
-        <h1>ROADMAP</h1>
+        <h1 id="roadmaptitle">ROADMAP</h1>
         <Fade duration={3000}>
           <div className="container" id="roadmapDiv">
             <img src={"./roadmap-ENG.png"} id="roadmapPic" />
@@ -220,7 +220,7 @@ export default function English() {
                 <img className="profilePic" src={"./jeasonV1.jpg"} />
               </a>
               <p className="name">Jeason</p>
-              <p className="legend">Community Manager</p>
+              <p className="legend">Lead Community Manager</p>
             </div>
             <div className="profileCard">
               <a
@@ -247,7 +247,7 @@ export default function English() {
                 <img className="profilePic" src={"./logo.png"} />
               </a>
               <p className="name">Jean-Baptiste</p>
-              <p className="legend">Developer</p>
+              <p className="legend">Blockchain Developer</p>
             </div>
             <div className="profileCard">
               <a
