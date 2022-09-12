@@ -2,4 +2,7 @@
     margin-left: 20px;
     display:flex;
     align-items: flex-start;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
 }

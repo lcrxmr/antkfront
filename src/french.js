@@ -123,7 +123,7 @@ export default function French(props) {
           <Fade duration={1000}>
             <div className="container" id="aboutDiv">
               <div className="container" id="product">
-                <img className="animalPic" src={"./LOGO.png"} />
+                <img className="aboutPic" src={"./LOGO.png"} />
 
                 <p className="name">Animal Nation Token</p>
               </div>
@@ -156,7 +156,7 @@ export default function French(props) {
           <Fade duration={1000}>
             <div className="container" id="produitDivMobile">
               <div className="container" id="productMobile">
-                <img className="animalPicMobile" src={"./LOGO.png"} />
+                <img className="aboutPicMobile" src={"./LOGO.png"} />
 
                 <p className="nameProductMobile">Animal Nation Token</p>
               </div>

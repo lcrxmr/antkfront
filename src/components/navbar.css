@@ -3,7 +3,8 @@
     -moz-box-sizing: border-box;
          box-sizing: border-box;
     margin-top: 0px;
-    width: 100vw !important;
+    margin-right: 0px;
+    width: 90vw !important;
     height: fit-content;
     display: flex;
     background-color: transparent;
@@ -17,6 +18,9 @@
     align-items: center;
     font-size: 80px;
     font-weight: 600;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
 }
 
 #navlogo{
@@ -46,6 +50,9 @@
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 40px; 
     width: 100vw !important;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
   }
 
   .navbar-toggle{
