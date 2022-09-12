@@ -25,7 +25,7 @@ export default function enNav() {
           />{" "}
           ANTK
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" id="togButton"/>
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav
             className="me-auto justify-content-end"

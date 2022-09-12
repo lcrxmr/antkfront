@@ -7,5 +7,7 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
   RewriteRule . /index.html [L]
+  RewriteCond %{SERVER_PORT} !=443
+  RewriteRule ^(.*)$ https://antk.io/$1 [R=301,L]
 
 </IfModule>

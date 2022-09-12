@@ -72,18 +72,18 @@ export default function English() {
       <div className="container" id="count">
         <h3 style={{ color: "red" }}>September 24th 2022</h3>
         <h1>PRIVATE SALE</h1>
-        <div>
-
+        <MediaQuery minWidth={1000}>
+          <div>
             <button className="button">BUY</button>
+          </div>
+        </MediaQuery>
 
-          <a
-            href="/white-eng.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="buttonSales">WHITEPAPER</button>
-          </a>
-        </div>
+        <MediaQuery minWidth={0} maxWidth={1000}>
+          <div>
+            <button className="buttonMobile">BUY</button>
+          </div>
+        </MediaQuery>
+        <br/>
         <Timer />
         {/* <ReactCardSlider slides={slides}/> */}
       </div>
@@ -92,7 +92,7 @@ export default function English() {
       <MediaQuery minWidth={1000}>
         <h1>THE ANIMAL NATION APP</h1>
         <Fade duration={3000}>
-          <div className="container" id="produitDiv">
+          <div className="container" id="aboutDiv">
             <div className="container" id="product">
               <img className="animalPic" src={"./LOGO.png"} />
 
@@ -104,6 +104,17 @@ export default function English() {
                 recognition module that will allow access to a set of functions
                 and games focused on the protection and discovery of animals.
               </p>
+              <MediaQuery minWidth={1000}>
+                  <div>
+                    <a
+                      href="/white-fr.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="buttonSales">WHITEPAPER</button>
+                    </a>
+                  </div>
+                </MediaQuery>
             </div>
           </div>
         </Fade>
@@ -124,6 +135,18 @@ export default function English() {
                 and games focused on the protection and discovery of animals.
               </p>
             </div>
+            <MediaQuery minWidth={0} maxWidth={1000}>
+                  <div>
+                    <a
+                      href="/white-fr.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="buttonSalesMobile">WHITEPAPER</button>
+                    </a>
+                    <br />
+                  </div>
+                </MediaQuery>
           </div>
         </Fade>
         </MediaQuery>

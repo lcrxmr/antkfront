@@ -233,6 +233,28 @@ body{
   outline: none;
 }
 
+.buttonMobile{
+  font-size: 50px;
+  color: white;
+  background-color:rgb(242, 60, 60);
+  border: solid white 5px;
+  border-radius: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 10px;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.buttonMobile:hover,
+.buttonMobile:focus,
+.buttonMobile:active {
+  background-color: rgba(250,226,121,1);
+  border: solid black 5px;
+  color: #000;
+  outline: none;
+}
 
 
 .buttonSales{
@@ -259,6 +281,30 @@ body{
   outline: none;
 }
 
+.buttonSalesMobile{
+  color: white;
+  font-size: 50px;
+  background-color:black;
+  border: solid white 3px;
+  border-radius: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.buttonSalesMobile:hover,
+.buttonSalesMobile:focus,
+.buttonSalesMobile:active {
+  background-color: rgba(250,226,121,1);
+  border: solid black 3px;
+  color: #000;
+  outline: none;
+}
 
 
 #count{
@@ -283,6 +329,30 @@ body{
   background: linear-gradient(0deg, rgba(237,70,207,1) 0%, rgba(250,226,121,1) 5%);
 }
 
+#aboutDiv{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* max-width: 80%;
+  min-width: fit-content; */
+  height: 400px;
+  background-color: rgba(70, 173, 237, 1);
+  /* background-position:center;
+  background-size: cover;
+  background-image: url(../public/LAUNCHATNK.png); */
+  border-radius: 30px;
+  margin-bottom: 50px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
 
 #roadmap{
   margin-top: 0px;
@@ -375,11 +445,23 @@ body{
   min-width: fit-content; */
   height: 400px;
   background-color: rgba(70, 173, 237, 1);
+  /* background-position:center;
+  background-size: cover;
+  background-image: url(../public/LAUNCHATNK.png); */
   border-radius: 30px;
   margin-bottom: 50px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
+}
+
+#produitDiv:hover,
+#produitDiv:focus,
+#produitDiv:active {
+  border: solid black 3px;
+  color: #000;
+  outline: none;
+  cursor: pointer;
 }
 
 .description{
@@ -395,6 +477,31 @@ body{
 .nameProduct{
   color: #000;
 }
+
+.modalDesc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+/* .modal-content {
+  max-width: none !important;
+}
+
+.modal-container{
+  max-width: none !important;
+  width: 90% !important;
+}
+
+.custom-modal-style {
+  width: 200px;
+  height: 802px;
+  } */
+
+
 #aboutMobile{
   display: flex;
   flex-direction: column;
@@ -545,6 +652,12 @@ border-radius: 50%;
   width: 200px;
   margin-left: 0px;
   margin-right: 0Px;
+}
+.animalPicMobile{
+  width: 200px;
+  margin-left: 0px;
+  margin-right: 0Px;
+  margin-top: 50px;
 }
 
 .name{
