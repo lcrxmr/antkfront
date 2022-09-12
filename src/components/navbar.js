@@ -11,7 +11,7 @@ export default function frNav() {
     <Navbar
       bg="transparent"
       expand="lg"
-      style={{ height: "200px" }}
+      style={{ height: "300px", margin: "0px" }}
       classe="col-sm-12"
       className="navbar"
     >

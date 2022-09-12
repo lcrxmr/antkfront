@@ -37,15 +37,33 @@ export default function French(props) {
 
   return (
     <div className="App">
-      <div className="container" id="navcontainer">
-        <div id="langButton">
+      <div id="langButton">
+      <MediaQuery minWidth={1000}>
           <Link to="/">
             <button className="lang">FR</button>
           </Link>
           <Link to="/eng">
             <button className="lang">EN</button>
           </Link>
+        </MediaQuery>
+        <MediaQuery minWidth={0} maxWidth={1000}>
+          <Link to="/">
+            <button className="langMobile">FR</button>
+          </Link>
+          <Link to="/eng">
+            <button className="langMobile">EN</button>
+          </Link>
+        </MediaQuery>
         </div>
+      <div className="container" id="navcontainer">
+        {/* <div id="langButton">
+          <Link to="/">
+            <button className="lang">FR</button>
+          </Link>
+          <Link to="/eng">
+            <button className="lang">EN</button>
+          </Link>
+        </div> */}
         <Nav />
         {/* <div className="container" id="langButton">
       <button onClick={fr} className="lang">FR</button>
@@ -77,8 +95,10 @@ export default function French(props) {
       </div>
       {/* // ---- compte a rebours  */}
       <div className="container" id="count">
-        <h3 style={{ color: "red" }}>23 Septembre 2022</h3>
+        <h2 style={{ color: "red", fontSize:"40px" }}>23 Septembre 2022</h2>
         <h1 className="vente">VENTE PRIVÉE </h1>
+        <Timer />
+        <br/>
         <MediaQuery minWidth={1000}>
           <div>
             <button className="button">BUY</button>
@@ -90,8 +110,8 @@ export default function French(props) {
             <button className="buttonMobile">BUY</button>
           </div>
         </MediaQuery>
-        <br/>
-        <Timer />
+        
+        
         {/* <ReactCardSlider slides={slides}/> */}
       </div>
 

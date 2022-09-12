@@ -20,13 +20,23 @@ export default function English() {
   return (
     <div className="App">
       <div id="langButton">
-        <Link to="/">
-          <button className="lang">FR</button>
-        </Link>
-        <Link to="/eng">
-          <button className="lang">EN</button>
-        </Link>
-      </div>
+      <MediaQuery minWidth={1000}>
+          <Link to="/">
+            <button className="lang">FR</button>
+          </Link>
+          <Link to="/eng">
+            <button className="lang">EN</button>
+          </Link>
+        </MediaQuery>
+        <MediaQuery minWidth={0} maxWidth={1000}>
+          <Link to="/">
+            <button className="langMobile">FR</button>
+          </Link>
+          <Link to="/eng">
+            <button className="langMobile">EN</button>
+          </Link>
+        </MediaQuery>
+        </div>
 
       <div className="container" id="navcontainer">
         <Nav />
@@ -70,8 +80,10 @@ export default function English() {
 
       {/* // ---- compte a rebours  */}
       <div className="container" id="count">
-        <h3 style={{ color: "red" }}>September 23rd 2022</h3>
+        <h2 style={{ color: "red", fontSize:"40px" }}>September 23rd 2022</h2>
         <h1>PRIVATE SALE</h1>
+        <Timer />
+        <br/>
         <MediaQuery minWidth={1000}>
           <div>
             <button className="button">BUY</button>
@@ -83,8 +95,8 @@ export default function English() {
             <button className="buttonMobile">BUY</button>
           </div>
         </MediaQuery>
-        <br/>
-        <Timer />
+        
+        
         {/* <ReactCardSlider slides={slides}/> */}
       </div>
 

@@ -71,6 +71,9 @@ body{
 }
 
 .langContainer{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
   width: 100vw;
   position: relative;
 }
@@ -84,6 +87,7 @@ body{
   position:absolute;
   top:0;
   right:0;
+  z-index: 9;
  
 }
 
@@ -109,15 +113,45 @@ body{
   outline: none;
 }
 
+
+.langMobile{
+  color: #000;
+  font-size: 40px;
+  background-color: white;
+  border: black solid 2px;
+  border-radius: 40px;
+  margin-top: 5px;
+  margin-right: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: 'Fjalla One', sans-serif;
+  
+}
+.langMobile:hover,
+.langMobile:focus,
+.langMobile:active {
+  background-color:rgb(242, 60, 60);
+  border-color: black;
+  outline: none;
+}
+
+
 #navcontainer{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 0px;
   padding-top: 0px;
-  margin-right: 150px;
+  margin-right: 0px;
   margin-bottom: 0px;
+  margin-left: 0px;
   font-family: 'Fjalla One', sans-serif;
   width: 100vw !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
 }
 
 #banner{
@@ -313,12 +347,14 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 50px;
 }
 
 #about{
   margin-top: 0px;
-  padding-bottom: 50px;
-  padding-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
   width: 100vw;
   min-width: fit-content;
   height: fit-content;
@@ -419,7 +455,7 @@ body{
   margin-top: 0px;
   margin-bottom: 0px;
   padding-bottom: 50px;
-  padding-top: 10px;
+  padding-top: 20px;
   height: fit-content;
   display: flex;
   max-width: 100vw;
