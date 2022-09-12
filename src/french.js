@@ -510,7 +510,7 @@ export default function French(props) {
             </div>
             <div className="profileCard">
               <a href="/" target="_blank">
-                <img className="profilePic" src={"./LOGO.jpg"} />
+                <img className="profilePic" src={"./LOGO.png"} />
               </a>
               <p className="name">Jean-Baptiste</p>
               <p className="legend">Développeur Blockchain</p>

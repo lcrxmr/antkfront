@@ -351,7 +351,7 @@ export default function English() {
             </div>
             <div className="profileCard">
               <a href="/" target="_blank">
-                <img className="profilePic" src={"./logo.png"} />
+                <img className="profilePic" src={"./LOGO.png"} />
               </a>
               <p className="name">Jean-Baptiste</p>
               <p className="legend">Blockchain Developer</p>
