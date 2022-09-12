@@ -9,6 +9,7 @@ import Iframe from "react-iframe";
 import ReactCardSlider from "react-card-slider-component";
 import { Routes, Route, Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
+import MediaQuery from 'react-responsive'
 
 import Fadetitle from "./components/Fade";
 import Footer from "./components/Footer";
@@ -75,7 +76,9 @@ export default function French() {
 
       {/* // ----- About  */}
 
+      
       <div id="about">
+      <MediaQuery minWidth={1000}>
         <h1>L'APPLICATION ANIMAL NATION</h1>
         <Fade duration={1000}>
           <div className="container" id="produitDiv">
@@ -94,10 +97,33 @@ export default function French() {
             </div>
           </div>
         </Fade>
+        </MediaQuery>
+
+        <MediaQuery minWidth={0} maxWidth={1000}>
+        <h1>L'APPLICATION ANIMAL NATION</h1>
+        <Fade duration={1000}>
+          <div className="container" id="produitDivMobile">
+            <div className="container" id="productMobile">
+              <img className="animalPicMobile" src={"./LOGO.png"} />
+
+              <p className="nameProductMobile">Animal Nation Token</p>
+            </div>
+            <div>
+              <p className="descriptionMobile">
+                Animal Nation est une application blockchain avec un module de
+                reconnaissance animale qui va permettre d'accéder à un ensemble
+                de fonctions et de jeux centrés sur la protection et la
+                découverte des animaux.
+              </p>
+            </div>
+          </div>
+        </Fade>
+        </MediaQuery>
       </div>
 
       {/* // ------ produit */}
       <div id="produit">
+      <MediaQuery minWidth={1000}>
         <h1>PRODUITS</h1>
         <Fade duration={3000}>
           <div className="container" id="produitDiv">
@@ -137,7 +163,7 @@ export default function French() {
               <p className="description">
                 Recevez des photos de votre animal lorsque vous partez en
                 vacances sans lui et faites gagner des tokens à la personne qui
-                s'occupe de votre animal
+                s'occupe de votre animal.
               </p>
             </div>
           </div>
@@ -157,6 +183,69 @@ export default function French() {
             </div>
           </div>
         </Fade>
+        </MediaQuery>
+
+
+        <MediaQuery minWidth={0} maxWidth={1000}>
+        <h1>PRODUITS</h1>
+        <Fade duration={3000}>
+          <div className="container" id="produitDivMobile">
+            <div className="container" id="productMobile">
+              <p className="nameProductMobile">Love to earn</p>
+
+              <img className="animalPicMobile" src={"./chat.png"} />
+            </div>
+            <div>
+              <p className="descriptionMobile">
+                Recevez des récompenses en token ANTK lorsque vous passez du
+                temps avec votre animal.
+              </p>
+            </div>
+          </div>
+
+          <div className="container" id="produitDivMobile">
+          <div className="container" id="product">
+          <p className="nameProductMobile">Find to earn</p>
+              <img className="animalPicMobile" src={"./chien.png"} />
+            </div>
+            <div>
+              <p className="descriptionMobile">
+                Recevez des récompenses en token ANTK lorsque vous aidez à
+                retrouver un animal perdu.
+              </p>
+            </div>
+          </div>
+
+          <div className="container" id="produitDivMobile">
+            <div className="container" id="product">
+              <p className="nameProductMobile">Keep to earn</p>
+              <img className="animalPicMobile" src={"./oiseau.png"} />
+            </div>
+            <div>
+              <p className="descriptionMobile">
+                Recevez des photos de votre animal lorsque vous partez en
+                vacances sans lui et faites gagner des tokens à la personne qui
+                s'occupe de votre animal.
+              </p>
+            </div>
+          </div>
+
+          <div className="container" id="produitDivMobile">
+            <div className="container" id="product">
+            <p className="nameProductMobile">Play to earn</p>
+              <img className="animalPicMobile" src={"./tigre.png"} />
+            </div>
+            <div>
+              <p className="descriptionMobile">
+                Un univers de jeux qui vont utiliser la reconnaissance faciale
+                animale pour découvrir le monde des animaux et vous faire gagner
+                des tokens.
+              </p>
+            </div>
+          </div>
+        </Fade>
+        </MediaQuery>
+
       </div>
 
       {/* // ----- Roadmap */}
@@ -167,6 +256,7 @@ export default function French() {
             <img src={"./roadmap-fr.png"} id="roadmapPic" />
           </div>
         </Fade>
+        
       </div>
 
       {/* // ------ Tokenomis  */}

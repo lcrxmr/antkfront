@@ -9,6 +9,7 @@ import Iframe from "react-iframe";
 import ReactCardSlider from "react-card-slider-component";
 import { Routes, Route, Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
+import MediaQuery from 'react-responsive'
 
 import Fadetitle from "./components/enFade";
 import Footer from "./components/enFooter";
@@ -88,11 +89,12 @@ export default function English() {
       </div>
 
       <div id="about">
+      <MediaQuery minWidth={1000}>
         <h1>THE ANIMAL NATION APP</h1>
         <Fade duration={3000}>
           <div className="container" id="produitDiv">
             <div className="container" id="product">
-              <img className="animalPic" src={"./logo.png"} />
+              <img className="animalPic" src={"./LOGO.png"} />
 
               <p className="name">Animal Nation Token</p>
             </div>
@@ -105,20 +107,43 @@ export default function English() {
             </div>
           </div>
         </Fade>
+        </MediaQuery>
+        <MediaQuery minWidth={0} maxWidth={1000}>
+        <h1>THE ANIMAL NATION APP</h1>
+        <Fade duration={1000}>
+          <div className="container" id="produitDivMobile">
+            <div className="container" id="productMobile">
+              <img className="animalPicMobile" src={"./LOGO.png"} />
+
+              <p className="nameProductMobile">Animal Nation Token</p>
+            </div>
+            <div>
+              <p className="descriptionMobile">
+              Animal Nation is a blockchain application with an animal
+                recognition module that will allow access to a set of functions
+                and games focused on the protection and discovery of animals.
+              </p>
+            </div>
+          </div>
+        </Fade>
+        </MediaQuery>
+
       </div>
 
       {/* // ------ produit */}
       <div id="produit">
+      <MediaQuery minWidth={1000}>
         <h1>PRODUCTS</h1>
         <Fade duration={3000}>
           <div className="container" id="produitDiv">
-            <div className="container" id="product">
+            <div className="container">
               <p className="prodname">Love to earn</p>
+
               <img className="animalPic" src={"./chat.png"} />
             </div>
             <div>
               <p className="description">
-                Receive ANTK token rewards when you spend time with your pet.
+              Receive ANTK token rewards when you spend time with your pet.
               </p>
             </div>
           </div>
@@ -126,7 +151,7 @@ export default function English() {
           <div className="container" id="produitDiv">
             <div>
               <p className="description">
-                Receive ANTK token rewards when you help find a lost animal.
+              Receive ANTK token rewards when you help find a lost animal.
               </p>
             </div>
             <div className="container" id="product">
@@ -143,7 +168,7 @@ export default function English() {
             </div>
             <div>
               <p className="description">
-                Get photos of your pet when you go on vacation without it and
+              Get photos of your pet when you go on vacation without it and
                 earn tokens for the person who looks after your pet.
               </p>
             </div>
@@ -152,7 +177,7 @@ export default function English() {
           <div className="container" id="produitDiv">
             <div>
               <p className="description">
-                A universe of games that will use animal facial recognition to
+              A universe of games that will use animal facial recognition to
                 discover the world of animals and make you win tokens.
               </p>
             </div>
@@ -163,6 +188,65 @@ export default function English() {
             </div>
           </div>
         </Fade>
+        </MediaQuery>
+
+
+        <MediaQuery minWidth={0} maxWidth={1000}>
+        <h1>PRODUITS</h1>
+        <Fade duration={3000}>
+          <div className="container" id="produitDivMobile">
+            <div className="container" id="productMobile">
+              <p className="nameProductMobile">Love to earn</p>
+
+              <img className="animalPicMobile" src={"./chat.png"} />
+            </div>
+            <div>
+              <p className="descriptionMobile">
+              Receive ANTK token rewards when you spend time with your pet.
+              </p>
+            </div>
+          </div>
+
+          <div className="container" id="produitDivMobile">
+          <div className="container" id="product">
+          <p className="nameProductMobile">Find to earn</p>
+              <img className="animalPicMobile" src={"./chien.png"} />
+            </div>
+            <div>
+              <p className="descriptionMobile">
+              Receive ANTK token rewards when you help find a lost animal.
+              </p>
+            </div>
+          </div>
+
+          <div className="container" id="produitDivMobile">
+            <div className="container" id="product">
+              <p className="nameProductMobile">Keep to earn</p>
+              <img className="animalPicMobile" src={"./oiseau.png"} />
+            </div>
+            <div>
+              <p className="descriptionMobile">
+              Get photos of your pet when you go on vacation without it and
+                earn tokens for the person who looks after your pet.
+              </p>
+            </div>
+          </div>
+
+          <div className="container" id="produitDivMobile">
+            <div className="container" id="product">
+            <p className="nameProductMobile">Play to earn</p>
+              <img className="animalPicMobile" src={"./tigre.png"} />
+            </div>
+            <div>
+              <p className="descriptionMobile">
+              A universe of games that will use animal facial recognition to
+                discover the world of animals and make you win tokens.
+              </p>
+            </div>
+          </div>
+        </Fade>
+        </MediaQuery>
+
       </div>
 
       {/* // ----- Roadmap */}
