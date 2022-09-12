@@ -77,7 +77,7 @@ export default function French(props) {
       </div>
       {/* // ---- compte a rebours  */}
       <div className="container" id="count">
-        <h3 style={{ color: "red" }}>24 Septembre 2022</h3>
+        <h3 style={{ color: "red" }}>23 Septembre 2022</h3>
         <h1 className="vente">VENTE PRIVÉE </h1>
         <MediaQuery minWidth={1000}>
           <div>

@@ -70,7 +70,7 @@ export default function English() {
 
       {/* // ---- compte a rebours  */}
       <div className="container" id="count">
-        <h3 style={{ color: "red" }}>September 24th 2022</h3>
+        <h3 style={{ color: "red" }}>September 23rd 2022</h3>
         <h1>PRIVATE SALE</h1>
         <MediaQuery minWidth={1000}>
           <div>
@@ -107,7 +107,7 @@ export default function English() {
               <MediaQuery minWidth={1000}>
                   <div>
                     <a
-                      href="/white-fr.pdf"
+                      href="/white-eng.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -138,7 +138,7 @@ export default function English() {
             <MediaQuery minWidth={0} maxWidth={1000}>
                   <div>
                     <a
-                      href="/white-fr.pdf"
+                      href="/white-eng.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
