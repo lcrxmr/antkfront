@@ -697,9 +697,9 @@ export default function French(props) {
               <p className="legend">Développeur</p>
             </div>
             <div className="profileCard">
-              <a href="/" target="_blank">
+              
                 <img className="profilePic" src={"./LOGO.png"} />
-              </a>
+              
               <p className="name">Jean-Baptiste</p>
               <p className="legend">Développeur Blockchain</p>
             </div>
@@ -714,9 +714,9 @@ export default function French(props) {
               <p className="legend">Co-Fondateur</p>
             </div>
             <div className="profileCard">
-              <a href="/" >
+              
                 <img className="profilePic" src={"./LOGO.png"} />
-              </a>
+              
               <p className="name">Marina</p>
               <p className="legend">Développeuse / Co-Fondatrice</p>
             </div>

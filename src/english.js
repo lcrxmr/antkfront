@@ -681,9 +681,9 @@ export default function English(props) {
               <p className="legend">Developer</p>
             </div>
             <div className="profileCard">
-              <a href="/" target="_blank">
+              
                 <img className="profilePic" src={"./LOGO.png"} />
-              </a>
+              
               <p className="name">Jean-Baptiste</p>
               <p className="legend">Blockchain Developer</p>
             </div>
@@ -698,9 +698,9 @@ export default function English(props) {
               <p className="legend">Co-Founder</p>
             </div>
             <div className="profileCard">
-              <a href="/" >
+             
                 <img className="profilePic" src={"./LOGO.png"} />
-              </a>
+              
               <p className="name">Marina</p>
               <p className="legend">Developer / Co-Founder</p>
             </div>
