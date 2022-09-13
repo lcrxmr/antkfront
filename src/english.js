@@ -9,18 +9,51 @@ import Iframe from "react-iframe";
 import ReactCardSlider from "react-card-slider-component";
 import { Routes, Route, Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
-import MediaQuery from 'react-responsive'
+import MediaQuery from "react-responsive";
+import Modal from "react-bootstrap/Modal";
 
 import Fadetitle from "./components/enFade";
 import Footer from "./components/enFooter";
 
 import "./styles.css";
 
-export default function English() {
+export default function English(props) {
+  const [showCat, setShowCat] = useState(false);
+  const handleCloseCat = () => setShowCat(false);
+  const handleShowCat = () => setShowCat(true);
+
+  const [showDog, setShowDog] = useState(false);
+  const handleCloseDog = () => setShowDog(false);
+  const handleShowDog = () => setShowDog(true);
+
+  const [showBird, setShowBird] = useState(false);
+  const handleCloseBird = () => setShowBird(false);
+  const handleShowBird = () => setShowBird(true);
+
+  const [showTigre, setShowTigre] = useState(false);
+  const handleCloseTigre = () => setShowTigre(false);
+  const handleShowTigre = () => setShowTigre(true);
+
+  const [showCatMobile, setShowCatMobile] = useState(false);
+  const handleCloseCatMobile = () => setShowCatMobile(false);
+  const handleShowCatMobile = () => setShowCatMobile(true);
+
+  const [showDogMobile, setShowDogMobile] = useState(false);
+  const handleCloseDogMobile = () => setShowDogMobile(false);
+  const handleShowDogMobile = () => setShowDogMobile(true);
+
+  const [showBirdMobile, setShowBirdMobile] = useState(false);
+  const handleCloseBirdMobile = () => setShowBirdMobile(false);
+  const handleShowBirdMobile = () => setShowBirdMobile(true);
+
+  const [showTigreMobile, setShowTigreMobile] = useState(false);
+  const handleCloseTigreMobile = () => setShowTigreMobile(false);
+  const handleShowTigreMobile = () => setShowTigreMobile(true);
+
   return (
     <div className="App">
       <div id="langButton">
-      <MediaQuery minWidth={1000}>
+        <MediaQuery minWidth={1000}>
           <Link to="/">
             <button className="lang">FR</button>
           </Link>
@@ -36,7 +69,7 @@ export default function English() {
             <button className="langMobile">EN</button>
           </Link>
         </MediaQuery>
-        </div>
+      </div>
 
       <div className="container" id="navcontainer">
         <Nav />
@@ -67,23 +100,15 @@ export default function English() {
             />
           </div>
         </div>
-        {/* <div className="bannerbutton">
-          <a
-            href="https://drive.google.com/file/d/1SdY1avUtXeHnZzJj9KVjpyPcpB8_6r2G/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="button">WHITEPAPER</button>
-          </a>
-        </div> */}
       </div>
 
       {/* // ---- compte a rebours  */}
+      <div className="countDiv">
       <div className="container" id="count">
-        <h2 style={{ color: "red", fontSize:"40px" }}>September 23rd 2022</h2>
+        <h2 style={{ color: "red", fontSize: "40px" }}>September 23rd 2022</h2>
         <h1>PRIVATE SALE</h1>
         <Timer />
-        <br/>
+        <br />
         <MediaQuery minWidth={1000}>
           <div>
             <button className="button">BUY</button>
@@ -95,28 +120,30 @@ export default function English() {
             <button className="buttonMobile">BUY</button>
           </div>
         </MediaQuery>
-        
-        
+
         {/* <ReactCardSlider slides={slides}/> */}
       </div>
+      </div>
+
 
       <div id="about">
-      <MediaQuery minWidth={1000}>
-        <h1>THE ANIMAL NATION APP</h1>
-        <Fade duration={3000}>
-          <div className="container" id="aboutDiv">
-            <div className="container" id="product">
-              <img className="aboutPic" src={"./LOGO.png"} />
+        <MediaQuery minWidth={1000}>
+          <h1>THE ANIMAL NATION APP</h1>
+          <Fade duration={3000}>
+            <div className="container" id="aboutDiv">
+              <div className="container" id="product">
+                <img className="aboutPic" src={"./LOGO.png"} />
 
-              <p className="name">Animal Nation Token</p>
-            </div>
-            <div>
-              <p className="description">
-                Animal Nation is a blockchain application with an animal
-                recognition module that will allow access to a set of functions
-                and games focused on the protection and discovery of animals.
-              </p>
-              <MediaQuery minWidth={1000}>
+                <p className="name">Animal Nation Token</p>
+              </div>
+              <div>
+                <p className="description">
+                  Animal Nation is a blockchain application with an animal
+                  recognition module that will allow access to a set of
+                  functions and games focused on the protection and discovery of
+                  animals.
+                </p>
+                <MediaQuery minWidth={1000}>
                   <div>
                     <a
                       href="/white-eng.pdf"
@@ -127,169 +154,438 @@ export default function English() {
                     </a>
                   </div>
                 </MediaQuery>
+              </div>
             </div>
-          </div>
-        </Fade>
+          </Fade>
         </MediaQuery>
         <MediaQuery minWidth={0} maxWidth={1000}>
-        <h1>THE ANIMAL NATION APP</h1>
-        <Fade duration={1000}>
-          <div className="container" id="produitDivMobile">
-            <div className="container" id="productMobile">
-              <img className="aboutPicMobile" src={"./LOGO.png"} />
+          <h1>THE ANIMAL NATION APP</h1>
+          <Fade duration={1000}>
+            <div className="container" id="produitDivMobile">
+              <div className="container" id="productMobile">
+                <img className="aboutPicMobile" src={"./LOGO.png"} />
 
-              <p className="nameProductMobile">Animal Nation Token</p>
+                <p className="nameProductMobile">Animal Nation Token</p>
+              </div>
+              <div>
+                <p className="descriptionMobile">
+                  Animal Nation is a blockchain application with an animal
+                  recognition module that will allow access to a set of
+                  functions and games focused on the protection and discovery of
+                  animals.
+                </p>
+              </div>
+              <MediaQuery minWidth={0} maxWidth={1000}>
+                <div>
+                  <a
+                    href="/white-eng.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="buttonSalesMobile">WHITEPAPER</button>
+                  </a>
+                  <br />
+                </div>
+              </MediaQuery>
             </div>
-            <div>
-              <p className="descriptionMobile">
-              Animal Nation is a blockchain application with an animal
-                recognition module that will allow access to a set of functions
-                and games focused on the protection and discovery of animals.
-              </p>
-            </div>
-            <MediaQuery minWidth={0} maxWidth={1000}>
-                  <div>
-                    <a
-                      href="/white-eng.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className="buttonSalesMobile">WHITEPAPER</button>
-                    </a>
-                    <br />
-                  </div>
-                </MediaQuery>
-          </div>
-        </Fade>
+          </Fade>
         </MediaQuery>
-
       </div>
 
       {/* // ------ produit */}
       <div id="produit">
-      <MediaQuery minWidth={1000}>
-        <h1>PRODUCTS</h1>
-        <Fade duration={3000}>
-          <div className="container" id="produitDiv">
-            <div className="container">
-              <p className="prodname">Love to earn</p>
+        <MediaQuery minWidth={1000}>
+          <h1>PRODUITS</h1>
+          <Fade duration={3000}>
+            
+            <div className="container" id="produitDiv" onClick={handleShowCat}>
+              <div className="container">
+                <p className="prodname">Love to earn</p>
 
-              <img className="animalPic" src={"./chat.png"} />
+                <img className="animalPic" src={"./chat.png"} />
+              </div>
+              <div>
+                <p className="description">
+                  Receive ANTK token rewards when you spend time with your pet.
+                </p>
+                <br />
+                <button onClick={handleShowCat} className="prodInfo">
+                  Info
+                </button>
+              </div>
             </div>
-            <div>
-              <p className="description">
-              Receive ANTK token rewards when you spend time with your pet.
-              </p>
-            </div>
-          </div>
+            <Modal
+              show={showCat}
+              onHide={handleCloseCat}
+              {...props}
+              size="lg"
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+              contentClassName="custom-modal-style"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title className="nameProductMobile">
+                  Love To Earn
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body className="descriptionMobile">
+                <div className="modalDesc">
+                  The unique passport of your pet will be created thanks to the
+                  animal recognition of AnimalNationTK. Spend time with your pet
+                  and identify it regularly with the app to keep the energy
+                  level of the passport.
+                  <img
+                    className="animalPicMobile"
+                    src={"./passeportchatfr.png"}
+                  ></img>
+                  <br />
+                  Every week you will receive ANTK tokens as a reward for your
+                  great friendship with your pet.
+                </div>
+              </Modal.Body>
+            </Modal>
+            
 
-          <div className="container" id="produitDiv">
-            <div>
-              <p className="description">
-              Receive ANTK token rewards when you help find a lost animal.
-              </p>
-            </div>
-            <div className="container" id="product">
-              <img className="animalPic" src={"./chien.png"} />
+            <div className="container" id="produitDiv" onClick={handleShowDog}>
+              <div>
+                <p className="description">
+                  Receive ANTK token rewards when you help find a lost animal.
+                </p>
+                <br />
+                <button onClick={handleShowDog} className="prodInfo">
+                  Info
+                </button>
+              </div>
+              <div className="container" id="product">
+                <img className="animalPic" src={"./chien.png"} />
 
-              <p className="prodname">Find to earn</p>
+                <p className="prodname">Find to earn</p>
+              </div>
             </div>
-          </div>
 
-          <div className="container" id="produitDiv">
-            <div className="container" id="product">
-              <p className="prodname">Keep to earn</p>
-              <img className="animalPic" src={"./oiseau.png"} />
+            <Modal
+              show={showDog}
+              onHide={handleCloseDog}
+              size="lg"
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+            >
+              <Modal.Header closeButton>
+                <Modal.Title className="nameProductMobile">
+                  Find To Earn
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body className="descriptionMobile">
+                <div className="modalDesc">
+                  This feature alerts app users that an animal has been lost in
+                  the geographic area where they are located. A person who
+                  encounters a lost animal will be able to perform an
+                  identification with animal facial recognition and warn the
+                  owner of the presence of his animal.
+                  <br />
+                  <img className="animalPicMobile" src={"./find.png"}></img>
+                  <br />
+                  After validation, an ANTK reward will be sent directly to the
+                  person who found your animal.
+                </div>
+              </Modal.Body>
+            </Modal>
+            <div className="container" id="produitDiv" onClick={handleShowBird}>
+              <div className="container" id="product">
+                <p className="prodname">Keep to earn</p>
+                <img className="animalPic" src={"./oiseau.png"} />
+              </div>
+              <div>
+                <p className="description">
+                  Get photos of your pet when you go on vacation without it and
+                  earn tokens for the person who looks after your pet.
+                </p>
+                <br />
+                <button onClick={handleShowBird} className="prodInfo">
+                  Info
+                </button>
+              </div>
             </div>
-            <div>
-              <p className="description">
-              Get photos of your pet when you go on vacation without it and
-                earn tokens for the person who looks after your pet.
-              </p>
-            </div>
-          </div>
+            <Modal
+              show={showBird}
+              onHide={handleCloseBird}
+              {...props}
+              size="lg"
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+            >
+              <Modal.Header closeButton>
+                <Modal.Title className="nameProductMobile">
+                  Keep To Earn
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body className="descriptionMobile">
+                <div className="modalDesc">
+                  The concept of Keep to earn rewards with ANTK tokens, a person
+                  who keeps your animal while you are away and regularly sends
+                  photographs using AnimalNationTK
+                  <img className="animalPicMobile" src={"./accueil.png"}></img>
+                  <br />
+                </div>
+              </Modal.Body>
+            </Modal>
 
-          <div className="container" id="produitDiv">
-            <div>
-              <p className="description">
-              A universe of games that will use animal facial recognition to
-                discover the world of animals and make you win tokens.
-              </p>
-            </div>
-            <div className="container" id="product">
-              <img className="animalPic" src={"./tigre.png"} />
+            <div
+              className="container"
+              id="produitDiv"
+              onClick={handleShowTigre}
+            >
+              <div>
+                <p className="description">
+                  A universe of games that will use animal facial recognition to
+                  discover the world of animals and make you win tokens.
+                </p>
+                <br />
+                <button onClick={handleShowTigre} className="prodInfo">
+                  Info
+                </button>
+              </div>
+              <div className="container" id="product">
+                <img className="animalPic" src={"./tigre.png"} />
 
-              <p className="prodname">Play to earn</p>
+                <p className="prodname">Play to earn</p>
+              </div>
             </div>
-          </div>
-        </Fade>
+            <Modal
+              show={showTigre}
+              onHide={handleCloseTigre}
+              {...props}
+              size="lg"
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+            >
+              <Modal.Header closeButton>
+                <Modal.Title className="nameProductMobile">
+                  Play To Earn
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body className="descriptionMobile">
+                <div className="modalDesc">
+                  The games and tournaments will give you photographs of how to
+                  combine the real with animal recognition and actually
+                  increased animals.
+                  <br />
+                  <img className="animalPicMobile" src={"./play.jpg"}></img>
+                  <br />
+                </div>
+              </Modal.Body>
+            </Modal>
+          </Fade>
         </MediaQuery>
-
 
         <MediaQuery minWidth={0} maxWidth={1000}>
-        <h1>PRODUITS</h1>
-        <Fade duration={3000}>
-          <div className="container" id="produitDivMobile">
-            <div className="container" id="productMobile">
-              <p className="nameProductMobile">Love to earn</p>
+          <h1>PRODUITS</h1>
+          <Fade duration={3000}>
+            <div className="container" id="produitDivMobile">
+              <div className="container" id="productMobile">
+                <p className="nameProductMobile">Love to earn</p>
 
-              <img className="animalPicMobile" src={"./chat.png"} />
+                <img className="animalPicMobile" src={"./chat.png"} />
+              </div>
+              <div>
+                <p className="descriptionMobile">
+                  Recevez des récompenses en token ANTK lorsque vous passez du
+                  temps avec votre animal.
+                </p>
+                <br />
+                <button
+                  onClick={handleShowCatMobile}
+                  className="prodInfoMobile"
+                >
+                  Info
+                </button>
+              </div>
             </div>
-            <div>
-              <p className="descriptionMobile">
-              Receive ANTK token rewards when you spend time with your pet.
-              </p>
-            </div>
-          </div>
+            <Modal
+              show={showCatMobile}
+              onHide={handleCloseCatMobile}
+              size="lg"
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+              contentClassName="modalMobile"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title className="nameProductMobile">
+                  Love To Earn
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body className="descriptionMobile">
+                <div className="modalDesc">
+                  The unique passport of your pet will be created thanks to the
+                  animal recognition of AnimalNationTK. Spend time with your pet
+                  and identify it regularly with the app to keep the energy
+                  level of the passport.
+                  <img
+                    className="animalPicMobile"
+                    src={"./passeportchatfr.png"}
+                  ></img>
+                  <br />
+                  Every week you will receive ANTK tokens as a reward for your
+                  great friendship with your pet.
+                </div>
+              </Modal.Body>
+            </Modal>
 
-          <div className="container" id="produitDivMobile">
-          <div className="container" id="product">
-          <p className="nameProductMobile">Find to earn</p>
-              <img className="animalPicMobile" src={"./chien.png"} />
+            <div className="container" id="produitDivMobile">
+              <div className="container" id="product">
+                <p className="nameProductMobile">Find to earn</p>
+                <img className="animalPicMobile" src={"./chien.png"} />
+              </div>
+              <div>
+                <p className="descriptionMobile">
+                  Recevez des récompenses en token ANTK lorsque vous aidez à
+                  retrouver un animal perdu.
+                </p>
+                <br />
+                <button
+                  onClick={handleShowDogMobile}
+                  className="prodInfoMobile"
+                >
+                  Info
+                </button>
+              </div>
             </div>
-            <div>
-              <p className="descriptionMobile">
-              Receive ANTK token rewards when you help find a lost animal.
-              </p>
-            </div>
-          </div>
+            <Modal
+              show={showDogMobile}
+              onHide={handleCloseDogMobile}
+              size="lg"
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+              contentClassName="modalMobile"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title className="nameProductMobile">
+                  Find To Earn
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body className="descriptionMobile">
+              <div className="modalDesc">
+                  This feature alerts app users that an animal has been lost in
+                  the geographic area where they are located. A person who
+                  encounters a lost animal will be able to perform an
+                  identification with animal facial recognition and warn the
+                  owner of the presence of his animal.
+                  <br />
+                  <img className="animalPicMobile" src={"./find.png"}></img>
+                  <br />
+                  After validation, an ANTK reward will be sent directly to the
+                  person who found your animal.
+                </div>
+              </Modal.Body>
+            </Modal>
 
-          <div className="container" id="produitDivMobile">
-            <div className="container" id="product">
-              <p className="nameProductMobile">Keep to earn</p>
-              <img className="animalPicMobile" src={"./oiseau.png"} />
+            <div
+              className="container"
+              id="produitDivMobile"
+              onClick={handleShowBirdMobile}
+            >
+              <div className="container" id="product">
+                <p className="nameProductMobile">Keep to earn</p>
+                <img className="animalPicMobile" src={"./oiseau.png"} />
+              </div>
+              <div>
+                <p className="descriptionMobile">
+                  Recevez des photos de votre animal lorsque vous partez en
+                  vacances sans lui et faites gagner des tokens à la personne
+                  qui s'occupe de votre animal.
+                </p>
+                <br />
+                <button
+                  onClick={handleShowBirdMobile}
+                  className="prodInfoMobile"
+                >
+                  Info
+                </button>
+              </div>
             </div>
-            <div>
-              <p className="descriptionMobile">
-              Get photos of your pet when you go on vacation without it and
-                earn tokens for the person who looks after your pet.
-              </p>
-            </div>
-          </div>
+            <Modal
+              show={showBirdMobile}
+              onHide={handleCloseBirdMobile}
+              size="lg"
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+              contentClassName="modalMobile"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title className="nameProductMobile">
+                  Keep To Earn
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body className="descriptionMobile">
+              <div className="modalDesc">
+                  The concept of Keep to earn rewards with ANTK tokens, a person
+                  who keeps your animal while you are away and regularly sends
+                  photographs using AnimalNationTK
+                  <img className="animalPicMobile" src={"./accueil.png"}></img>
+                  <br />
+                </div>
+              </Modal.Body>
+            </Modal>
 
-          <div className="container" id="produitDivMobile">
-            <div className="container" id="product">
-            <p className="nameProductMobile">Play to earn</p>
-              <img className="animalPicMobile" src={"./tigre.png"} />
+            <div
+              className="container"
+              id="produitDivMobile"
+              onClick={handleShowTigre}
+            >
+              <div className="container" id="product">
+                <p className="nameProductMobile">Play to earn</p>
+                <img className="animalPicMobile" src={"./tigre.png"} />
+              </div>
+              <div>
+                <p className="descriptionMobile">
+                  Un univers de jeux qui vont utiliser la reconnaissance faciale
+                  animale pour découvrir le monde des animaux et vous faire
+                  gagner des tokens.
+                </p>
+                <br />
+                <button
+                  onClick={handleShowTigreMobile}
+                  className="prodInfoMobile"
+                >
+                  Info
+                </button>
+              </div>
             </div>
-            <div>
-              <p className="descriptionMobile">
-              A universe of games that will use animal facial recognition to
-                discover the world of animals and make you win tokens.
-              </p>
-            </div>
-          </div>
-        </Fade>
+            <Modal
+              show={showTigreMobile}
+              onHide={handleCloseTigreMobile}
+              size="lg"
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+              contentClassName="modalMobile"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title className="nameProductMobile">
+                  Play To Earn
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body className="descriptionMobile">
+                <div className="modalDesc">
+                  The games and tournaments will give you photographs of how to
+                  combine the real with animal recognition and actually
+                  increased animals.
+                  <br />
+                  <img className="animalPicMobile" src={"./play.jpg"}></img>
+                  <br />
+                </div>
+              </Modal.Body>
+            </Modal>
+          </Fade>
         </MediaQuery>
-
       </div>
+
 
       {/* // ----- Roadmap */}
       <div id="roadmap">
         <h1 id="roadmaptitle">ROADMAP</h1>
         <Fade duration={3000}>
           <div className="container" id="roadmapDiv">
-            <img src={"./roadmap-ENG.png"} id="roadmapPic" />
+            <img src={"./roadmapeng.png"} id="roadmapPic" />
           </div>
         </Fade>
       </div>
@@ -300,7 +596,7 @@ export default function English() {
         <h1>TOKENOMICS</h1>
         <Fade duration={3000}>
           <div className="container" id="tokenomicsDiv">
-            <img src={"./tokenomicsdet.png"} id="diagrammePic" />
+            <img src={"./tokeneng.png"} id="diagrammePic" />
           </div>
         </Fade>
       </div>
@@ -377,6 +673,13 @@ export default function English() {
               </a>
               <p className="name">Gilles</p>
               <p className="legend">Co-Founder</p>
+            </div>
+            <div className="profileCard">
+              <a href="/" >
+                <img className="profilePic" src={"./LOGO.png"} />
+              </a>
+              <p className="name">Marina</p>
+              <p className="legend">Developer / Co-Founder</p>
             </div>
             {/* <div className="profileCard">
               <a

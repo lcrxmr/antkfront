@@ -16,7 +16,12 @@ body {
   bottom: 0;
   margin: 0;
   text-align: center;
-  background: linear-gradient(180deg, rgba(250,226,121,1) 35%, rgba(255,216,0,0.7637648809523809) 100%);
+  background: rgba(250,226,121,1);
+  /* background-position:center;
+  background-size: cover;
+  background-image: url(../public/banner.png); */
+  /* background: rgb(98,132,181);
+background: linear-gradient(90deg, rgba(98,132,181,1) 0%, rgba(104,137,162,1) 100%); */
 }
 
 .container {

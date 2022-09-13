@@ -1,4 +1,8 @@
 #logo{
-    border-radius: 50%;
     margin-right: 10px;
+}
+
+.shadow{
+    background: rgb(98,132,181);
+background: linear-gradient(90deg, rgba(98,132,181,1) 0%, rgba(104,137,162,1) 100%);
 }

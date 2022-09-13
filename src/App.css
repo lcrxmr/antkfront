@@ -160,6 +160,7 @@ body{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
+       
 }
 
 #banner{
@@ -170,6 +171,7 @@ body{
   background-image: url("../public/banner.png");
   margin-top: 0px;
   margin-bottom: 0px;
+
 }
 
 
@@ -349,21 +351,54 @@ body{
   outline: none;
 }
 
-
-#count{
-  margin-top: 50px;
-  margin-bottom: 50px;
+.countDiv{
+  width: 100vw !important;
+  min-width: fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-bottom: 50px;
+  align-items: center;
+  background: rgba(250,226,121,1);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+
 }
+#count{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  width: 100vw !important;
+  min-width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(250,226,121,1);
+}
+
+.date{
+  color: red; 
+  font-size: 40px;
+  /* padding-top: 5px;
+  padding-bottom: 5px;
+  background: white;
+  border-radius: 10px; */
+}
+
+/* .vente{
+  background: black;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+} */
 
 #about{
   margin-top: 0px;
   margin-bottom: 0px;
   padding-bottom: 50px;
-  padding-top: 0px;
+  padding-top: 20px;
   width: 100vw;
   min-width: fit-content;
   height: fit-content;
@@ -403,7 +438,7 @@ body{
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   padding-top: 10px;
   width: 100%;
   min-width: fit-content;
@@ -461,7 +496,10 @@ body{
 
 
 
-
+a:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+}
 
 #produit{
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -479,6 +517,7 @@ body{
   align-items: center;
   justify-content: center;
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(237,70,207,1) 5%);
+  text-decoration: none;
 }
 
 #produitDiv{
@@ -504,16 +543,17 @@ body{
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
+  text-decoration: none;
 }
 
-#produitDiv:hover,
+/* #produitDiv:hover,
 #produitDiv:focus,
 #produitDiv:active {
   border: solid black 3px;
   color: #000;
   outline: none;
   cursor: pointer;
-}
+} */
 
 .description{
   color: #000;
@@ -523,6 +563,7 @@ body{
   font-family: 'Fjalla One', sans-serif;
   font-size: 30px;
   font-weight: 400;
+  text-decoration: none;
 }
 
 .nameProduct{
@@ -602,9 +643,13 @@ body{
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .descriptionMobile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: #000;
   font-size: 40px;
   margin-left: 100px;
@@ -613,6 +658,7 @@ body{
   font-weight: 400;
   margin-bottom: 100px;
   margin-top: 0px;
+  text-decoration: none;
 }
 
 .nameProductMobile{
@@ -651,7 +697,6 @@ body{
   align-items: center;
   width: 100vw;
   min-width: fit-content;
-  height: 400px ;
   min-height:max max-content;
   
   border-radius: 30px;
@@ -787,4 +832,65 @@ border-radius: 50%;
 #email{
   color: #000;
   text-decoration: underline;
+}
+
+
+.modalMobile{
+  /* position: absolute;
+  top: 50%;
+  bottom: 50%; */
+  
+  right: 14%;
+  /* transform: translate(-50%, -50%);  */
+  vertical-align: middle;
+  width: 100vw !important;
+}
+
+
+.prodInfo{
+  color: white;
+  font-size: 18px;
+  background-color:black;
+  border: solid white 3px;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.prodInfo:hover,
+.profInfo:focus,
+.prodInfo:active {
+  background-color: rgba(250,226,121,1);
+  border: solid black 3px;
+  color: #000;
+  outline: none;
+}
+
+.prodInfoMobile{
+  color: white;
+  font-size: 25px;
+  background-color:black;
+  border: solid white 3px;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.prodInfoMobile:hover,
+.prodInfoMobile:focus,
+.prodInfoMobile:active {
+  background-color: rgba(250,226,121,1);
+  border: solid black 3px;
+  color: #000;
+  outline: none;
 }

@@ -19,13 +19,14 @@ export default function frNav() {
         <Navbar.Brand href="#home" id="navbarbrand">
           <img
             alt=""
-            src={"./LOGO.png"}
+            src={"./antklogo.png"}
             width={120}
             height={120}
             className="d-inline-block align-top"
             id="navlogo"
-          />{" "}
-          ANTK
+          />
+          {/* {" "}
+          ANTK */}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" id="togButton"/>
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
