@@ -586,6 +586,29 @@ export default function English(props) {
         <Fade duration={3000}>
           <div className="container" id="roadmapDiv">
             <img src={"./roadmapeng.png"} id="roadmapPic" />
+            <MediaQuery minWidth={1000}>
+                  <div>
+                    <a
+                      href="/roadmap-eng.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="buttonSales">ROADMAP</button>
+                    </a>
+                  </div>
+                </MediaQuery>
+                <MediaQuery minWidth={0} maxWidth={1000}>
+                <div>
+                  <a
+                    href="/roadmap-eng.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="buttonSalesMobile">ROADMAP</button>
+                  </a>
+                  <br />
+                </div>
+              </MediaQuery>
           </div>
         </Fade>
       </div>

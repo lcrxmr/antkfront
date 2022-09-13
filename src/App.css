@@ -459,8 +459,8 @@ body{
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
-  flex-direction: row;
-  justify-content:flex-start;
+  flex-direction: column;
+  justify-content:center;
   align-items: center;
   width: 80vw;
   min-width: fit-content;
@@ -475,6 +475,7 @@ body{
   width: 100% ;
   border-radius: 40px;
   border: solid 2px black;
+  margin-bottom: 50px;
 }
 
 #roadmaptitle{

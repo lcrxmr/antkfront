@@ -603,6 +603,29 @@ export default function French(props) {
         <Fade duration={3000}>
           <div className="container" id="roadmapDiv">
             <img src={"./roadmapfr.png"} id="roadmapPic" />
+            <MediaQuery minWidth={1000}>
+                  <div>
+                    <a
+                      href="/roadmap-fr.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="buttonSales">ROADMAP</button>
+                    </a>
+                  </div>
+                </MediaQuery>
+                <MediaQuery minWidth={0} maxWidth={1000}>
+                <div>
+                  <a
+                    href="/roadmap-fr.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="buttonSalesMobile">ROADMAP</button>
+                  </a>
+                  <br />
+                </div>
+              </MediaQuery>
           </div>
         </Fade>
       </div>
