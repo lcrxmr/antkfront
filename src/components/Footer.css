@@ -3,6 +3,7 @@
 }
 
 .shadow{
-    background: rgb(98,132,181);
-background: linear-gradient(90deg, rgba(98,132,181,1) 0%, rgba(104,137,162,1) 100%);
+    background:  rgba(250,226,121,1);
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
 }

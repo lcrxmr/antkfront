@@ -27,10 +27,17 @@ export default function Footer () {
           </CDBBox>
           <CDBBox>
             <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+              Contact
+            </p>
+            <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
+            <CDBFooterLink onClick={() => window.location = 'mailto:info@antk.io'} id="email">Email</CDBFooterLink>
+            </CDBBox>
+          </CDBBox>
+          <CDBBox>
+            <p className="h5 mb-4" style={{ fontWeight: '600' }}>
               Aide
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-              <CDBFooterLink onClick={() => window.location = 'mailto:contact@antk.io'} id="email">Contact</CDBFooterLink>
               <CDBFooterLink href="/cdgfr.pdf" target="_blank">Conditions Générales</CDBFooterLink>
               <CDBFooterLink href="#">FAQ</CDBFooterLink>
             </CDBBox>

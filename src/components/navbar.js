@@ -8,6 +8,7 @@ export default function frNav() {
 
   
   return (
+    
     <Navbar
       bg="transparent"
       expand="lg"
@@ -19,7 +20,7 @@ export default function frNav() {
         <Navbar.Brand href="#home" id="navbarbrand">
           <img
             alt=""
-            src={"./antklogo.png"}
+            src={"./antk_police.png"}
             width={120}
             height={120}
             className="d-inline-block align-top"

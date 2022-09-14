@@ -12,9 +12,11 @@ import { SocialIcon } from "react-social-icons";
 import MediaQuery from "react-responsive";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import { Slide } from "react-awesome-reveal";
 
 import Fadetitle from "./components/Fade";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar/Navbar";
 
 import "./styles.css";
 
@@ -53,91 +55,85 @@ export default function French(props) {
 
   return (
     <div className="App">
-      <div id="langButton">
-        <MediaQuery minWidth={1000}>
-          <Link to="/">
-            <button className="lang">FR</button>
-          </Link>
-          <Link to="/eng">
-            <button className="lang">EN</button>
-          </Link>
-        </MediaQuery>
-        <MediaQuery minWidth={0} maxWidth={1000}>
-          <Link to="/">
-            <button className="langMobile">FR</button>
-          </Link>
-          <Link to="/eng">
-            <button className="langMobile">EN</button>
-          </Link>
-        </MediaQuery>
-      </div>
-      <div className="container" id="navcontainer">
-        {/* <div id="langButton">
-          <Link to="/">
-            <button className="lang">FR</button>
-          </Link>
-          <Link to="/eng">
-            <button className="lang">EN</button>
-          </Link>
-        </div> */}
-        <Nav />
-        {/* <div className="container" id="langButton">
-      <button onClick={fr} className="lang">FR</button>
-      <button onClick={eng} className="lang">ENG</button>
-      </div> */}
-      </div>
-      {/* // ------ banner */}
-      <div id="banner">
-        <div className="accroche">
-          <Fadetitle />
-          <div id="socials">
-            <SocialIcon
-              url="https://twitter.com/animalnationtk"
-              className="socialicon"
-              target="_blank"
-            />
-            <SocialIcon
-              url="https://linktr.ee/animalnationtk"
-              className="socialicon"
-              target="_blank"
-            />
-            <SocialIcon
-              url="https://t.me/ANTKofficialchannel"
-              className="socialicon2"
-              target="_blank"
-            />
+      <div className="headerNew">
+        <div id="langButton"> 
+          <MediaQuery minWidth={1000}>
+            <Link to="/">
+              <button className="lang">FR</button>
+            </Link>
+            <Link to="/eng">
+              <button className="lang">EN</button>
+            </Link>
+          </MediaQuery>
+          <MediaQuery minWidth={0} maxWidth={1000}>
+            <Link to="/">
+              <button className="langMobile">FR</button>
+            </Link>
+            <Link to="/eng">
+              <button className="langMobile">EN</button>
+            </Link>
+          </MediaQuery>
+        </div>
+        <div id="navcontainer">
+          <Nav />
+          {/* <Navbar/> */}
+        </div>
+        {/* // ------ banner */}
+        <div id="banner">
+          <div className="accroche">
+            <Fadetitle />
+            <div id="socials">
+              <SocialIcon
+                url="https://twitter.com/animalnationtk"
+                className="socialicon"
+                target="_blank"
+                style={{ height: 80, width: 80 }}
+              />
+              <SocialIcon
+                url="https://linktr.ee/animalnationtk"
+                className="socialicon"
+                target="_blank"
+                style={{ height: 80, width: 80 }}
+              />
+              <SocialIcon
+                url="https://t.me/ANTKofficialchannel"
+                className="socialicon2"
+                target="_blank"
+                style={{ height: 80, width: 80 }}
+              />
+            </div>
           </div>
         </div>
       </div>
+
       {/* // ---- compte a rebours  */}
       <div className="countDiv">
-      <div className="container" id="count">
-        <h2 className="date"  >23 Septembre 2022</h2>
-        <h1 className="vente">VENTE PRIVÉE </h1>
-        <Timer />
-        <br />
-        <MediaQuery minWidth={1000}>
-          <div>
-            <button className="button">BUY</button>
-          </div>
-        </MediaQuery>
+        <div className="container" id="count">
+          <h2 className="date">23 Septembre 2022</h2>
+          <h1 className="vente">VENTE PRIVÉE </h1>
+          <Timer />
+          <br />
+          <MediaQuery minWidth={1000}>
+            <div>
+              <button className="button">BUY</button>
+            </div>
+          </MediaQuery>
 
-        <MediaQuery minWidth={0} maxWidth={1000}>
-          <div>
-            <button className="buttonMobile">BUY</button>
-          </div>
-        </MediaQuery>
+          <MediaQuery minWidth={0} maxWidth={1000}>
+            <div>
+              <button className="buttonMobile">BUY</button>
+            </div>
+          </MediaQuery>
 
-        {/* <ReactCardSlider slides={slides}/> */}
+          {/* <ReactCardSlider slides={slides}/> */}
+        </div>
       </div>
-      </div>
-      
 
       {/* // ----- About  */}
 
       <div id="about">
         <MediaQuery minWidth={1000}>
-          <h1>L'APPLICATION ANIMAL NATION</h1>
+          <h1 id="roadmaptitle">L'APPLICATION ANIMAL NATION</h1>
           <Fade duration={1000}>
             <div className="container" id="aboutDiv">
               <div className="container" id="product">
@@ -170,7 +166,7 @@ export default function French(props) {
         </MediaQuery>
 
         <MediaQuery minWidth={0} maxWidth={1000}>
-          <h1>L'APPLICATION ANIMAL NATION</h1>
+          <h1 id="roadmaptitle">L'APPLICATION ANIMAL NATION</h1>
           <Fade duration={1000}>
             <div className="container" id="produitDivMobile">
               <div className="container" id="productMobile">
@@ -206,27 +202,35 @@ export default function French(props) {
       {/* // ------ produit */}
       <div id="produit">
         <MediaQuery minWidth={1000}>
-          <h1>PRODUITS</h1>
+          <h1 id="roadmaptitle">PRODUITS</h1>
           <Fade duration={3000}>
             {/* <Link to="/lovetoearnfr.pdf" style={{ color: 'inherit', textDecoration: 'inherit'}}> */}
-            <div className="container" id="produitDiv" onClick={handleShowCat}>
-              <div className="container">
-                <p className="prodname">Love to earn</p>
+            <Slide direction="left">
+              <div
+                className="container"
+                id="produitDiv"
+                onClick={handleShowCat}
+              >
+                <div id="product">
+                  <p className="prodname">Love to earn</p>
 
-                <img className="animalPic" src={"./chat.png"} />
+                  <img className="animalPic" src={"./chat.png"} />
+                </div>
+                <div>
+                  <p className="description">
+                    Recevez des récompenses en token ANTK lorsque vous passez du
+                    temps avec votre animal.
+                  </p>
+                  <br />
+                  <a href="/love-fr">
+                    <button onClick={handleShowCat} className="prodInfo">
+                      Info
+                    </button>
+                  </a>
+                </div>
               </div>
-              <div>
-                <p className="description">
-                  Recevez des récompenses en token ANTK lorsque vous passez du
-                  temps avec votre animal.
-                </p>
-                <br />
-                <button onClick={handleShowCat} className="prodInfo">
-                  Info
-                </button>
-              </div>
-            </div>
-            <Modal
+            </Slide>
+            {/* <Modal
               show={showCat}
               onHide={handleCloseCat}
               {...props}
@@ -256,27 +260,33 @@ export default function French(props) {
                   votre grande amitié avec votre animal.
                 </div>
               </Modal.Body>
-            </Modal>
-            {/* </Link> */}
+            </Modal> */}
 
-            <div className="container" id="produitDiv" onClick={handleShowDog}>
-              <div>
-                <p className="description">
-                  Recevez des récompenses en token ANTK lorsque vous aidez à
-                  retrouver un animal perdu.
-                </p>
-                <br />
-                <button onClick={handleShowDog} className="prodInfo">
-                  Info
-                </button>
+            <Slide direction="left">
+              <div
+                className="container"
+                id="produitDiv"
+                onClick={handleShowBird}
+              >
+                <div id="product">
+                  <p className="prodname">Find to earn</p>
+                  <img className="animalPic" src={"./chien.png"} />
+                </div>
+                <div>
+                  <p className="description">
+                    Recevez des récompenses en token ANTK lorsque vous aidez à
+                    retrouver un animal perdu.
+                  </p>
+                  <br />
+                  <a href="/find-fr">
+                    <button onClick={handleShowBird} className="prodInfo">
+                      Info
+                    </button>
+                  </a>
+                </div>
               </div>
-              <div className="container" id="product">
-                <img className="animalPic" src={"./chien.png"} />
-
-                <p className="prodname">Find to earn</p>
-              </div>
-            </div>
-            <Modal
+            </Slide>
+            {/* <Modal
               show={showDog}
               onHide={handleCloseDog}
               size="lg"
@@ -303,25 +313,34 @@ export default function French(props) {
                   directement à la personne qui a trouvé votre animal.
                 </div>
               </Modal.Body>
-            </Modal>
-            <div className="container" id="produitDiv" onClick={handleShowBird}>
-              <div className="container" id="product">
-                <p className="prodname">Keep to earn</p>
-                <img className="animalPic" src={"./oiseau.png"} />
+            </Modal> */}
+
+            <Slide direction="left">
+              <div
+                className="container"
+                id="produitDiv"
+                onClick={handleShowBird}
+              >
+                <div id="product">
+                  <p className="prodname">Keep to earn</p>
+                  <img className="animalPic" src={"./oiseau.png"} />
+                </div>
+                <div>
+                  <p className="description">
+                    Recevez des photos de votre animal lorsque vous partez en
+                    vacances sans lui et faites gagner des tokens à la personne
+                    qui s'occupe de votre animal.
+                  </p>
+                  <br />
+                  <a href="/keep-fr">
+                    <button onClick={handleShowBird} className="prodInfo">
+                      Info
+                    </button>
+                  </a>
+                </div>
               </div>
-              <div>
-                <p className="description">
-                  Recevez des photos de votre animal lorsque vous partez en
-                  vacances sans lui et faites gagner des tokens à la personne
-                  qui s'occupe de votre animal.
-                </p>
-                <br />
-                <button onClick={handleShowBird} className="prodInfo">
-                  Info
-                </button>
-              </div>
-            </div>
-            <Modal
+            </Slide>
+            {/* <Modal
               show={showBird}
               onHide={handleCloseBird}
               {...props}
@@ -343,31 +362,34 @@ export default function French(props) {
                   <img className="animalPicMobile" src={"./accueil.png"}></img>
                 </div>
               </Modal.Body>
-            </Modal>
+            </Modal> */}
 
-            <div
-              className="container"
-              id="produitDiv"
-              onClick={handleShowTigre}
-            >
-              <div>
-                <p className="description">
-                  Un univers de jeux qui vont utiliser la reconnaissance faciale
-                  animale pour découvrir le monde des animaux et vous faire
-                  gagner des tokens.
-                </p>
-                <br />
-                <button onClick={handleShowTigre} className="prodInfo">
-                  Info
-                </button>
+            <Slide direction="left">
+              <div
+                className="container"
+                id="produitDiv"
+                onClick={handleShowTigre}
+              >
+                <div id="product">
+                  <p className="prodname">Play to earn</p>
+                  <img className="animalPic" src={"./tigre.png"} />
+                </div>
+                <div>
+                  <p className="description">
+                    Un univers de jeux qui vont utiliser la reconnaissance
+                    faciale animale pour découvrir le monde des animaux et vous
+                    faire gagner des tokens.
+                  </p>
+                  <br />
+                  <a href="/play-fr">
+                    <button onClick={handleShowBird} className="prodInfo">
+                      Info
+                    </button>
+                  </a>
+                </div>
               </div>
-              <div className="container" id="product">
-                <img className="animalPic" src={"./tigre.png"} />
-
-                <p className="prodname">Play to earn</p>
-              </div>
-            </div>
-            <Modal
+            </Slide>
+            {/* <Modal
               show={showTigre}
               onHide={handleCloseTigre}
               {...props}
@@ -390,34 +412,35 @@ export default function French(props) {
                   <br />
                 </div>
               </Modal.Body>
-            </Modal>
+            </Modal> */}
           </Fade>
         </MediaQuery>
 
         <MediaQuery minWidth={0} maxWidth={1000}>
-          <h1>PRODUITS</h1>
+          <h1 id="roadmaptitle">PRODUITS</h1>
           <Fade duration={3000}>
-            <div className="container" id="produitDivMobile">
-              <div className="container" id="productMobile">
-                <p className="nameProductMobile">Love to earn</p>
+            <Slide direction="left">
+              <div className="container" id="produitDivMobile">
+                <div id="productMobile">
+                  <p className="nameProductMobile">Love to earn</p>
 
-                <img className="animalPicMobile" src={"./chat.png"} />
+                  <img className="animalPicMobile" src={"./chat.png"} />
+                </div>
+                <div>
+                  <p className="descriptionMobile">
+                    Recevez des récompenses en token ANTK lorsque vous passez du
+                    temps avec votre animal.
+                  </p>
+                  <br />
+                  <a href="/love-fr">
+                    <button onClick={handleShowBird} className="prodInfoMobile">
+                      Info
+                    </button>
+                  </a>
+                </div>
               </div>
-              <div>
-                <p className="descriptionMobile">
-                  Recevez des récompenses en token ANTK lorsque vous passez du
-                  temps avec votre animal.
-                </p>
-                <br />
-                <button
-                  onClick={handleShowCatMobile}
-                  className="prodInfoMobile"
-                >
-                  Info
-                </button>
-              </div>
-            </div>
-            <Modal
+            </Slide>
+            {/* <Modal
               show={showCatMobile}
               onHide={handleCloseCatMobile}
               size="lg"
@@ -446,28 +469,28 @@ export default function French(props) {
                   votre grande amitié avec votre animal.
                 </div>
               </Modal.Body>
-            </Modal>
-
-            <div className="container" id="produitDivMobile">
-              <div className="container" id="product">
-                <p className="nameProductMobile">Find to earn</p>
-                <img className="animalPicMobile" src={"./chien.png"} />
+            </Modal> */}
+            <Slide direction="left">
+              <div className="container" id="produitDivMobile">
+                <div id="productMobile">
+                  <p className="nameProductMobile">Find to earn</p>
+                  <img className="animalPicMobile" src={"./chien.png"} />
+                </div>
+                <div>
+                  <p className="descriptionMobile">
+                    Recevez des récompenses en token ANTK lorsque vous aidez à
+                    retrouver un animal perdu.
+                  </p>
+                  <br />
+                  <a href="/find-fr">
+                    <button onClick={handleShowBird} className="prodInfoMobile">
+                      Info
+                    </button>
+                  </a>
+                </div>
               </div>
-              <div>
-                <p className="descriptionMobile">
-                  Recevez des récompenses en token ANTK lorsque vous aidez à
-                  retrouver un animal perdu.
-                </p>
-                <br />
-                <button
-                  onClick={handleShowDogMobile}
-                  className="prodInfoMobile"
-                >
-                  Info
-                </button>
-              </div>
-            </div>
-            <Modal
+            </Slide>
+            {/* <Modal
               show={showDogMobile}
               onHide={handleCloseDogMobile}
               size="lg"
@@ -495,33 +518,33 @@ export default function French(props) {
                   directement à la personne qui a trouvé votre animal.
                 </div>
               </Modal.Body>
-            </Modal>
-
-            <div
-              className="container"
-              id="produitDivMobile"
-              onClick={handleShowBirdMobile}
-            >
-              <div className="container" id="product">
-                <p className="nameProductMobile">Keep to earn</p>
-                <img className="animalPicMobile" src={"./oiseau.png"} />
+            </Modal> */}
+            <Slide direction="left">
+              <div
+                className="container"
+                id="produitDivMobile"
+                onClick={handleShowBirdMobile}
+              >
+                <div id="productMobile">
+                  <p className="nameProductMobile">Keep to earn</p>
+                  <img className="animalPicMobile" src={"./oiseau.png"} />
+                </div>
+                <div>
+                  <p className="descriptionMobile">
+                    Recevez des photos de votre animal lorsque vous partez en
+                    vacances sans lui et faites gagner des tokens à la personne
+                    qui s'occupe de votre animal.
+                  </p>
+                  <br />
+                  <a href="/keep-fr">
+                    <button onClick={handleShowBird} className="prodInfoMobile">
+                      Info
+                    </button>
+                  </a>
+                </div>
               </div>
-              <div>
-                <p className="descriptionMobile">
-                  Recevez des photos de votre animal lorsque vous partez en
-                  vacances sans lui et faites gagner des tokens à la personne
-                  qui s'occupe de votre animal.
-                </p>
-                <br />
-                <button
-                  onClick={handleShowBirdMobile}
-                  className="prodInfoMobile"
-                >
-                  Info
-                </button>
-              </div>
-            </div>
-            <Modal
+            </Slide>
+            {/* <Modal
               show={showBirdMobile}
               onHide={handleCloseBirdMobile}
               size="lg"
@@ -543,33 +566,33 @@ export default function French(props) {
                   <img className="animalPicMobile" src={"./accueil.png"}></img>
                 </div>
               </Modal.Body>
-            </Modal>
-
-            <div
-              className="container"
-              id="produitDivMobile"
-              onClick={handleShowTigre}
-            >
-              <div className="container" id="product">
-                <p className="nameProductMobile">Play to earn</p>
-                <img className="animalPicMobile" src={"./tigre.png"} />
+            </Modal> */}
+            <Slide direction="left">
+              <div
+                className="container"
+                id="produitDivMobile"
+                onClick={handleShowTigre}
+              >
+                <div id="productMobile">
+                  <p className="nameProductMobile">Play to earn</p>
+                  <img className="animalPicMobile" src={"./tigre.png"} />
+                </div>
+                <div>
+                  <p className="descriptionMobile">
+                    Un univers de jeux qui vont utiliser la reconnaissance
+                    faciale animale pour découvrir le monde des animaux et vous
+                    faire gagner des tokens.
+                  </p>
+                  <br />
+                  <a href="/play-fr">
+                    <button onClick={handleShowBird} className="prodInfoMobile">
+                      Info
+                    </button>
+                  </a>
+                </div>
               </div>
-              <div>
-                <p className="descriptionMobile">
-                  Un univers de jeux qui vont utiliser la reconnaissance faciale
-                  animale pour découvrir le monde des animaux et vous faire
-                  gagner des tokens.
-                </p>
-                <br />
-                <button
-                  onClick={handleShowTigreMobile}
-                  className="prodInfoMobile"
-                >
-                  Info
-                </button>
-              </div>
-            </div>
-            <Modal
+            </Slide>
+            {/* <Modal
               show={showTigreMobile}
               onHide={handleCloseTigreMobile}
               size="lg"
@@ -592,7 +615,7 @@ export default function French(props) {
                   <br />
                 </div>
               </Modal.Body>
-            </Modal>
+            </Modal> */}
           </Fade>
         </MediaQuery>
       </div>
@@ -602,30 +625,37 @@ export default function French(props) {
         <h1 id="roadmaptitle">ROADMAP</h1>
         <Fade duration={3000}>
           <div className="container" id="roadmapDiv">
-            <img src={"./roadmapfr.png"} id="roadmapPic" />
-            <MediaQuery minWidth={1000}>
-                  <div>
-                    <a
-                      href="/roadmap-fr.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className="buttonSales">ROADMAP</button>
-                    </a>
-                  </div>
-                </MediaQuery>
-                <MediaQuery minWidth={0} maxWidth={1000}>
-                <div>
-                  <a
-                    href="/roadmap-fr.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button className="buttonSalesMobile">ROADMAP</button>
-                  </a>
-                  <br />
-                </div>
+            <Slide direction="left">
+              <MediaQuery minWidth={1000}>
+                <img src={"./roadmapfr.png"} id="roadmapPic" />
               </MediaQuery>
+              <MediaQuery minWidth={0} maxWidth={1000}>
+                <img src={"./roadmapfr.png"} id="roadmapPicMobile" />
+              </MediaQuery>
+            </Slide>
+            <MediaQuery minWidth={1000}>
+              <div>
+                <a
+                  href="/roadmap-fr.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="buttonSales">ROADMAP</button>
+                </a>
+              </div>
+            </MediaQuery>
+            <MediaQuery minWidth={0} maxWidth={1000}>
+              <div>
+                <a
+                  href="/roadmap-fr.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="buttonSalesMobile">ROADMAP</button>
+                </a>
+                <br />
+              </div>
+            </MediaQuery>
           </div>
         </Fade>
       </div>
@@ -635,15 +665,17 @@ export default function French(props) {
       <div id="tokenomics">
         <h1>TOKENOMICS</h1>
         <Fade duration={3000}>
-          <div className="container" id="tokenomicsDiv">
-            <img src={"./tokenfr.png"} id="diagrammePic" />
-          </div>
+          <Slide direction="left">
+            <div className="container" id="tokenomicsDiv">
+              <img src={"./tokenfr.png"} id="diagrammePic" />
+            </div>
+          </Slide>
         </Fade>
       </div>
 
       {/* // ----- team */}
       <div id="team">
-        <h1>ÉQUIPE</h1>
+        <h1 id="roadmaptitle">ÉQUIPE</h1>
         <Fade duration={5000}>
           <div className="container" id="profileDiv">
             <div className="profileCard">
@@ -697,9 +729,8 @@ export default function French(props) {
               <p className="legend">Développeur</p>
             </div>
             <div className="profileCard">
-              
-                <img className="profilePic" src={"./LOGO.png"} />
-              
+              <img className="profilePic" src={"./LOGO.png"} />
+
               <p className="name">Jean-Baptiste</p>
               <p className="legend">Développeur Blockchain</p>
             </div>
@@ -714,13 +745,12 @@ export default function French(props) {
               <p className="legend">Co-Fondateur</p>
             </div>
             <div className="profileCard">
-              
-                <img className="profilePic" src={"./LOGO.png"} />
-              
+              <img className="profilePic" src={"./LOGO.png"} />
+
               <p className="name">Marina</p>
               <p className="legend">Développeuse / Co-Fondatrice</p>
             </div>
-            
+
             {/* <div className="profileCard">
               <a
                 href="https://www.linkedin.com/in/amaury-lacroix-95518022b/"
