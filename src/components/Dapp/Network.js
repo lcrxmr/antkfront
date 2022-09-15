@@ -9,7 +9,7 @@ function NetWork() {
   function NoticeWrongNetwork() {
     return (
       <p>
-        ⚠️ MetaMask is not connected to the good network.
+        ⚠️ MetaMask n'est pas connecté à la bonne blockchain !.
       </p>
     );
   }
@@ -17,8 +17,8 @@ function NetWork() {
   function NoticeNoArtifact() {
     return (
       <p>
-        ⚠️ Cannot find <span className="code">Voting</span> contract artifact.
-        Please complete the above preparation first, then restart the react dev server.
+        ⚠️ Impossible de trouver <span className="code">AntkPrivate</span> contract artifact.
+        Veuillez d'abord effectuer le déploiement, puis redémarrer le serveur react.
       </p>
     );
   }
@@ -26,7 +26,7 @@ function NetWork() {
   const Params =
     <>
       <div>
-        <h3>You are on the good NetWork of Private Dapp !</h3>
+        <h3>Vous êtes connecté sur le bon réseau de la vente privée !</h3>
       </div>
     </>;
 

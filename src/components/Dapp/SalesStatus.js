@@ -1,19 +1,16 @@
 import useEth from "../../contexts/EthContext/useEth";
 import { useEffect, useState } from "react";
 
-function SalesStatus({currentState, newState}) {
+function SalesStatus({newState}) {
     const { state: { contract, accounts } } = useEth();
     const [value, readState] = useState("");
-
-
+    
     let SalesStatus = ["La vente n'a pas encore commencé !", "La vente a débuté pour les Whitelistés !", "Vente en cours !"]
 
     useEffect(() => {
         if (contract) {
             salesStatus();
             event()
-            console.log(currentState)
-
         }
     })
 
@@ -24,7 +21,6 @@ function SalesStatus({currentState, newState}) {
     }
 
     async function event() {
-
         let options = {
             fromBlock: 'latest'
         };
@@ -32,10 +28,9 @@ function SalesStatus({currentState, newState}) {
             .on('data', event => newState(event.returnValues))
     }
 
-
     return (
         <div>
-            <h2>Status de la vente privée</h2>
+            <h2>Statut de la vente privée</h2>
             <p>{value}</p>
         </div>
     )
