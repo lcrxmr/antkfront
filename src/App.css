@@ -62,6 +62,18 @@ box-sizing: border-box;
   background-position:center;
   background-size: 100% 100%;
   background-image: url("../public/LAUNCHPNG.png");
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+.headerNewMobile{
+  background-position:center;
+  background-size: 130% 100%;
+  background-image: url("../public/LAUNCHPNG.png");
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
 }
 
 @keyframes App-logo-spin {
@@ -95,24 +107,21 @@ body{
 }
 
 #langButton{
-  margin-top: 10px;
-  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
   height: 30px;
-  margin-right: 10px;
-  margin-left: auto;
-  position:absolute;
-  top:0;
-  right:0;
-  z-index: 9;
+
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
 }
 
 .lang{
-  color: #000;
-  background-color: white;
-  border: black solid 2px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+  border: white solid 2px;
   border-radius: 40px;
   margin-top: 5px;
   margin-right: 10px;
@@ -126,22 +135,21 @@ body{
 .lang:hover,
 .lang:focus,
 .lang:active {
-  background-color:rgb(242, 60, 60);
-  border-color: black;
+  background-color:rgba(255, 255, 255, 0.3);
   outline: none;
 }
 
 
 .langMobile{
-  color: #000;
-  font-size: 40px;
-  background-color: white;
+  font-size: 28px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0);
   border: black solid 2px;
   border-radius: 40px;
   margin-top: 5px;
   margin-right: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
   font-family: 'Alata', sans-serif;
@@ -150,8 +158,7 @@ body{
 .langMobile:hover,
 .langMobile:focus,
 .langMobile:active {
-  background-color:rgb(242, 60, 60);
-  border-color: black;
+  background-color:rgba(255, 255, 255, 0.5);
   outline: none;
 }
 
@@ -162,6 +169,7 @@ body{
   justify-content: center;
   margin-top: 0px;
   padding-top: 0px;
+  padding-bottom: 100px;
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
@@ -181,6 +189,9 @@ body{
   background-image: url("../public/banner.JPG"); */
   margin-top: 0px;
   margin-bottom: 0px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
   
 
 }
@@ -200,14 +211,13 @@ body{
   flex-direction: row;
   align-items: flex-start;
   margin-left: 20px;
-  margin-top: 100px;
-  background-color: white;
+  margin-top: 50px;
+  background-image: url(../public/fonddegrade.png);
   border-radius: 40px;
 }
 
 .socialicon{
-  width: 200px;
-  height: 300px;
+  color: #000;
 }
 
 .footerBox{
@@ -393,6 +403,9 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
 }
 
 .date{
@@ -420,6 +433,9 @@ color:#000;
   flex-direction: column;
   align-items: center;
   background-image: url(../public/fonddegrade2.png);
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
 }
 
 #aboutDiv{
@@ -461,6 +477,7 @@ color:#000;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
   background-image: url(../public/fonddegrade2.png);
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -491,13 +508,19 @@ color:#000;
   border-radius: 40px;
   border: solid 2px black;
   margin-bottom: 50px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
 }
 
 #roadmapPicMobile{
-  width: 900px ;
+  width: 600px ;
   border-radius: 40px;
   border: solid 2px black;
   margin-bottom: 50px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
 }
 
 #roadmaptitle{

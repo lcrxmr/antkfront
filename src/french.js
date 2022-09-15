@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import React, { Component, useState } from "react";
 import Timer from "./components/Countdown/Timer";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css"; 
 import Nav from "./components/navbar";
 import { Fade } from "react-awesome-reveal";
 import Iframe from "react-iframe";
@@ -16,7 +16,7 @@ import { Slide } from "react-awesome-reveal";
 
 import Fadetitle from "./components/Fade";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./newNav";
 
 import "./styles.css";
 
@@ -55,8 +55,9 @@ export default function French(props) {
 
   return (
     <div className="App">
+      <MediaQuery minWidth={1000}>
       <div className="headerNew">
-        <div id="langButton"> 
+        {/* <div id="langButton"> 
           <MediaQuery minWidth={1000}>
             <Link to="/">
               <button className="lang">FR</button>
@@ -73,10 +74,10 @@ export default function French(props) {
               <button className="langMobile">EN</button>
             </Link>
           </MediaQuery>
-        </div>
+        </div> */}
         <div id="navcontainer">
-          <Nav />
-          {/* <Navbar/> */}
+          {/* <Nav /> */}
+          <Navbar/>
         </div>
         {/* // ------ banner */}
         <div id="banner">
@@ -88,23 +89,83 @@ export default function French(props) {
                 className="socialicon"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
+                bgColor="white"
               />
               <SocialIcon
                 url="https://linktr.ee/animalnationtk"
                 className="socialicon"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
+                bgColor="white"
               />
               <SocialIcon
                 url="https://t.me/ANTKofficialchannel"
                 className="socialicon2"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
+                bgColor="white"
               />
             </div>
           </div>
         </div>
       </div>
+      </MediaQuery>
+      <MediaQuery minWidth={0} maxWidth={1000}>
+      <div className="headerNewMobile">
+        {/* <div id="langButton"> 
+          <MediaQuery minWidth={1000}>
+            <Link to="/">
+              <button className="lang">FR</button>
+            </Link>
+            <Link to="/eng">
+              <button className="lang">EN</button>
+            </Link>
+          </MediaQuery>
+          <MediaQuery minWidth={0} maxWidth={1000}>
+            <Link to="/">
+              <button className="langMobile">FR</button>
+            </Link>
+            <Link to="/eng">
+              <button className="langMobile">EN</button>
+            </Link>
+          </MediaQuery>
+        </div> */}
+        <div id="navcontainer">
+          {/* <Nav /> */}
+          <Navbar/>
+        </div>
+        {/* // ------ banner */}
+        <div id="banner">
+          <div className="accroche">
+            <Fadetitle />
+            <div id="socials">
+              <SocialIcon
+                url="https://twitter.com/animalnationtk"
+                className="socialicon"
+                target="_blank"
+                style={{ height: 80, width: 80 }}
+                bgColor="white"
+              />
+              <SocialIcon
+                url="https://linktr.ee/animalnationtk"
+                className="socialicon"
+                target="_blank"
+                style={{ height: 80, width: 80 }}
+                bgColor="white"
+              />
+              <SocialIcon
+                url="https://t.me/ANTKofficialchannel"
+                className="socialicon2"
+                target="_blank"
+                style={{ height: 80, width: 80 }}
+                bgColor="white"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      </MediaQuery>
+      
 
       {/* // ---- compte a rebours  */}
       <div className="countDiv">

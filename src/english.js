@@ -16,6 +16,7 @@ import { CDBNavbar } from "cdbreact";
 
 import Fadetitle from "./components/enFade";
 import Footer from "./components/enFooter";
+import Navbar from "./newNavEn";
 
 import "./styles.css";
 
@@ -54,8 +55,9 @@ export default function English(props) {
 
   return (
     <div className="App">
+      <MediaQuery minWidth={1000}>
       <div className="headerNew">
-        <div id="langButton">
+        {/* <div id="langButton">
           <MediaQuery minWidth={1000}>
             <Link to="/">
               <button className="lang">FR</button>
@@ -72,10 +74,11 @@ export default function English(props) {
               <button className="langMobile">EN</button>
             </Link>
           </MediaQuery>
-        </div>
+        </div> */}
 
         <div className="container" id="navcontainer">
-          <Nav />
+          {/* <Nav /> */}
+          <Navbar/>
         </div>
         {/* // ------ banner */}
         <div id="banner">
@@ -86,21 +89,86 @@ export default function English(props) {
                 url="https://twitter.com/animalnationtk"
                 className="socialicon"
                 target="_blank"
+                style={{ height: 80, width: 80 }}
+                bgColor="white"
               />
               <SocialIcon
                 url="https://linktr.ee/animalnationtk"
                 className="socialicon"
                 target="_blank"
+                style={{ height: 80, width: 80 }}
+                bgColor="white"
               />
               <SocialIcon
                 url="https://t.me/ANTKofficialchannel"
                 className="socialicon2"
                 target="_blank"
+                style={{ height: 80, width: 80 }}
+                bgColor="white"
               />
             </div>
           </div>
         </div>
       </div>
+      </MediaQuery>
+      
+      <MediaQuery minWidth={0} maxWidth={1000}>
+      <div className="headerNewMobile">
+        {/* <div id="langButton">
+          <MediaQuery minWidth={1000}>
+            <Link to="/">
+              <button className="lang">FR</button>
+            </Link>
+            <Link to="/eng">
+              <button className="lang">EN</button>
+            </Link>
+          </MediaQuery>
+          <MediaQuery minWidth={0} maxWidth={1000}>
+            <Link to="/">
+              <button className="langMobile">FR</button>
+            </Link>
+            <Link to="/eng">
+              <button className="langMobile">EN</button>
+            </Link>
+          </MediaQuery>
+        </div> */}
+
+        <div id="navcontainer">
+          {/* <Nav /> */}
+          <Navbar/>
+        </div>
+        {/* // ------ banner */}
+        <div id="banner">
+          <div className="accroche">
+            <Fadetitle />
+            <div id="socials">
+              <SocialIcon
+                url="https://twitter.com/animalnationtk"
+                className="socialicon"
+                target="_blank"
+                style={{ height: 80, width: 80 }}
+                bgColor="white"
+              />
+              <SocialIcon
+                url="https://linktr.ee/animalnationtk"
+                className="socialicon"
+                target="_blank"
+                style={{ height: 80, width: 80 }}
+                bgColor="white"
+              />
+              <SocialIcon
+                url="https://t.me/ANTKofficialchannel"
+                className="socialicon2"
+                target="_blank"
+                style={{ height: 80, width: 80 }}
+                bgColor="white"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      </MediaQuery>
+      
 
       {/* // ---- compte a rebours  */}
       <div className="countDiv">
