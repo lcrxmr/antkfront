@@ -10,7 +10,7 @@ export default function Footer () {
         <CDBBox display="flex" justifyContent="around" className="flex-wrap">
           <CDBBox>
             <a href="/" className="d-flex align-items-center p-0 text-dark">
-              <img alt="logo" src={"./antklogo.png"} width="200px" id='logo'/>
+              <img alt="logo" src={"./antk_police.png"} width="200px" id='logo'/>
               {/* <span className="ml-3 h5 font-weight-bold">ANTK</span> */}
             </a>
             <p className="my-3" style={{ width: '250px' }}>
@@ -45,9 +45,12 @@ export default function Footer () {
         </CDBBox>
       </CDBBox>
       <div id="socialsFooter">
-          <SocialIcon url="https://twitter.com/animalnationtk" className="socialiconFooter" target="_blank"/>
-          <SocialIcon url="https://linktr.ee/animalnationtk" className="socialiconFooter" target="_blank"/>
-          <SocialIcon url="https://t.me/ANTKofficialchannel" className="socialiconFooter" target="_blank"/>
+          <SocialIcon url="https://twitter.com/animalnationtk" className="socialiconFooter" target="_blank" style={{ height: 80, width: 80 }}
+                bgColor="white"/>
+          <SocialIcon url="https://linktr.ee/animalnationtk" className="socialiconFooter" target="_blank" style={{ height: 80, width: 80 }}
+                bgColor="white"/>
+          <SocialIcon url="https://t.me/ANTKofficialchannel" className="socialiconFooter" target="_blank" style={{ height: 80, width: 80 }}
+                bgColor="white"/>
         </div>
         <small className="text-center mt-5">&copy; ANTK 2022. All rights reserved.</small>
     </CDBFooter>

@@ -46,16 +46,18 @@ function Navbar() {
             </Link>
           </MediaQuery>
           </div>
-          <div id="langButton"> 
+          
           <MediaQuery minWidth={0} maxWidth={1000}>
+          <div id="langButtonMobile"> 
             <Link to="/">
               <button className="langMobile">FR</button>
             </Link>
             <Link to="/eng">
               <button className="langMobile">EN</button>
             </Link>
-          </MediaQuery>
             </div>
+          </MediaQuery>
+            
 			</nav>
 			<button className="nav-btn" onClick={showNavbar}>
 				<FaBars size={70} />

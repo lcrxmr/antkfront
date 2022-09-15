@@ -138,7 +138,7 @@ export default function English(props) {
           <Navbar/>
         </div>
         {/* // ------ banner */}
-        <div id="banner">
+        <div id="bannerMobile">
           <div className="accroche">
             <Fadetitle />
             <div id="socials">

@@ -135,7 +135,7 @@ export default function French(props) {
           <Navbar/>
         </div>
         {/* // ------ banner */}
-        <div id="banner">
+        <div id="bannerMobile">
           <div className="accroche">
             <Fadetitle />
             <div id="socials">

@@ -46,7 +46,7 @@ function Navbar() {
             </Link>
           </MediaQuery>
           </div>
-          <div id="langButton"> 
+          <div id="langButtonMobile"> 
           <MediaQuery minWidth={0} maxWidth={1000}>
             <Link to="/">
               <button className="langMobile">FR</button>
