@@ -457,7 +457,7 @@ color:#000;
   /* background-position:center;
   background-size: cover;
   background-image: url(../public/LAUNCHATNK.png); */
-  border: solid black 2px;
+  /* border: solid black 2px; */
   border-radius: 30px;
   margin-bottom: 50px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -507,7 +507,7 @@ color:#000;
 #roadmapPic{
   width: 100% ;
   border-radius: 40px;
-  border: solid 2px black;
+  /* border: solid 2px black; */
   margin-bottom: 50px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -581,7 +581,7 @@ a:-webkit-any-link {
   /* max-width: 80%;
   min-width: fit-content; */
   height: 200px;
-  border: solid black 2px;
+  /* border: solid black 2px; */
   background-color: white;
   /* background-position:center;
   background-size: cover;
