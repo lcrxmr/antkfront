@@ -701,7 +701,7 @@ export default function French(props) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="buttonSales">ROADMAP</button>
+                  <button className="buttonSales">OUVRIR</button>
                 </a>
               </div>
             </MediaQuery>
@@ -712,7 +712,7 @@ export default function French(props) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="buttonSalesMobile">ROADMAP</button>
+                  <button className="buttonSalesMobile">OUVRIR</button>
                 </a>
                 <br />
               </div>

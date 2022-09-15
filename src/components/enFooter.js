@@ -164,7 +164,7 @@ export default function Footer () {
                   <CDBFooterLink href="/cdgeng.pdf" target="_blank" style={{ fontWeight: "400" , fontSize: '20px'}}>
                     CDG
                   </CDBFooterLink>
-                  <CDBFooterLink href="#" style={{ fontWeight: "400" , fontSize: '20px'}}>FAQ</CDBFooterLink>
+                  <CDBFooterLink href="#" style={{ fontWeight: "400" , fontSize: '20px', marginTop:'20px'}}>FAQ</CDBFooterLink>
                 </CDBBox>
               </CDBBox>
             </CDBBox>
