@@ -183,7 +183,7 @@ body{
 
 #banner{
   width: 100vw;
-  height: 800px;
+  height: 600px;
   /* background-position:center;
   background-size: cover;
   background-image: url("../public/banner.JPG"); */
@@ -209,10 +209,11 @@ body{
 #socials{
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  margin-left: 20px;
-  margin-top: 50px;
-  background-image: url(../public/fonddegrade.png);
+  align-items: flex-end;
+  margin-left: auto;
+  margin-right: 50px;
+  margin-top: 150px;
+  /* background-image: url(../public/fonddegrade.png); */
   border-radius: 40px;
 }
 
