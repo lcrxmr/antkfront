@@ -11,6 +11,10 @@ function Navbar() {
 		navRef.current.classList.toggle("responsive_nav");
 	};
 
+    const hideNavbar =()=>{
+        navRef.current.classList.remove("responsive_nav")
+      }
+
 	return (
 		<header>
 			<img
@@ -21,16 +25,16 @@ function Navbar() {
             className="d-inline-block align-top"
             id="navlogo"
           />
-			<nav ref={navRef}>
-				<a href="#produit">Products</a>
-				<a href="/white-eng.pdf" target="_blank">Whitepaper</a>
-				<a href="#tokenomics" >Tokenomics</a>
-				<a href="#roadmap">Roadmap</a>
-                <a href="#team">Team</a>
+			<nav ref={navRef} >
+				<a href="#produit" onClick={hideNavbar}>Products</a>
+				<a href="/white-eng.pdf" target="_blank" onClick={hideNavbar}>Whitepaper</a>
+				<a href="#tokenomics" onClick={hideNavbar}>Tokenomics</a>
+				<a href="#roadmap" onClick={hideNavbar}>Roadmap</a>
+                <a href="#team" onClick={hideNavbar}>Team</a>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
-					<FaTimes />
+					<FaTimes size={70}/>
 				</button>
                 <div id="langButton"> 
           <MediaQuery minWidth={1000}>
@@ -54,7 +58,7 @@ function Navbar() {
             </div>
 			</nav>
 			<button className="nav-btn" onClick={showNavbar}>
-				<FaBars />
+				<FaBars size={70} />
 			</button>
 
 		</header>
