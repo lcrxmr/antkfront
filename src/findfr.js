@@ -16,8 +16,6 @@ import { Slide } from "react-awesome-reveal";
 
 import Fadetitle from "./components/Fade";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar/Navbar"; 
-
 import "./detailspage.css";
 
 export default function FindFr(props) {

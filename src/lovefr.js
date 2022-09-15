@@ -16,7 +16,7 @@ import { Slide } from "react-awesome-reveal";
 
 import Fadetitle from "./components/Fade";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar/Navbar";
+
 
 import "./detailspage.css";
 
@@ -60,7 +60,6 @@ export default function LoveFr(props) {
         <div className="details">
           <img className="detailsPicMobile" src={"./passeportchatfr.png"} />
         </div>
-
         <div className="details">
           <p className="detailsTextMobile">
             Le passeport unique de votre animal va être créé grâce à la

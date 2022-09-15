@@ -467,7 +467,7 @@ export default function English(props) {
         </MediaQuery>
 
         <MediaQuery minWidth={0} maxWidth={1000}>
-          <h1 id="roadmaptitle">PRODUITS</h1>
+          <h1 id="roadmaptitle">PRODUCTS</h1>
           <Fade duration={3000}>
             <Slide direction="left">
               <div className="container" id="produitDivMobile">
@@ -478,8 +478,8 @@ export default function English(props) {
                 </div>
                 <div>
                   <p className="descriptionMobile">
-                    Recevez des récompenses en token ANTK lorsque vous passez du
-                    temps avec votre animal.
+                  Receive ANTK token rewards when you spend time with your
+                    pet.
                   </p>
                   <br />
                   <a href="/love-en">
@@ -527,8 +527,7 @@ export default function English(props) {
                 </div>
                 <div>
                   <p className="descriptionMobile">
-                    Recevez des récompenses en token ANTK lorsque vous aidez à
-                    retrouver un animal perdu.
+                  Receive ANTK token rewards when you help find a lost animal.
                   </p>
                   <br />
                   <a href="/find-en">
@@ -579,9 +578,8 @@ export default function English(props) {
                 </div>
                 <div>
                   <p className="descriptionMobile">
-                    Recevez des photos de votre animal lorsque vous partez en
-                    vacances sans lui et faites gagner des tokens à la personne
-                    qui s'occupe de votre animal.
+                  Get photos of your pet when you go on vacation without it
+                    and earn tokens for the person who looks after your pet.
                   </p>
                   <br />
                   <a href="/keep-en">
@@ -627,9 +625,8 @@ export default function English(props) {
                 </div>
                 <div>
                   <p className="descriptionMobile">
-                    Un univers de jeux qui vont utiliser la reconnaissance
-                    faciale animale pour découvrir le monde des animaux et vous
-                    faire gagner des tokens.
+                  A universe of games that will use animal facial recognition
+                    to discover the world of animals and make you win tokens.
                   </p>
                   <br />
                   <a href="/play-en">

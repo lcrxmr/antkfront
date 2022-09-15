@@ -16,7 +16,6 @@ import { Slide } from "react-awesome-reveal";
 
 import Fadetitle from "./components/Fade";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar/Navbar";
 
 import "./detailspage.css";
 
@@ -34,7 +33,7 @@ export default function KeepEn(props) {
         </div>
 
         <div className="details">
-          <img className="detailsPic" src={"./accueil.png"} />
+          <img className="detailsPic" src={"./keep.png"} />
         </div>
 
         <div className="details">
@@ -55,7 +54,7 @@ export default function KeepEn(props) {
         </a>
         </div>
         <div className="details">
-          <img className="detailsPicMobile" src={"./accueil.png"} />
+          <img className="detailsPicMobile" src={"./keep.png"} />
         </div>
 
         <div className="details">

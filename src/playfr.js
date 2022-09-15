@@ -16,7 +16,6 @@ import { Slide } from "react-awesome-reveal";
 
 import Fadetitle from "./components/Fade";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar/Navbar";
 
 import "./detailspage.css";
  
@@ -34,7 +33,7 @@ export default function PlayFr(props) {
         </div>
 
         <div className="details">
-          <img className="detailsPic" src={"./play.jpg"} />
+          <img className="detailsPic" src={"./play.png"} />
         </div>
 
         <div className="details">
@@ -55,7 +54,7 @@ export default function PlayFr(props) {
         </a>
         </div>
         <div className="details">
-          <img className="detailsPicMobile" src={"./play.jpg"} />
+          <img className="detailsPicMobile" src={"./play.png"} />
         </div>
 
         <div className="details">
