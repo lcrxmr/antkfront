@@ -3,7 +3,7 @@ import { Routes, Route, Link, HashRouter} from "react-router-dom";
 import "./App.css";
 import French from './french'
 import English from './english'
-import Test from './responsiveTest'
+import Dapp from './components/Dapp/dapp'
 import Lovefr from "./lovefr"
 import Findfr from "./findfr"
 import Keepfr from "./keepfr"
@@ -30,6 +30,7 @@ export default function App() {
         <Route path="/play-en" element={<PlayEn />} />
         <Route path="/test" element={<Test />} />
         <Route path="/buy-fr" element={<BuyFr />} />
+        <Route path="/private" element={<Dapp />} />
       </Routes>
     </div>
   );
