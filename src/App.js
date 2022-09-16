@@ -28,8 +28,8 @@ export default function App() {
         <Route path="/find-en" element={<FindEn />} />
         <Route path="/keep-en" element={<KeepEn />} />
         <Route path="/play-en" element={<PlayEn />} />
-        <Route path="/test" element={<Test />} />
-        <Route path="/buy-fr" element={<BuyFr />} />
+        {/* <Route path="/test" element={<Test />} />
+        <Route path="/buy-fr" element={<BuyFr />} /> */}
         <Route path="/private" element={<Dapp />} />
       </Routes>
     </div>

@@ -49,7 +49,7 @@ function Header() {
 
     if (contract) {
         return (
-            <div>
+            <div className="headerDapp">
             <div>Prix de l'ETH {priceOfEth} $</div>
             <div>Wallet address {truncateAddr(accounts[0])}</div>
             <div>Balance USDT {balance} </div>
