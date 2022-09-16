@@ -484,14 +484,8 @@ color:#000;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* max-width: 80%;
-  min-width: fit-content; */
   height: 400px;
   background-color: white;
-  /* background-position:center;
-  background-size: cover;
-  background-image: url(../public/LAUNCHATNK.png); */
-  /* border: solid black 2px; */
   border-radius: 30px;
   margin-bottom: 50px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -772,6 +766,7 @@ a:-webkit-any-link {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-position: center;
   background-size: cover;
   background-image: url(../public/fonddegrade_pieces.png);
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -985,3 +980,4 @@ border-radius: 50%;
   color: #000;
   outline: none;
 }
+

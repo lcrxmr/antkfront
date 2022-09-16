@@ -12,6 +12,7 @@ import LoveEn from "./loveen"
 import FindEn from "./finden";
 import KeepEn from "./keepen";
 import PlayEn from "./playen";
+import BuyFr from "./buyfr"
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/keep-en" element={<KeepEn />} />
         <Route path="/play-en" element={<PlayEn />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/buy-fr" element={<BuyFr />} />
       </Routes>
     </div>
   );
