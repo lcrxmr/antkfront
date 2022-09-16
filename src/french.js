@@ -688,7 +688,7 @@ export default function French(props) {
           <div className="container" id="roadmapDiv">
             <Slide direction="left">
               <MediaQuery minWidth={1000}>
-                <img src={"./roadmapfr.png"} id="roadmapPic" />
+                <img src={"./roadmap_FR.png"} id="roadmapPic" />
               </MediaQuery>
               <MediaQuery minWidth={0} maxWidth={1000}>
                 <img src={"./roadmapfr.png"} id="roadmapPicMobile" />

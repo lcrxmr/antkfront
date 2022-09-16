@@ -672,7 +672,7 @@ export default function English(props) {
           <div className="container" id="roadmapDiv">
             <Slide direction="left">
               <MediaQuery minWidth={1000}>
-                <img src={"./roadmapeng.png"} id="roadmapPic" />
+                <img src={"./roadmap-EN.png"} id="roadmapPic" />
               </MediaQuery>
               <MediaQuery minWidth={0} maxWidth={1000}>
                 <img src={"./roadmapeng.png"} id="roadmapPicMobile" />
