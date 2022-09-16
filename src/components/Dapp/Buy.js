@@ -12,23 +12,21 @@ function Buy({ whitelisted, currentState, devise }) {
 
     async function buyInEth() {
         if (amountInEth == 0) {
-            window.alert("Vous devez écrire un montant supérieur à 0 ETH!");
+            window.alert("Vous devez investir un montant supérieur à 1$ !");
         }
         else {
-
             await contract.methods.buyTokenWithEth().send({ from: accounts[0], value: web3.utils.toWei(amountInEth, 'ether') })
         }
     }
 
     async function buyInUsdt() {
         if (amountInUSDT < 1) {
-            window.alert("Vous devez écrire un montant supérieur à 1$ !");
+            window.alert("Vous devez investir un montant supérieur à 1$ !");
         }
         else {
             await instance.methods.approve('0xE130E93b386B7FA49163713160C7353E854b51c9', amountInUSDT*10**6).send({ from: accounts[0]})
             await contract.methods.buyTokenWithTether(amountInUSDT).send({ from: accounts[0] })
         }
-
     }
 
     function setAmountEth(amount) {
@@ -46,7 +44,6 @@ function Buy({ whitelisted, currentState, devise }) {
                 <input type='text' onChange={setAmountEth} />
             </div>
         )
-
     }
 
     if (((whitelisted && currentState == 1) || currentState == 2) && devise == "USDT") {

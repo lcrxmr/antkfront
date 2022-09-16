@@ -1,12 +1,6 @@
 import { useEffect } from "react";
 
-function Devise({ whitelisted, currentState, setDevise, devise }) {
-
-    useEffect(() => {
-       
-            console.log(devise)
-        
-    })
+function Devise({ whitelisted, currentState, setDevise }) {
 
     function setEth() {
         setDevise("ETH")
