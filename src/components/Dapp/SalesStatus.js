@@ -30,7 +30,7 @@ function SalesStatus({newState}) {
 
     return (
         <div>
-            <h2>Statut de la vente privée</h2>
+            <h4>Statut de la vente privée</h4>
             <p>{value}</p>
         </div>
     )

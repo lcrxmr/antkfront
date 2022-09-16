@@ -5,10 +5,12 @@ import SalesStatus from "./SalesStatus";
 import Header from "./Header";
 import Devise from "./Devise";
 import Whitelist from "./Whitelist";
+import Buy from "./Buy";
 
 function Dapp (){
   const [currentState, newState] = useState([]);
   const [whitelisted, iswhitelisted] = useState([]);
+  const [devise, setDevise] = useState('');
 
 
 return (
@@ -19,7 +21,8 @@ return (
     <NetWork />
     <SalesStatus newState={newState}/>
     <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted}/>
-    <Devise currentState={currentState} whitelisted={whitelisted}/>
+    <Devise currentState={currentState} whitelisted={whitelisted} setDevise={setDevise} devise={devise}/>
+    <Buy currentState={currentState} whitelisted={whitelisted} devise={devise}/>
   </div>
   </EthProvider>
 )

@@ -24,11 +24,7 @@ contract AntkPrivateTest is Ownable {
     /**
      * @dev tether is the only ERC20 asset to buy ANTK
      */
-    address usdt;
-
-    constructor(address _tether) {
-        usdt = _tether;
-    }
+    address usdt = 0x05e797F41f54e7Ef542775143B43f0B224B11760;
 
     /**
      * @dev numberOfTokenToSell is the number of ANTK to sell

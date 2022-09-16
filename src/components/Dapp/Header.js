@@ -13,7 +13,7 @@ function Header() {
 
     const Web3 = require('web3');
     const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
-    const instance = new web3.eth.Contract(IERC20.abi, "0x4Aec1F50164e9B09EcD966495993a47fb0B80467");
+    const instance = new web3.eth.Contract(IERC20.abi, "0x05e797F41f54e7Ef542775143B43f0B224B11760");
 
 
     useEffect(() => {
@@ -32,7 +32,7 @@ function Header() {
 
     async function checkBalance() {
         const result = await instance.methods.balanceOf(accounts[0]).call();
-        setBalance(result/10**18)
+        setBalance(result/10**6)
     }
 
     async function checkBalanceEth() {
@@ -51,9 +51,9 @@ function Header() {
         return (
             <div>
             <div>Prix de l'ETH {priceOfEth} $</div>
-            <div>{truncateAddr(accounts[0])}</div>
-            <div>{balance} USDT</div>
-            <div>{balanceEth} ETH</div>
+            <div>Wallet address {truncateAddr(accounts[0])}</div>
+            <div>Balance USDT {balance} </div>
+            <div>Balance ETH {balanceEth} </div>
             </div>
         )
     }
