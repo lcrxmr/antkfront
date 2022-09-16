@@ -9,7 +9,6 @@ function Account() {
     useEffect(() => {
         if (contract) {
             getAccount();
-            console.log(Antk)
         }
     })
 

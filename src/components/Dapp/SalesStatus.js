@@ -1,22 +1,18 @@
 import useEth from "../../contexts/EthContext/useEth";
 import { useEffect, useState } from "react";
 
-function SalesStatus({newState}) {
+function SalesStatus({ newState, whitelisted, currentState }) {
     const { state: { contract, accounts } } = useEth();
-    const [value, readState] = useState("");
-    
-    let SalesStatus = ["La vente n'a pas encore commencé !", "La vente a débuté pour les Whitelistés !", "Vente en cours !"]
 
     useEffect(() => {
         if (contract) {
-            salesStatus();
+            salesStatus()
             event()
         }
     })
 
     async function salesStatus() {
         const status = await contract.methods.salesStatus().call({ from: accounts[0] })
-        readState(SalesStatus[status]);
         newState(status)
     }
 
@@ -28,12 +24,44 @@ function SalesStatus({newState}) {
             .on('data', event => newState(event.returnValues))
     }
 
-    return (
-        <div>
-            <h4>Statut de la vente privée</h4>
-            <p>{value}</p>
-        </div>
-    )
+        if (currentState == 0) {
+            return (
+                <div>
+                    <h4>Statut de la vente privée</h4>
+                    <p>La vente n'a pas encore commencé !</p>
+                </div>
+            )
+        }
+        if ((currentState == 1) && whitelisted) {
+            return (
+                <div>
+                    <h4>Statut de la vente privée</h4>
+                    <p>La vente a débuté pour les Whitelistés !</p>
+                    <p>Votre addresse est whitelistée, vous pouvez acheter vos tokens !</p>
+                </div>
+            )
+        }
+        
+        if ((currentState == 1) && !whitelisted) {
+            return (
+                <div>
+                    <h4>Statut de la vente privée</h4>
+                    <p>La vente a débuté pour les Whitelistés !</p>
+                    <p>Votre addresse n'est pas whitelistée, vous devez attendre la phase public pour acheter vos tokens !</p>
+                </div>
+            )
+        }
+        
+        if (currentState == 2) {
+            return (
+                <div>
+                    <h4>Statut de la vente privée</h4>
+                    <p>La vente est en cours !</p>
+                    <p>Vous pouvez acheter vos tokens !</p>
+                </div>
+            )
+        }
+    
 
 }
 
