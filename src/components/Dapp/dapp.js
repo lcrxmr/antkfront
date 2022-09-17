@@ -13,7 +13,7 @@ import Navbar from "../../newNav";
 import "./dapp.css";
 
 function Dapp() {
-  const [currentState, newState] = useState([]);
+  const [currentState, newState] = useState("");
   const [whitelisted, iswhitelisted] = useState([]);
   const [devise, setDevise] = useState("");
 
@@ -29,7 +29,7 @@ function Dapp() {
           
           <Header />
           </div>
-          <SalesStatus newState={newState} />
+          <SalesStatus newState={newState} whitelisted={whitelisted} currentState={currentState}/>
           <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
           <Devise
             currentState={currentState}
