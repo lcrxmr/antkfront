@@ -19247,6 +19247,12 @@
     "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
   },
   "networks": {
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0xb8cc8AC49d35f22E40da0Ba849eA5Cc5434dfC34",
+      "transactionHash": "0xbc803928bfaf04a802bcacb0b7313912c924893e5da35b939243b42a3c4fb40c"
+    },
     "5": {
       "events": {
         "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
@@ -19310,10 +19316,16 @@
       "links": {},
       "address": "0xE130E93b386B7FA49163713160C7353E854b51c9",
       "transactionHash": "0xe3b7ffceed53d239dbb6de9c1b15429a8c88c3633ae899d1f1d9edf543e44c7a"
+    },
+    "1663409393653": {
+      "events": {},
+      "links": {},
+      "address": "0xD774f5F3Ac09493Ac55BF46B8713bffd72A58AD8",
+      "transactionHash": "0xec95cd12622084bacd98aafb7a8bc371a42b98576b043b034a11b55592082b5a"
     }
   },
   "schemaVersion": "3.4.9",
-  "updatedAt": "2022-09-16T11:03:50.831Z",
+  "updatedAt": "2022-09-17T19:54:50.674Z",
   "networkType": "ethereum",
   "devdoc": {
     "details": "Buyers can buy only with ETH or USDTCan add whitelists address to buy firstImplementation of the {IERC20} interfaceImplementation of the {Ownable} contractImplementation of the {AggregatorV3Interface} contract",

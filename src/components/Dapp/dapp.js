@@ -11,11 +11,15 @@ import Account from "./Account";
 import Footer from "../Footer";
 import Navbar from "../../newNav";
 import "./dapp.css";
+import Bonus from "./Bonus";
+import Calcul from "./Calculette";
 
 function Dapp() {
   const [currentState, newState] = useState("");
   const [whitelisted, iswhitelisted] = useState([]);
   const [devise, setDevise] = useState("");
+  const [tokensRemaining, setTokensRemaining] = useState();
+  const [priceOfEth, setPriceEth] = useState();
 
   return (
     <div className="App">
@@ -23,13 +27,13 @@ function Dapp() {
       <EthProvider>
         <div>
           <div className="top">
-          <h1>Vente Privée ANTK
-          <NetWork />
-          </h1>
-          
-          <Header />
+            <h1>Vente Privée ANTK
+              <NetWork />
+            </h1>
+
+            <Header setPriceEth={setPriceEth} priceOfEth={priceOfEth} />
           </div>
-          <SalesStatus newState={newState} whitelisted={whitelisted} currentState={currentState}/>
+          <SalesStatus newState={newState} whitelisted={whitelisted} currentState={currentState} />
           <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
           <Devise
             currentState={currentState}
@@ -41,9 +45,12 @@ function Dapp() {
             currentState={currentState}
             whitelisted={whitelisted}
             devise={devise}
+            priceOfEth={priceOfEth}
           />
-          <Amounts />
+          <Amounts tokensRemaining={tokensRemaining} setTokensRemaining={setTokensRemaining} />
           <Account />
+          <Bonus />
+          <Calcul tokensRemaining={tokensRemaining} devise={devise} priceOfEth={priceOfEth}/>
           <Footer />
         </div>
       </EthProvider>

@@ -2,11 +2,11 @@ import { useEth } from "../../contexts/EthContext";
 import { useEffect, useState } from "react";
 import IERC20 from "../../contracts/IERC20.json";
 
-function Header() {
+function Header({priceOfEth, setPriceEth}) {
     const { state: { contract, accounts } } = useEth();
     const [balance, setBalance] = useState([]);
     const [balanceEth, setBalanceEth] = useState([]);
-    const [priceOfEth, setPriceEth] = useState([]);
+    
 
 
     const truncate = /^(0x[a-zA-Z0-9]{4})[a-zA-Z0-9]+([a-zA-Z0-9]{4})$/;
@@ -14,7 +14,6 @@ function Header() {
     const Web3 = require('web3');
     const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
     const instance = new web3.eth.Contract(IERC20.abi, "0x05e797F41f54e7Ef542775143B43f0B224B11760");
-
 
     useEffect(() => {
         if (contract) {
@@ -41,11 +40,9 @@ function Header() {
     }
      
     async function priceEth() {
-        const priceEth = await contract.methods.getLatestPrice().call()
+        const priceEth = await contract.methods.getLatestPrice().call({ from: accounts[0] })
         setPriceEth(priceEth/10**8)
     }
-
-
 
     if (contract) {
         return (
