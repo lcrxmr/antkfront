@@ -6,17 +6,19 @@ function Amounts({tokensRemaining, setTokensRemaining}) {
     
     const [theFonds, setFondsLeves] = useState();
     const [price, setPrice] = useState();
+    const [bonus, setBonus] = useState();
 
     useEffect(() => {
         if (contract) {
             getTokenRemaining()
             getFunds()
             showPrice()
+            getBonus()
         }
     })
 
     async function getTokenRemaining() {
-        const token = await contract.methods.numberOfTokenToSell().call({ from: accounts[0] })
+        const token = await contract.methods.numberOfTokenToSell().call()
         setTokensRemaining(token);
     }
 
@@ -33,12 +35,19 @@ function Amounts({tokensRemaining, setTokensRemaining}) {
         setFondsLeves(fonds)
     }
 
+    async function getBonus() {
+        const numberOfTokenBonus = await contract.methods.numberOfTokenBonus().call()
+        setBonus(numberOfTokenBonus)
+    }
+
 
     return (
         <div>
-            <h5>Nombre de tokens restant à acheter : {tokensRemaining} ANTK</h5>
+            <p></p>
+            <h5>Nombre de tokens encore disponibles : {tokensRemaining} ANTK</h5>
+            <h6>Nombres de tokens bonus restant : {bonus} ANTK</h6>
             <p>Prix de l'Antk {price} $</p>
-            <h5>Fonds levés : {theFonds} $</h5>
+            <h5>Fonds levés : {theFonds} $</h5><p></p>
         </div>
     )
 

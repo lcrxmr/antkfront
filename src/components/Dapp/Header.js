@@ -2,7 +2,7 @@ import { useEth } from "../../contexts/EthContext";
 import { useEffect, useState } from "react";
 import IERC20 from "../../contracts/IERC20.json";
 
-function Header({priceOfEth, setPriceEth}) {
+function Header({priceOfEth, setPriceEth, setboolAcc}) {
     const { state: { contract, accounts } } = useEth();
     const [balance, setBalance] = useState([]);
     const [balanceEth, setBalanceEth] = useState([]);
@@ -13,13 +13,14 @@ function Header({priceOfEth, setPriceEth}) {
 
     const Web3 = require('web3');
     const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
-    const instance = new web3.eth.Contract(IERC20.abi, "0x05e797F41f54e7Ef542775143B43f0B224B11760");
+    const instance = new web3.eth.Contract(IERC20.abi, "0xb684b241a0ca25a995eae765118b4F2FFcc34409");
 
     useEffect(() => {
         if (contract) {
             checkBalance()
             checkBalanceEth()
             priceEth()
+            getAccount()
         }
     })
 
@@ -42,6 +43,14 @@ function Header({priceOfEth, setPriceEth}) {
     async function priceEth() {
         const priceEth = await contract.methods.getLatestPrice().call({ from: accounts[0] })
         setPriceEth(priceEth/10**8)
+    }
+
+    async function getAccount() {
+        const investor = await contract.methods.investors(accounts[0]).call()
+        if(investor.numberOfTokensPurchased > 0) {
+            setboolAcc(true)
+        }
+        
     }
 
     if (contract) {

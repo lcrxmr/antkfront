@@ -17,6 +17,7 @@ function Devise({ whitelisted, currentState, setDevise }) {
             <button onClick={setEth}>ETH</button>
             <p></p>
             <button onClick={setUsdt}>USDT</button>
+            <p></p>
             </div>
         )
     }

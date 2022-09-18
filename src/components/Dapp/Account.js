@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 
 function Account() {
     const { state: { contract, accounts } } = useEth();
-    const [Antk, setAntk] = useState([]);
-    const [Dollars, setDollars] = useState([]);
+    const [Antk, setAntk] = useState();
+    const [Dollars, setDollars] = useState();
+    const [Bonus, setBonus] = useState();
 
     useEffect(() => {
         if (contract) {
@@ -13,21 +14,21 @@ function Account() {
     })
 
     async function getAccount() {
-        const antk = await contract.methods.investors(accounts[0]).call()
-        setAntk(antk.numberOfTokensPurchased)
-        setDollars(antk.amountSpendInDollars)
+        const investor = await contract.methods.investors(accounts[0]).call()
+        setAntk(investor.numberOfTokensPurchased)
+        setDollars(investor.amountSpendInDollars)
+        setBonus(investor.bonusTokens)
     }
 
-    if(Dollars>0) {
-    return(
-        <div>
-            <h5>Vous avez acheté</h5>
-            <p>{Antk} ANTK</p>
-            <p>Pour un montant de {Dollars}$</p>
-        </div>
-    )
-}
+    if (Dollars > 0) {
+        return (
+            <div id='account' >
+                <h5>Vous avez acheté {Antk} ANTK pour un montant de {Dollars}$</h5>
+                { Bonus > 0 && <p>Vous avez reçu un bonus de {Bonus} ANTK</p>}
+            </div>
+        )
 
+    }
 }
 
 export default Account;

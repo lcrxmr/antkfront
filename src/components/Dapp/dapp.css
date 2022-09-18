@@ -16,6 +16,7 @@
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
+  color:black;
   }
   .view {
     width: 100%;
@@ -57,3 +58,25 @@
     margin-top: 0px;
   }
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+-webkit-appearance: none;
+margin:0;
+}
+
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button { 
+-o-appearance: none;
+margin:0
+}
+
+#account {
+  color: white;
+}

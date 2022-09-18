@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-function Calcul({ tokensRemaining, devise, priceOfEth }) {
-    const [get, set] = useState([])
-    const [get2, set2] = useState([])
+function Calcul({ tokensRemaining, devise, priceOfEth, currentState, whitelisted}) {
+    const [get, set] = useState()
+    const [get2, set2] = useState()
 
     function calculNumberTokenFromDollar(amount) {
         if(amount>100000){window.alert("Vous ne pouvez pas investir plus de 100 000$ en une fois !")}
@@ -72,18 +72,20 @@ function Calcul({ tokensRemaining, devise, priceOfEth }) {
 
     let ethNumber = (get2/1500).toFixed(2)
 
+    if(((currentState == 1) && whitelisted) || currentState == 2)
+
     if (devise == 'ETH') {
         return (
             <div>
                 <div>
-                    <h5>Calculateur du nombre de token pour un montant en ETH</h5>
+                <p></p>
+                <h5>Calculateur</h5>
                     <input type='number' placeholder="Montant en ETH" onChange={setAmountEth} />
-                    <p>Nombre d'ANTK que vous recevrez : {get} </p>
+                    <p>Vous recevrez : {get} ANTK</p>
                 </div>
                 <div>
-                <h5>Calculateur du prix en ETH pour un nombre de tokens</h5>
                     <input type='number' placeholder="Nombre de tokens" onChange={setAmountOfTokenETH}/>
-                    <p>Montant nécessaire: {ethNumber}ETH</p>
+                    <p>Montant nécessaire: {ethNumber} ETH</p>
                 </div>
             </div>
         )
@@ -93,14 +95,14 @@ function Calcul({ tokensRemaining, devise, priceOfEth }) {
         return (
             <div>
                 <div>
-                    <h5>Calculateur du nombre de token pour un montant en USDT</h5>
+                    <p></p>
+                    <h5>Calculateur</h5>
                     <input type='number' placeholder="Montant en USDT" onChange={setAmountDollars} />
-                    <p>Nombre d'ANTK que vous recevrez : {get} </p>
+                    <p>Vous recevrez : {get} ANTK</p>
                 </div>
                 <div>
-                    <h5>Calculateur du prix en USDT pour un nombre de tokens</h5>
                     <input type='number' placeholder="Nombre de tokens" onChange={setAmountOfTokenUSDT}/>
-                    <p>Montant nécessaire: {get2}USDT</p>
+                    <p>Montant nécessaire: {get2} USDT</p>
                 </div>
             </div>
         )

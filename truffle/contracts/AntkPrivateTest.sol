@@ -24,19 +24,21 @@ contract AntkPrivateTest is Ownable {
     /**
      * @dev tether is the only ERC20 asset to buy ANTK
      */
-    address usdt = 0x05e797F41f54e7Ef542775143B43f0B224B11760;
+    address usdt = 0xb684b241a0ca25a995eae765118b4F2FFcc34409;
 
     /**
      * @dev numberOfTokenToSell is the number of ANTK to sell
      * @dev It is update when someone buy
      */
     uint128 public numberOfTokenToSell = 500000000;
+    uint128 public numberOfTokenBonus = 10000000;
 
     /// save informations about the buyers
     struct Investor {
         bool isWhitelisted;
         uint128 numberOfTokensPurchased;
         uint128 amountSpendInDollars;
+        uint128 bonusTokens;
     }
 
     /// buyer's address  => buyer's informations
@@ -73,12 +75,9 @@ contract AntkPrivateTest is Ownable {
                 salesStatus == SalesStatus(1)) || salesStatus == SalesStatus(2),
             "Vous ne pouvez pas investir pour le moment !"
         );
+        require(_amount >= 1, "Ce montant est inferieur au montant minimum !");
         require(
-            _amount>=1,
-            "Ce montant est inferieur au montant minimum !"
-        );
-        require(
-            calculNumberOfTokenToBuy(_amount) <= numberOfTokenToSell,
+            _calculNumberOfTokenToBuy(_amount) <= numberOfTokenToSell,
             "Il ne reste plus assez de tokens disponibles !"
         );
         _;
@@ -108,12 +107,12 @@ contract AntkPrivateTest is Ownable {
 
     /**
      * @notice calcul number of token to buy
-     * @dev this is a public function, called in the modifier and buy function
+     * @dev this is a private function, called in the modifier and buy function
      * @dev we use it with the dapp to show the number of token to buy
      * @param _amountDollars is the amount to buy in dollars
      */
-    function calculNumberOfTokenToBuy(uint128 _amountDollars)
-        public
+    function _calculNumberOfTokenToBuy(uint128 _amountDollars)
+        private
         view
         returns (uint128)
     {
@@ -169,7 +168,7 @@ contract AntkPrivateTest is Ownable {
             "Vous n'avez pas assez de Tether !"
         );
 
-        uint128 numberOfTokenToBuy = calculNumberOfTokenToBuy(_amountDollars);
+        uint128 numberOfTokenToBuy = _calculNumberOfTokenToBuy(_amountDollars);
 
         bool result = IERC20(usdt).transferFrom(
             msg.sender,
@@ -178,17 +177,16 @@ contract AntkPrivateTest is Ownable {
         );
         require(result, "Transfer from error");
 
-        investors[msg.sender]
-            .numberOfTokensPurchased += numberOfTokenToBuy;
+        investors[msg.sender].numberOfTokensPurchased += numberOfTokenToBuy;
         investors[msg.sender].amountSpendInDollars += _amountDollars;
 
-        emit TokensBuy(
-            msg.sender,
-            numberOfTokenToBuy,
-            _amountDollars
-        );
+        emit TokensBuy(msg.sender, numberOfTokenToBuy, _amountDollars);
 
         numberOfTokenToSell -= numberOfTokenToBuy;
+
+        if (_amountDollars > 500 && numberOfTokenBonus > 0) {
+            _setBonus(numberOfTokenToBuy, _amountDollars);
+        }
     }
 
     /**
@@ -220,19 +218,56 @@ contract AntkPrivateTest is Ownable {
             (msg.value * getLatestPrice()) / 10**26
         );
 
-        uint128 numberOfTokenToBuy = calculNumberOfTokenToBuy(amountInDollars);
+        uint128 numberOfTokenToBuy = _calculNumberOfTokenToBuy(amountInDollars);
 
-        investors[msg.sender]
-            .numberOfTokensPurchased += numberOfTokenToBuy;
+        investors[msg.sender].numberOfTokensPurchased += numberOfTokenToBuy;
         investors[msg.sender].amountSpendInDollars += amountInDollars;
 
-        emit TokensBuy(
-            msg.sender,
-            numberOfTokenToBuy,
-            amountInDollars
-        );
+        emit TokensBuy(msg.sender, numberOfTokenToBuy, amountInDollars);
 
         numberOfTokenToSell -= numberOfTokenToBuy;
+
+        if (amountInDollars > 500 && numberOfTokenBonus > 0) {
+            _setBonus(numberOfTokenToBuy, amountInDollars);
+        }
+    }
+
+    /**
+     * @notice calcul of the bonus tokens
+     * @param _numberToken is the number of token buy
+     * @param _amountDollars is the price in dollars
+     */
+    function _calculBonus(uint128 _numberToken, uint128 _amountDollars)
+        private
+        view
+        returns (uint128)
+    {
+        if (_amountDollars > 1500) {
+            uint128 bonus = _numberToken / 10;
+            if (bonus <= numberOfTokenBonus) {
+                return bonus;
+            } else {
+                return numberOfTokenBonus;
+            }
+        } else {
+            uint128 bonus2 = (_numberToken * 65) / 1000;
+            if (bonus2 <= numberOfTokenBonus) {
+                return bonus2;
+            } else {
+                return numberOfTokenBonus;
+            }
+        }
+    }
+
+    /**
+     * @notice set the bonus to the buyer
+     * @param _numberToken is the number of token buy
+     * @param _amountDollars is the price in dollars
+     */
+    function _setBonus(uint128 _numberToken, uint128 _amountDollars) private {
+        uint128 bonus = _calculBonus(_numberToken, _amountDollars);
+        investors[msg.sender].bonusTokens += bonus;
+        numberOfTokenBonus -= bonus;
     }
 
     /**
