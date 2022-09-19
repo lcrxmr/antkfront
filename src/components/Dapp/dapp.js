@@ -35,6 +35,7 @@ function Dapp() {
     navRef.current.classList.remove("responsive_nav");
   };
 
+  if (window.ethereum) {
   return (
     <div className="App">
       <header>
@@ -256,5 +257,14 @@ function Dapp() {
     </div>
   );
 }
+
+else{
+  return (
+    <div>
+      <h2>Vous n'avez pas installé l'extension MetaMask !</h2>
+      <p>Rendez vous ici pour l'obtenir : <a href="https://metamask.io/">https://metamask.io/</a></p>
+      </div>
+  );
+}}
 
 export default Dapp;

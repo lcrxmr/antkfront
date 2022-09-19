@@ -3,7 +3,7 @@ import MediaQuery from "react-responsive";
 
 function Calcul({ tokensRemaining, devise, priceOfEth, currentState, whitelisted}) {
     const [get, set] = useState()
-    const [get2, set2] = useState()
+    const [get2, set2] = useState('')
 
     function calculNumberTokenFromDollar(amount) {
         if(amount>100000){window.alert("Vous ne pouvez pas investir plus de 100 000$ en une fois !")}

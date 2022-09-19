@@ -17,7 +17,7 @@ function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc }) {
 
     async function buyInEth() {
         setBool(true) ;
-        if (amountInEth * priceOfEth < 1) {
+        try {if (amountInEth * priceOfEth < 1) {
             window.alert("Vous devez investir un montant supérieur à 1$ !");
         }
         else if (amountInEth * priceOfEth > 100000) {
@@ -27,12 +27,16 @@ function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc }) {
             await contract.methods.buyTokenWithEth().send({ from: accounts[0], value: web3.utils.toWei(amountInEth, 'ether') })
         }
         setBool(false)
-        setInterval(setboolAcc(true), 10000)
+        setInterval(setboolAcc(true), 3000)}
+        catch{
+            setBool(false)
+            window.alert("Échec de la transaction !");
+        }
     }
 
     async function buyInUsdt() {
         setBool2(true)
-        let balanceOfUSDT = await instance.methods.balanceOf(accounts[0]).call()
+        try {let balanceOfUSDT = await instance.methods.balanceOf(accounts[0]).call()
         if (amountInUSDT > balanceOfUSDT * 10 ** 6) { window.alert("Vous n'avez pas assez d'USDT dans votre Wallet !"); }
         else {
             if (amountInUSDT < 1) {
@@ -47,7 +51,11 @@ function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc }) {
             }
         }
         setBool2(false)
-        setInterval(setboolAcc(true), 10000)
+        setInterval(setboolAcc(true), 10000)}
+        catch{
+            window.alert("Échec de la transaction !");
+            setBool2(false)
+        }
     }
 
     function setAmountEth(amount) {

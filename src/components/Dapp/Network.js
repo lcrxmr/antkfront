@@ -27,26 +27,30 @@ function NetWork() {
   const Params =
     <>
       <div className="status">
-      <MediaQuery minWidth={1000}>
-      <h6>Vous êtes connecté sur le bon réseau de la vente privée !</h6>
-      </MediaQuery>
-      <MediaQuery minWidth={0} maxWidth={1000}>
-      <h3>Vous êtes connecté sur le bon réseau de la vente privée !</h3>
-      </MediaQuery>
+        <MediaQuery minWidth={1000}>
+          <h6>Vous êtes connecté sur le bon réseau de la vente privée !</h6>
+        </MediaQuery>
+        <MediaQuery minWidth={0} maxWidth={1000}>
+          <h3>Vous êtes connecté sur le bon réseau de la vente privée !</h3>
+        </MediaQuery>
 
       </div>
     </>;
 
-  return (
-    <div className="demo">
-      {
-        !state.artifact ? <NoticeNoArtifact /> :
-          !state.contract ? <NoticeWrongNetwork /> :
-            Params
-      }
-      <hr />
-    </div>
-  );
+
+    return (
+      <div className="demo">
+        {
+          !state.ethereum ? <NoticeWrongNetwork /> :
+            !state.artifact ? <NoticeNoArtifact /> :
+              !state.contract ? <NoticeWrongNetwork /> :
+                Params
+        }
+        <hr />
+      </div>
+    );
+  
+
 }
 
 export default NetWork;
