@@ -26,7 +26,7 @@ function NetWork() {
   const Params =
     <>
       <div>
-        <h3>Vous êtes connecté sur le bon réseau de la vente privée !</h3>
+        <h6>Vous êtes connecté sur le bon réseau de la vente privée !</h6>
       </div>
     </>;
 

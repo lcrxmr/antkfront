@@ -48,14 +48,31 @@
   .top{
     display: flex;
     flex-direction: row;
-    margin-top: 100px;
-    width: fit-content;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 150px;
+    width: 100vw;
+  }
+
+  .titreDapp{
+    margin-left: 50px;
+    color: white;
   }
 
   .headerDapp{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 0px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
+  }
+
+  .headerDiv{
+    /* margin-left: auto; */
+    margin-right: 0px;
   }
 
 /* Firefox */

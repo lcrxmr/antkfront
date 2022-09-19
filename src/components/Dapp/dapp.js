@@ -27,11 +27,14 @@ function Dapp() {
       <EthProvider>
         <div>
           <div className="top">
-            <h1>Vente Privée ANTK
+            <h1 className="titreDapp">Vente Privée ANTK
               <NetWork />
             </h1>
-
+            
+            <div className="headerDiv">
             <Header setPriceEth={setPriceEth} priceOfEth={priceOfEth} setboolAcc={setboolAcc} />
+            </div>
+            
           </div>
           <SalesStatus newState={newState} whitelisted={whitelisted} currentState={currentState} />
           <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
