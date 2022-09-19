@@ -2,6 +2,7 @@ import { useState } from "react";
 import useEth from "../../contexts/EthContext/useEth";
 import IERC20 from "../../contracts/IERC20.json";
 import { MDBSpinner } from 'mdb-react-ui-kit';
+import MediaQuery from "react-responsive";
 
 function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc }) {
     const Web3 = require('web3');
@@ -60,8 +61,15 @@ function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc }) {
     if (((whitelisted && currentState == 1) || currentState == 2) && devise == "ETH") {
         return (
             <div >
-                <button onClick={buyInEth} className="buttonETH">Acheter{bool == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
+                <MediaQuery minWidth={1000}>
+                <button onClick={buyInEth} className="buttonBuyETH">ACHETER{bool == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
                 <input className="amountInputETH" type='text' placeholder="Montant en ETH" onChange={setAmountEth} />
+                </MediaQuery>
+                <MediaQuery minWidth={0} maxWidth={1000}>
+                <button onClick={buyInEth} className="buttonBuyETHMobile">ACHETER{bool == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
+                <input className="amountInputETHMobile" type='text' placeholder="Montant en ETH" onChange={setAmountEth} />
+                </MediaQuery>
+
             </div>
         )
     }
@@ -69,8 +77,15 @@ function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc }) {
     if (((whitelisted && currentState == 1) || currentState == 2) && devise == "USDT") {
         return (
             <div >
-                <button onClick={buyInUsdt} className="buttonUSDT">Acheter{bool2 == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
+                <MediaQuery minWidth={1000}>
+                <button onClick={buyInUsdt} className="buttonBuyUSDT">ACHETER{bool2 == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
                 <input className="amountInputUSDT" type='text' placeholder="Montant en USDT" onChange={setAmountUsdt} />
+                </MediaQuery>
+                <MediaQuery minWidth={0} maxWidth={1000}>
+                <button onClick={buyInUsdt} className="buttonBuyUSDTMobile">ACHETER{bool2 == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
+                <input className="amountInputUSDTMobile" type='text' placeholder="Montant en USDT" onChange={setAmountUsdt} />
+                </MediaQuery>
+
             </div>
         )
     }

@@ -47,14 +47,14 @@ function Amounts({tokensRemaining, setTokensRemaining}) {
             <MediaQuery minWidth={1000}>
             <p></p>
             <h5>Nombre de tokens encore disponibles : {tokensRemaining} / 500000000 ANTK</h5>
-            <h6>Nombres de tokens bonus restant : {bonus} ANTK</h6>
-            <p>ANTK = {price} $</p>
+            <h5>Nombres de tokens bonus restant : {bonus} ANTK</h5>
+            <h5>ANTK = {price} $</h5>
             <h5>Fonds levés : {theFonds} / 400000$</h5><p></p>
             </MediaQuery>
             <MediaQuery minWidth={0} maxWidth={1000}>
             <p></p>
-            <h2>Nombre de tokens encore disponibles : {tokensRemaining} / 500000000 ANTK</h2>
-            <h3>Nombres de tokens bonus restant : {bonus} ANTK</h3>
+            <h2>Nombre de tokens encore disponibles :  {tokensRemaining} / 500000000 ANTK</h2>
+            <h2>Nombres de tokens bonus restant : {bonus} ANTK</h2>
             <h2>ANTK = {price} $</h2>
             <h2>Fonds levés : {theFonds} / 400000$</h2><p></p>
             </MediaQuery>

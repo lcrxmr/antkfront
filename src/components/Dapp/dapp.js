@@ -47,19 +47,19 @@ function Dapp() {
           id="navlogo"
         />
         <nav ref={navRef}>
-          <a href="#produit" onClick={hideNavbar}>
+          <a href="/#produit" onClick={hideNavbar}>
             Produits
           </a>
           <a href="/white-fr.pdf" target="_blank" onClick={hideNavbar}>
             Whitepaper
           </a>
-          <a href="#tokenomics" onClick={hideNavbar}>
+          <a href="/#tokenomics" onClick={hideNavbar}>
             Tokenomics
           </a>
-          <a href="#roadmap" onClick={hideNavbar}>
+          <a href="/#roadmap" onClick={hideNavbar}>
             Roadmap
           </a>
-          <a href="#team" onClick={hideNavbar}>
+          <a href="/#team" onClick={hideNavbar}>
             Équipe
           </a>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
@@ -147,13 +147,13 @@ function Dapp() {
       </MediaQuery>
       <MediaQuery minWidth={0} maxWidth={1000}>
         <EthProvider>
-          <div className="top">
+          <div className="topMobile">
             <h1 className="titreDappMobile">
               Vente Privée ANTK
-              <NetWork />
             </h1>
+            <NetWork />
 
-            <div className="headerDiv">
+            <div className="headerDivMobile">
               <Header
                 setPriceEth={setPriceEth}
                 priceOfEth={priceOfEth}

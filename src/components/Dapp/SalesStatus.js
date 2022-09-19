@@ -65,14 +65,14 @@ function SalesStatus({ newState, whitelisted, currentState }) {
     return (
       <div>
         <MediaQuery minWidth={1000}>
-          <h4>Statut de la vente :</h4>
-          <button className="buttonETH"> en cours </button>
+          <h4>Phase 1 :</h4>
+          <button className="buttonStatus"> EN COURS </button>
           <p>Vous pouvez acheter vos tokens !</p>
         </MediaQuery>
         <MediaQuery minWidth={0} maxWidth={1000}>
           <div style={{marginTop: "30px"}}>
             <h1>Statut de la vente :</h1>
-            <button className="buttonETHMobile"> en cours </button>
+            <button className="buttonStatus"> EN COURS </button>
             <h2>Vous pouvez acheter vos tokens !</h2>
           </div>
         </MediaQuery>

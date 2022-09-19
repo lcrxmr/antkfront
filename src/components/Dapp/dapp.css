@@ -11,8 +11,10 @@
     text-align: center;
     font-family: 'Alata', sans-serif;
     position: relative;
-    background-size: cover;
-    background-image: url(../../../public/fonddegrade2.png);
+    background: rgb(255,240,112);
+background: linear-gradient(90deg, rgba(255,240,112,1) 0%, rgba(246,132,83,1) 80%);
+    /* background-size: cover;
+    background-image: url(../../../public/fonddegrade2.png); */
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
@@ -57,6 +59,29 @@
        -moz-box-sizing: border-box;
             box-sizing: border-box;
   }
+  .topMobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    width: 100vw;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  .buttonStatus{
+    background-color: rgb(122,212,32);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px ;
+    font-size: 20px;
+
+  }
 
   .titreDapp{
     margin-left: auto;
@@ -88,7 +113,9 @@
   .headerDappMobile{
     display: flex;
     flex-direction: column;
-    margin-top: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 0px;
     color: black;
     background-color: white;
     padding: 10px;
@@ -103,6 +130,16 @@
     margin-left: 0px;
   }
 
+  .headerMobile{
+    /* margin-left: auto; */
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .status{
+    margin-top: 50px;
+  }
+
   .mid{
     display: flex;
     justify-content: center !important;
@@ -114,7 +151,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.7);
     width: fit-content;
     padding: 10px;
     border-radius: 15px;
@@ -163,6 +200,8 @@ margin:0
   width: 100%;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
@@ -204,20 +243,57 @@ margin:0
   outline: none;
 }
 
+.buttonBuyETH{
+  background-color: red;
+  border-radius: 40px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid white 3px;
+  outline: none;
+  margin-right: 10px;
+}
+.buttonBuyETH:hover{
+  border: solid white 3px;
+  outline: none;
+}
+
+.buttonBuyETHMobile{
+  background-color: red;
+  border-radius: 40px;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid white 5px;
+  outline: none;
+  margin-right: 10px;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.buttonBuyETHMobile:hover{
+  border: solid white 3px;
+  outline: none;
+}
+
 .buttonETHMobile{
   background-color: red;
   border-radius: 40px;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  font-size: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
   padding-top: 5px;
   padding-bottom: 10px;
   border: solid red 3px;
   outline: none;
-  margin-right: 10px;
+  margin-right: 50px;
 }
 
 .buttonUSDT{
@@ -236,6 +312,95 @@ margin:0
   outline: none;
 }
 
+.buttonCalculUSDT{
+  background-color: rgb(68, 112, 246);
+  border-radius: 40px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+  border: none;
+}
+
+.buttonCalculUSDTMobile{
+  background-color: rgb(68, 112, 246);
+  border-radius: 40px;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 50px;
+  font-size: 50px;
+  outline: none;
+  border: none;
+}
+
+.buttonCalculETH{
+  background-color: red;
+  border-radius: 40px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+}
+
+.buttonCalculETHMobile{
+  background-color: red;
+  border-radius: 40px;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  font-size: 50px;
+  margin-top: 50px;
+}
+
+.buttonBuyUSDT{
+  background-color: rgb(68, 112, 246);
+  border-radius: 40px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+  border: solid white 3px;
+}
+.buttonBuyUSDT:hover{
+  border: solid white 3px;
+  outline: none;
+}
+
+.buttonBuyUSDTMobile{
+  background-color: rgb(68, 112, 246);
+  border-radius: 40px;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+  border: solid white 3px;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.buttonBuyUSDT:hover{
+  border: solid white 3px;
+  outline: none;
+}
+
 .buttonUSDTMobile{
   background-color: rgb(68, 112, 246);
   border-radius: 40px;
@@ -246,7 +411,11 @@ margin:0
   padding-bottom: 5px;
   outline: none;
   border: solid 3px rgb(68, 112, 246);
-  font-size: 30px;
+  font-size: 50px;
+}
+
+.calculette{
+  margin-top: 50px;
 }
 
 .amountInputETH{
@@ -259,6 +428,17 @@ margin:0
   margin-left: 0px;
 }
 
+.amountInputETHMobile{
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid white 2px;
+  margin-left: 0px;
+  font-size: 50px;
+}
+
 .amountInputUSDT{
   border-radius: 40px;
   padding-left: 20px;
@@ -269,13 +449,26 @@ margin:0
   margin-left: 10px;
 }
 
+.amountInputUSDTMobile{
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid white 2px;
+  margin-left: 10px;
+  font-size: 50px;
+}
+
 .tokenPic{
-  width: 600px;
-  margin-left: -150px;
+  width: 400px;
+  margin-right: 200px;
 }
 
 .tokenPicMobile{
-  width: 600px;
+  width: 500px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .currencyButtons{

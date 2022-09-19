@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MediaQuery from "react-responsive";
 
 function Calcul({ tokensRemaining, devise, priceOfEth, currentState, whitelisted}) {
     const [get, set] = useState()
@@ -76,38 +77,72 @@ function Calcul({ tokensRemaining, devise, priceOfEth, currentState, whitelisted
 
     if (devise == 'ETH') {
         return (
-            <div>
+            <div className="calculette">
+                <MediaQuery minWidth={1000}>
                 <div>
                 <p></p>
-                <h5>Calculateur</h5>
-                <button className="buttonETH"> ETH </button>
+                <h4>Calculateur</h4>
+                <button className="buttonCalculETH"> ETH </button>
                     <input className="amountInputETH" type='number' placeholder="Montant en ETH" onChange={setAmountEth} />
                     <p>Vous recevrez : {get} ANTK</p>
                 </div>
                 <div>
-                <button className="buttonETH"> ANTK </button>
+                <button className="buttonCalculETH"> ANTK </button>
                     <input className="amountInputETH" type='number' placeholder="Nombre de tokens" onChange={setAmountOfTokenETH}/>
                     <p>Montant nécessaire: {ethNumber} ETH</p>
                 </div>
+                </MediaQuery>
+                <MediaQuery minWidth={0} maxWidth={1000}>
+                <div>
+                <p></p>
+                <h1>Calculateur</h1>
+                <button className="buttonCalculETHMobile"> ETH </button>
+                    <input className="amountInputETHMobile" type='number' placeholder="Montant en ETH" onChange={setAmountEth} />
+                    <h2>Vous recevrez : {get} ANTK</h2>
+                </div>
+                <div>
+                <button className="buttonCalculETHMobile"> ANTK </button>
+                    <input className="amountInputETHMobile" type='number' placeholder="Nombre de tokens" onChange={setAmountOfTokenETH}/>
+                    <h2>Montant nécessaire: {ethNumber} ETH</h2>
+                </div>
+                </MediaQuery>
+
             </div>
         )
     }
 
     if (devise == 'USDT') {
         return (
-            <div>
+            <div className="calculette">
+                <MediaQuery minWidth={1000}>
                 <div>
                     <p></p>
-                    <h5>Calculateur</h5>
-                    <button className="buttonUSDT"> USDT </button>
+                    <h4>Calculateur</h4>
+                    <button className="buttonCalculUSDT"> USDT </button>
                     <input className="amountInputUSDT" type='number' placeholder="Montant en USDT" onChange={setAmountDollars} />
                     <p>Vous recevrez : {get} ANTK</p>
                 </div>
                 <div>
-                <button className="buttonUSDT"> ANTK </button>
+                <button className="buttonCalculUSDT"> ANTK </button>
                     <input className="amountInputUSDT" type='number' placeholder="Nombre de tokens" onChange={setAmountOfTokenUSDT}/>
                     <p>Montant nécessaire: {get2} USDT</p>
                 </div>
+                </MediaQuery>
+                <MediaQuery minWidth={0} maxWidth={1000}>
+                <div>
+                    <p></p>
+                    <h1>Calculateur</h1>
+                    <button className="buttonCalculUSDTMobile"> USDT </button>
+                    <input className="amountInputUSDTMobile" type='number' placeholder="Montant en USDT" onChange={setAmountDollars} />
+                    <h2>Vous recevrez : {get} ANTK</h2>
+                </div>
+                <div>
+                <button className="buttonCalculUSDTMobile"> ANTK </button>
+                    <input className="amountInputUSDTMobile" type='number' placeholder="Nombre de tokens" onChange={setAmountOfTokenUSDT}/>
+                    <h2>Montant nécessaire: {get2} USDT</h2>
+                </div>
+                </MediaQuery>
+
             </div>
         )
     }

@@ -1,6 +1,7 @@
 import { useEth } from "../../contexts/EthContext";
 // import NoticeNoArtifact from "./NoticeNoArtifact";
 // import NoticeWrongNetwork from "./NoticeWrongNetwork";
+import MediaQuery from "react-responsive";
 
 
 function NetWork() {
@@ -25,8 +26,14 @@ function NetWork() {
 
   const Params =
     <>
-      <div>
-        <h6>Vous êtes connecté sur le bon réseau de la vente privée !</h6>
+      <div className="status">
+      <MediaQuery minWidth={1000}>
+      <h6>Vous êtes connecté sur le bon réseau de la vente privée !</h6>
+      </MediaQuery>
+      <MediaQuery minWidth={0} maxWidth={1000}>
+      <h3>Vous êtes connecté sur le bon réseau de la vente privée !</h3>
+      </MediaQuery>
+
       </div>
     </>;
 
