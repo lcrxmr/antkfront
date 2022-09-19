@@ -38,12 +38,12 @@ class CountDown extends Component {
         minutes: 0,
         hours: 0,
         seconds: 0,
-        time_up: "TIME IS UP"
+        time_up: "LA VENTE À DÉBUTÉE"
       });
     }
   }
   componentDidMount() {
-    this.deadline = new Date("Sept 23, 2022 21:00:00").getTime();
+    this.deadline = new Date("Sept 23, 2022 12:00:00").getTime();
 
     this.x = setInterval(this.count, 1000);
   }
