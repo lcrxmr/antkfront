@@ -17,7 +17,6 @@ import "../../newNav.css";
 import { Routes, Route, Link } from "react-router-dom";
 import { useRef } from "react";
 
-
 function Dapp() {
   const [currentState, newState] = useState("");
   const [whitelisted, iswhitelisted] = useState([]);
@@ -28,233 +27,232 @@ function Dapp() {
 
   const navRef = useRef();
 
-	const showNavbar = () => {
-		navRef.current.classList.toggle("responsive_nav");
-	};
+  const showNavbar = () => {
+    navRef.current.classList.toggle("responsive_nav");
+  };
 
-  const hideNavbar =()=>{
-    navRef.current.classList.remove("responsive_nav")
-  }
+  const hideNavbar = () => {
+    navRef.current.classList.remove("responsive_nav");
+  };
 
   return (
     <div className="App">
-      		<header>
-			<img
-            alt=""
-            src={"./antk_police.png"}
-            width={120}
-            height={120}
-            className="d-inline-block align-top"
-            id="navlogo"
-          />
-			<nav ref={navRef}>
-				<a href="#produit" onClick={hideNavbar}>Produits</a>
-				<a href="/white-fr.pdf" target="_blank" onClick={hideNavbar}>Whitepaper</a>
-				<a href="#tokenomics" onClick={hideNavbar} >Tokenomics</a>
-				<a href="#roadmap" onClick={hideNavbar}>Roadmap</a>
-        <a href="#team" onClick={hideNavbar}>Équipe</a>
-				<button
-					className="nav-btn nav-close-btn"
-					onClick={showNavbar}>
-					<FaTimes size={70}/>
-				</button>
-                <div id="langButton"> 
-          <MediaQuery minWidth={1000}>
+      <header>
+        <img
+          alt=""
+          src={"./antk_police.png"}
+          width={120}
+          height={120}
+          className="d-inline-block align-top"
+          id="navlogo"
+        />
+        <nav ref={navRef}>
+          <a href="#produit" onClick={hideNavbar}>
+            Produits
+          </a>
+          <a href="/white-fr.pdf" target="_blank" onClick={hideNavbar}>
+            Whitepaper
+          </a>
+          <a href="#tokenomics" onClick={hideNavbar}>
+            Tokenomics
+          </a>
+          <a href="#roadmap" onClick={hideNavbar}>
+            Roadmap
+          </a>
+          <a href="#team" onClick={hideNavbar}>
+            Équipe
+          </a>
+          <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+            <FaTimes size={70} />
+          </button>
+          <div id="langButton">
+            <MediaQuery minWidth={1000}>
               <button className="lang">FR</button>
               <button className="lang">EN</button>
-          </MediaQuery>
+            </MediaQuery>
           </div>
-          <div id="langButtonMobile"> 
-          <MediaQuery minWidth={0} maxWidth={1000}>
-
+          <div id="langButtonMobile">
+            <MediaQuery minWidth={0} maxWidth={1000}>
               <button className="langMobile">FR</button>
 
               <button className="langMobile">EN</button>
+            </MediaQuery>
+          </div>
+        </nav>
+        <button className="nav-btn" onClick={showNavbar}>
+          <FaBars size={70} />
+        </button>
+      </header>
 
-          </MediaQuery>
-            </div>
-			</nav>
-			<button className="nav-btn" onClick={showNavbar}>
-				<FaBars size={70} />
-			</button>
-
-		</header>
       <MediaQuery minWidth={1000}>
-      <EthProvider>
-        
-        <div className="top">
-          <h1 className="titreDapp">
-            Vente Privée ANTK
-            <NetWork />
-          </h1>
+        <EthProvider>
+          <div className="top">
+            <h1 className="titreDapp">
+              Vente Privée ANTK
+              <NetWork />
+            </h1>
 
-          <div className="headerDiv">
-            <Header
-              setPriceEth={setPriceEth}
-              priceOfEth={priceOfEth}
-              setboolAcc={setboolAcc}
-            />
+            <div className="headerDiv">
+              <Header
+                setPriceEth={setPriceEth}
+                priceOfEth={priceOfEth}
+                setboolAcc={setboolAcc}
+              />
+            </div>
           </div>
-        </div>
-        <SalesStatus
-          newState={newState}
-          whitelisted={whitelisted}
-          currentState={currentState}
-        />
-        <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
+          <SalesStatus
+            newState={newState}
+            whitelisted={whitelisted}
+            currentState={currentState}
+          />
+          <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
 
-        <div className="buyANTK">
-          <img className="tokenPic" src={"./token.png"} />
+          <div className="buyANTK">
+            <img className="tokenPic" src={"./token.png"} />
 
-          <div className="buyDiv">
-            <Devise
-              currentState={currentState}
-              whitelisted={whitelisted}
-              setDevise={setDevise}
-              devise={devise}
-            />
-            <Buy
-              currentState={currentState}
-              whitelisted={whitelisted}
-              devise={devise}
-              priceOfEth={priceOfEth}
-              setboolAcc={setboolAcc}
-            />
-            <Calcul
-          tokensRemaining={tokensRemaining}
-          devise={devise}
-          priceOfEth={priceOfEth}
-          whitelisted={whitelisted}
-          currentState={currentState}
-        />
+            <div className="buyDiv">
+              <Devise
+                currentState={currentState}
+                whitelisted={whitelisted}
+                setDevise={setDevise}
+                devise={devise}
+              />
+              <Buy
+                currentState={currentState}
+                whitelisted={whitelisted}
+                devise={devise}
+                priceOfEth={priceOfEth}
+                setboolAcc={setboolAcc}
+              />
+              <Calcul
+                tokensRemaining={tokensRemaining}
+                devise={devise}
+                priceOfEth={priceOfEth}
+                whitelisted={whitelisted}
+                currentState={currentState}
+              />
+            </div>
           </div>
-        </div>
 
-        <div className="mid">
-          <div className="amounts">
-            <Amounts
-              tokensRemaining={tokensRemaining}
-              setTokensRemaining={setTokensRemaining}
-            />
-            {boolAcc == true && <Account />}
+          <div className="mid">
+            <div className="amounts">
+              <Amounts
+                tokensRemaining={tokensRemaining}
+                setTokensRemaining={setTokensRemaining}
+              />
+              {boolAcc == true && <Account />}
+            </div>
           </div>
-        </div>
         </EthProvider>
       </MediaQuery>
       <MediaQuery minWidth={0} maxWidth={1000}>
-      <EthProvider>
-        
-        <div className="top">
-          <h1 className="titreDappMobile">
-            Vente Privée ANTK
-            <NetWork />
-          </h1>
+        <EthProvider>
+          <div className="top">
+            <h1 className="titreDappMobile">
+              Vente Privée ANTK
+              <NetWork />
+            </h1>
 
-          <div className="headerDiv">
-            <Header
-              setPriceEth={setPriceEth}
-              priceOfEth={priceOfEth}
-              setboolAcc={setboolAcc}
-            />
+            <div className="headerDiv">
+              <Header
+                setPriceEth={setPriceEth}
+                priceOfEth={priceOfEth}
+                setboolAcc={setboolAcc}
+              />
+            </div>
           </div>
-        </div>
-        <SalesStatus
-          newState={newState}
-          whitelisted={whitelisted}
-          currentState={currentState}
-        />
-        <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
+          <SalesStatus
+            newState={newState}
+            whitelisted={whitelisted}
+            currentState={currentState}
+          />
+          <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
 
+          {/* //------------- BUY ANTK  */}
+          <MediaQuery minWidth={1000}>
+            <div className="buyANTK">
+              <img className="tokenPic" src={"./token.png"} />
 
-        {/* //------------- BUY ANTK  */}
-        <MediaQuery minWidth={1000}>
-        <div className="buyANTK">
-          <img className="tokenPic" src={"./token.png"} />
+              <div className="buyDiv">
+                <Devise
+                  currentState={currentState}
+                  whitelisted={whitelisted}
+                  setDevise={setDevise}
+                  devise={devise}
+                />
+                <Buy
+                  currentState={currentState}
+                  whitelisted={whitelisted}
+                  devise={devise}
+                  priceOfEth={priceOfEth}
+                  setboolAcc={setboolAcc}
+                />
+                <Calcul
+                  tokensRemaining={tokensRemaining}
+                  devise={devise}
+                  priceOfEth={priceOfEth}
+                  whitelisted={whitelisted}
+                  currentState={currentState}
+                />
+              </div>
+            </div>
+          </MediaQuery>
+          <MediaQuery minWidth={0} maxWidth={1000}>
+            <div className="buyANTKMobile">
+              <img className="tokenPic" src={"./token.png"} />
 
-          <div className="buyDiv">
-            <Devise
-              currentState={currentState}
-              whitelisted={whitelisted}
-              setDevise={setDevise}
-              devise={devise}
-            />
-            <Buy
-              currentState={currentState}
-              whitelisted={whitelisted}
-              devise={devise}
-              priceOfEth={priceOfEth}
-              setboolAcc={setboolAcc}
-            />
-            <Calcul
-          tokensRemaining={tokensRemaining}
-          devise={devise}
-          priceOfEth={priceOfEth}
-          whitelisted={whitelisted}
-          currentState={currentState}
-        />
-          </div>
-        </div>
-        </MediaQuery>
-        <MediaQuery minWidth={0} maxWidth={1000}>
-        <div className="buyANTKMobile">
-          <img className="tokenPic" src={"./token.png"} />
+              <div className="buyDiv">
+                <Devise
+                  currentState={currentState}
+                  whitelisted={whitelisted}
+                  setDevise={setDevise}
+                  devise={devise}
+                />
+                <Buy
+                  currentState={currentState}
+                  whitelisted={whitelisted}
+                  devise={devise}
+                  priceOfEth={priceOfEth}
+                  setboolAcc={setboolAcc}
+                />
+                <Calcul
+                  tokensRemaining={tokensRemaining}
+                  devise={devise}
+                  priceOfEth={priceOfEth}
+                  whitelisted={whitelisted}
+                  currentState={currentState}
+                />
+              </div>
+            </div>
+          </MediaQuery>
 
-          <div className="buyDiv">
-            <Devise
-              currentState={currentState}
-              whitelisted={whitelisted}
-              setDevise={setDevise}
-              devise={devise}
-            />
-            <Buy
-              currentState={currentState}
-              whitelisted={whitelisted}
-              devise={devise}
-              priceOfEth={priceOfEth}
-              setboolAcc={setboolAcc}
-            />
-            <Calcul
-          tokensRemaining={tokensRemaining}
-          devise={devise}
-          priceOfEth={priceOfEth}
-          whitelisted={whitelisted}
-          currentState={currentState}
-        />
-          </div>
-        </div>
-        </MediaQuery>
-
-
-        {/* // --------------- Amounts  */}
-        <MediaQuery minWidth={1000}>
-        <div className="mid">
-          <div className="amounts">
-            <Amounts
-              tokensRemaining={tokensRemaining}
-              setTokensRemaining={setTokensRemaining}
-            />
-            {boolAcc == true && <Account />}
-          </div>
-        </div>
-        </MediaQuery>
-        <MediaQuery minWidth={0} maxWidth={1000}>
-        <div className="mid">
-          <div className="amountsMobile">
-            <Amounts
-              tokensRemaining={tokensRemaining}
-              setTokensRemaining={setTokensRemaining}
-            />
-            {boolAcc == true && <Account />}
-          </div>
-        </div>
-        </MediaQuery>
-
-        
+          {/* // --------------- Amounts  */}
+          <MediaQuery minWidth={1000}>
+            <div className="mid">
+              <div className="amounts">
+                <Amounts
+                  tokensRemaining={tokensRemaining}
+                  setTokensRemaining={setTokensRemaining}
+                />
+                {boolAcc == true && <Account />}
+              </div>
+            </div>
+          </MediaQuery>
+          <MediaQuery minWidth={0} maxWidth={1000}>
+            <div className="mid">
+              <div className="amountsMobile">
+                <Amounts
+                  tokensRemaining={tokensRemaining}
+                  setTokensRemaining={setTokensRemaining}
+                />
+                {boolAcc == true && <Account />}
+              </div>
+            </div>
+          </MediaQuery>
         </EthProvider>
       </MediaQuery>
-      
+
       <Footer />
-      
     </div>
   );
 }
