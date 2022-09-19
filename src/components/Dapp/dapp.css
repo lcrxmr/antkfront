@@ -271,6 +271,11 @@ margin:0
 
 .tokenPic{
   width: 600px;
+  margin-left: -150px;
+}
+
+.tokenPicMobile{
+  width: 600px;
 }
 
 .currencyButtons{

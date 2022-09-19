@@ -199,7 +199,7 @@ function Dapp() {
           </MediaQuery>
           <MediaQuery minWidth={0} maxWidth={1000}>
             <div className="buyANTKMobile">
-              <img className="tokenPic" src={"./token.png"} />
+              <img className="tokenPicMobile" src={"./token.png"} />
 
               <div className="buyDiv">
                 <Devise
