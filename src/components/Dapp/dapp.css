@@ -476,3 +476,10 @@ margin:0
   justify-content: center;
   margin-bottom: 20px;
 }
+
+.currencyButtonsMobile{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}

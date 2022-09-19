@@ -24,8 +24,8 @@ function Devise({ whitelisted, currentState, setDevise }) {
             </div>
             </MediaQuery>
             <MediaQuery minWidth={0} maxWidth={1000}>
-            <div><h2>Sélectionnez votre devise :</h2></div>
-            <div className="currencyButtons">
+            <div><h1>Sélectionnez votre devise :</h1></div>
+            <div className="currencyButtonsMobile">
             <button onClick={setEth} className="buttonETHMobile">ETH</button>
             <p></p>
             <button onClick={setUsdt} className="buttonUSDTMobile">USDT</button>
