@@ -8,9 +8,9 @@ function NetWork() {
 
   function NoticeWrongNetwork() {
     return (
-      <p>
+      <h3>
         ⚠️ MetaMask n'est pas connecté à la bonne blockchain !.
-      </p>
+      </h3>
     );
   }
 

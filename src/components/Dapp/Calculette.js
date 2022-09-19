@@ -80,11 +80,13 @@ function Calcul({ tokensRemaining, devise, priceOfEth, currentState, whitelisted
                 <div>
                 <p></p>
                 <h5>Calculateur</h5>
-                    <input type='number' placeholder="Montant en ETH" onChange={setAmountEth} />
+                <button className="buttonETH"> ETH </button>
+                    <input className="amountInputETH" type='number' placeholder="Montant en ETH" onChange={setAmountEth} />
                     <p>Vous recevrez : {get} ANTK</p>
                 </div>
                 <div>
-                    <input type='number' placeholder="Nombre de tokens" onChange={setAmountOfTokenETH}/>
+                <button className="buttonETH"> ANTK </button>
+                    <input className="amountInputETH" type='number' placeholder="Nombre de tokens" onChange={setAmountOfTokenETH}/>
                     <p>Montant nécessaire: {ethNumber} ETH</p>
                 </div>
             </div>
@@ -97,11 +99,13 @@ function Calcul({ tokensRemaining, devise, priceOfEth, currentState, whitelisted
                 <div>
                     <p></p>
                     <h5>Calculateur</h5>
-                    <input type='number' placeholder="Montant en USDT" onChange={setAmountDollars} />
+                    <button className="buttonUSDT"> USDT </button>
+                    <input className="amountInputUSDT" type='number' placeholder="Montant en USDT" onChange={setAmountDollars} />
                     <p>Vous recevrez : {get} ANTK</p>
                 </div>
                 <div>
-                    <input type='number' placeholder="Nombre de tokens" onChange={setAmountOfTokenUSDT}/>
+                <button className="buttonUSDT"> ANTK </button>
+                    <input className="amountInputUSDT" type='number' placeholder="Nombre de tokens" onChange={setAmountOfTokenUSDT}/>
                     <p>Montant nécessaire: {get2} USDT</p>
                 </div>
             </div>

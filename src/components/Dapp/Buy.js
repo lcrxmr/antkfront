@@ -59,18 +59,18 @@ function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc }) {
 
     if (((whitelisted && currentState == 1) || currentState == 2) && devise == "ETH") {
         return (
-            <div>
-                <button onClick={buyInEth}>Acheter{bool == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
-                <input type='text' placeholder="Montant en ETH" onChange={setAmountEth} />
+            <div >
+                <button onClick={buyInEth} className="buttonETH">Acheter{bool == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
+                <input className="amountInputETH" type='text' placeholder="Montant en ETH" onChange={setAmountEth} />
             </div>
         )
     }
 
     if (((whitelisted && currentState == 1) || currentState == 2) && devise == "USDT") {
         return (
-            <div>
-                <button onClick={buyInUsdt}>Acheter{bool2 == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
-                <input type='text' placeholder="Montant en USDT" onChange={setAmountUsdt} />
+            <div >
+                <button onClick={buyInUsdt} className="buttonUSDT">Acheter{bool2 == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
+                <input className="amountInputUSDT" type='text' placeholder="Montant en USDT" onChange={setAmountUsdt} />
             </div>
         )
     }

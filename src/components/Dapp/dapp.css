@@ -16,7 +16,9 @@
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
-  color:black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   }
   .view {
     width: 100%;
@@ -48,21 +50,34 @@
   .top{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     margin-top: 150px;
     width: 100vw;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
   }
 
   .titreDapp{
-    margin-left: 50px;
+    margin-left: auto;
+    margin-right: 100px;
     color: white;
+    font-size: 100px;
   }
+
+  .titreDappMobile{
+    margin-left: auto;
+    margin-right: 50px;
+    color: white;
+    font-size: 100px;
+  }
+  
 
   .headerDapp{
     display: flex;
     flex-direction: column;
     margin-top: 0px;
+    color: black;
     background-color: white;
     padding: 10px;
     border-radius: 15px;
@@ -70,9 +85,54 @@
     box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
   }
 
+  .headerDappMobile{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 24px;
+    box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
+  }
+
   .headerDiv{
     /* margin-left: auto; */
-    margin-right: 0px;
+    margin-right: 50px;
+    margin-left: 0px;
+  }
+
+  .mid{
+    display: flex;
+    justify-content: center !important;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .amounts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
+  }
+
+  .amountsMobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+    width: fit-content;
+    max-width: 800px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
+    margin-top: 50px;
+    margin-bottom: 200px;
   }
 
 /* Firefox */
@@ -96,4 +156,125 @@ margin:0
 
 #account {
   color: white;
+}
+
+.buyANTK{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  min-width: fit-content;
+}
+
+.buyANTKMobile{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: fit-content;
+  max-width: 800px;
+  justify-content: center;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  min-width: fit-content;
+}
+
+.buyDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttonETH{
+  background-color: red;
+  border-radius: 40px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid red 3px;
+  outline: none;
+  margin-right: 10px;
+}
+.buttonETH:hover{
+  border: solid white 3px;
+  outline: none;
+}
+
+.buttonETHMobile{
+  background-color: red;
+  border-radius: 40px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border: solid red 3px;
+  outline: none;
+  margin-right: 10px;
+}
+
+.buttonUSDT{
+  background-color: rgb(68, 112, 246);
+  border-radius: 40px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+  border: solid 3px rgb(68, 112, 246);
+}
+.buttonUSDT:hover{
+  border: solid white 3px;
+  outline: none;
+}
+
+.buttonUSDTMobile{
+  background-color: rgb(68, 112, 246);
+  border-radius: 40px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+  border: solid 3px rgb(68, 112, 246);
+  font-size: 30px;
+}
+
+.amountInputETH{
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid white 2px;
+  margin-left: 0px;
+}
+
+.amountInputUSDT{
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid white 2px;
+  margin-left: 10px;
+}
+
+.tokenPic{
+  width: 600px;
+}
+
+.currencyButtons{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
