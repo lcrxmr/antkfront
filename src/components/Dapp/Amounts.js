@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import useEth from "../../contexts/EthContext/useEth";
 import MediaQuery from "react-responsive";
 
-function Amounts({ tokensRemaining, setTokensRemaining }) {
+function Amounts({ tokensRemaining, setTokensRemaining, price, setPrice }) {
     const { state: { contract } } = useEth();
 
     const [theFonds, setFondsLeves] = useState();
-    const [price, setPrice] = useState();
     const [bonus, setBonus] = useState();
     const [percent1, setPercent1] = useState();
     const [percent2, setPercent2] = useState();
