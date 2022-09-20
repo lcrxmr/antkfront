@@ -61,10 +61,33 @@ background: linear-gradient(90deg, rgba(255,240,112,1) 0%, rgba(246,132,83,1) 80
   margin-left: 5px;
   margin-right: 5px;
 }
+.buyLangButton:hover,
+.buyLangButton:focus,
+.buyLangButton:active{
+  margin-left: 5px;
+  margin-right: 5px;
+  color: grey;
+  cursor: pointer;
+}
+
+.buyLangButtonMobile{
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 50px;
+  z-index: 9;
+}
+.buyLangButtonMobile:hover,
+.buyLangButtonMobile:focus,
+.buyLangButtonMobile:active{
+  margin-left: 5px;
+  margin-right: 5px;
+  color: grey;
+  cursor: pointer;
+}
 
   .top{
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
     margin-top: 150px;
     width: 100vw;
@@ -76,6 +99,7 @@ background: linear-gradient(90deg, rgba(255,240,112,1) 0%, rgba(246,132,83,1) 80
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 150px;
     width: 100vw;
     -webkit-box-sizing: border-box;
@@ -97,8 +121,7 @@ background: linear-gradient(90deg, rgba(255,240,112,1) 0%, rgba(246,132,83,1) 80
   }
 
   .titreDapp{
-    margin-left: auto;
-    margin-right: 100px;
+justify-content: center;
     color: white;
     font-size: 100px;
   }
@@ -139,19 +162,30 @@ background: linear-gradient(90deg, rgba(255,240,112,1) 0%, rgba(246,132,83,1) 80
 
   .headerDiv{
     /* margin-left: auto; */
-    margin-right: 50px;
+    margin-right: 0px;
     margin-left: 0px;
+    width: fit-content;
+    position: absolute;
+    top: 350px;
+    right: 50px
   }
 
   .headerMobile{
     /* margin-left: auto; */
     margin-right: 0px;
     margin-left: 0px;
+    margin-bottom: 0px;
   }
 
   .status{
     margin-top: 50px;
   }
+
+
+.saleStatus{
+  margin-left: 200px
+
+}
 
   .mid{
     display: flex;
@@ -166,7 +200,7 @@ background: linear-gradient(90deg, rgba(255,240,112,1) 0%, rgba(246,132,83,1) 80
     justify-content: center;
     background-color: rgba(255, 0, 0, 0.7);
     width: fit-content;
-    height: 400px;
+    height: fit-content;
     padding: 10px;
     border-radius: 15px;
     box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
@@ -176,7 +210,7 @@ background: linear-gradient(90deg, rgba(255,240,112,1) 0%, rgba(246,132,83,1) 80
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.7);
     width: fit-content;
     max-width: 800px;
     padding: 10px;
@@ -206,7 +240,28 @@ margin:0
 }
 
 #account {
+  justify-content: center;
+  align-items: center;
   color: white;
+  background-color: black;
+  width: 300px;
+  height: fit-content;
+  border-radius: 15px;
+  padding: 5px;
+  margin-top: 20px;
+  box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
+  font-size: 14px;
+}
+#accountMobile {
+  color: white;
+  background-color: black;
+  width: 100%;
+  height: fit-content;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
+  font-size: 24px;
 }
 
 .buyANTK{
@@ -214,7 +269,7 @@ margin:0
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 50px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -500,19 +555,23 @@ margin:0
 
 
 .skillbar {
-  height: 30px;
+  height: fit-content;
   width: 1000px;
-  /* background-color: black; */
+  background-color: black;
   display: flex;
+  border-radius: 15px;
+  margin-bottom: 10px;
   /* border: 1px solid black; */
+
 }
 
 .skillbarMobile {
-  height: 30px;
+  height: fit-content;
   width: 100%;
   /* background-color: black; */
   display: flex;
   /* border: 1px solid black; */
+  margin-bottom: 20px;
 }
 
 .skillbar-progress {
@@ -521,42 +580,68 @@ margin:0
 }
 
 .one {
-background-color: lightgreen;
+background-color: rgb(239, 176, 175);
 width: 20%;
-border-top-left-radius: 15px;
 border-bottom-left-radius: 15px;
+border-top-left-radius: 15px;
 }
 
 .two {
-background-color: lightyellow;
+background-color: rgb(239, 176, 175);
 width: 20%;
 }
 
 .three {
-background-color: rgb(128, 139, 240);
+background-color: rgb(239, 176, 175);
 width: 60%;
 border-top-right-radius: 15px;
 border-bottom-right-radius: 15px;
 
 }
 
+
+.oneMobile {
+  background-color: rgb(239, 176, 175);
+  width: 20%;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  font-size: 30px;
+  }
+  
+  .twoMobile {
+  background-color: rgb(239, 176, 175);
+  width: 20%;
+  font-size: 30px;
+  }
+  
+  .threeMobile {
+  background-color: rgb(239, 176, 175);
+  width: 60%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 30px;
+  
+  }
+
+
 .skillbar-progress-one {
-   background-color: green;
+   background-color: rgb(144, 210, 72);
    width: 100%;
    height: 100%;
-   border-bottom-right-radius:  15px;
-   border-bottom-left-radius:  15px;
    margin-top: 5px;
 }
 
 .skillbar-progress-two {
 background-color: orange;
-
 height: 100%;
+margin-top: 5px;
 }
 .skillbar-progress-three {
-background-color: rgb(0, 38, 255);
+background-color: rgb(240, 144, 53);
 height: 100%;
+margin-top: 5px;
+border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .skillbar-progress-text {

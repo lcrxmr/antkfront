@@ -18,10 +18,10 @@ function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc, USDT, 
     async function buyInEth() {
         setBool(true) ;
         try {if (amountInEth * priceOfEth < 1) {
-            window.alert("Vous devez investir un montant supérieur à 1$ !");
+            window.alert("You need to invest at least 1$ !");
         }
         else if (amountInEth * priceOfEth > 100000) {
-            window.alert("Vous ne pouvez pas investir plus de 100 000$ en une fois !");
+            window.alert("You can't invest more than 100 000$ at a time !");
         }
         else {
             await contract.methods.buyTokenWithEth().send({ from: accounts[0], value: web3.utils.toWei(amountInEth, 'ether') })
@@ -30,20 +30,20 @@ function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc, USDT, 
         setInterval(setboolAcc(true), 3000)}
         catch{
             setBool(false)
-            window.alert("Échec de la transaction !");
+            window.alert("Transaction failed !");
         }
     }
 
     async function buyInUsdt() {
         setBool2(true)
         try {let balanceOfUSDT = await instance.methods.balanceOf(accounts[0]).call()
-        if (amountInUSDT > balanceOfUSDT * 10 ** 6) { window.alert("Vous n'avez pas assez d'USDT dans votre Wallet !"); }
+        if (amountInUSDT > balanceOfUSDT * 10 ** 6) { window.alert("You don't have USDT in you wallet !"); }
         else {
             if (amountInUSDT < 1) {
-                window.alert("Vous devez investir un montant supérieur à 1$ !");
+                window.alert("You need to invest at least 1$ !");
             }
             else if (amountInUSDT > 100000) {
-                window.alert("Vous ne pouvez pas investir plus de 100 000$ en une fois !");
+                window.alert("You can't invest more than 100 000$ at a time !");
             }
             else {
                 await instance.methods.approve(Private, amountInUSDT * 10 ** 6).send({ from: accounts[0] })
@@ -53,7 +53,7 @@ function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc, USDT, 
         setBool2(false)
         setInterval(setboolAcc(true), 10000)}
         catch{
-            window.alert("Échec de la transaction !");
+            window.alert("Transaction failed!");
             setBool2(false)
         }
     }
@@ -70,12 +70,12 @@ function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc, USDT, 
         return (
             <div >
                 <MediaQuery minWidth={1000}>
-                <button onClick={buyInEth} className="buttonBuyETH">ACHETER{bool == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
-                <input className="amountInputETH" type='text' placeholder="Montant en ETH" onChange={setAmountEth} />
+                <button onClick={buyInEth} className="buttonBuyETH">BUY{bool == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
+                <input className="amountInputETH" type='text' placeholder="Amount in ETH" onChange={setAmountEth} />
                 </MediaQuery>
                 <MediaQuery minWidth={0} maxWidth={1000}>
-                <button onClick={buyInEth} className="buttonBuyETHMobile">ACHETER{bool == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
-                <input className="amountInputETHMobile" type='text' placeholder="Montant en ETH" onChange={setAmountEth} />
+                <button onClick={buyInEth} className="buttonBuyETHMobile">BUY{bool == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
+                <input className="amountInputETHMobile" type='text' placeholder="Amount in ETH" onChange={setAmountEth} />
                 </MediaQuery>
 
             </div>
@@ -86,12 +86,12 @@ function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc, USDT, 
         return (
             <div >
                 <MediaQuery minWidth={1000}>
-                <button onClick={buyInUsdt} className="buttonBuyUSDT">ACHETER{bool2 == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
-                <input className="amountInputUSDT" type='text' placeholder="Montant en USDT" onChange={setAmountUsdt} />
+                <button onClick={buyInUsdt} className="buttonBuyUSDT">BUY{bool2 == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
+                <input className="amountInputUSDT" type='text' placeholder="Amount in USDT" onChange={setAmountUsdt} />
                 </MediaQuery>
                 <MediaQuery minWidth={0} maxWidth={1000}>
-                <button onClick={buyInUsdt} className="buttonBuyUSDTMobile">ACHETER{bool2 == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
-                <input className="amountInputUSDTMobile" type='text' placeholder="Montant en USDT" onChange={setAmountUsdt} />
+                <button onClick={buyInUsdt} className="buttonBuyUSDTMobile">BUY{bool2 == true && <MDBSpinner class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"/> }</button>
+                <input className="amountInputUSDTMobile" type='text' placeholder="Amount in USDT" onChange={setAmountUsdt} />
                 </MediaQuery>
 
             </div>

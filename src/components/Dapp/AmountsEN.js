@@ -26,22 +26,23 @@ function Amounts({ tokensRemaining, setTokensRemaining }) {
         let tokens = 500000000 - tokensRemaining
         let tokens2 = 400000000 - tokensRemaining
         let tokens3 = 300000000 - tokensRemaining
+
         if (tokens <= 100000000 && tokens > 0) {
             setPercent1(tokens / 1000000)
             setPercent2(0)
             setPercent3(0)
         }
+        else { setPercent1(100) }
 
         if (tokens <= 200000000 && tokens > 100000000) {
             setPercent2(tokens2 / 1000000)
-            setPercent1(100)
             setPercent3(0)
         }
+        else { setPercent2(100) }
 
         if (tokens > 200000000) {
             setPercent3(tokens3 / 3000000)
-            setPercent1(100) 
-            setPercent2(100) 
+            
         }
         if (tokens == 0) {
             setPercent1(0)
@@ -95,15 +96,14 @@ function Amounts({ tokensRemaining, setTokensRemaining }) {
                     }} > {percent3 +'%'}</div>
                 </div>
             </div>
-            <h5>Fonds levés : {theFonds} / 400000$</h5>
+            <h5>Funds raised : {theFonds} / 400000$</h5>
             <br/>
-                <h5>Nombre de tokens encore disponibles : {tokensRemaining} / 500000000 ANTK</h5>
-                <h5>Nombres de tokens bonus restant : {bonus} ANTK</h5>
+                <h5>Number of tokens remaining : {tokensRemaining} / 500000000 ANTK</h5>
+                <h5>Number of bonus tokens remaining : {bonus} ANTK</h5>
                 <br/>
                 <h5>ANTK = {price} $</h5>
                 
 
-                
 
 
             </MediaQuery>
@@ -126,12 +126,14 @@ function Amounts({ tokensRemaining, setTokensRemaining }) {
                     }} >{percent3 +'%'}</div>
                 </div>
             </div>
-            <h2>Fonds levés : {theFonds} / 400000$</h2>
+            <h2>Funds raised : {theFonds} / 400000$</h2>
             <br/>
-                <h2>Nombre de tokens encore disponibles :  {tokensRemaining} / 500000000 ANTK</h2>
-                <h2>Nombres de tokens bonus restant : {bonus} ANTK</h2>
+                <h2>Number of tokens remaining  :  {tokensRemaining} / 500000000 ANTK</h2>
+                <h2>Number of bonus tokens remaining : {bonus} ANTK</h2>
                 <br/>
                 <h2>ANTK = {price} $</h2>
+                
+
             </MediaQuery>
 
 

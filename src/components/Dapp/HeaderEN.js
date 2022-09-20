@@ -63,20 +63,20 @@ function Header({ priceOfEth, setPriceEth, setboolAcc,  USDT}) {
       <>
         <MediaQuery minWidth={1000}>
           <div className="headerDapp">
-            <h5>Votre Wallet</h5>
-            <div>Prix de l'ETH = {priceOfEth} $</div>
+            <h5>Your Wallet</h5>
+            <div>Price of ETH = {priceOfEth} $</div>
             <div>Wallet address : {truncateAddr(accounts[0])}</div>
-            <div>Balance USDT :{balance} </div>
-            <div>Balance ETH : {balanceEth} </div>
+            <div>USDT Balance :{balance} </div>
+            <div>ETH Balance : {balanceEth} </div>
           </div>
         </MediaQuery>
         <MediaQuery minWidth={0} maxWidth={1000}>
           <div className="headerDappMobile">
-            <h2>Votre Wallet</h2>
-            <div>Prix de l'ETH = {priceOfEth} $</div>
+          <h2>Your Wallet</h2>
+            <div>Price of ETH = {priceOfEth} $</div>
             <div>Wallet address : {truncateAddr(accounts[0])}</div>
-            <div>Balance USDT :{balance} </div>
-            <div>Balance ETH : {balanceEth} </div>
+            <div>USDT Balance :{balance} </div>
+            <div>ETH Balance : {balanceEth} </div>
           </div>
         </MediaQuery>
       </>

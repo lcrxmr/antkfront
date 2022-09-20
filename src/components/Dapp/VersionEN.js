@@ -1,16 +1,16 @@
 import { EthProvider } from "../../contexts/EthContext";
-import NetWork from "./Network";
+import NetWork from "./NetworkEN";
 import { useState } from "react";
-import SalesStatus from "./SalesStatus";
-import Header from "./Header";
-import Devise from "./Devise";
+import SalesStatus from "./SalesStatusEN";
+import Header from "./HeaderEN";
+import Devise from "./DeviseEN";
 import Whitelist from "./Whitelist";
-import Buy from "./Buy";
-import Amounts from "./Amounts";
-import Account from "./Account";
-import Footer from "../Footer";
+import Buy from "./BuyEN";
+import Amounts from "./AmountsEN";
+import Account from "./AccountEN";
+import FooterEN from "../enFooter";
 import "./dapp.css";
-import Calcul from "./Calculette";
+import Calcul from "./CalculetteEN";
 import MediaQuery from "react-responsive";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../../newNav.css";
@@ -25,6 +25,8 @@ function Dapp() {
   const [tokensRemaining, setTokensRemaining] = useState();
   const [priceOfEth, setPriceEth] = useState();
   const [boolAcc, setboolAcc] = useState();
+  const USDT ="0x4Aec1F50164e9B09EcD966495993a47fb0B80467";
+  const Private = "0xE130E93b386B7FA49163713160C7353E854b51c9";
 
   const français = <VersionFR/>
 
@@ -51,20 +53,14 @@ function Dapp() {
           id="navlogo"
         />
         <nav ref={navRef}>
-          <a href="/#produit" onClick={hideNavbar}>
-            Produits
+        <a href="/" target="_blank" onClick={hideNavbar}>
+            Home
           </a>
           <a href="/white-fr.pdf" target="_blank" onClick={hideNavbar}>
             Whitepaper
           </a>
-          <a href="/#tokenomics" onClick={hideNavbar}>
-            Tokenomics
-          </a>
-          <a href="/#roadmap" onClick={hideNavbar}>
-            Roadmap
-          </a>
-          <a href="/#team" onClick={hideNavbar}>
-            Équipe
+          <a href="/private" onClick={hideNavbar}>
+            Contact
           </a>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes size={70} />
@@ -95,21 +91,26 @@ function Dapp() {
                ANTK Private Sale
               <NetWork />
             </h1>
-
-            <div className="headerDiv">
-              <Header
-                setPriceEth={setPriceEth}
-                priceOfEth={priceOfEth}
-                setboolAcc={setboolAcc}
-              />
-            </div>
           </div>
+
           <SalesStatus
             newState={newState}
             whitelisted={whitelisted}
             currentState={currentState}
           />
           <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
+
+
+          <div className="headerDiv">
+              <Header
+                setPriceEth={setPriceEth}
+                priceOfEth={priceOfEth}
+                setboolAcc={setboolAcc}
+                USDT={USDT}
+              />
+              {boolAcc == true && <Account />}
+            </div>
+
 
           <div className="buyANTK">
             <img className="tokenPic" src={"./token.png"} />
@@ -127,6 +128,8 @@ function Dapp() {
                 devise={devise}
                 priceOfEth={priceOfEth}
                 setboolAcc={setboolAcc}
+                USDT={USDT}
+                Private={Private}
               />
               <Calcul
                 tokensRemaining={tokensRemaining}
@@ -144,7 +147,6 @@ function Dapp() {
                 tokensRemaining={tokensRemaining}
                 setTokensRemaining={setTokensRemaining}
               />
-              {boolAcc == true && <Account />}
             </div>
           </div>
         </EthProvider>
@@ -154,17 +156,9 @@ function Dapp() {
         <EthProvider>
           <div className="topMobile">
             <h1 className="titreDappMobile">
-              Vente Privée ANTK
+              ANTK PRIVATE SALE
             </h1>
             <NetWork />
-
-            <div className="headerDivMobile">
-              <Header
-                setPriceEth={setPriceEth}
-                priceOfEth={priceOfEth}
-                setboolAcc={setboolAcc}
-              />
-            </div>
           </div>
           <SalesStatus
             newState={newState}
@@ -172,7 +166,14 @@ function Dapp() {
             currentState={currentState}
           />
           <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
-
+          <div className="headerDivMobile">
+              <Header
+                setPriceEth={setPriceEth}
+                priceOfEth={priceOfEth}
+                setboolAcc={setboolAcc}
+              />
+              {boolAcc == true && <Account />}
+            </div>
           {/* //------------- BUY ANTK  */}
           <MediaQuery minWidth={1000}>
             <div className="buyANTK">
@@ -239,7 +240,6 @@ function Dapp() {
                   tokensRemaining={tokensRemaining}
                   setTokensRemaining={setTokensRemaining}
                 />
-                {boolAcc == true && <Account />}
               </div>
             </div>
           </MediaQuery>
@@ -250,14 +250,13 @@ function Dapp() {
                   tokensRemaining={tokensRemaining}
                   setTokensRemaining={setTokensRemaining}
                 />
-                {boolAcc == true && <Account />}
               </div>
             </div>
           </MediaQuery>
         </EthProvider>
       </MediaQuery>
 
-      <Footer />
+      <FooterEN />
     </div>
   );
 }

@@ -25,6 +25,8 @@ function Dapp() {
   const [tokensRemaining, setTokensRemaining] = useState();
   const [priceOfEth, setPriceEth] = useState();
   const [boolAcc, setboolAcc] = useState();
+  const USDT ="0x4Aec1F50164e9B09EcD966495993a47fb0B80467";
+  const Private = "0x4b7F3cBb44eafAF421151592605eF875277410b8";
 
   const français = <VersionFR/>
 
@@ -51,20 +53,14 @@ function Dapp() {
           id="navlogo"
         />
         <nav ref={navRef}>
-          <a href="/#produit" onClick={hideNavbar}>
-            Produits
+        <a href="/" target="_blank" onClick={hideNavbar}>
+            Home
           </a>
           <a href="/white-fr.pdf" target="_blank" onClick={hideNavbar}>
             Whitepaper
           </a>
-          <a href="/#tokenomics" onClick={hideNavbar}>
-            Tokenomics
-          </a>
-          <a href="/#roadmap" onClick={hideNavbar}>
-            Roadmap
-          </a>
-          <a href="/#team" onClick={hideNavbar}>
-            Équipe
+          <a href="/private" onClick={hideNavbar}>
+            Contact
           </a>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes size={70} />
@@ -101,7 +97,9 @@ function Dapp() {
                 setPriceEth={setPriceEth}
                 priceOfEth={priceOfEth}
                 setboolAcc={setboolAcc}
+                USDT={USDT}
               />
+              {boolAcc == true && <Account />}
             </div>
           </div>
           <SalesStatus
@@ -110,7 +108,7 @@ function Dapp() {
             currentState={currentState}
           />
           <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
-
+          
           <div className="buyANTK">
             <img className="tokenPic" src={"./token.png"} />
 
@@ -127,6 +125,8 @@ function Dapp() {
                 devise={devise}
                 priceOfEth={priceOfEth}
                 setboolAcc={setboolAcc}
+                USDT={USDT}
+                Private={Private}
               />
               <Calcul
                 tokensRemaining={tokensRemaining}
@@ -144,7 +144,7 @@ function Dapp() {
                 tokensRemaining={tokensRemaining}
                 setTokensRemaining={setTokensRemaining}
               />
-              {boolAcc == true && <Account />}
+              
             </div>
           </div>
         </EthProvider>
@@ -164,6 +164,7 @@ function Dapp() {
                 priceOfEth={priceOfEth}
                 setboolAcc={setboolAcc}
               />
+              {boolAcc == true && <Account />}
             </div>
           </div>
           <SalesStatus
@@ -200,6 +201,7 @@ function Dapp() {
                   currentState={currentState}
                 />
               </div>
+              <Account/>
             </div>
           </MediaQuery>
           <MediaQuery minWidth={0} maxWidth={1000}>
@@ -239,7 +241,7 @@ function Dapp() {
                   tokensRemaining={tokensRemaining}
                   setTokensRemaining={setTokensRemaining}
                 />
-                {boolAcc == true && <Account />}
+                
               </div>
             </div>
           </MediaQuery>
@@ -250,7 +252,6 @@ function Dapp() {
                   tokensRemaining={tokensRemaining}
                   setTokensRemaining={setTokensRemaining}
                 />
-                {boolAcc == true && <Account />}
               </div>
             </div>
           </MediaQuery>
