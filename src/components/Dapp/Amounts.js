@@ -86,20 +86,20 @@ function Amounts({ tokensRemaining, setTokensRemaining }) {
 
                 <h2 height='30' width='200' id="mother">Progression</h2>
             <div class="skillbar">
-                <div class="skillbar-progress one">Phase un {percent1 + '%'}
-                    {/* <div class="skillbar-progress-one" style={{
+                <div class="skillbar-progress one">Phase un 
+                    <div class="skillbar-progress-one" style={{
                         width: percent1*2
-                    }}> Phase 1</div> */}
+                    }}> {percent1 + '%'} </div>
                 </div>
-                <div class="skillbar-progress two">
+                <div class="skillbar-progress two">Phase deux 
                     <div class="skillbar-progress-two" style={{
                         width: percent2*2
-                    }}>Phase deux {percent2 + '%'}</div>  
+                    }}>{percent2 + '%'}</div>  
                 </div>
-                <div class="skillbar-progress three">
+                <div class="skillbar-progress three"> Phase trois
                     <div class="skillbar-progress-three" style={{
                         width: percent3*6
-                    }} ><p class="skillbar-progress-text"> Phase trois {percent3 +'%'}</p></div>
+                    }} > {percent3 +'%'}</div>
                 </div>
             </div>
 
@@ -112,20 +112,20 @@ function Amounts({ tokensRemaining, setTokensRemaining }) {
                 <h2>Fonds levés : {theFonds} / 400000$</h2><p></p>
                 <h2 height='30' width='200' id="mother">Progression</h2>
             <div class="skillbarMobile">
-                <div class="skillbar-progress one">Phase un {percent1 + '%'}
-                    {/* <div class="skillbar-progress-one" style={{
+                <div class="skillbar-progress one">Phase un 
+                    <div class="skillbar-progress-one" style={{
                         width: percent1*2
-                    }}> Phase 1</div> */}
+                    }}> {percent1 + '%'}</div>
                 </div>
-                <div class="skillbar-progress two">
+                <div class="skillbar-progress two">Phase deux
                     <div class="skillbar-progress-two" style={{
                         width: percent2*2
-                    }}>Phase deux {percent2 + '%'}</div>  
+                    }}> {percent2 + '%'}</div>  
                 </div>
-                <div class="skillbar-progress three">
+                <div class="skillbar-progress three"> Phase trois 
                     <div class="skillbar-progress-three" style={{
                         width: percent3*6
-                    }} ><p class="skillbar-progress-text"> Phase trois {percent3 +'%'}</p></div>
+                    }} >{percent3 +'%'}</div>
                 </div>
             </div>
             </MediaQuery>
