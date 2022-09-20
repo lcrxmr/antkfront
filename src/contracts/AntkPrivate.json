@@ -20330,7 +20330,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.9",
-  "updatedAt": "2022-09-20T13:45:24.251Z",
+  "updatedAt": "2022-09-20T15:11:45.759Z",
   "devdoc": {
     "author": "https://antk.io",
     "details": "Buyers can buy only with ETH or USDTCan add whitelists address to buy firstImplementation of the {IERC20} interfaceImplementation of the {Ownable} contractImplementation of the {AggregatorV3Interface} contract",
