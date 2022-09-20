@@ -20887,10 +20887,16 @@
       "links": {},
       "address": "0x14d53637B82aD278ab364A12547338dA46939122",
       "transactionHash": "0xe9d2f0bac0b70003c3704827438ac8bf5ae82c66b00d5e54303df23c122b744f"
+    },
+    "1663664198117": {
+      "events": {},
+      "links": {},
+      "address": "0x67c439bFFCE24e194602869F5A802840ADc0E2Df",
+      "transactionHash": "0xcc37b99080785ca7d059acb414931ebc917e4dc4eff4db53061e5cb52c2dec18"
     }
   },
   "schemaVersion": "3.4.9",
-  "updatedAt": "2022-09-19T22:36:18.913Z",
+  "updatedAt": "2022-09-20T08:57:09.622Z",
   "networkType": "ethereum",
   "devdoc": {
     "details": "Buyers can buy only with ETH or USDTCan add whitelists address to buy firstImplementation of the {IERC20} interfaceImplementation of the {Ownable} contractImplementation of the {AggregatorV3Interface} contract",

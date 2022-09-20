@@ -41,7 +41,6 @@ function NetWork() {
     return (
       <div className="demo">
         {
-          !state.ethereum ? <NoticeWrongNetwork /> :
             !state.artifact ? <NoticeNoArtifact /> :
               !state.contract ? <NoticeWrongNetwork /> :
                 Params

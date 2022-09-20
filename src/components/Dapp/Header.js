@@ -16,7 +16,7 @@ function Header({ priceOfEth, setPriceEth, setboolAcc }) {
   const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
   const instance = new web3.eth.Contract(
     IERC20.abi,
-    "0xb684b241a0ca25a995eae765118b4F2FFcc34409"
+    "0x4Aec1F50164e9B09EcD966495993a47fb0B80467"
   );
 
   useEffect(() => {
