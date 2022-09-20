@@ -112,17 +112,17 @@ function Amounts({ tokensRemaining, setTokensRemaining }) {
                 <h2>Fonds levés : {theFonds} / 400000$</h2><p></p>
                 <h2 height='30' width='200' id="mother">Progression</h2>
             <div class="skillbarMobile">
-                <div class="skillbar-progress one">Phase un 
+                <div class="skillbar-progress oneMobile">Phase un 
                     <div class="skillbar-progress-one" style={{
                         width: percent1*2
                     }}> {percent1 + '%'}</div>
                 </div>
-                <div class="skillbar-progress two">Phase deux
+                <div class="skillbar-progress twoMobile">Phase deux
                     <div class="skillbar-progress-two" style={{
                         width: percent2*2
                     }}> {percent2 + '%'}</div>  
                 </div>
-                <div class="skillbar-progress three"> Phase trois 
+                <div class="skillbar-progress threeMobile"> Phase trois 
                     <div class="skillbar-progress-three" style={{
                         width: percent3*6
                     }} >{percent3 +'%'}</div>

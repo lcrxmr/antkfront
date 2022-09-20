@@ -144,7 +144,6 @@ function Dapp() {
                 tokensRemaining={tokensRemaining}
                 setTokensRemaining={setTokensRemaining}
               />
-              {boolAcc == true && <Account />}
             </div>
           </div>
         </EthProvider>
@@ -240,7 +239,6 @@ function Dapp() {
                   tokensRemaining={tokensRemaining}
                   setTokensRemaining={setTokensRemaining}
                 />
-                {boolAcc == true && <Account />}
               </div>
             </div>
           </MediaQuery>
@@ -251,7 +249,6 @@ function Dapp() {
                   tokensRemaining={tokensRemaining}
                   setTokensRemaining={setTokensRemaining}
                 />
-                {boolAcc == true && <Account />}
               </div>
             </div>
           </MediaQuery>
