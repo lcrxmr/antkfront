@@ -27,13 +27,13 @@ function Account() {
             <MediaQuery minWidth={1000}>
             <div id='account' >
                 <p>You bought {Antk} ANTK for a total of {Dollars}$</p>
-                { Bonus > 0 && <p>You received a bonus of {Bonus} ANTK</p>}
+                { Bonus > 0 && <p>You will get a bonus of {Bonus} ANTK</p>}
             </div>
             </MediaQuery>
             <MediaQuery minWidth={0} maxWidth={1000}>
             <div id='accountMobile' >
                 <p>You bought {Antk} ANTK for a total of {Dollars}$</p>
-                { Bonus > 0 && <p>You received a bonus of {Bonus} ANTK</p>}
+                { Bonus > 0 && <p>You will get a bonus of {Bonus} ANTK</p>}
             </div>
             </MediaQuery>
             </>

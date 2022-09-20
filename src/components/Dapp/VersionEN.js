@@ -91,8 +91,17 @@ function Dapp() {
                ANTK Private Sale
               <NetWork />
             </h1>
+          </div>
 
-            <div className="headerDiv">
+          <SalesStatus
+            newState={newState}
+            whitelisted={whitelisted}
+            currentState={currentState}
+          />
+          <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
+
+
+          <div className="headerDiv">
               <Header
                 setPriceEth={setPriceEth}
                 priceOfEth={priceOfEth}
@@ -101,13 +110,7 @@ function Dapp() {
               />
               {boolAcc == true && <Account />}
             </div>
-          </div>
-          <SalesStatus
-            newState={newState}
-            whitelisted={whitelisted}
-            currentState={currentState}
-          />
-          <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
+
 
           <div className="buyANTK">
             <img className="tokenPic" src={"./token.png"} />
@@ -156,15 +159,6 @@ function Dapp() {
               ANTK PRIVATE SALE
             </h1>
             <NetWork />
-
-            <div className="headerDivMobile">
-              <Header
-                setPriceEth={setPriceEth}
-                priceOfEth={priceOfEth}
-                setboolAcc={setboolAcc}
-              />
-              {boolAcc == true && <Account />}
-            </div>
           </div>
           <SalesStatus
             newState={newState}
@@ -172,7 +166,14 @@ function Dapp() {
             currentState={currentState}
           />
           <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
-
+          <div className="headerDivMobile">
+              <Header
+                setPriceEth={setPriceEth}
+                priceOfEth={priceOfEth}
+                setboolAcc={setboolAcc}
+              />
+              {boolAcc == true && <Account />}
+            </div>
           {/* //------------- BUY ANTK  */}
           <MediaQuery minWidth={1000}>
             <div className="buyANTK">

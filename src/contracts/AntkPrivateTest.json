@@ -20685,14 +20685,72 @@
   },
   "networks": {
     "5": {
-      "events": {},
+      "events": {
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        "0x6c10c020a374273ba2bec4494362a1cba501ec48a3716a4963bc87de748fc6ac": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "addressBuyer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint128",
+              "name": "numberOfTokensPurchased",
+              "type": "uint128"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint128",
+              "name": "amountSpendInDollars",
+              "type": "uint128"
+            }
+          ],
+          "name": "TokensBuy",
+          "type": "event"
+        },
+        "0x41919ca94feb948873b3bc1af54edc2d3f3b4a4a4723eb681e3b871cd697917c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "enum AntkPrivateTest.SalesStatus",
+              "name": "newStatus",
+              "type": "uint8"
+            }
+          ],
+          "name": "newStatus",
+          "type": "event"
+        }
+      },
       "links": {},
-      "address": "0x2aD5889ad004C01ea492556df73cE8864a0e50A7",
-      "transactionHash": "0x9de439a7e8d8ae655596bca200320729f0a041bf2f7da645e0bd18fa0c11cbbf"
+      "address": "0x4b7F3cBb44eafAF421151592605eF875277410b8",
+      "transactionHash": "0x273a5ec38dc7bf6c1fd24ffc5944e328c0268d8ab3229eed1f8044ebfb1ddd8e"
     }
   },
   "schemaVersion": "3.4.9",
-  "updatedAt": "2022-09-20T12:26:16.662Z",
+  "updatedAt": "2022-09-20T13:46:05.511Z",
   "networkType": "ethereum",
   "devdoc": {
     "details": "Buyers can buy only with ETH or USDTCan add whitelists address to buy firstImplementation of the {IERC20} interfaceImplementation of the {Ownable} contractImplementation of the {AggregatorV3Interface} contract",
