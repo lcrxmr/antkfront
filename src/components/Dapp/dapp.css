@@ -1,0 +1,571 @@
+.App{
+    height: 100%;
+    width: 100vw;
+    margin-left:  0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    overflow: auto;
+    overflow-x: hidden;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    position: relative;
+    background: rgb(255,240,112);
+background: linear-gradient(90deg, rgba(255,240,112,1) 0%, rgba(246,132,83,1) 80%);
+    /* background-size: cover;
+    background-image: url(../../../public/fonddegrade2.png); */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+  .view {
+    width: 100%;
+    height: 100%;
+    margin-left:  0px;
+    margin-right: 0px;
+    overflow: scroll;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow: auto;
+  }
+  
+  body{
+    font-family: 'Alata', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    width: 100vw;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+.buyLang{
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.buyLangButton{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+  .top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 150px;
+    width: 100vw;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .topMobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    width: 100vw;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  .buttonStatus{
+    background-color: rgb(122,212,32);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px ;
+    font-size: 20px;
+
+  }
+
+  .titreDapp{
+    margin-left: auto;
+    margin-right: 100px;
+    color: white;
+    font-size: 100px;
+  }
+
+  .titreDappMobile{
+    margin-left: auto;
+    margin-right: 50px;
+    color: white;
+    font-size: 100px;
+  }
+  
+
+  .headerDapp{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
+  }
+
+  .headerDappMobile{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 0px;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 24px;
+    box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
+  }
+
+  .headerDiv{
+    /* margin-left: auto; */
+    margin-right: 50px;
+    margin-left: 0px;
+  }
+
+  .headerMobile{
+    /* margin-left: auto; */
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .status{
+    margin-top: 50px;
+  }
+
+  .mid{
+    display: flex;
+    justify-content: center !important;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .amounts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 0, 0, 0.7);
+    width: fit-content;
+    height: 400px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
+  }
+
+  .amountsMobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+    width: fit-content;
+    max-width: 800px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
+    margin-top: 50px;
+    margin-bottom: 200px;
+  }
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+-webkit-appearance: none;
+margin:0;
+}
+
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button { 
+-o-appearance: none;
+margin:0
+}
+
+#account {
+  color: white;
+}
+
+.buyANTK{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  min-width: fit-content;
+}
+
+.buyANTKMobile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  min-width: fit-content;
+}
+
+.buyDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttonETH{
+  background-color: red;
+  border-radius: 40px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid red 3px;
+  outline: none;
+  margin-right: 10px;
+}
+.buttonETH:hover{
+  border: solid white 3px;
+  outline: none;
+}
+
+.buttonBuyETH{
+  background-color: red;
+  border-radius: 40px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid white 3px;
+  outline: none;
+  margin-right: 10px;
+}
+.buttonBuyETH:hover{
+  border: solid white 3px;
+  outline: none;
+}
+
+.buttonBuyETHMobile{
+  background-color: red;
+  border-radius: 40px;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid white 5px;
+  outline: none;
+  margin-right: 10px;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.buttonBuyETHMobile:hover{
+  border: solid white 3px;
+  outline: none;
+}
+
+.buttonETHMobile{
+  background-color: red;
+  border-radius: 40px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border: solid red 3px;
+  outline: none;
+  margin-right: 50px;
+}
+
+.buttonUSDT{
+  background-color: rgb(68, 112, 246);
+  border-radius: 40px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+  border: solid 3px rgb(68, 112, 246);
+}
+.buttonUSDT:hover{
+  border: solid white 3px;
+  outline: none;
+}
+
+.buttonCalculUSDT{
+  background-color: rgb(68, 112, 246);
+  border-radius: 40px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+  border: none;
+}
+
+.buttonCalculUSDTMobile{
+  background-color: rgb(68, 112, 246);
+  border-radius: 40px;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 50px;
+  font-size: 50px;
+  outline: none;
+  border: none;
+}
+
+.buttonCalculETH{
+  background-color: red;
+  border-radius: 40px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+}
+
+.buttonCalculETHMobile{
+  background-color: red;
+  border-radius: 40px;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  font-size: 50px;
+  margin-top: 50px;
+}
+
+.buttonBuyUSDT{
+  background-color: rgb(68, 112, 246);
+  border-radius: 40px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+  border: solid white 3px;
+}
+.buttonBuyUSDT:hover{
+  border: solid white 3px;
+  outline: none;
+}
+
+.buttonBuyUSDTMobile{
+  background-color: rgb(68, 112, 246);
+  border-radius: 40px;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+  border: solid white 3px;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.buttonBuyUSDT:hover{
+  border: solid white 3px;
+  outline: none;
+}
+
+.buttonUSDTMobile{
+  background-color: rgb(68, 112, 246);
+  border-radius: 40px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+  border: solid 3px rgb(68, 112, 246);
+  font-size: 50px;
+}
+
+.calculette{
+  margin-top: 50px;
+}
+
+.amountInputETH{
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid white 2px;
+  margin-left: 0px;
+}
+
+.amountInputETHMobile{
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid white 2px;
+  margin-left: 0px;
+  font-size: 50px;
+}
+
+.amountInputUSDT{
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid white 2px;
+  margin-left: 10px;
+}
+
+.amountInputUSDTMobile{
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid white 2px;
+  margin-left: 10px;
+  font-size: 50px;
+}
+
+.tokenPic{
+  width: 400px;
+  margin-right: 200px;
+}
+
+.tokenPicMobile{
+  width: 500px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.currencyButtons{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.currencyButtonsMobile{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+
+.skillbar {
+  height: 30px;
+  width: 1000px;
+  /* background-color: black; */
+  display: flex;
+  /* border: 1px solid black; */
+}
+
+.skillbarMobile {
+  height: 30px;
+  width: 100%;
+  /* background-color: black; */
+  display: flex;
+  /* border: 1px solid black; */
+}
+
+.skillbar-progress {
+  height: 100%;
+  width: 33.3%;
+}
+
+.one {
+background-color: lightgreen;
+width: 20%;
+border-top-left-radius: 15px;
+border-bottom-left-radius: 15px;
+}
+
+.two {
+background-color: lightyellow;
+width: 20%;
+}
+
+.three {
+background-color: rgb(128, 139, 240);
+width: 60%;
+border-top-right-radius: 15px;
+border-bottom-right-radius: 15px;
+
+}
+
+.skillbar-progress-one {
+   background-color: green;
+   width: 100%;
+   height: 100%;
+   border-bottom-right-radius:  15px;
+   border-bottom-left-radius:  15px;
+   margin-top: 5px;
+}
+
+.skillbar-progress-two {
+background-color: orange;
+
+height: 100%;
+}
+.skillbar-progress-three {
+background-color: rgb(0, 38, 255);
+height: 100%;
+}
+
+.skillbar-progress-text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  top: 0;
+  transform: translateX(+50%);
+}
