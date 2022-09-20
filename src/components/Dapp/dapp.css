@@ -654,3 +654,11 @@ border-top-right-radius: 15px;
   top: 0;
   transform: translateX(+50%);
 }
+
+.telegram{
+  background-color: rgb(144, 210, 72);
+  border-radius: 30px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

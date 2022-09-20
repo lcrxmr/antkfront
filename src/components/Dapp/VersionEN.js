@@ -102,6 +102,11 @@ function Dapp() {
 
 
           <div className="headerDiv">
+          <a href='https://discord.com/channels/1014479004956377198/1014865360123609119'>
+          <div className="telegram" > CALL US </div>
+          </a>
+          
+
               <Header
                 setPriceEth={setPriceEth}
                 priceOfEth={priceOfEth}
@@ -109,6 +114,7 @@ function Dapp() {
                 USDT={USDT}
               />
               {boolAcc == true && <Account />}
+              
             </div>
 
 
