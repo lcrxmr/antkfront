@@ -173,6 +173,9 @@ function Dapp() {
           />
           <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
           <div className="headerDivMobile">
+          <a href='https://discord.com/channels/1014479004956377198/1014865360123609119'>
+          <div className="telegramMobile" > CALL US </div>
+          </a>
               <Header
                 setPriceEth={setPriceEth}
                 priceOfEth={priceOfEth}
