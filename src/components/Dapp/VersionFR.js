@@ -17,6 +17,7 @@ import "../../newNav.css";
 import { Routes, Route, Link } from "react-router-dom";
 import { useRef } from "react";
 import VersionFR from "./VersionFR";
+import Price from "../Price";
 
 function Dapp() {
   const [currentState, newState] = useState("");
@@ -27,6 +28,7 @@ function Dapp() {
   const [boolAcc, setboolAcc] = useState();
   const USDT ="0x4Aec1F50164e9B09EcD966495993a47fb0B80467";
   const Private = "0x1c9cc921242c3bF4D4197D477e5553Bbdc21b1EE";
+  const [price, setPrice] = useState();
 
   const français = <VersionFR/>
 
@@ -86,6 +88,7 @@ function Dapp() {
 
       <MediaQuery minWidth={1000}>
         <EthProvider>
+          <Price price={price}/>
           <div className="top">
             <h1 className="titreDapp">
               Vente Privée ANTK
@@ -146,6 +149,8 @@ function Dapp() {
               <Amounts
                 tokensRemaining={tokensRemaining}
                 setTokensRemaining={setTokensRemaining}
+                price={price}
+                 setPrice={setPrice}
               />
               
             </div>
