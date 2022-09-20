@@ -20328,22 +20328,9 @@
     "name": "solc",
     "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
   },
-  "networks": {
-    "1663189750048": {
-      "events": {},
-      "links": {},
-      "address": "0x686A69Ac149f3A3Da8E7b5c79FcDaE5Be4E92c1b",
-      "transactionHash": "0x64ecd3ebeac059698850d092039f0aff5d63879d6e35a954a24c5a2518e24f6f"
-    },
-    "1663193861515": {
-      "events": {},
-      "links": {},
-      "address": "0x767E61D4C74cAf109712fC876d9CB23e4ab84703",
-      "transactionHash": "0xd1ca0743f187992ecfdd959d710679acbd9f3e815c5a4332e169d6b0594b2530"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.4.9",
-  "updatedAt": "2022-09-20T08:57:09.106Z",
+  "updatedAt": "2022-09-20T12:25:30.926Z",
   "devdoc": {
     "author": "https://antk.io",
     "details": "Buyers can buy only with ETH or USDTCan add whitelists address to buy firstImplementation of the {IERC20} interfaceImplementation of the {Ownable} contractImplementation of the {AggregatorV3Interface} contract",
