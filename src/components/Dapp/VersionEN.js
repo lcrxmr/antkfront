@@ -7,7 +7,7 @@ import Devise from "./DeviseEN";
 import Whitelist from "./Whitelist";
 import Buy from "./BuyEN";
 import Amounts from "./AmountsEN";
-import Account from "./Account";
+import Account from "./AccountEN";
 import FooterEN from "../enFooter";
 import "./dapp.css";
 import Calcul from "./CalculetteEN";
@@ -99,6 +99,7 @@ function Dapp() {
                 setboolAcc={setboolAcc}
                 USDT={USDT}
               />
+              {boolAcc == true && <Account />}
             </div>
           </div>
           <SalesStatus
@@ -163,6 +164,7 @@ function Dapp() {
                 priceOfEth={priceOfEth}
                 setboolAcc={setboolAcc}
               />
+              {boolAcc == true && <Account />}
             </div>
           </div>
           <SalesStatus

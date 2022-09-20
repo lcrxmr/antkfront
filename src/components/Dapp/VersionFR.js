@@ -99,6 +99,7 @@ function Dapp() {
                 setboolAcc={setboolAcc}
                 USDT={USDT}
               />
+              {boolAcc == true && <Account />}
             </div>
           </div>
           <SalesStatus
@@ -143,7 +144,7 @@ function Dapp() {
                 tokensRemaining={tokensRemaining}
                 setTokensRemaining={setTokensRemaining}
               />
-              {boolAcc == true && <Account />}
+              
             </div>
           </div>
         </EthProvider>
@@ -163,6 +164,7 @@ function Dapp() {
                 priceOfEth={priceOfEth}
                 setboolAcc={setboolAcc}
               />
+              {boolAcc == true && <Account />}
             </div>
           </div>
           <SalesStatus
@@ -239,7 +241,7 @@ function Dapp() {
                   tokensRemaining={tokensRemaining}
                   setTokensRemaining={setTokensRemaining}
                 />
-                {boolAcc == true && <Account />}
+                
               </div>
             </div>
           </MediaQuery>
@@ -250,7 +252,6 @@ function Dapp() {
                   tokensRemaining={tokensRemaining}
                   setTokensRemaining={setTokensRemaining}
                 />
-                {boolAcc == true && <Account />}
               </div>
             </div>
           </MediaQuery>
