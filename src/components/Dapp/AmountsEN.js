@@ -26,23 +26,23 @@ function Amounts({ tokensRemaining, setTokensRemaining }) {
         let tokens = 500000000 - tokensRemaining
         let tokens2 = 400000000 - tokensRemaining
         let tokens3 = 300000000 - tokensRemaining
-
+        
         if (tokens <= 100000000 && tokens > 0) {
-            setPercent1(tokens / 1000000)
+            setPercent1((tokens / 1000000).toFixed(2))
             setPercent2(0)
             setPercent3(0)
         }
-        else { setPercent1(100) }
 
         if (tokens <= 200000000 && tokens > 100000000) {
-            setPercent2(tokens2 / 1000000)
+            setPercent2((tokens2 / 1000000).toFixed(2))
+            setPercent1(100)
             setPercent3(0)
         }
-        else { setPercent2(100) }
 
         if (tokens > 200000000) {
-            setPercent3(tokens3 / 3000000)
-            
+            setPercent3((tokens3 / 3000000).toFixed(2))
+            setPercent1(100) 
+            setPercent2(100) 
         }
         if (tokens == 0) {
             setPercent1(0)
