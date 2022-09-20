@@ -53,20 +53,14 @@ function Dapp() {
           id="navlogo"
         />
         <nav ref={navRef}>
-          <a href="/#produit" onClick={hideNavbar}>
-            Produits
+        <a href="/" target="_blank" onClick={hideNavbar}>
+            Home
           </a>
           <a href="/white-fr.pdf" target="_blank" onClick={hideNavbar}>
             Whitepaper
           </a>
-          <a href="/#tokenomics" onClick={hideNavbar}>
-            Tokenomics
-          </a>
-          <a href="/#roadmap" onClick={hideNavbar}>
-            Roadmap
-          </a>
-          <a href="/#team" onClick={hideNavbar}>
-            Équipe
+          <a href="/private" onClick={hideNavbar}>
+            Contact
           </a>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes size={70} />
@@ -113,7 +107,7 @@ function Dapp() {
             currentState={currentState}
           />
           <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
-
+          
           <div className="buyANTK">
             <img className="tokenPic" src={"./token.png"} />
 
@@ -205,6 +199,7 @@ function Dapp() {
                   currentState={currentState}
                 />
               </div>
+              <Account/>
             </div>
           </MediaQuery>
           <MediaQuery minWidth={0} maxWidth={1000}>

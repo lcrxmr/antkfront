@@ -34,11 +34,11 @@ function SalesStatus({ newState, whitelisted, currentState }) {
     return (
       <div>
               <MediaQuery minWidth={1000}>
-              <h4>La vente n'a pas commencée</h4>
+              <h4>Sale has not started</h4>
             </MediaQuery>
             <MediaQuery minWidth={0} maxWidth={1000}>
               <div style={{marginTop: "30px"}}>
-                <h1>La vente n'a pas commencée</h1>
+                <h1>Sale has not started</h1>
               </div>
             </MediaQuery>
       </div>
@@ -48,15 +48,15 @@ function SalesStatus({ newState, whitelisted, currentState }) {
     return (
       <div>
               <MediaQuery minWidth={1000}>
-              <h4>Whitelist seulement :</h4>
-              <button className="buttonStatus"> EN COURS </button>
-              <p>Vous pouvez acheter vos tokens !</p>
+              <h4>Whitelist :</h4>
+              <button className="buttonStatus"> RUNNING </button>
+              <p>You can buy tokens !</p>
             </MediaQuery>
             <MediaQuery minWidth={0} maxWidth={1000}>
               <div style={{marginTop: "30px"}}>
                 <h1>Whitelist:</h1>
-                <button className="buttonStatus"> EN COURS </button>
-                <h2>Vous pouvez acheter vos tokens !</h2>
+                <button className="buttonStatus"> RUNNING </button>
+                <h2>You can buy tokens !</h2>
               </div>
             </MediaQuery>
       </div>
@@ -67,17 +67,15 @@ function SalesStatus({ newState, whitelisted, currentState }) {
     return (
       <div>
         <MediaQuery minWidth={1000}>
-              <h4>Whitelist seulement :</h4>
-              <button className="buttonStatus"> EN COURS </button>
-              <p>Vous devez attendre la phase
-          public pour acheter vos tokens!</p>
+              <h4>Whitelist only :</h4>
+              <button className="buttonStatus"> RUNNING </button>
+              <p>Please wait for the public sale !</p>
             </MediaQuery>
             <MediaQuery minWidth={0} maxWidth={1000}>
               <div style={{marginTop: "30px"}}>
-                <h1>Whitelist seulement</h1>
-                <button className="buttonStatus"> EN COURS </button>
-                <h2>Vous devez attendre la phase
-          public pour acheter vos tokens!</h2>
+                <h1>Whitelist only :</h1>
+                <button className="buttonStatus"> RUNNING </button>
+                <h2>Please wait for the public sale !</h2>
               </div>
             </MediaQuery>
       </div>
@@ -88,15 +86,15 @@ function SalesStatus({ newState, whitelisted, currentState }) {
     return (
       <div>
         <MediaQuery minWidth={1000}>
-          <h4>Vente ouverte :</h4>
-          <button className="buttonStatus"> EN COURS </button>
-          <p>Vous pouvez acheter vos tokens !</p>
+          <h4>Phase 1 :</h4>
+          <button className="buttonStatus"> RUNNING </button>
+          <p>You can buy tokens !</p>
         </MediaQuery>
         <MediaQuery minWidth={0} maxWidth={1000}>
           <div style={{marginTop: "30px"}}>
-            <h1>Statut de la vente :</h1>
-            <button className="buttonStatus"> EN COURS </button>
-            <h2>Vous pouvez acheter vos tokens !</h2>
+            <h1>Phase 1 :</h1>
+            <button className="buttonStatus"> RUNNING </button>
+            <h2>You can buy tokens !</h2>
           </div>
         </MediaQuery>
       </div>

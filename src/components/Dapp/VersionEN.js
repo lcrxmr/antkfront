@@ -1,16 +1,16 @@
 import { EthProvider } from "../../contexts/EthContext";
-import NetWork from "./Network";
+import NetWork from "./NetworkEN";
 import { useState } from "react";
-import SalesStatus from "./SalesStatus";
-import Header from "./Header";
-import Devise from "./Devise";
+import SalesStatus from "./SalesStatusEN";
+import Header from "./HeaderEN";
+import Devise from "./DeviseEN";
 import Whitelist from "./Whitelist";
-import Buy from "./Buy";
-import Amounts from "./Amounts";
+import Buy from "./BuyEN";
+import Amounts from "./AmountsEN";
 import Account from "./Account";
-import Footer from "../Footer";
+import FooterEN from "../enFooter";
 import "./dapp.css";
-import Calcul from "./Calculette";
+import Calcul from "./CalculetteEN";
 import MediaQuery from "react-responsive";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../../newNav.css";
@@ -53,20 +53,14 @@ function Dapp() {
           id="navlogo"
         />
         <nav ref={navRef}>
-          <a href="/#produit" onClick={hideNavbar}>
-            Produits
+        <a href="/" target="_blank" onClick={hideNavbar}>
+            Home
           </a>
           <a href="/white-fr.pdf" target="_blank" onClick={hideNavbar}>
             Whitepaper
           </a>
-          <a href="/#tokenomics" onClick={hideNavbar}>
-            Tokenomics
-          </a>
-          <a href="/#roadmap" onClick={hideNavbar}>
-            Roadmap
-          </a>
-          <a href="/#team" onClick={hideNavbar}>
-            Équipe
+          <a href="/private" onClick={hideNavbar}>
+            Contact
           </a>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes size={70} />
@@ -159,7 +153,7 @@ function Dapp() {
         <EthProvider>
           <div className="topMobile">
             <h1 className="titreDappMobile">
-              Vente Privée ANTK
+              ANTK PRIVATE SALE
             </h1>
             <NetWork />
 
@@ -262,7 +256,7 @@ function Dapp() {
         </EthProvider>
       </MediaQuery>
 
-      <Footer />
+      <FooterEN />
     </div>
   );
 }

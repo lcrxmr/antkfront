@@ -39,7 +39,7 @@ export default function Footer () {
                   flex="column"
                   style={{ cursor: "pointer", padding: "0" }}
                 >
-                  <CDBFooterLink href="#about">A propos</CDBFooterLink>
+                  <CDBFooterLink href="#about">About</CDBFooterLink>
                 </CDBBox>
               </CDBBox>
               <CDBBox>
@@ -60,14 +60,14 @@ export default function Footer () {
               </CDBBox>
               <CDBBox>
                 <p className="h5 mb-4" style={{ fontWeight: "600" }}>
-                  Aide
+                  Help
                 </p>
                 <CDBBox
                   flex="column"
                   style={{ cursor: "pointer", padding: "0" }}
                 >
                   <CDBFooterLink href="/cdgeng.pdf" target="_blank">
-                    Conditions Générales
+                    Terms
                   </CDBFooterLink>
                   <CDBFooterLink href="#">FAQ</CDBFooterLink>
                 </CDBBox>
@@ -134,7 +134,7 @@ export default function Footer () {
                   flex="column"
                   style={{ cursor: "pointer", padding: "0" }}
                 >
-                  <CDBFooterLink href="#about" style={{ fontWeight: "400" , fontSize: '20px'}}>A propos</CDBFooterLink>
+                  <CDBFooterLink href="#about" style={{ fontWeight: "400" , fontSize: '20px'}}>About</CDBFooterLink>
                 </CDBBox>
               </CDBBox>
               <CDBBox>
@@ -155,14 +155,14 @@ export default function Footer () {
               </CDBBox>
               <CDBBox>
                 <p className="h5 mb-4" style={{ fontWeight: "600" , fontSize: '30px'}}>
-                  Aide
+                 Help
                 </p>
                 <CDBBox
                   flex="column"
                   style={{ cursor: "pointer", padding: "0" }}
                 >
                   <CDBFooterLink href="/cdgeng.pdf" target="_blank" style={{ fontWeight: "400" , fontSize: '20px'}}>
-                    CDG
+                    Terms
                   </CDBFooterLink>
                   <CDBFooterLink href="#" style={{ fontWeight: "400" , fontSize: '20px', marginTop:'20px'}}>FAQ</CDBFooterLink>
                 </CDBBox>
