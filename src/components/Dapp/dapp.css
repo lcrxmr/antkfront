@@ -88,7 +88,6 @@ background: linear-gradient(90deg, rgba(255,240,112,1) 0%, rgba(246,132,83,1) 80
   .top{
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 150px;
     width: 100vw;
     -webkit-box-sizing: border-box;
@@ -124,6 +123,7 @@ background: linear-gradient(90deg, rgba(255,240,112,1) 0%, rgba(246,132,83,1) 80
 justify-content: center;
     color: white;
     font-size: 100px;
+    margin-top: 0px;
   }
 
   .titreDappMobile{
@@ -178,7 +178,7 @@ justify-content: center;
   }
 
   .status{
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
 
