@@ -619,7 +619,6 @@ border-bottom-right-radius: 15px;
    width: 100%;
    height: 100%;
    margin-top: 5px;
-   border-bottom-left-radius: 15px;
 }
 
 .skillbar-progress-two {
@@ -631,7 +630,8 @@ margin-top: 5px;
 background-color: rgb(240, 144, 53);
 height: 100%;
 margin-top: 5px;
-border-bottom-right-radius: 15px;
+border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .skillbar-progress-text {
