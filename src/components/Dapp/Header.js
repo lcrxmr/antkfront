@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import IERC20 from "../../contracts/IERC20.json";
 import MediaQuery from "react-responsive";
 
-function Header({ priceOfEth, setPriceEth, setboolAcc }) {
+function Header({ priceOfEth, setPriceEth, setboolAcc,  USDT}) {
   const {
     state: { contract, accounts },
   } = useEth();
@@ -16,7 +16,7 @@ function Header({ priceOfEth, setPriceEth, setboolAcc }) {
   const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
   const instance = new web3.eth.Contract(
     IERC20.abi,
-    "0x4Aec1F50164e9B09EcD966495993a47fb0B80467"
+    USDT
   );
 
   useEffect(() => {

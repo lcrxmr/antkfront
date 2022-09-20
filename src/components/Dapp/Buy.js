@@ -4,10 +4,10 @@ import IERC20 from "../../contracts/IERC20.json";
 import { MDBSpinner } from 'mdb-react-ui-kit';
 import MediaQuery from "react-responsive";
 
-function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc }) {
+function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc, USDT, Private}) {
     const Web3 = require('web3');
     const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
-    const instance = new web3.eth.Contract(IERC20.abi, "0x4Aec1F50164e9B09EcD966495993a47fb0B80467");
+    const instance = new web3.eth.Contract(IERC20.abi, USDT);
     const { state: { contract, accounts } } = useEth();
     const [amountInEth, setAmountInEth] = useState();
     const [amountInUSDT, setAmountInUSDT] = useState();
@@ -46,7 +46,7 @@ function Buy({ whitelisted, currentState, devise, priceOfEth, setboolAcc }) {
                 window.alert("Vous ne pouvez pas investir plus de 100 000$ en une fois !");
             }
             else {
-                await instance.methods.approve('0xF7922FFd3DA8cB2Cba90C37021710c992B5e967B', amountInUSDT * 10 ** 6).send({ from: accounts[0] })
+                await instance.methods.approve(Private, amountInUSDT * 10 ** 6).send({ from: accounts[0] })
                 await contract.methods.buyTokenWithTether(amountInUSDT).send({ from: accounts[0] })
             }
         }
