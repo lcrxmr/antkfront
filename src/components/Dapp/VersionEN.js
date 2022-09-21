@@ -103,7 +103,7 @@ function Dapp() {
 
           <div className="headerDiv">
           <a href='https://discord.com/channels/1014479004956377198/1014865360123609119'>
-          <div className="telegram" > CALL US </div>
+          <div className="telegram" > Live Telegram </div>
           </a>
           
 
@@ -167,7 +167,7 @@ function Dapp() {
             <NetWork />
             <div className="headerDivMobile">
           <a href='https://discord.com/channels/1014479004956377198/1014865360123609119'>
-          <div className="telegramMobile" > CALL US </div>
+          <div className="telegramMobile" > Live Telegram </div>
           </a>
               <Header
                 setPriceEth={setPriceEth}
