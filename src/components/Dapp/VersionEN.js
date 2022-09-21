@@ -178,6 +178,7 @@ function Dapp() {
                 priceOfEth={priceOfEth}
                 setboolAcc={setboolAcc}
               />
+              <PriceSolo/>
               {boolAcc == true && <Account />}
             </div>
           </div>

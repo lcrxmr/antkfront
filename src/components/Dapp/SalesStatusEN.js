@@ -92,7 +92,7 @@ function SalesStatus({ newState, whitelisted, currentState }) {
         </MediaQuery>
         <MediaQuery minWidth={0} maxWidth={1000}>
           <div style={{marginTop: "30px"}}>
-            <h1>Phase 1 :</h1>
+            <h1>Sale :</h1>
             <button className="buttonStatus"> RUNNING </button>
             <h2>You can buy tokens !</h2>
           </div>

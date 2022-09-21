@@ -27,7 +27,13 @@ function PriceSolo() {
 
     return (
         <div>
-            <p>{price}</p>
+            <MediaQuery minWidth={1000}>
+            <div className="ANTKprice">ANTK = {price}</div>
+            </MediaQuery>
+            <MediaQuery minWidth={0} maxWidth={1000}>
+            <div className="ANTKpriceMobile">ANTK = {price}</div>
+            </MediaQuery>
+            
         </div>
     )
 

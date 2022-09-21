@@ -683,3 +683,17 @@ border-top-right-radius: 15px;
   padding-bottom: 10px;
   font-size: 30px;
 }
+
+.ANTKprice{
+  background-color: rgb(213, 135, 206);
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.ANTKpriceMobile{
+  background-color: rgb(213, 135, 206);
+  border-radius: 20px;
+  margin-bottom: 40px;
+  margin-top: 0px;
+  font-size: 30px;
+}
