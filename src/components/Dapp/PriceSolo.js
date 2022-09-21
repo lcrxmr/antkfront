@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import useEth from "../../contexts/EthContext/useEth";
 import MediaQuery from "react-responsive";
 
-function Amounts({ tokensRemaining, setTokensRemaining }) {
+function PriceSolo({ tokensRemaining, setTokensRemaining }) {
     const { state: { contract } } = useEth();
 
     const [theFonds, setFondsLeves] = useState();
@@ -78,68 +78,14 @@ function Amounts({ tokensRemaining, setTokensRemaining }) {
     return (
         <div>
             <MediaQuery minWidth={1000}>
-            <h2 height='30' width='200' id="mother">Progress</h2>
-            <div class="skillbar">
-                <div class="skillbar-progress one">Phase 1 
-                    <div class="skillbar-progress-one" style={{
-                        width: percent1*2
-                    }}> {percent1 + '%'} </div>
-                </div>
-                <div class="skillbar-progress two">Phase 2 
-                    <div class="skillbar-progress-two" style={{
-                        width: percent2*2
-                    }}>{percent2 + '%'}</div>  
-                </div>
-                <div class="skillbar-progress three"> Phase 3
-                    <div class="skillbar-progress-three" style={{
-                        width: percent3*6
-                    }} > {percent3 +'%'}</div>
-                </div>
-            </div>
-            <h5>Funds raised : {theFonds} / 400000$</h5>
-            <br/>
-                <h5>Number of tokens remaining : {tokensRemaining} / 500000000 ANTK</h5>
-                <h5>Number of bonus tokens remaining : {bonus} ANTK</h5>
-                <br/>
                 <h5>ANTK = {price} $</h5>
-                
-
-
-
             </MediaQuery>
             <MediaQuery minWidth={0} maxWidth={1000}>
-            <h2 height='30' width='200' id="mother">Progress</h2>
-            <div class="skillbarMobile">
-                <div class="skillbar-progress oneMobile">Phase 1 
-                    <div class="skillbar-progress-one" style={{
-                        width: percent1*2
-                    }}> {percent1 + '%'}</div>
-                </div>
-                <div class="skillbar-progress twoMobile">Phase 2
-                    <div class="skillbar-progress-two" style={{
-                        width: percent2*2
-                    }}> {percent2 + '%'}</div>  
-                </div>
-                <div class="skillbar-progress threeMobile"> Phase 3 
-                    <div class="skillbar-progress-three" style={{
-                        width: percent3*6
-                    }} >{percent3 +'%'}</div>
-                </div>
-            </div>
-            <h2>Funds raised : {theFonds} / 400000$</h2>
-            <br/>
-                <h2>Number of tokens remaining  :  {tokensRemaining} / 500000000 ANTK</h2>
-                <h2>Number of bonus tokens remaining : {bonus} ANTK</h2>
-                <br/>
                 <h2>ANTK = {price} $</h2>
-                
-
             </MediaQuery>
-
-
         </div>
     )
 
 }
 
-export default Amounts;
+export default PriceSolo;

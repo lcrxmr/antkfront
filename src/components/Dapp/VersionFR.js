@@ -17,6 +17,7 @@ import "../../newNav.css";
 import { Routes, Route, Link } from "react-router-dom";
 import { useRef } from "react";
 import VersionFR from "./VersionFR";
+import PriceSolo from "./PriceSolo"
 
 function Dapp() {
   const [currentState, newState] = useState("");
@@ -102,6 +103,9 @@ function Dapp() {
                 setboolAcc={setboolAcc}
                 USDT={USDT}
               />
+             <div className="priceSolo" >
+              <PriceSolo/>
+              </div>
               {boolAcc == true && <Account />}
             </div>
           </div>
@@ -170,6 +174,9 @@ function Dapp() {
                 priceOfEth={priceOfEth}
                 setboolAcc={setboolAcc}
               />
+              <div className="priceSoloMobile" >
+              <PriceSolo/>
+              </div>
               {boolAcc == true && <Account />}
             </div>
           </div>

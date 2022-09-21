@@ -17,6 +17,7 @@ import "../../newNav.css";
 import { Routes, Route, Link } from "react-router-dom";
 import { useRef } from "react";
 import VersionFR from "./VersionFR";
+import PriceSolo from "./PriceSolo"
 
 function Dapp() {
   const [currentState, newState] = useState("");
@@ -113,6 +114,9 @@ function Dapp() {
                 setboolAcc={setboolAcc}
                 USDT={USDT}
               />
+              <div className="priceSolo" >
+              <PriceSolo/>
+              </div>
               {boolAcc == true && <Account />}
               
             </div>
@@ -165,14 +169,7 @@ function Dapp() {
               ANTK PRIVATE SALE
             </h1>
             <NetWork />
-          </div>
-          <SalesStatus
-            newState={newState}
-            whitelisted={whitelisted}
-            currentState={currentState}
-          />
-          <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
-          <div className="headerDivMobile">
+            <div className="headerDivMobile">
           <a href='https://discord.com/channels/1014479004956377198/1014865360123609119'>
           <div className="telegramMobile" > CALL US </div>
           </a>
@@ -181,8 +178,20 @@ function Dapp() {
                 priceOfEth={priceOfEth}
                 setboolAcc={setboolAcc}
               />
+              <div className="priceSoloMobile" >
+              <PriceSolo/>
+              </div>
+              
               {boolAcc == true && <Account />}
             </div>
+          </div>
+          <SalesStatus
+            newState={newState}
+            whitelisted={whitelisted}
+            currentState={currentState}
+          />
+          <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
+
           {/* //------------- BUY ANTK  */}
           <MediaQuery minWidth={1000}>
             <div className="buyANTK">
