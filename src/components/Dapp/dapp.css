@@ -297,14 +297,14 @@ margin:0
 }
 
 .buttonETH{
-  background-color: red;
+  background-color: rgb(113, 91, 241);
   border-radius: 40px;
   color: white;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  border: solid red 3px;
+  border: solid rgb(113, 91, 241) 3px;
   outline: none;
   margin-right: 10px;
 }
@@ -314,7 +314,7 @@ margin:0
 }
 
 .buttonBuyETH{
-  background-color: red;
+  background-color: rgb(113, 91, 241);
   border-radius: 40px;
   color: white;
   padding-left: 20px;
@@ -331,7 +331,7 @@ margin:0
 }
 
 .buttonBuyETHMobile{
-  background-color: red;
+  background-color: rgb(113, 91, 241);
   border-radius: 40px;
   color: white;
   padding-left: 30px;
@@ -351,7 +351,7 @@ margin:0
 }
 
 .buttonETHMobile{
-  background-color: red;
+  background-color: rgb(113, 91, 241);
   border-radius: 40px;
   justify-content: center;
   align-items: center;
@@ -361,7 +361,7 @@ margin:0
   padding-right: 30px;
   padding-top: 5px;
   padding-bottom: 10px;
-  border: solid red 3px;
+  border: solid rgb(113, 91, 241) 3px;
   outline: none;
   margin-right: 50px;
 }
@@ -410,7 +410,7 @@ margin:0
 }
 
 .buttonCalculETH{
-  background-color: red;
+  background-color: rgb(113, 91, 241);
   border-radius: 40px;
   color: white;
   padding-left: 20px;
@@ -424,7 +424,7 @@ margin:0
 }
 
 .buttonCalculETHMobile{
-  background-color: red;
+  background-color: rgb(113, 91, 241);
   border-radius: 40px;
   color: white;
   padding-left: 30px;
