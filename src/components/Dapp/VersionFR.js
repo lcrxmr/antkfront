@@ -26,7 +26,7 @@ function Dapp() {
   const [tokensRemaining, setTokensRemaining] = useState();
   const [priceOfEth, setPriceEth] = useState();
   const [boolAcc, setboolAcc] = useState();
-  const USDT ="0x4Aec1F50164e9B09EcD966495993a47fb0B80467";
+  const USDT ="0x05e797F41f54e7Ef542775143B43f0B224B11760";
   const Private = "0x1c9cc921242c3bF4D4197D477e5553Bbdc21b1EE";
 
   const français = <VersionFR/>

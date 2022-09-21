@@ -18,7 +18,6 @@ function Header({ priceOfEth, setPriceEth, setboolAcc,  USDT}) {
     IERC20.abi,
     USDT
   );
-
   useEffect(() => {
     if (contract) {
       checkBalance();
@@ -38,7 +37,6 @@ function Header({ priceOfEth, setPriceEth, setboolAcc,  USDT}) {
     const result = await instance.methods.balanceOf(accounts[0]).call();
     setBalance(result / 10 ** 6);
   }
-
   async function checkBalanceEth() {
     const result = await web3.eth.getBalance(accounts[0]);
     setBalanceEth(result / 10 ** 18);
@@ -70,7 +68,7 @@ function Header({ priceOfEth, setPriceEth, setboolAcc,  USDT}) {
             <div>Balance ETH : {balanceEth} </div>
           </div>
         </MediaQuery>
-        <MediaQuery minWidth={0} maxWidth={1000}>
+         <MediaQuery minWidth={0} maxWidth={1000}>
           <div className="headerDappMobile">
             <h2>Votre Wallet</h2>
             <div>Prix de l'ETH = {priceOfEth} $</div>
