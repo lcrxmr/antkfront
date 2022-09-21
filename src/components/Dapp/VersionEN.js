@@ -165,14 +165,10 @@ function Dapp() {
               ANTK PRIVATE SALE
             </h1>
             <NetWork />
-          </div>
-          <SalesStatus
-            newState={newState}
-            whitelisted={whitelisted}
-            currentState={currentState}
-          />
-          <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
-          <div className="headerDivMobile">
+            <div className="headerDivMobile">
+          <a href='https://discord.com/channels/1014479004956377198/1014865360123609119'>
+          <div className="telegramMobile" > CALL US </div>
+          </a>
               <Header
                 setPriceEth={setPriceEth}
                 priceOfEth={priceOfEth}
@@ -180,6 +176,14 @@ function Dapp() {
               />
               {boolAcc == true && <Account />}
             </div>
+          </div>
+          <SalesStatus
+            newState={newState}
+            whitelisted={whitelisted}
+            currentState={currentState}
+          />
+          <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
+
           {/* //------------- BUY ANTK  */}
           <MediaQuery minWidth={1000}>
             <div className="buyANTK">
