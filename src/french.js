@@ -57,26 +57,7 @@ export default function French(props) {
     <div className="App">
       <MediaQuery minWidth={1000}>
       <div className="headerNew">
-        {/* <div id="langButton"> 
-          <MediaQuery minWidth={1000}>
-            <Link to="/">
-              <button className="lang">FR</button>
-            </Link>
-            <Link to="/eng">
-              <button className="lang">EN</button>
-            </Link>
-          </MediaQuery>
-          <MediaQuery minWidth={0} maxWidth={1000}>
-            <Link to="/">
-              <button className="langMobile">FR</button>
-            </Link>
-            <Link to="/eng">
-              <button className="langMobile">EN</button>
-            </Link>
-          </MediaQuery>
-        </div> */}
         <div id="navcontainer">
-          {/* <Nav /> */}
           <Navbar/>
         </div>
         {/* // ------ banner */}

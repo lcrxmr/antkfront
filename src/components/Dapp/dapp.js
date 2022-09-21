@@ -72,12 +72,20 @@ function Dapp() {
   } else {
     return (
       <div>
+        <br/>
         <h2>Vous n'avez pas installé l'extension MetaMask !</h2>
         <p>
           Rendez vous ici pour l'obtenir :{" "}
           <a href="https://metamask.io/">https://metamask.io/</a>
         </p>
+        <br/>
+        <h2>You need the MetaMask extension!</h2>
+        <p>
+          Follow this link :{" "}
+          <a href="https://metamask.io/">https://metamask.io/</a>
+        </p>
       </div>
+      
     );
   }
 }

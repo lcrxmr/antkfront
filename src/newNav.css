@@ -16,12 +16,15 @@ nav a {
 	margin: 0 1rem;
 	color: white;
 	text-decoration: none;
-	font-size: 22px;
+	font-size: 20px;
 	font-family: 'Alata', sans-serif;
+	align-items: center;
+	
 }
 
 nav a:hover {
 	color: grey;
+
 	
 }
 
@@ -48,7 +51,7 @@ nav {
 	box-sizing: border-box;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1500px) {
 	header .nav-btn {
 		visibility: visible;
 		opacity: 1;
@@ -95,4 +98,34 @@ nav {
 		color: black !important;
 		font-family: 'Alata', sans-serif;
 	}
+}
+
+.howTo{
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	width: 130px;
+	color: black;
+	font-size: 18px;
+	border: 3px solid black;
+	background-color: rgba(250,226,121,1);
+	margin-left: -10px;
+}
+.howTo:hover{
+	background-color: grey;
+	border: 3px solid white;
+	color: white;
+
+}
+
+.howToMobile{
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	width: 270px;
+	color: black;
+	font-size: 40px;
+	border: 3px solid black;
+	background-color: rgba(250,226,121,1);
+	margin-left: -10px;
 }

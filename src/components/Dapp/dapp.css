@@ -116,6 +116,7 @@ background: linear-gradient(90deg, rgba(255,240,112,1) 0%, rgba(246,132,83,1) 80
     padding-right: 20px;
     padding-left: 20px ;
     font-size: 20px;
+    cursor:default !important;
 
   }
 
@@ -166,8 +167,8 @@ justify-content: center;
     margin-left: 0px;
     width: fit-content;
     position: absolute;
-    top: 300px;
-    right: 40px
+    top: 400px;
+    left: 50px
   }
 
   .headerMobile{
@@ -296,14 +297,14 @@ margin:0
 }
 
 .buttonETH{
-  background-color: red;
+  background-color: rgb(113, 91, 241);
   border-radius: 40px;
   color: white;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  border: solid red 3px;
+  border: solid rgb(113, 91, 241) 3px;
   outline: none;
   margin-right: 10px;
 }
@@ -313,7 +314,7 @@ margin:0
 }
 
 .buttonBuyETH{
-  background-color: red;
+  background-color: rgb(113, 91, 241);
   border-radius: 40px;
   color: white;
   padding-left: 20px;
@@ -330,7 +331,7 @@ margin:0
 }
 
 .buttonBuyETHMobile{
-  background-color: red;
+  background-color: rgb(113, 91, 241);
   border-radius: 40px;
   color: white;
   padding-left: 30px;
@@ -350,7 +351,7 @@ margin:0
 }
 
 .buttonETHMobile{
-  background-color: red;
+  background-color: rgb(113, 91, 241);
   border-radius: 40px;
   justify-content: center;
   align-items: center;
@@ -360,13 +361,13 @@ margin:0
   padding-right: 30px;
   padding-top: 5px;
   padding-bottom: 10px;
-  border: solid red 3px;
+  border: solid rgb(113, 91, 241) 3px;
   outline: none;
   margin-right: 50px;
 }
 
 .buttonUSDT{
-  background-color: rgb(68, 112, 246);
+  background-color: rgb(66, 182, 108);
   border-radius: 40px;
   color: white;
   padding-left: 20px;
@@ -374,7 +375,7 @@ margin:0
   padding-top: 5px;
   padding-bottom: 5px;
   outline: none;
-  border: solid 3px rgb(68, 112, 246);
+  border: solid 3px rgb(66, 182, 108);
 }
 .buttonUSDT:hover{
   border: solid white 3px;
@@ -382,7 +383,7 @@ margin:0
 }
 
 .buttonCalculUSDT{
-  background-color: rgb(68, 112, 246);
+  background-color: rgb(66, 182, 108);
   border-radius: 40px;
   color: white;
   padding-left: 20px;
@@ -391,10 +392,11 @@ margin:0
   padding-bottom: 5px;
   outline: none;
   border: none;
+  cursor:default !important;
 }
 
 .buttonCalculUSDTMobile{
-  background-color: rgb(68, 112, 246);
+  background-color: rgb(66, 182, 108);
   border-radius: 40px;
   color: white;
   padding-left: 30px;
@@ -408,7 +410,7 @@ margin:0
 }
 
 .buttonCalculETH{
-  background-color: red;
+  background-color: rgb(113, 91, 241);
   border-radius: 40px;
   color: white;
   padding-left: 20px;
@@ -418,10 +420,11 @@ margin:0
   border: none;
   outline: none;
   margin-right: 10px;
+  cursor:default !important;
 }
 
 .buttonCalculETHMobile{
-  background-color: red;
+  background-color: rgb(113, 91, 241);
   border-radius: 40px;
   color: white;
   padding-left: 30px;
@@ -436,7 +439,7 @@ margin:0
 }
 
 .buttonBuyUSDT{
-  background-color: rgb(68, 112, 246);
+  background-color: rgb(66, 182, 108);
   border-radius: 40px;
   color: white;
   padding-left: 20px;
@@ -452,7 +455,7 @@ margin:0
 }
 
 .buttonBuyUSDTMobile{
-  background-color: rgb(68, 112, 246);
+  background-color: rgb(66, 182, 108);
   border-radius: 40px;
   color: white;
   padding-left: 30px;
@@ -471,7 +474,7 @@ margin:0
 }
 
 .buttonUSDTMobile{
-  background-color: rgb(68, 112, 246);
+  background-color: rgb(66, 182, 108);
   border-radius: 40px;
   color: white;
   padding-left: 20px;
@@ -479,7 +482,7 @@ margin:0
   padding-top: 5px;
   padding-bottom: 5px;
   outline: none;
-  border: solid 3px rgb(68, 112, 246);
+  border: solid 3px rgb(66, 182, 108);
   font-size: 50px;
 }
 
@@ -663,33 +666,20 @@ border-top-right-radius: 15px;
   padding-bottom: 10px;
 }
 
-.telegramMobile{
+.telegram{
   background-color: rgb(144, 210, 72);
   border-radius: 30px;
   margin-bottom: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 24px;
-  margin-top: 40px;
 }
 
-.priceSolo{
-  background-color: rgb(255, 231, 12);
+.telegramMobile{
+  background-color: rgb(144, 210, 72);
   border-radius: 30px;
   margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 5px;
   margin-top: 20px;
-  color: black;
-}
-
-.priceSoloMobile{
-  background-color: rgb(255, 231, 12);
-  border-radius: 30px;
-  margin-bottom: 40px;
   padding-top: 10px;
-  padding-bottom: 20px;
-  font-size: 24px;
-  margin-top: 20px;
-  color: black;
+  padding-bottom: 10px;
+  font-size: 30px;
 }
