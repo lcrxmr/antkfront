@@ -103,7 +103,7 @@ function Dapp() {
 
 
           <div className="headerDiv">
-          <a href='https://t.me/ANTKofficialchannel'>
+          <a href='https://t.me/+-DyD7hKACyk3YTE8'>
           <div className="telegram" > Live Telegram </div>
           </a>
           
@@ -173,7 +173,7 @@ function Dapp() {
             </h1>
             <NetWork />
             <div className="headerDivMobile">
-          <a href='https://t.me/ANTKofficialchannel'>
+          <a href='https://t.me/+-DyD7hKACyk3YTE8'>
           <div className="telegramMobile" > Live Telegram </div>
           </a>
               <Header
