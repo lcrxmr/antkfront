@@ -320,23 +320,4 @@ contract AntkPrivate is Ownable {
         require(sent, "Failed to send Ether");
     }
 
-    /**
-     * @notice see the USDT and the ETH on the contract
-     */
-    function seeFunds() external view returns (uint256 USDT, uint256 ETH) {
-        return (IERC20(usdt).balanceOf(address(this)), address(this).balance);
-    }
 }
-
-  // ::::::::::::: Mainnet ::::::::::::: //
-
-// usdt = 0xdAC17F958D2ee523a2206206994597C13D831ec7;
-// ethPrice = 0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419;
-// antkWallet = 0x80920A7960670f01f63d6fA9B1f2a2Efd1C2A371;
-
-
-  // ::::::::::::: TestNet Goerli::::::::::::: //
-
-// usdt = 0x4Aec1F50164e9B09EcD966495993a47fb0B80467;
-// ethPrice = 0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e;
-// antkWallet = 0x39C4Ce965b9F81de90D5F91127afB807bdd1F705;

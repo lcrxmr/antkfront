@@ -27,6 +27,10 @@ module.exports = {
     provider : function() {return new HDWalletProvider({mnemonic:{phrase:`${process.env.MNEMONIC}`},providerOrUrl:`https://goerli.infura.io/v3/${process.env.INFURA_ID}`})},
     network_id:5,
   },
+  mainnet:{
+    provider : function() {return new HDWalletProvider({mnemonic:{phrase:`${process.env.MNEMONIC}`},providerOrUrl:`https://mainnet.infura.io/v3/${process.env.INFURA_ID}`})},
+    network_id:1,
+  },
 },
 
 plugins: ["solidity-coverage"],
