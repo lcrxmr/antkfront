@@ -52,27 +52,7 @@ function Navbar() {
 					onClick={showNavbar}>
 					<FaTimes size={70}/>
 				</button>
-                {/* <div id="langButton"> 
-          <MediaQuery minWidth={1000}>
-            <Link to="/">
-              <button className="lang">FR</button>
-            </Link>
-            <Link to="/eng">
-              <button className="lang">EN</button>
-            </Link>
-          </MediaQuery>
-          </div>
-          <div id="langButtonMobile"> 
-          <MediaQuery minWidth={0} maxWidth={1000}>
-            <Link to="/">
-              <button className="langMobile">FR</button>
-            </Link>
-            <Link to="/eng">
-              <button className="langMobile">EN</button>
-            </Link>
-          </MediaQuery>
-            </div> */}
-             <div className="buyLang">
+             <div className="buyLangFront">
           <MediaQuery minWidth={1000}>
           <a href="/"><h5 className="buyLangButton" >
               fr
