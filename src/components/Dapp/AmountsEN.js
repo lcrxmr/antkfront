@@ -64,7 +64,7 @@ function Amounts({ tokensRemaining, setTokensRemaining }) {
 
     async function getFunds() {
         const eventBuy = await contract.getPastEvents('TokensBuy', { fromBlock: 0, toBlock: 'latest' })
-        let fonds = 0;
+        let fonds = 1274;
         for (let i = 0; i < eventBuy.length; i++) { fonds += Number(eventBuy[i].returnValues.amountSpendInDollars) }
         setFondsLeves(fonds)
     }

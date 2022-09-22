@@ -13,7 +13,7 @@ function Whitelist({ setProof, proof, myBool2, setMyBool2 }) {
     useEffect(() => {
         if (contract) {
 
-            isWhitelist()
+            // isWhitelist()
         }
     })
 
