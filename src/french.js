@@ -93,24 +93,6 @@ export default function French(props) {
       </MediaQuery>
       <MediaQuery minWidth={0} maxWidth={1000}>
       <div className="headerNewMobile">
-        {/* <div id="langButton"> 
-          <MediaQuery minWidth={1000}>
-            <Link to="/">
-              <button className="lang">FR</button>
-            </Link>
-            <Link to="/eng">
-              <button className="lang">EN</button>
-            </Link>
-          </MediaQuery>
-          <MediaQuery minWidth={0} maxWidth={1000}>
-            <Link to="/">
-              <button className="langMobile">FR</button>
-            </Link>
-            <Link to="/eng">
-              <button className="langMobile">EN</button>
-            </Link>
-          </MediaQuery>
-        </div> */}
         <div id="navcontainer">
           {/* <Nav /> */}
           <Navbar/>
@@ -156,15 +138,25 @@ export default function French(props) {
           <Timer />
           <br />
           <MediaQuery minWidth={1000}>
-            <div>
+          <div className="countbuttons">
+            <a href="/private">
               <button className="button">BUY</button>
+              </a>
+              <br/>
+              <a href="/how-to-buy-eng.pdf" target="_blank">
+          <button className="howToCountButton">HOW TO BUY</button>
+        </a>
             </div>
           </MediaQuery>
 
           <MediaQuery minWidth={0} maxWidth={1000}>
-            <div>
+          <a href="/private">
               <button className="buttonMobile">BUY</button>
-            </div>
+              </a>
+              <br/>
+              <a href="/how-to-buy-eng.pdf" target="_blank">
+          <button className="howToCountButtonMobile">HOW TO BUY</button>
+        </a>
           </MediaQuery>
 
           {/* <ReactCardSlider slides={slides}/> */}

@@ -56,14 +56,11 @@ function Dapp() {
           id="navlogo"
         />
         <nav ref={navRef}>
-        <a href="/" target="_blank" onClick={hideNavbar}>
+        <a href="/" onClick={hideNavbar}>
             Home
           </a>
           <a href="/white-fr.pdf" target="_blank" onClick={hideNavbar}>
             Whitepaper
-          </a>
-          <a href="/private" onClick={hideNavbar}>
-            Contact
           </a>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes size={70} />

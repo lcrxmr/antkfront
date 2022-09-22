@@ -170,7 +170,7 @@ export default function English(props) {
       </MediaQuery>
       
 
-      {/* // ---- compte a rebours  */}
+      {/* // ---- compte a rebours  */} 
       <div className="countDiv">
         <div className="container" id="count">
           <h2 className="date">September 23rd 2022</h2>
@@ -178,15 +178,27 @@ export default function English(props) {
           <Timer />
           <br />
           <MediaQuery minWidth={1000}>
-            <div>
+            <div className="countbuttons">
+            <a href="/private">
               <button className="button">BUY</button>
+              </a>
+              <br/>
+              <a href="/how-to-buy-eng.pdf" target="_blank">
+          <button className="howToCountButton">HOW TO BUY</button>
+        </a>
             </div>
           </MediaQuery>
 
           <MediaQuery minWidth={0} maxWidth={1000}>
-            <div>
+          
+            <a href="/private">
               <button className="buttonMobile">BUY</button>
-            </div>
+              </a>
+              <br/>
+              <a href="/how-to-buy-eng.pdf" target="_blank">
+          <button className="howToCountButtonMobile">HOW TO BUY</button>
+        </a>
+            
           </MediaQuery>
 
           {/* <ReactCardSlider slides={slides}/> */}

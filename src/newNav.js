@@ -32,18 +32,18 @@ function Navbar() {
 				<a href="#roadmap" onClick={hideNavbar}>Roadmap</a>
         <a href="#team" onClick={hideNavbar}>Équipe</a>
         <MediaQuery minWidth={1000}>
-        <a href="#team" onClick={hideNavbar}>
+        <a href="/how-to-buy-fr.pdf" target="_blank" onClick={hideNavbar}>
           <button className="howTo">HOW TO BUY</button>
         </a>
-        <a href="#team" onClick={hideNavbar}>
+        <a href="/private" onClick={hideNavbar}>
           <button className="button">BUY</button>
         </a>
         </MediaQuery>
         <MediaQuery minWidth={0} maxWidth={1000}>
-        <a href="#team" onClick={hideNavbar}>
+        <a href="/how-to-buy-fr.pdf" target="_blank" onClick={hideNavbar}>
           <button className="howToMobile">HOW TO BUY</button>
         </a>
-        <a href="#team" onClick={hideNavbar}>
+        <a href="/private" onClick={hideNavbar}>
           <button className="buttonMobile">BUY</button>
         </a>
         </MediaQuery>

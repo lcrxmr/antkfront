@@ -62,9 +62,6 @@ function Dapp() {
           <a href="/white-fr.pdf" target="_blank" onClick={hideNavbar}>
             Whitepaper
           </a>
-          <a href="/private" onClick={hideNavbar}>
-            Contact
-          </a>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes size={70} />
           </button>
