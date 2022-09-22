@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import MediaQuery from "react-responsive";
 
-function Devise({ whitelisted, currentState, setDevise }) {
+function Devise({ myBool2, currentState, setDevise }) {
 
     function setEth() {
         setDevise("ETH")
@@ -11,7 +11,7 @@ function Devise({ whitelisted, currentState, setDevise }) {
         setDevise("USDT")
     }
 
-    if ((whitelisted && currentState == 1) || currentState == 2) {
+    if ((myBool2 && currentState == 1) || currentState == 2) {
         return (
             <div>
             <MediaQuery minWidth={1000}>

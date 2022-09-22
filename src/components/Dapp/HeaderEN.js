@@ -48,7 +48,7 @@ function Header({ priceOfEth, setPriceEth, setboolAcc,  USDT}) {
     const priceEth = await contract.methods
       .getLatestPrice()
       .call({ from: accounts[0] });
-    setPriceEth(priceEth / 10 ** 8);
+    setPriceEth((priceEth / 10 ** 8).toFixed(2));
   }
 
   async function getAccount() {

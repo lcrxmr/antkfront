@@ -27,8 +27,8 @@ function Dapp() {
   const [tokensRemaining, setTokensRemaining] = useState();
   const [priceOfEth, setPriceEth] = useState();
   const [boolAcc, setboolAcc] = useState();
-  const USDT ="0x4Aec1F50164e9B09EcD966495993a47fb0B80467";
-  const Private = "0x217d7EbF1D2D679C725290DF3c737c461253ce19";
+  const USDT ="0xdAC17F958D2ee523a2206206994597C13D831ec7";
+  const Private = "0x9bD1873F51e589D1c62112e886e79F0d8d9FC804";
   const [myBool2, setMyBool2] = useState();
 
   const français = <VersionFR/>
@@ -239,6 +239,7 @@ function Dapp() {
                   whitelisted={whitelisted}
                   setDevise={setDevise}
                   devise={devise}
+                  myBool2={myBool2}
                 />
                 <Buy
                   currentState={currentState}
@@ -246,6 +247,7 @@ function Dapp() {
                   devise={devise}
                   priceOfEth={priceOfEth}
                   setboolAcc={setboolAcc}
+                  myBool2={myBool2}
                 />
                 <Calcul
                   tokensRemaining={tokensRemaining}

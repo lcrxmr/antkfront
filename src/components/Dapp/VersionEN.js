@@ -21,13 +21,15 @@ import PriceSolo from "./PriceSolo"
 
 function Dapp() {
   const [currentState, newState] = useState("");
-  const [whitelisted, iswhitelisted] = useState([]);
+  const [whitelisted, iswhitelisted] = useState();
+  const [proof, setProof] = useState();
   const [devise, setDevise] = useState("");
   const [tokensRemaining, setTokensRemaining] = useState();
   const [priceOfEth, setPriceEth] = useState();
   const [boolAcc, setboolAcc] = useState();
-  const USDT ="0x4Aec1F50164e9B09EcD966495993a47fb0B80467";
-  const Private = "0xE130E93b386B7FA49163713160C7353E854b51c9";
+  const USDT ="0xdAC17F958D2ee523a2206206994597C13D831ec7";
+  const Private = "0x9bD1873F51e589D1c62112e886e79F0d8d9FC804";
+  const [myBool2, setMyBool2] = useState();
 
   const français = <VersionFR/>
 
@@ -95,11 +97,12 @@ function Dapp() {
           </div>
 
           <SalesStatus
+          myBool2={myBool2}
             newState={newState}
             whitelisted={whitelisted}
             currentState={currentState}
           />
-          <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
+          <Whitelist setProof={setProof} proof={proof}  setMyBool2={setMyBool2} myBool2={myBool2}/>
 
 
           <div className="headerDiv">
@@ -127,6 +130,7 @@ function Dapp() {
 
             <div className="buyDiv">
               <Devise
+              myBool2={myBool2}
                 currentState={currentState}
                 whitelisted={whitelisted}
                 setDevise={setDevise}
@@ -140,8 +144,10 @@ function Dapp() {
                 setboolAcc={setboolAcc}
                 USDT={USDT}
                 Private={Private}
+                myBool2={myBool2}
               />
               <Calcul
+              myBool2={myBool2}
                 tokensRemaining={tokensRemaining}
                 devise={devise}
                 priceOfEth={priceOfEth}
@@ -183,11 +189,12 @@ function Dapp() {
             </div>
           </div>
           <SalesStatus
+          myBool2={myBool2}
             newState={newState}
             whitelisted={whitelisted}
             currentState={currentState}
           />
-          <Whitelist iswhitelisted={iswhitelisted} whitelisted={whitelisted} />
+          <Whitelist setProof={setProof} proof={proof}  setMyBool2={setMyBool2} myBool2={myBool2}/>
 
           {/* //------------- BUY ANTK  */}
           <MediaQuery minWidth={1000}>
@@ -196,12 +203,14 @@ function Dapp() {
 
               <div className="buyDiv">
                 <Devise
+                myBool2={myBool2}
                   currentState={currentState}
                   whitelisted={whitelisted}
                   setDevise={setDevise}
                   devise={devise}
                 />
                 <Buy
+                myBool2={myBool2}
                   currentState={currentState}
                   whitelisted={whitelisted}
                   devise={devise}
@@ -224,6 +233,7 @@ function Dapp() {
 
               <div className="buyDiv">
                 <Devise
+                myBool2={myBool2}
                   currentState={currentState}
                   whitelisted={whitelisted}
                   setDevise={setDevise}
@@ -235,6 +245,7 @@ function Dapp() {
                   devise={devise}
                   priceOfEth={priceOfEth}
                   setboolAcc={setboolAcc}
+                  myBool2={myBool2}
                 />
                 <Calcul
                   tokensRemaining={tokensRemaining}

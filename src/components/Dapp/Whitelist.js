@@ -14,7 +14,6 @@ function Whitelist({ setProof, proof, myBool2, setMyBool2 }) {
         if (contract) {
 
             isWhitelist()
-            // console.log(myBool2)
         }
     })
 
@@ -33,7 +32,6 @@ function Whitelist({ setProof, proof, myBool2, setMyBool2 }) {
     async function isWhitelist() {
         let theproof = merkleTree.getHexProof(keccak256(accounts[0]));
         let bool = await contract.methods.isWhitelist(theproof).call({ from: accounts[0] });
-        // console.log(bool)
         setProof(theproof)
         setMyBool2(bool)
     }
