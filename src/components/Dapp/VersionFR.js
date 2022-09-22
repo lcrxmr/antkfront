@@ -93,7 +93,7 @@ function Dapp() {
             </h1>
 
             <div className="headerDiv">
-            <a href='https://t.me/+-DyD7hKACyk3YTE8'>
+            <a href='https://t.me/+-DyD7hKACyk3YTE8' target="_blank">
           <div className="telegram" > Télégram Live  </div>
           </a>
               <Header
