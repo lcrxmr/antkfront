@@ -101,7 +101,7 @@ function Dapp() {
           />
           <Whitelist setProof={setProof} proof={proof}  setMyBool2={setMyBool2} myBool2={myBool2}/>
 
-
+ 
           <div className="headerDiv">
           <a href='https://t.me/+-DyD7hKACyk3YTE8' target="_blank">
           <div className="telegram" > Live Telegram </div>

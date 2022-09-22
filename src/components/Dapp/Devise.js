@@ -19,7 +19,7 @@ function Devise({ myBool2, currentState, setDevise }) {
             <div className="currencyButtons">
             <button onClick={setEth} className="buttonETH">ETH</button>
             <p></p>
-            <button onClick={setUsdt} className="buttonUSDT">USDT</button>
+            {/* <button onClick={setUsdt} className="buttonUSDT">USDT</button> */}
             <p></p>
             </div>
             </MediaQuery>
@@ -28,7 +28,7 @@ function Devise({ myBool2, currentState, setDevise }) {
             <div className="currencyButtonsMobile">
             <button onClick={setEth} className="buttonETHMobile">ETH</button>
             <p></p>
-            <button onClick={setUsdt} className="buttonUSDTMobile">USDT</button>
+            {/* <button onClick={setUsdt} className="buttonUSDTMobile">USDT</button> */}
             <p></p>
             </div>
             </MediaQuery>
