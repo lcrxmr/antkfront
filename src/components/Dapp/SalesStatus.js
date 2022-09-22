@@ -2,7 +2,7 @@ import useEth from "../../contexts/EthContext/useEth";
 import { useEffect, useState } from "react";
 import MediaQuery from "react-responsive";
 
-function SalesStatus({ newState, whitelisted, currentState }) {
+function SalesStatus({ newState, myBool2, currentState }) {
   const {
     state: { contract, accounts },
   } = useEth();
@@ -26,7 +26,7 @@ function SalesStatus({ newState, whitelisted, currentState }) {
       fromBlock: "latest",
     };
     contract.events
-      .newStatus(options)
+      .NewStatus(options)
       .on("data", (event) => newState(event.returnValues));
   }
 
@@ -44,7 +44,7 @@ function SalesStatus({ newState, whitelisted, currentState }) {
       </div>
     );
   }
-  if (currentState == 1 && whitelisted) {
+  if (currentState == 1 && myBool2) {
     return (
       <div>
               <MediaQuery minWidth={1000}>
@@ -63,7 +63,7 @@ function SalesStatus({ newState, whitelisted, currentState }) {
     );
   }
 
-  if (currentState == 1 && !whitelisted) {
+  if (currentState == 1 && !myBool2) {
     return (
       <div>
         <MediaQuery minWidth={1000}>

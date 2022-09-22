@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MediaQuery from "react-responsive";
 
-function Calcul({ tokensRemaining, devise, priceOfEth, currentState, whitelisted}) {
+function Calcul({ tokensRemaining, devise, priceOfEth, currentState, myBool2}) {
     const [get, set] = useState()
     const [get2, set2] = useState('')
 
@@ -73,7 +73,7 @@ function Calcul({ tokensRemaining, devise, priceOfEth, currentState, whitelisted
 
     let ethNumber = (get2/1500).toFixed(2)
 
-    if(((currentState == 1) && whitelisted) || currentState == 2)
+    if(((currentState == 1) && myBool2) || currentState == 2) {
 
     if (devise == 'ETH') {
         return (
@@ -146,6 +146,7 @@ function Calcul({ tokensRemaining, devise, priceOfEth, currentState, whitelisted
             </div>
         )
     }
+}
 }
 
 export default Calcul;

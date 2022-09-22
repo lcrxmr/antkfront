@@ -30,7 +30,7 @@ function EthProvider({ children }) {
   useEffect(() => {
     const tryInit = async () => {
       try {
-        const artifact = require("../../contracts/AntkPrivateTest.json");
+        const artifact = require("../../contracts/AntkPrivate.json");
         init(artifact);
       } catch (err) {
         console.error(err);
