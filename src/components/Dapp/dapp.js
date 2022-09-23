@@ -43,7 +43,7 @@ function Dapp() {
 
   if (window.ethereum) {
     return (
-      <div className="App">
+      <div id="navcontainer" >
         <div className="buyLangDapp">
           <MediaQuery minWidth={1000}>
             <h5 className="buyLangButtonDapp" onClick={() => setLangue(français)}>

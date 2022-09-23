@@ -87,7 +87,7 @@
   .top{
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 20px;
     width: 100vw;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -123,7 +123,7 @@
 
   .titreDapp{
 justify-content: center;
-color: black;
+color:rgb(247, 147, 30);
     font-size: 100px;
     margin-top: 0px;
   }
@@ -168,7 +168,7 @@ color: black;
     margin-left: 0px;
     width: fit-content;
     position: absolute;
-    top: 400px;
+    top: 350px;
     left: 50px
   }
 
@@ -181,7 +181,7 @@ color: black;
 
   .status{
     margin-top: 20px;
-    color: black;
+    color:rgb(247, 147, 30);
   }
 
 

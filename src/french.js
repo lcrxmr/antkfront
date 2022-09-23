@@ -71,21 +71,21 @@ export default function French(props) {
                 className="socialicon"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
-                bgColor="white"
+                bgColor="rgb(247, 147, 30)"
               />
               <SocialIcon
                 url="https://linktr.ee/animalnationtk"
                 className="socialicon"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
-                bgColor="white"
+                bgColor="rgb(247, 147, 30)"
               />
               <SocialIcon
                 url="https://t.me/ANTKofficialchannel"
                 className="socialicon2"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
-                bgColor="white"
+                bgColor="rgb(247, 147, 30)"
               />
             </div>
           </div>
@@ -105,26 +105,26 @@ export default function French(props) {
             <Fadetitle />
             
             <div id="socials">
-              <SocialIcon
+            <SocialIcon
                 url="https://twitter.com/animalnationtk"
                 className="socialicon"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
-                bgColor="white"
+                bgColor="rgb(247, 147, 30)"
               />
               <SocialIcon
                 url="https://linktr.ee/animalnationtk"
                 className="socialicon"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
-                bgColor="white"
+                bgColor="rgb(247, 147, 30)"
               />
               <SocialIcon
                 url="https://t.me/ANTKofficialchannel"
                 className="socialicon2"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
-                bgColor="white"
+                bgColor="rgb(247, 147, 30)"
               />
             </div>
           </div>
@@ -248,7 +248,7 @@ export default function French(props) {
               >
                 <div id="product">
 
-                  <img className="animalPic" src={"./chat.png"} />
+                  <img className="animalPic" src={"./chien.png"} />
                 </div>
                 <div>
                 <h1 id="roadmaptitle">LOVE TO EARN</h1>
@@ -301,10 +301,10 @@ export default function French(props) {
               <div
                 className="container"
                 id="produitDiv"
-                onClick={handleShowBird}
+                onClick={handleShowBird} 
               >
                 <div id="product">
-                  <img className="animalPic" src={"./chien.png"} />
+                  <img className="animalPic" src={"./chat.png"} />
                 </div>
                 <div>
                 <h1 id="roadmaptitle">FIND TO EARN</h1>
@@ -458,7 +458,7 @@ export default function French(props) {
               <div className="container" id="produitDivMobile">
                 <div id="productMobile">
 
-                  <img className="animalPicMobile" src={"./chat.png"} />
+                  <img className="animalPicMobile" src={"./chien.png"} />
                 </div>
                 <br/>
                 <div>
@@ -509,11 +509,11 @@ export default function French(props) {
             <Slide direction="left">
               <div className="container" id="produitDivMobile">
                 <div id="productMobile">
-                  <img className="animalPicMobile" src={"./chien.png"} />
+                  <img className="animalPicMobile" src={"./chat.png"} />
                 </div>
                 <br/>
                 <div>
-                <h1 id="roadmaptitle">PLAY TO EARN</h1>
+                <h1 id="roadmaptitle">FIND TO EARN</h1>
                   <p className="descriptionMobile">
                     Recevez des récompenses en token ANTK lorsque vous aidez à
                     retrouver un animal perdu.

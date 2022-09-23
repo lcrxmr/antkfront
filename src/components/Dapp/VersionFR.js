@@ -46,7 +46,9 @@ function Dapp() {
   if (window.ethereum) {
   return (
     <div className="App">
-          <header style={{color: "black"}}>
+      <div className="headerNew">
+      <div id="navcontainer">
+      <header style={{color: "black"}} >
         <img
           alt=""
           src={"./antk_police_black.png"}
@@ -55,7 +57,7 @@ function Dapp() {
           className="d-inline-block align-top"
           id="navlogo"
         />
-        <nav ref={navRef}>
+        <nav ref={navRef} style={{color: "black", backgroundColor: "rgba(250,226,121,1)"}}>
         <a href="/" onClick={hideNavbar}>
             Home
           </a>
@@ -65,28 +67,18 @@ function Dapp() {
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes size={70} />
           </button>
-          {/* <div id="langButton">
-            <MediaQuery minWidth={1000}>
-              <button className="lang">FR</button>
-              <button className="lang">EN</button>
-            </MediaQuery>
-          </div>
-          <div id="langButtonMobile">
-            <MediaQuery minWidth={0} maxWidth={1000}>
-              <button className="langMobile">FR</button>
-
-              <button className="langMobile">EN</button>
-            </MediaQuery>
-          </div> */}
         </nav>
         <button className="nav-btn" onClick={showNavbar}>
           <FaBars size={70} />
         </button>
       </header>
+      </div>
+      </div>
+          
 
       <MediaQuery minWidth={1000}>
         <EthProvider>
-          <div className="top">
+          <div className="top" >
             <h1 className="titreDapp">
               Vente Privée ANTK
               <NetWork />

@@ -46,7 +46,9 @@ function Dapp() {
   if (window.ethereum) {
   return (
     <div className="App">
-          <header style={{color: "black"}}>
+                <div className="headerNew">
+      <div id="navcontainer">
+      <header style={{color: "black"}} >
         <img
           alt=""
           src={"./antk_police_black.png"}
@@ -55,7 +57,7 @@ function Dapp() {
           className="d-inline-block align-top"
           id="navlogo"
         />
-        <nav ref={navRef}>
+        <nav ref={navRef} style={{color: "black", backgroundColor: "rgba(250,226,121,1)"}}>
         <a href="/" onClick={hideNavbar}>
             Home
           </a>
@@ -70,6 +72,8 @@ function Dapp() {
           <FaBars size={70} />
         </button>
       </header>
+      </div>
+      </div>
 
       <MediaQuery minWidth={1000}>
         <EthProvider>

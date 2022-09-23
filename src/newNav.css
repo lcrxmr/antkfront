@@ -4,7 +4,7 @@ header {
 	justify-content: space-between;
 	height: 80px;
 	padding: 0 2rem;
-	background-color: var(--mainColor);
+	background-color: rgba(250,226,121,1);
 	color: var(--textColor);
 	padding-top: 100px;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -74,7 +74,7 @@ nav {
 		align-items: center;
 		justify-content: center;
 		gap: 1.5rem;
-		background-image: url(../public/fonddegrade.png);
+		background-color:rgb(255, 177, 88);
 		transition: 1s;
 		transform: translateY(-100vh);
 		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -105,9 +105,9 @@ nav {
 	display: flex;
 	flex-direction: row;
 	width: 115px;
-	color: white;
+	color: black;
 	background-color: transparent;
-	border: solid 1px white;
+	border: solid 1px black;
 	font-size: 16px;
 }
 .howTo:hover{
@@ -121,9 +121,9 @@ nav {
 	display: flex;
 	flex-direction: row;
 	width: 260px;
-	color: white;
+	color: black;
 	background-color: transparent;
-	border: solid 1px white;
+	border: solid 1px black;
 	background-color: transparent;
 	font-size: 40px;
 }

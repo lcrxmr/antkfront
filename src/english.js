@@ -58,7 +58,7 @@ export default function English(props) {
       <MediaQuery minWidth={1000}>
       <div className="headerNew">
 
-        <div className="container" id="navcontainer">
+        <div  id="navcontainer">
           {/* <Nav /> */}
           <Navbar/>
         </div>
@@ -66,27 +66,28 @@ export default function English(props) {
         <div id="banner">
           <div className="accroche">
             <Fadetitle />
+            <img src={"./holocat.png"} className='holocat' />
             <div id="socials">
-              <SocialIcon
+            <SocialIcon
                 url="https://twitter.com/animalnationtk"
                 className="socialicon"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
-                bgColor="white"
+                bgColor="rgb(247, 147, 30)"
               />
               <SocialIcon
                 url="https://linktr.ee/animalnationtk"
                 className="socialicon"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
-                bgColor="white"
+                bgColor="rgb(247, 147, 30)"
               />
               <SocialIcon
                 url="https://t.me/ANTKofficialchannel"
                 className="socialicon2"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
-                bgColor="white"
+                bgColor="rgb(247, 147, 30)"
               />
             </div>
           </div>
@@ -106,27 +107,28 @@ export default function English(props) {
         <div id="bannerMobile">
           <div className="accroche">
             <Fadetitle />
+            <img src={"./holocat.png"} className='holocatMobile' />
             <div id="socials">
-              <SocialIcon
+            <SocialIcon
                 url="https://twitter.com/animalnationtk"
                 className="socialicon"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
-                bgColor="white"
+                bgColor="rgb(247, 147, 30)"
               />
               <SocialIcon
                 url="https://linktr.ee/animalnationtk"
                 className="socialicon"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
-                bgColor="white"
+                bgColor="rgb(247, 147, 30)"
               />
               <SocialIcon
                 url="https://t.me/ANTKofficialchannel"
                 className="socialicon2"
                 target="_blank"
                 style={{ height: 80, width: 80 }}
-                bgColor="white"
+                bgColor="rgb(247, 147, 30)"
               />
             </div>
           </div>
@@ -245,7 +247,7 @@ export default function English(props) {
                 onClick={handleShowCat}
               >
                 <div id="product">
-                  <img className="animalPic" src={"./chat.png"} />
+                  <img className="animalPic" src={"./chien.png"} />
                 </div>
                 <div>
                 <h1 id="roadmaptitle">LOVE TO EARN</h1>
@@ -300,7 +302,7 @@ export default function English(props) {
                 onClick={handleShowDog}
               >
                 <div  id="product">
-                  <img className="animalPic" src={"./chien.png"} />
+                  <img className="animalPic" src={"./chat.png"} />
 
                 </div>
                 <div>
@@ -424,7 +426,7 @@ export default function English(props) {
               <div className="container" id="produitDivMobile">
                 <div id="productMobile">
 
-                  <img className="animalPicMobile" src={"./chat.png"} />
+                  <img className="animalPicMobile" src={"./chien.png"} />
                 </div>
                 <div>
                 <br/>
@@ -474,7 +476,7 @@ export default function English(props) {
             <Slide direction="left">
               <div className="container" id="produitDivMobile">
                 <div id="productMobile">
-                  <img className="animalPicMobile" src={"./chien.png"} />
+                  <img className="animalPicMobile" src={"./chat.png"} />
                 </div>
                 <div>
                 <br/>
