@@ -44,18 +44,18 @@ function Dapp() {
   if (window.ethereum) {
     return (
       <div className="App">
-        <div className="buyLang">
+        <div className="buyLangDapp">
           <MediaQuery minWidth={1000}>
-            <h5 className="buyLangButton" onClick={() => setLangue(français)}>
+            <h5 className="buyLangButtonDapp" onClick={() => setLangue(français)}>
               fr
             </h5>
             <h5>{""} |{""}</h5>
-            <h5 className="buyLangButton" onClick={() => setLangue(english)}>
+            <h5 className="buyLangButtonDapp" onClick={() => setLangue(english)}>
               en
             </h5>
           </MediaQuery>
         </div>
-        <div className="buyLang">
+        <div className="buyLangDapp">
           <MediaQuery minWidth={0} maxWidth={1000}>
           <h5 className="buyLangButtonMobile" onClick={() => setLangue(français)}>
               fr
@@ -73,14 +73,14 @@ function Dapp() {
     return (
       <div>
         <br/>
-        <h2>Vous n'avez pas installé l'extension MetaMask !</h2>
-        <p>
+        <h2 style={{color: "black"}}>Vous n'avez pas installé l'extension MetaMask !</h2>
+        <p style={{color: "black"}}>
           Rendez vous ici pour l'obtenir :{" "}
           <a href="https://metamask.io/">https://metamask.io/</a>
         </p>
         <br/>
-        <h2>You need the MetaMask extension!</h2>
-        <p>
+        <h2 style={{color: "black"}}>You need the MetaMask extension!</h2>
+        <p style={{color: "black"}}>
           Follow this link :{" "}
           <a href="https://metamask.io/">https://metamask.io/</a>
         </p>

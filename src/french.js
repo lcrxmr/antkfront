@@ -133,9 +133,9 @@ export default function French(props) {
       {/* // ---- compte a rebours  */}
       <div className="countDiv">
         <div className="container" id="count">
-          <h2 className="date">23 Septembre 2022</h2>
+          {/* <h2 className="date">23 Septembre 2022</h2> */}
           <h1 className="vente">VENTE PRIVÉE </h1>
-          <Timer />
+          {/* <Timer /> */}
           <br />
           <MediaQuery minWidth={1000}>
           <div className="countbuttons">
@@ -167,16 +167,15 @@ export default function French(props) {
 
       <div id="about">
         <MediaQuery minWidth={1000}>
-          <h1 id="roadmaptitle">L'APPLICATION ANIMAL NATION</h1>
+          
           <Fade duration={1000}>
             <div className="container" id="aboutDiv">
               <div className="container" id="product">
-                <img className="aboutPic" src={"./LOGO.png"} />
-
-                <p className="name">Animal Nation Token</p>
+                <img className="aboutPic" src={"./token.png"} />
               </div>
 
               <div>
+              <h1 id="roadmaptitle">L'APPLICATION ANIMAL NATION</h1>
                 <p className="description">
                   Animal Nation est une application blockchain avec un module de
                   reconnaissance animale qui va permettre d'accéder à un
@@ -200,15 +199,14 @@ export default function French(props) {
         </MediaQuery>
 
         <MediaQuery minWidth={0} maxWidth={1000}>
-          <h1 id="roadmaptitle">L'APPLICATION ANIMAL NATION</h1>
+          
           <Fade duration={1000}>
             <div className="container" id="produitDivMobile">
               <div className="container" id="productMobile">
-                <img className="aboutPicMobile" src={"./LOGO.png"} />
-
-                <p className="nameProductMobile">Animal Nation Token</p>
+                <img className="aboutPicMobile" src={"./token.png"} />
               </div>
               <div>
+              <h1 id="roadmaptitle">L'APPLICATION ANIMAL NATION</h1>
                 <p className="descriptionMobile">
                   Animal Nation est une application blockchain avec un module de
                   reconnaissance animale qui va permettre d'accéder à un
@@ -246,11 +244,11 @@ export default function French(props) {
                 onClick={handleShowCat}
               >
                 <div id="product">
-                  <p className="prodname">Love to earn</p>
 
                   <img className="animalPic" src={"./chat.png"} />
                 </div>
                 <div>
+                <h1 id="roadmaptitle">LOVE TO EARN</h1>
                   <p className="description">
                     Recevez des récompenses en token ANTK lorsque vous passez du
                     temps avec votre animal.
@@ -303,10 +301,10 @@ export default function French(props) {
                 onClick={handleShowBird}
               >
                 <div id="product">
-                  <p className="prodname">Find to earn</p>
                   <img className="animalPic" src={"./chien.png"} />
                 </div>
                 <div>
+                <h1 id="roadmaptitle">FIND TO EARN</h1>
                   <p className="description">
                     Recevez des récompenses en token ANTK lorsque vous aidez à
                     retrouver un animal perdu.
@@ -356,10 +354,10 @@ export default function French(props) {
                 onClick={handleShowBird}
               >
                 <div id="product">
-                  <p className="prodname">Keep to earn</p>
                   <img className="animalPic" src={"./oiseau.png"} />
                 </div>
                 <div>
+                <h1 id="roadmaptitle">KEEP TO EARN</h1>
                   <p className="description">
                     Recevez des photos de votre animal lorsque vous partez en
                     vacances sans lui et faites gagner des tokens à la personne
@@ -405,10 +403,10 @@ export default function French(props) {
                 onClick={handleShowTigre}
               >
                 <div id="product">
-                  <p className="prodname">Play to earn</p>
                   <img className="animalPic" src={"./tigre.png"} />
                 </div>
                 <div>
+                <h1 id="roadmaptitle">PLAY TO EARN</h1>
                   <p className="description">
                     Un univers de jeux qui vont utiliser la reconnaissance
                     faciale animale pour découvrir le monde des animaux et vous
@@ -456,11 +454,12 @@ export default function French(props) {
             <Slide direction="left">
               <div className="container" id="produitDivMobile">
                 <div id="productMobile">
-                  <p className="nameProductMobile">Love to earn</p>
 
                   <img className="animalPicMobile" src={"./chat.png"} />
                 </div>
+                <br/>
                 <div>
+                <h1 id="roadmaptitle">LOVE TO EARN</h1>
                   <p className="descriptionMobile">
                     Recevez des récompenses en token ANTK lorsque vous passez du
                     temps avec votre animal.
@@ -507,10 +506,11 @@ export default function French(props) {
             <Slide direction="left">
               <div className="container" id="produitDivMobile">
                 <div id="productMobile">
-                  <p className="nameProductMobile">Find to earn</p>
                   <img className="animalPicMobile" src={"./chien.png"} />
                 </div>
+                <br/>
                 <div>
+                <h1 id="roadmaptitle">PLAY TO EARN</h1>
                   <p className="descriptionMobile">
                     Recevez des récompenses en token ANTK lorsque vous aidez à
                     retrouver un animal perdu.
@@ -560,10 +560,12 @@ export default function French(props) {
                 onClick={handleShowBirdMobile}
               >
                 <div id="productMobile">
-                  <p className="nameProductMobile">Keep to earn</p>
                   <img className="animalPicMobile" src={"./oiseau.png"} />
                 </div>
+
+        <br/>
                 <div>
+                <h1 id="roadmaptitle">KEEP TO EARN</h1>
                   <p className="descriptionMobile">
                     Recevez des photos de votre animal lorsque vous partez en
                     vacances sans lui et faites gagner des tokens à la personne
@@ -608,10 +610,11 @@ export default function French(props) {
                 onClick={handleShowTigre}
               >
                 <div id="productMobile">
-                  <p className="nameProductMobile">Play to earn</p>
                   <img className="animalPicMobile" src={"./tigre.png"} />
                 </div>
+                <br/>
                 <div>
+                <h1 id="roadmaptitle">PLAY TO EARN</h1>
                   <p className="descriptionMobile">
                     Un univers de jeux qui vont utiliser la reconnaissance
                     faciale animale pour découvrir le monde des animaux et vous
@@ -697,7 +700,7 @@ export default function French(props) {
       {/* // ------ Tokenomis  */}
 
       <div id="tokenomics">
-        <h1>TOKENOMICS</h1>
+        <h1 id="roadmaptitle">TOKENOMICS</h1>
         <Fade duration={3000}>
           <Slide direction="left">
             <div className="container" id="tokenomicsDiv">
