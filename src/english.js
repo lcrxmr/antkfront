@@ -57,24 +57,6 @@ export default function English(props) {
     <div className="App">
       <MediaQuery minWidth={1000}>
       <div className="headerNew">
-        {/* <div id="langButton">
-          <MediaQuery minWidth={1000}>
-            <Link to="/">
-              <button className="lang">FR</button>
-            </Link>
-            <Link to="/eng">
-              <button className="lang">EN</button>
-            </Link>
-          </MediaQuery>
-          <MediaQuery minWidth={0} maxWidth={1000}>
-            <Link to="/">
-              <button className="langMobile">FR</button>
-            </Link>
-            <Link to="/eng">
-              <button className="langMobile">EN</button>
-            </Link>
-          </MediaQuery>
-        </div> */}
 
         <div className="container" id="navcontainer">
           {/* <Nav /> */}
@@ -114,24 +96,7 @@ export default function English(props) {
       
       <MediaQuery minWidth={0} maxWidth={1000}>
       <div className="headerNewMobile">
-        {/* <div id="langButton">
-          <MediaQuery minWidth={1000}>
-            <Link to="/">
-              <button className="lang">FR</button>
-            </Link>
-            <Link to="/eng">
-              <button className="lang">EN</button>
-            </Link>
-          </MediaQuery>
-          <MediaQuery minWidth={0} maxWidth={1000}>
-            <Link to="/">
-              <button className="langMobile">FR</button>
-            </Link>
-            <Link to="/eng">
-              <button className="langMobile">EN</button>
-            </Link>
-          </MediaQuery>
-        </div> */}
+       
 
         <div id="navcontainer">
           {/* <Nav /> */}
@@ -173,9 +138,9 @@ export default function English(props) {
       {/* // ---- compte a rebours  */} 
       <div className="countDiv">
         <div className="container" id="count">
-          <h2 className="date">September 23rd 2022</h2>
+          {/* <h2 className="date">September 23rd 2022</h2> */}
           <h1 className="vente">PRIVATE SALE</h1>
-          <Timer />
+          {/* <Timer /> */}
           <br />
           <MediaQuery minWidth={1000}>
             <div className="countbuttons">
@@ -207,15 +172,14 @@ export default function English(props) {
 
       <div id="about">
         <MediaQuery minWidth={1000}>
-          <h1 id="roadmaptitle">THE ANIMAL NATION APP</h1>
+          
           <Fade duration={3000}>
             <div className="container" id="aboutDiv">
               <div className="container" id="product">
-                <img className="aboutPic" src={"./LOGO.png"} />
-
-                <p className="name">Animal Nation Token</p>
+                <img className="aboutPic" src={"./token.png"} />
               </div>
               <div>
+              <h1 id="roadmaptitle">THE ANIMAL NATION APP</h1>
                 <p className="description">
                   Animal Nation is a blockchain application with an animal
                   recognition module that will allow access to a set of
@@ -238,15 +202,13 @@ export default function English(props) {
           </Fade>
         </MediaQuery>
         <MediaQuery minWidth={0} maxWidth={1000}>
-          <h1 id="roadmaptitle">THE ANIMAL NATION APP</h1>
           <Fade duration={1000}>
             <div className="container" id="produitDivMobile">
               <div className="container" id="productMobile">
-                <img className="aboutPicMobile" src={"./LOGO.png"} />
-
-                <p className="nameProductMobile">Animal Nation Token</p>
+                <img className="aboutPicMobile" src={"./token.png"} />
               </div>
               <div>
+              <h1 id="roadmaptitle">THE ANIMAL NATION APP</h1>
                 <p className="descriptionMobile">
                   Animal Nation is a blockchain application with an animal
                   recognition module that will allow access to a set of
@@ -273,8 +235,8 @@ export default function English(props) {
 
       {/* // ------ produit */}
       <div id="produit">
+      <h1 id="roadmaptitle">PRODUCTS</h1>
         <MediaQuery minWidth={1000}>
-          <h1 id="roadmaptitle">PRODUITS</h1>
           <Fade duration={3000}>
             <Slide direction="left">
               <div
@@ -282,12 +244,11 @@ export default function English(props) {
                 id="produitDiv"
                 onClick={handleShowCat}
               >
-                <div className="container">
-                  <p className="prodname">Love to earn</p>
-
+                <div id="product">
                   <img className="animalPic" src={"./chat.png"} />
                 </div>
                 <div>
+                <h1 id="roadmaptitle">LOVE TO EARN</h1>
                   <p className="description">
                     Receive ANTK token rewards when you spend time with your
                     pet.
@@ -338,13 +299,12 @@ export default function English(props) {
                 id="produitDiv"
                 onClick={handleShowDog}
               >
-                <div className="container" id="product">
-
-                <p className="prodname">Find to earn</p>
+                <div  id="product">
                   <img className="animalPic" src={"./chien.png"} />
 
                 </div>
                 <div>
+                <h1 id="roadmaptitle">FIND TO EARN</h1>
                   <p className="description">
                     Receive ANTK token rewards when you help find a lost animal.
                   </p>
@@ -357,38 +317,18 @@ export default function English(props) {
                 </div>
               </div>
             </Slide>
-            {/* <Modal show={showDog} onHide={handleCloseDog} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
-              <Modal.Header closeButton>
-                <Modal.Title className="nameProductMobile">
-                  Find To Earn
-                </Modal.Title>
-              </Modal.Header>
-              <Modal.Body className="descriptionMobile">
-                <div className="modalDesc">
-                  This feature alerts app users that an animal has been lost in
-                  the geographic area where they are located. A person who
-                  encounters a lost animal will be able to perform an
-                  identification with animal facial recognition and warn the
-                  owner of the presence of his animal.
-                  <br />
-                  <img className="animalPicMobile" src={"./find.png"}></img>
-                  <br />
-                  After validation, an ANTK reward will be sent directly to the
-                  person who found your animal.
-                </div>
-              </Modal.Body>
-            </Modal> */}
             <Slide direction="left">
               <div
                 className="container"
                 id="produitDiv"
                 onClick={handleShowBird}
               >
-                <div className="container" id="product">
-                  <p className="prodname">Keep to earn</p>
+                <div  id="product">
+                  
                   <img className="animalPic" src={"./oiseau.png"} />
                 </div>
                 <div>
+                <h1 id="roadmaptitle">KEEP TO EARN</h1>
                   <p className="description">
                     Get photos of your pet when you go on vacation without it
                     and earn tokens for the person who looks after your pet.
@@ -431,13 +371,13 @@ export default function English(props) {
                 id="produitDiv"
                 onClick={handleShowTigre}
               >
-                <div className="container" id="product">
-                <p className="prodname">Play to earn</p>
+                <div  id="product">
                   <img className="animalPic" src={"./tigre.png"} />
 
                   
                 </div>
                 <div>
+                <h1 id="roadmaptitle">PLAY TO EARN</h1>
                   <p className="description">
                     A universe of games that will use animal facial recognition
                     to discover the world of animals and make you win tokens.
@@ -479,16 +419,16 @@ export default function English(props) {
         </MediaQuery>
 
         <MediaQuery minWidth={0} maxWidth={1000}>
-          <h1 id="roadmaptitle">PRODUCTS</h1>
           <Fade duration={3000}>
             <Slide direction="left">
               <div className="container" id="produitDivMobile">
                 <div id="productMobile">
-                  <p className="nameProductMobile">Love to earn</p>
 
                   <img className="animalPicMobile" src={"./chat.png"} />
                 </div>
                 <div>
+                <br/>
+                <h1 id="roadmaptitle">LOVE TO EARN</h1>
                   <p className="descriptionMobile">
                   Receive ANTK token rewards when you spend time with your
                     pet.
@@ -534,10 +474,11 @@ export default function English(props) {
             <Slide direction="left">
               <div className="container" id="produitDivMobile">
                 <div id="productMobile">
-                  <p className="nameProductMobile">Find to earn</p>
                   <img className="animalPicMobile" src={"./chien.png"} />
                 </div>
                 <div>
+                <br/>
+                <h1 id="roadmaptitle">FIND TO EARN</h1>
                   <p className="descriptionMobile">
                   Receive ANTK token rewards when you help find a lost animal.
                   </p>
@@ -585,10 +526,11 @@ export default function English(props) {
                 onClick={handleShowBirdMobile}
               >
                 <div id="productMobile">
-                  <p className="nameProductMobile">Keep to earn</p>
                   <img className="animalPicMobile" src={"./oiseau.png"} />
                 </div>
                 <div>
+                <br/>
+                <h1 id="roadmaptitle">KEEP TO EARN</h1>
                   <p className="descriptionMobile">
                   Get photos of your pet when you go on vacation without it
                     and earn tokens for the person who looks after your pet.
@@ -632,10 +574,11 @@ export default function English(props) {
                 onClick={handleShowTigre}
               >
                 <div id="productMobile">
-                  <p className="nameProductMobile">Play to earn</p>
                   <img className="animalPicMobile" src={"./tigre.png"} />
                 </div>
                 <div>
+                  <br/>
+                <h1 id="roadmaptitle">PLAY TO EARN</h1>
                   <p className="descriptionMobile">
                   A universe of games that will use animal facial recognition
                     to discover the world of animals and make you win tokens.
@@ -720,7 +663,7 @@ export default function English(props) {
       {/* // ------ Tokenomis  */}
 
       <div id="tokenomics">
-        <h1>TOKENOMICS</h1>
+        <h1 id="roadmaptitle">TOKENOMICS</h1>
         <Fade duration={3000}>
           <div className="container" id="tokenomicsDiv">
             <Slide direction="left">

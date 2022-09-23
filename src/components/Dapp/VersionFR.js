@@ -46,17 +46,17 @@ function Dapp() {
   if (window.ethereum) {
   return (
     <div className="App">
-          <header>
+          <header style={{color: "black"}}>
         <img
           alt=""
-          src={"./antk_police.png"}
+          src={"./antk_police_black.png"}
           width={120}
           height={120}
           className="d-inline-block align-top"
           id="navlogo"
         />
         <nav ref={navRef}>
-        <a href="/" target="_blank" onClick={hideNavbar}>
+        <a href="/" onClick={hideNavbar}>
             Home
           </a>
           <a href="/white-fr.pdf" target="_blank" onClick={hideNavbar}>

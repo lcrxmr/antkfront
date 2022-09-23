@@ -13,8 +13,9 @@
   text-align: center;
   font-family: 'Alata', sans-serif;
   position: relative;
-  background-size: cover;
-  background-image: url(../public/fonddegrade.png);
+  color: black;
+  /* background-size: cover;
+  background-image: url(../public/fonddegrade.png); */
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 -moz-box-sizing: border-box;    /* Firefox, other Gecko */
 box-sizing: border-box;
@@ -51,7 +52,7 @@ box-sizing: border-box;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
@@ -64,7 +65,7 @@ box-sizing: border-box;
 .headerNew{
   background-position:center;
   background-size: 100% 100%;
-  background-image: url("../public/LAUNCHPNG.png");
+  /* background-image: url("../public/LAUNCHPNG.png"); */
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
@@ -74,7 +75,7 @@ box-sizing: border-box;
 .headerNewMobile{
   background-position:center;
   background-size: 130% 100%;
-  background-image: url("../public/LAUNCHPNG.png");
+  /* background-image: url("../public/LAUNCHPNG.png"); */
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
@@ -194,6 +195,7 @@ body{
   margin-left: 0px;
   font-family: 'Alata', sans-serif;
   width: 100vw !important;
+  background-color: rgba(250,226,121,1);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
@@ -203,9 +205,7 @@ body{
 #banner{
   width: 100vw;
   height: 800px;
-  /* background-position:center;
-  background-size: cover;
-  background-image: url("../public/banner.JPG"); */
+  background-position:center;
   margin-top: 0px;
   margin-bottom: 0px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -216,7 +216,7 @@ body{
 }
 #bannerMobile{
   width: 100vw;
-  height: 800px;
+  height: 500px;
   /* background-position:center;
   background-size: cover;
   background-image: url("../public/banner.JPG"); */
@@ -244,8 +244,9 @@ body{
   flex-direction: row;
   align-items: flex-end;
   margin-left: auto;
+  background-color: #000;
   margin-right: 50px;
-  margin-top: 300px;
+  margin-top: 100px;
   /* background-image: url(../public/fonddegrade.png); */
   border-radius: 40px;
 }
@@ -291,14 +292,14 @@ body{
 .socialicon:hover,
 .socialicon:focus,
 .socialicon:active {
-  border: solid rgba(250,226,121,1);
+  border: solid rgb(247, 147, 30);
   border-radius: 50%;
 }
 
 .socialicon2:hover,
 .socialicon2:focus,
 .socialicon2:active {
-  border: solid rgba(250,226,121,1);
+  border: solid rgb(247, 147, 30);
   border-radius: 50%;
 }
 
@@ -317,30 +318,27 @@ body{
 .button{
   font-size: 18px;
   color: white;
-  background-color:rgb(242, 60, 60);
-  border: solid white 3px;
+  background-color:rgb(247, 147, 30);
   border-radius: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 40px;
   padding-right: 40px;
   font-family: 'Alata', sans-serif;
+  border: none;
 }
 
 .button:hover,
 .button:focus,
 .button:active {
-  background-color: rgba(250,226,121,1);
-  border: solid black 3px;
-  color: #000;
+  background-color: rgba(247, 146, 30, 0.722);
   outline: none;
 }
 
 .buttonMobile{
   font-size: 50px;
   color: white;
-  background-color:rgb(242, 60, 60);
-  border: solid white 5px;
+  background-color:rgb(247, 147, 30);
   border-radius: 100px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -348,14 +346,13 @@ body{
   padding-right: 100px;
   margin-bottom: 10px;
   font-family: 'Alata', sans-serif;
+  border: none;
 }
 
 .buttonMobile:hover,
 .buttonMobile:focus,
 .buttonMobile:active {
-  background-color: rgba(250,226,121,1);
-  border: solid black 5px;
-  color: #000;
+  background-color: rgba(247, 146, 30, 0.722);
   outline: none;
 }
 
@@ -378,9 +375,7 @@ body{
 .buttonSales:hover,
 .buttonSales:focus,
 .buttonSales:active {
-  background-color: rgba(250,226,121,1);
-  border: solid black 3px;
-  color: #000;
+  background-color: rgb(247, 147, 30);
   outline: none;
 }
 
@@ -400,15 +395,14 @@ body{
   margin-bottom: 10px;
   margin-left: 10px;
   font-family: 'Alata', sans-serif;
+  border: none;
   
 }
 
 .buttonSalesMobile:hover,
 .buttonSalesMobile:focus,
 .buttonSalesMobile:active {
-  background-color: rgba(250,226,121,1);
-  border: solid black 3px;
-  color: #000;
+  background-color: rgb(247, 147, 30);
   outline: none;
 }
 
@@ -492,7 +486,7 @@ color:#000;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
-  box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
+  box-shadow: 0px 0px 20px 5px rgba(247, 147, 30, 0.2);
 }
 
 #roadmap{
@@ -508,7 +502,7 @@ color:#000;
   flex-direction: column;
   align-items: center;
   background-size: cover;
-  background-image: url(../public/fonddegrade2.png);
+  /* background-image: url(../public/fonddegrade2.png); */
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
@@ -553,7 +547,9 @@ color:#000;
 }
 
 #roadmaptitle{
-  color: white !important;
+  color: rgb(247, 147, 30) !important;
+  font-size: 40px;
+  
 }
 
 
@@ -593,7 +589,7 @@ a:-webkit-any-link {
   justify-content: center;
   background-position: center;
   background-size: cover;
-  background-image: url(../public/fonddegrade_pieces.png);
+  /* background-image: url(../public/fonddegrade_pieces.png); */
   text-decoration: none;
 }
 
@@ -607,10 +603,10 @@ a:-webkit-any-link {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   /* max-width: 80%;
   min-width: fit-content; */
-  height: 200px;
+  height: 400px;
   /* border: solid black 2px; */
   background-color: white;
   /* background-position:center;
@@ -622,7 +618,7 @@ a:-webkit-any-link {
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
   text-decoration: none;
-  box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
+  box-shadow: 0px 0px 20px 5px rgba(247, 147, 30, 0.2);
 }
 
 /* #produitDiv:hover,
@@ -640,8 +636,8 @@ a:-webkit-any-link {
 
 .description{
   color: #000;
-  font-size: 16px;
-  margin-left: 10px;
+  font-size: 18px;
+  margin-left: 0px;
   margin-right: 50px;
   margin-top: 20px;
   font-family: 'Alata', sans-serif;
@@ -703,6 +699,7 @@ a:-webkit-any-link {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 #produitDivMobile{
@@ -727,9 +724,8 @@ a:-webkit-any-link {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
-  text-decoration: none;
-
-  box-shadow: 0px 12px 12px 0px rgba(93, 93, 109, 0.2);
+  text-decoration: none; 
+  box-shadow: 0px 0px 20px 5px rgba(247, 147, 30, 0.2);
 }
 
 
@@ -768,7 +764,7 @@ a:-webkit-any-link {
   align-items: center;
   background-position: center;
   background-size: cover;
-  background-image: url(../public/fonddegrade_pieces.png);
+  /* background-image: url(../public/fonddegrade_pieces.png); */
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
@@ -812,7 +808,7 @@ a:-webkit-any-link {
   flex-direction: column;
   align-items: center;
   background-size: cover;
-  background-image: url(../public/fonddegrade2.png);
+  /* background-image: url(../public/fonddegrade2.png); */
   font-family: 'Alata', sans-serif;
   padding-bottom: 50px;
 
@@ -842,11 +838,11 @@ border-radius: 50%;
 .profilePic:hover,
 .profilePic:focus,
 .profilePic:active {
-  border: solid gold 5px
+  box-shadow: 0px 0px 20px 12px rgba(247, 147, 30, 0.2);
 }
 
 .animalPic{
-  width: 150px;
+  width: 180px;
   margin-left: 0px;
   margin-right: 0Px;
 }
@@ -960,8 +956,7 @@ border-radius: 50%;
 .prodInfo:hover,
 .profInfo:focus,
 .prodInfo:active {
-  background-color: rgba(250,226,121,1);
-  border: solid black 3px;
+  background-color: rgb(247, 147, 30);
   color: #000;
   outline: none;
 }
@@ -984,7 +979,7 @@ border-radius: 50%;
 .prodInfoMobile:hover,
 .prodInfoMobile:focus,
 .prodInfoMobile:active {
-  background-color: rgba(250,226,121,1);
+  background-color: rgb(247, 147, 30);
   border: solid black 3px;
   color: #000;
   outline: none;
@@ -997,20 +992,21 @@ border-radius: 50%;
 }
 
 .howToCountButton{
-	border-radius: 10px;
-	display: flex;
-	flex-direction: row;
-	width: 130px;
-	color: black;
-	font-size: 18px;
-	border: 3px solid black;
-	background-color: rgba(250,226,121,1);
+  color: white;
+  font-size: 18px;
+  background-color:black;
+  border: none;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .howToCountButton:hover{
-	background-color: grey;
-	border: 3px solid white;
+	background-color: rgba(247, 146, 30, 0.539);
 	color: white;
+  border: none;
 
 }
 
@@ -1018,17 +1014,21 @@ border-radius: 50%;
 	border-radius: 10px;
 	display: flex;
 	flex-direction: row;
-	width: 210px;
-	color: black;
+	width: 270px;
+	color: white;
 	font-size: 30px;
-	border: 3px solid black;
-	background-color: rgba(250,226,121,1);
+  background-color:black;
+  border: none;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+	
 }
 
 .howToCountButtonMobile:hover{
-	background-color: grey;
-	border: 3px solid white;
-	color: white;
+	color:rgb(247, 147, 30);
 
 }
 
@@ -1036,4 +1036,20 @@ border-radius: 50%;
   position: absolute;
   top: 10px ;
   right: 0px;
+}
+
+.holocat{
+  position: absolute;
+  top: 150px;
+  width: 800px;
+  left: 30%;
+  z-index: 9;
+}
+
+.holocatMobile{
+  position: absolute;
+  top: 200px;
+  width: 600px;
+  left: 30%;
+  z-index: 0;
 }

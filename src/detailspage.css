@@ -4,7 +4,6 @@
     margin-bottom: 50px;
     background-position:center;
     background-size: cover;
-    background-image: url("../public/banner.JPG");
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -15,7 +14,7 @@
     margin-left: 50px;
     font-size: 18px;
     color: white;
-    background-color:rgb(242, 60, 60);
+    background-color:black;
     border: solid white 3px;
     border-radius: 30px;
     padding-top: 10px;
@@ -28,10 +27,9 @@
 .back:hover,
 .back:focus,
 .back:active {
-  background-color: rgba(250,226,121,1);
-  border: solid black 3px;
-  color: #000;
+  background-color: rgba(0, 0, 0, 0.099);
   outline: none;
+  color: black;
 }
 
 .details{

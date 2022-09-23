@@ -34,11 +34,11 @@ function SalesStatus({ newState, myBool2, currentState }) {
     return (
       <div>
               <MediaQuery minWidth={1000}>
-              <h4>La vente n'a pas commencée</h4>
+              <h4 style={{color: "black"}}>La vente n'a pas commencée</h4>
             </MediaQuery>
             <MediaQuery minWidth={0} maxWidth={1000}>
               <div style={{marginTop: "30px"}}>
-                <h1>La vente n'a pas commencée</h1>
+                <h1 style={{color: "black"}}>La vente n'a pas commencée</h1>
               </div>
             </MediaQuery>
       </div>
@@ -48,15 +48,15 @@ function SalesStatus({ newState, myBool2, currentState }) {
     return (
       <div>
               <MediaQuery minWidth={1000}>
-              <h4>Whitelist seulement :</h4>
+              <h4 style={{color: "black"}}>Whitelist seulement :</h4>
               <button className="buttonStatus"> EN COURS </button>
-              <p>Vous pouvez acheter vos tokens !</p>
+              <p style={{color: "black"}}>Vous pouvez acheter vos tokens !</p>
             </MediaQuery>
             <MediaQuery minWidth={0} maxWidth={1000}>
               <div style={{marginTop: "30px"}}>
-                <h1>Whitelist:</h1>
+                <h1 style={{color: "black"}}>Whitelist:</h1>
                 <button className="buttonStatus"> EN COURS </button>
-                <h2>Vous pouvez acheter vos tokens !</h2>
+                <h2 style={{color: "black"}}>Vous pouvez acheter vos tokens !</h2>
               </div>
             </MediaQuery>
       </div>
@@ -67,16 +67,16 @@ function SalesStatus({ newState, myBool2, currentState }) {
     return (
       <div>
         <MediaQuery minWidth={1000}>
-              <h4>Whitelist seulement :</h4>
+              <h4 style={{color: "black"}}>Whitelist seulement :</h4>
               <button className="buttonStatus"> EN COURS </button>
               <p>Vous devez attendre la phase
           public pour acheter vos tokens!</p>
             </MediaQuery>
             <MediaQuery minWidth={0} maxWidth={1000}>
               <div style={{marginTop: "30px"}}>
-                <h1>Whitelist seulement</h1>
+                <h1 style={{color: "black"}}>Whitelist seulement</h1>
                 <button className="buttonStatus"> EN COURS </button>
-                <h2>Vous devez attendre la phase
+                <h2 style={{color: "black"}}>Vous devez attendre la phase
           public pour acheter vos tokens!</h2>
               </div>
             </MediaQuery>
@@ -88,15 +88,15 @@ function SalesStatus({ newState, myBool2, currentState }) {
     return (
       <div>
         <MediaQuery minWidth={1000}>
-          <h4>Vente:</h4>
+          <h4 style={{color: "black"}}>Vente:</h4>
           <button className="buttonStatus"> EN COURS </button>
-          <p>Vous pouvez acheter vos tokens !</p>
+          <p style={{color: "black"}}>Vous pouvez acheter vos tokens !</p>
         </MediaQuery>
         <MediaQuery minWidth={0} maxWidth={1000}>
           <div style={{marginTop: "30px"}}>
-            <h1>Vente :</h1>
+            <h1 style={{color: "black"}}>Vente :</h1>
             <button className="buttonStatus"> EN COURS </button>
-            <h2>Vous pouvez acheter vos tokens !</h2>
+            <h2 style={{color: "black"}}>Vous pouvez acheter vos tokens !</h2>
           </div>
         </MediaQuery>
       </div>

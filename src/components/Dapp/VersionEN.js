@@ -46,10 +46,10 @@ function Dapp() {
   if (window.ethereum) {
   return (
     <div className="App">
-          <header>
+          <header style={{color: "black"}}>
         <img
           alt=""
-          src={"./antk_police.png"}
+          src={"./antk_police_black.png"}
           width={120}
           height={120}
           className="d-inline-block align-top"
@@ -65,19 +65,6 @@ function Dapp() {
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes size={70} />
           </button>
-          {/* <div id="langButton">
-            <MediaQuery minWidth={1000}>
-              <button className="lang">FR</button>
-              <button className="lang">EN</button>
-            </MediaQuery>
-          </div>
-          <div id="langButtonMobile">
-            <MediaQuery minWidth={0} maxWidth={1000}>
-              <button className="langMobile">FR</button>
-
-              <button className="langMobile">EN</button>
-            </MediaQuery>
-          </div> */}
         </nav>
         <button className="nav-btn" onClick={showNavbar}>
           <FaBars size={70} />
