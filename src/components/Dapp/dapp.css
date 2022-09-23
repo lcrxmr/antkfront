@@ -502,7 +502,7 @@ margin:0
   padding-right: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: rgb(218, 187, 236);
+  background-color: rgba(247, 146, 30, 0.394);
   border: solid white 2px;
   margin-left: 0px;
 }
@@ -513,6 +513,7 @@ margin:0
   padding-right: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
+  background-color: rgba(247, 146, 30, 0.394);
   border: solid white 2px;
   margin-left: 0px;
   font-size: 50px;
@@ -696,13 +697,13 @@ border-top-right-radius: 15px;
 }
 
 .ANTKprice{
-  background-color: rgb(213, 135, 206);
+  background-color: rgba(247, 146, 30);
   border-radius: 20px;
   margin-top: 20px;
 }
 
 .ANTKpriceMobile{
-  background-color: rgb(213, 135, 206);
+  background-color: rgba(247, 146, 30);
   border-radius: 20px;
   margin-bottom: 40px;
   margin-top: 0px;
