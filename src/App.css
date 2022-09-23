@@ -602,7 +602,7 @@ a:-webkit-any-link {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   /* max-width: 80%;
   min-width: fit-content; */
   height: 400px;
@@ -841,7 +841,7 @@ border-radius: 50%;
 }
 
 .animalPic{
-  width: 150px;
+  width: 180px;
   margin-left: 0px;
   margin-right: 0Px;
 }
