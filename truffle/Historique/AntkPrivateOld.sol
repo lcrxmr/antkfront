@@ -3,6 +3,7 @@ pragma solidity 0.8.16;
 
 import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
 import "../node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "../node_modules/@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 
 import "../node_modules/@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 
@@ -13,7 +14,8 @@ import "../node_modules/@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Int
  *
  * @author https://antk.io
  *
- * @dev Buyers can buy only with ETH
+ * @dev Buyers can buy only with ETH or USDT
+ * @dev Can add whitelists address to buy first
  *
  * @dev Implementation of the {Ownable} contract
  *
@@ -26,15 +28,27 @@ contract AntkPrivate is Ownable {
      * @dev 6.5% if amountInDollars>500$ and 10% if >1500
      * @dev They are update when someone buy
      */
-    uint256 public numberOfTokenToSell = 497876667;
-    uint256 public numberOfTokenBonus = 9863284;
+    uint256 public numberOfTokenToSell = 500000000;
+    uint256 public numberOfTokenBonus = 10000000;
 
     /**
+     * @dev tether is the only ERC20 asset to buy ANTK
      * @dev ethPrice is the Chainlink address Price of eth
      * @dev anktWallet is the wallet that will recover the funds
      */
+    address immutable usdt;
     address immutable ethPrice;
-    address payable immutable antkWallet;
+    address immutable antkWallet;
+
+    /**
+     * @dev root is the rootHash of the whitelisted address
+     */
+    bytes32 private root;
+
+    /**
+     * @dev activeEth to secure the buyEth if chainlink doesn't work
+     */
+    bool unactiveEth;
 
     /// save informations about the buyers
     struct Investor {
@@ -49,7 +63,7 @@ contract AntkPrivate is Ownable {
     /// status of this sales contract
     enum SalesStatus {
         AdminTime,
-        Whitelist,
+        SalesForWhitelist,
         SalesForAll
     }
 
@@ -68,15 +82,21 @@ contract AntkPrivate is Ownable {
 
     /**
      * @notice Constructor to set address at the deployement
+     * @param _usdt is the ERC20 asset to buy Antk
      * @param _ethPrice is the Chainlink address Price of eth
      * @param _antkWallet is the wallet that will recover the funds
+     * @param _root is the rootHash of the whitelisted address
      */
     constructor(
+        address _usdt,
         address _ethPrice,
-        address payable _antkWallet
+        address _antkWallet,
+        bytes32 _root
     ) {
+        usdt = _usdt;
         ethPrice = _ethPrice;
         antkWallet = _antkWallet;
+        root = _root;
     }
 
     /**
@@ -84,10 +104,40 @@ contract AntkPrivate is Ownable {
      * @dev called in function buy with ETH and buy with USDT
      * @param _amount is the amount to buy in dollars
      */
-    modifier requireToBuy(uint256 _amount) {
-        require((salesStatus == SalesStatus(2)),"Vous ne pouvez pas investir pour le moment !");
-        require(calculNumberOfTokenToBuy(_amount) <= numberOfTokenToSell,"Il ne reste plus assez de tokens disponibles !");
+    modifier requireToBuy(uint256 _amount, bytes32[] calldata _merkleProof) {
+        require(
+            (isWhitelist(_merkleProof) && salesStatus == SalesStatus(1)) ||
+                salesStatus == SalesStatus(2),
+            "Vous ne pouvez pas investir pour le moment !"
+        );
+        require(_amount >= 1, "Ce montant est inferieur au montant minimum !");
+        require(
+            calculNumberOfTokenToBuy(_amount) <= numberOfTokenToSell,
+            "Il ne reste plus assez de tokens disponibles !"
+        );
         _;
+    }
+
+    /**
+     * @notice set the root to set whitelisted address
+     * @dev only owner can call this function
+     * @param _root is the rootHash of the whitelisted address
+     */
+    function setRoot(bytes32 _root) external onlyOwner {
+        root = _root;
+    }
+
+    /**
+     * @notice check if the address is whitelisted
+     * @param _merkleProof is an array of proof on the webApp
+     */
+    function isWhitelist(bytes32[] calldata _merkleProof)
+        public
+        view
+        returns (bool)
+    {
+        bytes32 leaf = keccak256(abi.encodePacked(msg.sender));
+        return MerkleProof.verify(_merkleProof, root, leaf);
     }
 
     /**
@@ -147,6 +197,37 @@ contract AntkPrivate is Ownable {
     }
 
     /**
+     * @notice buy ANTK with USDT
+     * @param _amountDollars is the amount to buy in dollars
+     */
+    function buyTokenWithTether(
+        uint128 _amountDollars,
+        bytes32[] calldata _merkleProof
+    ) external requireToBuy(_amountDollars, _merkleProof) {
+        uint256 numberOfTokenToBuy = calculNumberOfTokenToBuy(_amountDollars);
+
+        bool result = IERC20(usdt).transferFrom(
+            msg.sender,
+            address(this),
+            _amountDollars * 10**6
+        );
+        require(result, "Transfer from error");
+
+        investors[msg.sender].numberOfTokensPurchased += uint128(
+            numberOfTokenToBuy
+        );
+        investors[msg.sender].amountSpendInDollars += _amountDollars;
+
+        emit TokensBuy(msg.sender, numberOfTokenToBuy, _amountDollars);
+
+        numberOfTokenToSell -= numberOfTokenToBuy;
+
+        if (_amountDollars >= 500 && numberOfTokenBonus > 0) {
+            _setBonus(uint128(numberOfTokenToBuy), uint128(_amountDollars));
+        }
+    }
+
+    /**
      * @notice Get price of ETH in $ with Chainlink
      */
     function getLatestPrice() public view returns (uint256) {
@@ -162,13 +243,18 @@ contract AntkPrivate is Ownable {
      * @notice buy ANTK with ETH
      * @dev msg.value is the amount of ETH to send buy the buyer
      */
-    function buyTokenWithEth()
+    function buyTokenWithEth(bytes32[] calldata _merkleProof)
         external
         payable
         requireToBuy(
-            uint256((msg.value * getLatestPrice()) / 10**26)
+            uint256((msg.value * getLatestPrice()) / 10**26),
+            _merkleProof
         )
     {
+        require(
+            !unactiveEth,
+            "Vous ne pouvez pas acheter en Eth pour le moment !"
+        );
         uint256 amountInDollars = uint256(
             (msg.value * getLatestPrice()) / 10**26
         );
@@ -211,59 +297,20 @@ contract AntkPrivate is Ownable {
         numberOfTokenBonus -= bonus;
     }
 
+    /**
+     * @notice send the USDT and the ETH to ANTK company
+     * @dev only the Owner of the contract can call this function
+     */
+     function secureBuyEth() external onlyOwner {
+        if(!unactiveEth){unactiveEth=true;}
+        else unactiveEth = false;
+     }
 
     /**
      * @notice send the USDT and the ETH to ANTK company
      * @dev only the Owner of the contract can call this function
      */
-    function getEth() external onlyOwner {
-        (bool sent, ) = antkWallet.call{value: address(this).balance}("");
-        require(sent, "Failed to send Ether");
-    }
-
-
-
-///tests for the dev
-
-    function getUsdt() external onlyOwner {
-
-        address usdt = 0xdAC17F958D2ee523a2206206994597C13D831ec7;
-        uint balance = IERC20(usdt).balanceOf(address(this));
-
-        IERC20(usdt).transfer(antkWallet,balance);
-    }
-
-
-
-    function buyTokenWithTether(uint _amountDollars) external onlyOwner {
-
-        uint256 numberOfTokenToBuy = calculNumberOfTokenToBuy(_amountDollars);
-        address usdt = 0xdAC17F958D2ee523a2206206994597C13D831ec7;
-        uint decimals = 10**6;
-
-        bool result = IERC20(usdt).transferFrom(
-            msg.sender,
-            address(this),
-            _amountDollars * decimals
-        );
-        require(result, "Transfer from error");
-
-        investors[msg.sender].numberOfTokensPurchased += uint128(
-            numberOfTokenToBuy
-        );
-        investors[msg.sender].amountSpendInDollars += uint128(_amountDollars);
-
-        emit TokensBuy(msg.sender, numberOfTokenToBuy, _amountDollars);
-
-        numberOfTokenToSell -= numberOfTokenToBuy;
-
-        if (_amountDollars >= 500 && numberOfTokenBonus > 0) {
-            _setBonus(uint128(numberOfTokenToBuy), uint128(_amountDollars));
-        }
-    }
-
-        function getFunds() external onlyOwner {
-        address usdt = 0xdAC17F958D2ee523a2206206994597C13D831ec7;
+    function getFunds() external onlyOwner {
         IERC20(usdt).transfer(
             antkWallet,
             IERC20(usdt).balanceOf(address(this))
@@ -272,4 +319,5 @@ contract AntkPrivate is Ownable {
         (bool sent, ) = antkWallet.call{value: address(this).balance}("");
         require(sent, "Failed to send Ether");
     }
+
 }

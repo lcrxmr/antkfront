@@ -71,7 +71,7 @@ function Calcul({ tokensRemaining, devise, priceOfEth, currentState, myBool2}) {
         else (set2((number * 0.001).toFixed(2)))
     }
 
-    let ethNumber = (get2/1500).toFixed(2)
+    let ethNumber = (get2/priceOfEth).toFixed(2)
 
     if(((currentState == 1) && myBool2) || currentState == 2) {
 

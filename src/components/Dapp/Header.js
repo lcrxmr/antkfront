@@ -20,7 +20,7 @@ function Header({ priceOfEth, setPriceEth, setboolAcc,  USDT}) {
   );
   useEffect(() => {
     if (contract) {
-      checkBalance();
+      // checkBalance();
       checkBalanceEth();
       priceEth();
       getAccount();
@@ -39,7 +39,7 @@ function Header({ priceOfEth, setPriceEth, setboolAcc,  USDT}) {
   }
   async function checkBalanceEth() {
     const result = await web3.eth.getBalance(accounts[0]);
-    setBalanceEth(result / 10 ** 18);
+    setBalanceEth((result / 10 ** 18).toFixed(4));
   }
 
   async function priceEth() {
@@ -64,7 +64,6 @@ function Header({ priceOfEth, setPriceEth, setboolAcc,  USDT}) {
             <h5>Votre Wallet</h5>
             <div>Prix de l'ETH = {priceOfEth} $</div>
             <div>Wallet address : {truncateAddr(accounts[0])}</div>
-            <div>Balance USDT :{balance} </div>
             <div>Balance ETH : {balanceEth} </div>
           </div>
         </MediaQuery>
@@ -73,7 +72,6 @@ function Header({ priceOfEth, setPriceEth, setboolAcc,  USDT}) {
             <h2>Votre Wallet</h2>
             <div>Prix de l'ETH = {priceOfEth} $</div>
             <div>Wallet address : {truncateAddr(accounts[0])}</div>
-            <div>Balance USDT :{balance} </div>
             <div>Balance ETH : {balanceEth} </div>
           </div>
         </MediaQuery>

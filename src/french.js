@@ -143,7 +143,7 @@ export default function French(props) {
               <button className="button">BUY</button>
               </a>
               <br/>
-              <a href="/how-to-buy-eng.pdf" target="_blank">
+              <a href="/how-to-buy-fr.pdf" target="_blank">
           <button className="howToCountButton">HOW TO BUY</button>
         </a>
             </div>
@@ -154,7 +154,7 @@ export default function French(props) {
               <button className="buttonMobile">BUY</button>
               </a>
               <br/>
-              <a href="/how-to-buy-eng.pdf" target="_blank">
+              <a href="/how-to-buy-fr.pdf" target="_blank">
           <button className="howToCountButtonMobile">HOW TO BUY</button>
         </a>
           </MediaQuery>

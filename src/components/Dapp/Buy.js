@@ -38,10 +38,10 @@ function Buy({ currentState, devise, priceOfEth, setboolAcc, USDT, Private, proo
                 window.alert("Vous ne pouvez pas investir plus de 100 000$ en une fois !");
             }
             else {
-                await contract.methods.buyTokenWithEth(proof).send({ from: accounts[0], value: web3.utils.toWei(amountInEth, 'ether') })
+                await contract.methods.buyTokenWithEth().send({ from: accounts[0], value: web3.utils.toWei(amountInEth, 'ether') })
             }
             setBool(false)
-            setInterval(setboolAcc(true), 3000)
+            setboolAcc(true)
         }
         catch {
             setBool(false)
@@ -59,8 +59,13 @@ function Buy({ currentState, devise, priceOfEth, setboolAcc, USDT, Private, proo
                 window.alert("Vous ne pouvez pas investir plus de 100 000$ en une fois !");
             }
             else {
-                await instance.methods.approve(Private, amountInUSDT * 10 ** 6).send({ from: accounts[0] })
+                let Allowance = await instance.methods.allowance(accounts[0], Private).call()
+                console.log(Allowance)
+                if(Allowance>=amountInUSDT * 10 ** 6) {await contract.methods.buyTokenWithTether(amountInUSDT, proof).send({ from: accounts[0] })}
+                
+                else { await instance.methods.approve(Private, amountInUSDT * 10 ** 6).send({ from: accounts[0] })
                 await contract.methods.buyTokenWithTether(amountInUSDT, proof).send({ from: accounts[0] })
+            }
             }
 
             setBool2(false)
