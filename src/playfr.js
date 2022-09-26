@@ -95,6 +95,7 @@ export default function PlayFr(props) {
 
         </div>
       </MediaQuery>
+      {/* <br/>
       <br/>
       <br/>
       <br/>
@@ -103,8 +104,7 @@ export default function PlayFr(props) {
       <br/>
       <br/>
       <br/>
-      <br/>
-      <br/>
+      <br/> */}
       <Footer/>
     </>
   );

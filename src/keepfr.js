@@ -97,13 +97,13 @@ export default function KeepFr(props) {
 
         </div>
       </MediaQuery>
+      {/* <br/>
       <br/>
       <br/>
       <br/>
       <br/>
       <br/>
-      <br/>
-      <br/>
+      <br/> */}
       <Footer/>
     </>
   );
