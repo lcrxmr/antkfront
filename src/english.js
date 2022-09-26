@@ -178,7 +178,7 @@ export default function English(props) {
           <Fade duration={3000}>
             <div className="container" id="aboutDiv">
               <div className="container" id="product">
-                <img className="aboutPic" src={"./token.png"} />
+                <img className="aboutPic" src={"./icone_phone.png"} />
               </div>
               <div>
               <h1 id="roadmaptitle">THE ANIMAL NATION APP</h1>
@@ -207,7 +207,7 @@ export default function English(props) {
           <Fade duration={1000}>
             <div className="container" id="produitDivMobile">
               <div className="container" id="productMobile">
-                <img className="aboutPicMobile" src={"./token.png"} />
+                <img className="aboutPicMobile" src={"./icone_phone.png"} />
               </div>
               <div>
               <h1 id="roadmaptitle">THE ANIMAL NATION APP</h1>

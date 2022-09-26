@@ -90,9 +90,11 @@ box-sizing: border-box;
   }
 }
 html, body {
-  min-height: 100vh;
+  position: relative;
+  min-height: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  color: black;
 }
 
 body{
@@ -195,7 +197,8 @@ body{
   margin-left: 0px;
   font-family: 'Alata', sans-serif;
   width: 100vw !important;
-  background-color: rgba(250,226,121,1);
+  height: 150px;
+  background-color: rgb(255, 177, 88);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
@@ -603,8 +606,8 @@ a:-webkit-any-link {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  /* max-width: 80%;
-  min-width: fit-content; */
+  /* width: 800px; */
+  min-width: fit-content;
   height: 400px;
   /* border: solid black 2px; */
   background-color: white;
@@ -862,13 +865,13 @@ border-radius: 50%;
 }
 
 .aboutPic{
-  width: 300px;
+  width: 350px;
   margin-left: 0px;
   margin-right: 0Px;
 }
 
 .aboutPicMobile{
-  width: 400px;
+  width: 600px;
   margin-left: 0px;
   margin-right: 0Px;
 }
@@ -1032,14 +1035,14 @@ border-radius: 50%;
 }
 
 .buyLangFront{
-  position: absolute;
-  top: 10px ;
-  right: 0px;
+  top: 90px;
+  right: 50px;
+  z-index: 9;
 }
 
 .holocat{
   position: absolute;
-  top: 150px;
+  top: 100px;
   width: 800px;
   left: 30%;
   z-index: 0;
@@ -1047,8 +1050,14 @@ border-radius: 50%;
 
 .holocatMobile{
   position: absolute;
-  top: 200px;
-  width: 500px;
-  left: 35%;
+  top: 120px;
+  width: 600px;
+  left: 30%;
   z-index: 0;
+}
+
+#navlogo{
+  width: 400px;
+  height: 100px;
+  margin-right: 0px;
 }

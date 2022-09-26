@@ -20,8 +20,8 @@ function Navbar() {
 			<img
             alt=""
             src={"./antk_police_black.png"}
-            width={120}
-            height={120}
+            width={80}
+            height={80}
             className="d-inline-block align-top"
             id="navlogo"
           />

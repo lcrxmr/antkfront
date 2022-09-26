@@ -4,7 +4,7 @@ header {
 	justify-content: space-between;
 	height: 80px;
 	padding: 0 2rem;
-	background-color: rgba(250,226,121,1);
+	background-color: rgb(255, 177, 88);
 	color: var(--textColor);
 	padding-top: 100px;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -14,7 +14,7 @@ header {
 
 nav a {
 	margin: 0 1rem;
-	color: white;
+	color: black;
 	text-decoration: none;
 	font-size: 18px;
 	font-family: 'Alata', sans-serif;
@@ -104,11 +104,12 @@ nav {
 	border-radius: 10px;
 	display: flex;
 	flex-direction: row;
-	width: 115px;
+	justify-content: center;
+	width: 120px;
 	color: black;
 	background-color: transparent;
 	border: solid 1px black;
-	font-size: 16px;
+	font-size: 15px;
 }
 .howTo:hover{
 	background-color: rgb(247, 147, 30);
@@ -120,7 +121,8 @@ nav {
 	border-radius: 10px;
 	display: flex;
 	flex-direction: row;
-	width: 260px;
+	justify-content: center;
+	width: 280px;
 	color: black;
 	background-color: transparent;
 	border: solid 1px black;

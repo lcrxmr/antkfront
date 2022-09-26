@@ -24,7 +24,7 @@ export default function Footer () {
                 <a href="/" className="d-flex align-items-center p-0 text-dark">
                   <img
                     alt="logo"
-                    src={"./antk_police.png"}
+                    src={"./antk_police_black.png"}
                     width="200px"
                     id="logo"
                   />
@@ -80,21 +80,21 @@ export default function Footer () {
               className="socialiconFooter"
               target="_blank"
               style={{ height: 80, width: 80 }}
-              bgColor="white"
+              bgColor="black"
             />
             <SocialIcon
               url="https://linktr.ee/animalnationtk"
               className="socialiconFooter"
               target="_blank"
               style={{ height: 80, width: 80 }}
-              bgColor="white"
+              bgColor="black"
             />
             <SocialIcon
               url="https://t.me/ANTKofficialchannel"
               className="socialiconFooter"
               target="_blank"
               style={{ height: 80, width: 80 }}
-              bgColor="white"
+              bgColor="black"
             />
           </div>
           <small className="text-center mt-5">
@@ -119,7 +119,7 @@ export default function Footer () {
                 <a href="/" className="d-flex align-items-center p-0 text-dark">
                   <img
                     alt="logo"
-                    src={"./antk_police.png"}
+                    src={"./antk_police_black.png"}
                     width="200px"
                     id="logo"
                   />
@@ -175,21 +175,21 @@ export default function Footer () {
               className="socialiconFooter"
               target="_blank"
               style={{ height: 80, width: 80 }}
-              bgColor="white"
+              bgColor="black"
             />
             <SocialIcon
               url="https://linktr.ee/animalnationtk"
               className="socialiconFooter"
               target="_blank"
               style={{ height: 80, width: 80 }}
-              bgColor="white"
+              bgColor="black"
             />
             <SocialIcon
               url="https://t.me/ANTKofficialchannel"
               className="socialiconFooter"
               target="_blank"
               style={{ height: 80, width: 80 }}
-              bgColor="white"
+              bgColor="black"
             />
           </div>
           <small className="text-center mt-5" style={{ fontWeight: "400" , fontSize: '20px'}}>

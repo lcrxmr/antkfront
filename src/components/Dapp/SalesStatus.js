@@ -34,11 +34,11 @@ function SalesStatus({ newState, myBool2, currentState }) {
     return (
       <div>
               <MediaQuery minWidth={1000}>
-              <h4 style={{color: "black"}}>La vente n'a pas commencée</h4>
+              <h4 style={{color: "black"}}>La vente n'a pas commencé</h4>
             </MediaQuery>
             <MediaQuery minWidth={0} maxWidth={1000}>
               <div style={{marginTop: "30px"}}>
-                <h1 style={{color: "black"}}>La vente n'a pas commencée</h1>
+                <h1 style={{color: "black"}}>La vente n'a pas commencé</h1>
               </div>
             </MediaQuery>
       </div>

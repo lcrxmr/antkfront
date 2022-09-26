@@ -51,8 +51,11 @@
 
 .buyLangDapp{
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  position: absolute;
   top: 60px;
+  right: 140px;
+  z-index: 9;
 }
 
 .buyLangButtonDapp{

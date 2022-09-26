@@ -19,7 +19,7 @@ function Navbar() {
     <header>
       <img
         alt=""
-        src={"./antk_police.png"}
+        src={"./antk_police_black.png"}
         width={120}
         height={120}
         className="d-inline-block align-top"

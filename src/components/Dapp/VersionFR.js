@@ -57,7 +57,7 @@ function Dapp() {
           className="d-inline-block align-top"
           id="navlogo"
         />
-        <nav ref={navRef} style={{color: "black", backgroundColor: "rgba(250,226,121,1)"}}>
+        <nav ref={navRef} style={{color: "black"}}>
         <a href="/" onClick={hideNavbar}>
             Home
           </a>

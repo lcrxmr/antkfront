@@ -23,11 +23,6 @@
     box-sizing: border-box;
 }
 
-#navlogo{
-    width: 400px;
-    height: 150px;
-    margin-right: 0px;
-}
 
 .nav-link {
     color: black !important;

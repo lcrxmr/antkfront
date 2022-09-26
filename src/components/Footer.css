@@ -3,16 +3,26 @@
 }
 
 .shadow{
-    background:  rgba(250,226,121,1);
+    background:  rgb(255, 177, 88);
     margin-top: 50px;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    position: relative;
+    left:0;
+    bottom:0;
+    right:0;
 }
 
 
 .shadowMobile{
-    background:  rgba(250,226,121,1);
-    margin-top: 50px;
+    background:  rgb(255, 177, 88);
+    margin-top: 180px;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
+    margin-top: auto;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  bottom: 0;
 }

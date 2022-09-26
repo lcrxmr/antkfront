@@ -174,7 +174,7 @@ export default function French(props) {
           <Fade duration={1000}>
             <div className="container" id="aboutDiv">
               <div className="container" id="product">
-                <img className="aboutPic" src={"./token.png"} />
+                <img className="aboutPic" src={"./icone_phone.png"} />
               </div>
 
               <div>
@@ -206,7 +206,7 @@ export default function French(props) {
           <Fade duration={1000}>
             <div className="container" id="produitDivMobile">
               <div className="container" id="productMobile">
-                <img className="aboutPicMobile" src={"./token.png"} />
+                <img className="aboutPicMobile" src={"./icone_phone.png"} />
               </div>
               <div>
               <h1 id="roadmaptitle">L'APPLICATION ANIMAL NATION</h1>
@@ -411,7 +411,7 @@ export default function French(props) {
                 <div>
                 <h1 id="roadmaptitle">PLAY TO EARN</h1>
                   <p className="description">
-                    Un univers de jeux qui vont utiliser la reconnaissance
+                    Un univers de jeux qui va utiliser la reconnaissance
                     faciale animale pour découvrir le monde des animaux et vous
                     faire gagner des tokens.
                   </p>
@@ -583,29 +583,7 @@ export default function French(props) {
                 </div>
               </div>
             </Slide>
-            {/* <Modal
-              show={showBirdMobile}
-              onHide={handleCloseBirdMobile}
-              size="lg"
-              aria-labelledby="contained-modal-title-vcenter"
-              centered
-              contentClassName="modalMobile"
-            >
-              <Modal.Header closeButton>
-                <Modal.Title className="nameProductMobile">
-                  Keep To Earn
-                </Modal.Title>
-              </Modal.Header>
-              <Modal.Body className="descriptionMobile">
-                <div className="modalDesc">
-                  Le concept de Keep to earn permet de récompenser avec des
-                  tokens ANTK, une personne qui garde votre animal pendant que
-                  vous êtes absent et qui vous envoie régulièrement des photos
-                  en utilisant l'application AnimalNationTK
-                  <img className="animalPicMobile" src={"./accueil.png"}></img>
-                </div>
-              </Modal.Body>
-            </Modal> */}
+           
             <Slide direction="left">
               <div
                 className="container"
@@ -619,7 +597,7 @@ export default function French(props) {
                 <div>
                 <h1 id="roadmaptitle">PLAY TO EARN</h1>
                   <p className="descriptionMobile">
-                    Un univers de jeux qui vont utiliser la reconnaissance
+                    Un univers de jeux qui va utiliser la reconnaissance
                     faciale animale pour découvrir le monde des animaux et vous
                     faire gagner des tokens.
                   </p>
@@ -632,30 +610,6 @@ export default function French(props) {
                 </div>
               </div>
             </Slide>
-            {/* <Modal
-              show={showTigreMobile}
-              onHide={handleCloseTigreMobile}
-              size="lg"
-              aria-labelledby="contained-modal-title-vcenter"
-              centered
-              contentClassName="modalMobile"
-            >
-              <Modal.Header closeButton>
-                <Modal.Title className="nameProductMobile">
-                  Play To Earn
-                </Modal.Title>
-              </Modal.Header>
-              <Modal.Body className="descriptionMobile">
-                <div className="modalDesc">
-                  Les jeux et des tournois vous feront réaliser des safaris
-                  photos où vont se mêler le réel avec la reconnaissance animale
-                  et des animaux en réalité augmentée.
-                  <br />
-                  <img className="animalPicMobile" src={"./play.jpg"}></img>
-                  <br />
-                </div>
-              </Modal.Body>
-            </Modal> */}
           </Fade>
         </MediaQuery>
       </div>
