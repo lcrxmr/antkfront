@@ -149,7 +149,6 @@ export default function English(props) {
             <a href="/private">
               <button className="button">BUY</button>
               </a>
-              <br/>
               <a href="/how-to-buy-eng.pdf" target="_blank">
           <button className="howToCountButton">HOW TO BUY</button>
         </a>
@@ -161,7 +160,6 @@ export default function English(props) {
             <a href="/private">
               <button className="buttonMobile">BUY</button>
               </a>
-              <br/>
               <a href="/how-to-buy-eng.pdf" target="_blank">
           <button className="howToCountButtonMobile">HOW TO BUY</button>
         </a>
