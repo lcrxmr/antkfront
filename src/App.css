@@ -417,6 +417,7 @@ body{
   flex-direction: column;
   align-items: center;
   background-size: cover;
+  margin-top: 100px;
   /* background-image: url(../public/fonddegrade.png); */
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
