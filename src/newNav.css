@@ -123,10 +123,12 @@ nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	width: 280px;
+	width: 300px;
 	color: black;
 	background-color: transparent;
 	border: solid 1px black;
 	background-color: transparent;
-	font-size: 40px;
+	font-size: 34px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
