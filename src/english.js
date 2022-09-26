@@ -170,6 +170,9 @@ export default function English(props) {
 
           {/* <ReactCardSlider slides={slides}/> */}
         </div>
+        <div className='promotion'>
+<img className="promoImage" src={"./prizepool.png"}/>
+          </div>
       </div>
 
       <div id="about">
