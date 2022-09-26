@@ -9,7 +9,7 @@
     overflow: auto;
     overflow-x: hidden;
     text-align: center;
-    font-family: 'Alata', sans-serif;
+    font-family: 'Dosis', sans-serif;
     position: relative;
     /* background: rgb(255,240,112); */
 /* background: linear-gradient(90deg, rgba(255,240,112,1) 0%, rgba(246,132,83,1) 80%); */
@@ -40,7 +40,7 @@
   }
   
   body{
-    font-family: 'Alata', sans-serif;
+    font-family: 'Dosis', sans-serif;
     position: relative;
     overflow-x: hidden;
     width: 100vw;
