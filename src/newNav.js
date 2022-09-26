@@ -47,7 +47,7 @@ function Navbar() {
           <button className="buttonMobile">BUY</button>
         </a>
         </MediaQuery>
-				<button 
+				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
 					<FaTimes size={70}/>
