@@ -4,7 +4,7 @@ import React, { Component, useState } from "react";
 import Timer from "./components/Countdown/Timer";
 import "bootstrap/dist/css/bootstrap.min.css"; 
 import Nav from "./components/navbar";
-import { Fade } from "react-awesome-reveal";
+import { Fade, AttentionSeeker } from "react-awesome-reveal";
 import Iframe from "react-iframe";
 import ReactCardSlider from "react-card-slider-component";
 import { Routes, Route, Link } from "react-router-dom";
@@ -64,7 +64,7 @@ export default function French(props) {
         <div id="banner">
           <div className="accroche">
             <Fadetitle />
-            <img src={"./holocat.png"} className='holocat' />
+            <img src={"./holocat.png"} className='holocat'  />
             <div id="socials">
               <SocialIcon
                 url="https://twitter.com/animalnationtk"
@@ -164,9 +164,10 @@ export default function French(props) {
 
           {/* <ReactCardSlider slides={slides}/> */}
         </div>
-        <div className='promotion'>
-<img className="promoImage" src={"./prizepoolfr.png"}/>
-          </div>
+        <div className='promotion'> 
+        <img className="promoImage" src={"./prizepoolfr.png"}/>
+        </div>
+
       </div>
 
       {/* // ----- About  */}
