@@ -4,10 +4,16 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+<<<<<<< HEAD
 	height: fit-content;
 	margin-top: 0px;
 	padding: 0 2rem;
 	background-color: rgb(255, 177, 88);
+=======
+	height: 80px;
+	/* padding: 0 2rem; */
+	/* background-color: rgb(255, 177, 88); */
+>>>>>>> new
 	color: var(--textColor);
 	padding-top: 100px;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -53,6 +59,7 @@ nav {
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;
+	z-index: 9;
 }
 
 @media only screen and (max-width: 1270px) {
@@ -136,4 +143,36 @@ nav {
 	font-size: 50px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+.active{
+    width: 100% !important;
+    position: fixed;
+    top: 0px;
+	height: fit-content;
+    transition: 0.3s linear;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color:rgb(255, 177, 88);
+    /* border-bottom: 1px solid rgba(0, 0, 0, .1); */
+    z-index: 1;
+    /* box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .08); */
+    /* padding: 0 7%; */
+	padding-top: 20px;
+	padding-bottom: 20px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;
+}
+.hidden{
+    height: 4rem;
+    width: 100%;
+    z-index: -1;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .08);
+    position: fixed;
+    top: -80px;
+    transition: 0.3s linear;
+
 }

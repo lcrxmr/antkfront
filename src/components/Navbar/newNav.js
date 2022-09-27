@@ -1,10 +1,38 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./newNav.css";
 import MediaQuery from "react-responsive";
 import { Routes, Route, Link } from "react-router-dom";
 
 function Navbar() {
+
+  const [show, setShow] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') { 
+      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+        setShow(true); 
+      } else { // if scroll up show the navbar
+        setShow(false);  
+      }
+
+      // remember current page location to use in the next move
+      setLastScrollY(window.scrollY); 
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
 	const navRef = useRef();
 
 	const showNavbar = () => {
@@ -16,8 +44,9 @@ function Navbar() {
   }
 
 	return (
-		<header>
-			<img
+		<header >
+			<nav ref={navRef}  className={`active ${show && 'hidden'}`}>
+      <img
             alt=""
             src={"./antk_police_black.png"}
             width={80}
@@ -25,7 +54,6 @@ function Navbar() {
             className="d-inline-block align-top"
             id="navlogo"
           />
-			<nav ref={navRef}>
 				<a href="#produit" onClick={hideNavbar}>Produits</a>
 				<a href="/white-fr.pdf" target="_blank" onClick={hideNavbar}>Whitepaper</a>
 				<a href="#tokenomics" onClick={hideNavbar} >Tokenomics</a>
@@ -74,7 +102,10 @@ function Navbar() {
 					onClick={showNavbar}>
 					<FaTimes size={70}/>
 				</button>
+<<<<<<< HEAD
 
+=======
+>>>>>>> new
 			</nav>
 			<button className="nav-btn" onClick={showNavbar}>
 				<FaBars size={70} />
