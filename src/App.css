@@ -11,6 +11,7 @@
   margin-right: 0px;
   overflow: auto;
   overflow-x: hidden;
+  overflow-y: hidden;
   text-align: center;
   font-family: 'Dosis', sans-serif;
   position: relative;
@@ -1063,7 +1064,7 @@ border-radius: 50%;
 
 .holocat{
   position: absolute;
-  top: 130px;
+  top: 160px;
   width: 800px;
   left: 30%;
   z-index: 0;
