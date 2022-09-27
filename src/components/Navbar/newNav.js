@@ -44,9 +44,8 @@ function Navbar() {
   }
 
 	return (
-		<header >
-			<nav ref={navRef}  className={`active ${show && 'hidden'}`}>
-      <img
+		<header className={`active ${show && 'hidden'}`} >
+            <img
             alt=""
             src={"./antk_police_black.png"}
             width={80}
@@ -54,6 +53,7 @@ function Navbar() {
             className="d-inline-block align-top"
             id="navlogo"
           />
+			<nav ref={navRef}  >
 				<a href="#produit" onClick={hideNavbar}>Produits</a>
 				<a href="/white-fr.pdf" target="_blank" onClick={hideNavbar}>Whitepaper</a>
 				<a href="#tokenomics" onClick={hideNavbar} >Tokenomics</a>
@@ -102,10 +102,6 @@ function Navbar() {
 					onClick={showNavbar}>
 					<FaTimes size={70}/>
 				</button>
-<<<<<<< HEAD
-
-=======
->>>>>>> new
 			</nav>
 			<button className="nav-btn" onClick={showNavbar}>
 				<FaBars size={70} />

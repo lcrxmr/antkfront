@@ -4,16 +4,11 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-<<<<<<< HEAD
 	height: fit-content;
 	margin-top: 0px;
 	padding: 0 2rem;
+	padding-bottom: 20px;
 	background-color: rgb(255, 177, 88);
-=======
-	height: 80px;
-	/* padding: 0 2rem; */
-	/* background-color: rgb(255, 177, 88); */
->>>>>>> new
 	color: var(--textColor);
 	padding-top: 100px;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
