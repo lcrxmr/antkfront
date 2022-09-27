@@ -55,7 +55,7 @@ nav {
 	box-sizing: border-box;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1270px) {
 	header .nav-btn {
 		visibility: visible;
 		opacity: 1;
