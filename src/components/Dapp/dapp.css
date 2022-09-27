@@ -49,14 +49,14 @@
             box-sizing: border-box;
   }
 
-.buyLangDapp{
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 60px;
-  right: 140px;
-  z-index: 9;
-}
+  .buyLangDapp{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 60px;
+    right: 140px;
+    z-index: 9;
+  }
 
 .buyLangButtonDapp{
   margin-left: 5px;

@@ -4,7 +4,8 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 80px;
+	height: fit-content;
+	margin-top: 0px;
 	padding: 0 2rem;
 	background-color: rgb(255, 177, 88);
 	color: var(--textColor);

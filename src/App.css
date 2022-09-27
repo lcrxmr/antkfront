@@ -1045,8 +1045,13 @@ border-radius: 50%;
 }
 
 .buyLangFront{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   top: 90px;
   right: 50px;
+  padding-top: 5px;
   z-index: 9;
   font-family: 'Dosis', sans-serif;
 }
@@ -1075,7 +1080,7 @@ border-radius: 50%;
 }
 
 #navlogo{
-  width: 400px;
+  width: 300px;
   height: 100px;
   margin-right: 0px;
 }
