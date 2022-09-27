@@ -44,8 +44,9 @@ function Navbar() {
   }
 
 	return (
-		<header className={`active ${show && 'hidden'}`}>
-			<img
+		<header >
+			<nav ref={navRef}  className={`active ${show && 'hidden'}`}>
+      <img
             alt=""
             src={"./antk_police_black.png"}
             width={80}
@@ -53,7 +54,6 @@ function Navbar() {
             className="d-inline-block align-top"
             id="navlogo"
           />
-			<nav ref={navRef} >
 				<a href="#produit" onClick={hideNavbar}>Produits</a>
 				<a href="/white-fr.pdf" target="_blank" onClick={hideNavbar}>Whitepaper</a>
 				<a href="#tokenomics" onClick={hideNavbar} >Tokenomics</a>
@@ -75,12 +75,7 @@ function Navbar() {
           <button className="buttonMobile">BUY</button>
         </a>
         </MediaQuery>
-				<button
-					className="nav-btn nav-close-btn"
-					onClick={showNavbar}>
-					<FaTimes size={70}/>
-				</button>
-             <div className="buyLangFront">
+        <div className="buyLangFront">
           <MediaQuery minWidth={1000}>
           <a href="/"><h5 className="buyLangButton" >
               fr
@@ -102,6 +97,11 @@ function Navbar() {
             </h5></a>
           </MediaQuery>
         </div>
+				<button
+					className="nav-btn nav-close-btn"
+					onClick={showNavbar}>
+					<FaTimes size={70}/>
+				</button>
 			</nav>
 			<button className="nav-btn" onClick={showNavbar}>
 				<FaBars size={70} />

@@ -252,6 +252,7 @@ body{
   margin-top: 100px;
   /* background-image: url(../public/fonddegrade.png); */
   border-radius: 40px;
+ 
 }
 
 .socialicon{
@@ -1045,9 +1046,10 @@ border-radius: 50%;
 }
 
 .buyLangFront{
-  top: 90px;
-  right: 50px;
-  z-index: 9;
+  /* position: absolute;
+  top: 60px;
+  left: 500px;
+  z-index: 9; */
   font-family: 'Dosis', sans-serif;
 }
 
@@ -1056,7 +1058,7 @@ border-radius: 50%;
   top: 100px;
   width: 800px;
   left: 30%;
-  z-index: 9;
+  z-index: 2;
 }
 .holocatDiv{
   position: absolute;
@@ -1075,7 +1077,7 @@ border-radius: 50%;
 }
 
 #navlogo{
-  width: 400px;
+  width: 300px;
   height: 100px;
   margin-right: 0px;
 }

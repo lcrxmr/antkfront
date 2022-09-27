@@ -48,8 +48,8 @@ function Navbar() {
       <img
         alt=""
         src={"./antk_police_black.png"}
-        width={120}
-        height={120}
+        width={80}
+        height={80}
         className="d-inline-block align-top"
         id="navlogo"
       />
@@ -85,10 +85,6 @@ function Navbar() {
           <button className="buttonMobile">BUY</button>
         </a>
         </MediaQuery>
-        
-        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-          <FaTimes size={70} />
-        </button>
         <div className="buyLangFront">
           <MediaQuery minWidth={1000}>
           <a href="/"><h5 className="buyLangButton" >
@@ -111,6 +107,10 @@ function Navbar() {
             </h5></a>
           </MediaQuery>
         </div>
+        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+          <FaTimes size={70} />
+        </button>
+      
       </nav>
       <button className="nav-btn" onClick={showNavbar}>
         <FaBars size={70} />
