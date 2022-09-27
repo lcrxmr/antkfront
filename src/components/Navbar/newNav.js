@@ -44,7 +44,8 @@ function Navbar() {
   }
 
 	return (
-		<header className={`active ${show && 'hidden'}`}>
+		// <header className={`active ${show && 'hidden'}`}>
+    <header className='active'>
             <img
             alt=""
             src={"./antk_police_black.png"}

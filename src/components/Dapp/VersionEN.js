@@ -46,7 +46,7 @@ function Dapp() {
   if (window.ethereum) {
   return (
     <div className="App">
-                <div className="headerNew">
+      <div className="headerNew">
       <div id="navcontainer">
       <header className='buyHeader' >
         <img
