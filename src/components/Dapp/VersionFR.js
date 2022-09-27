@@ -46,9 +46,9 @@ function Dapp() {
   if (window.ethereum) {
   return (
     <div className="App">
-      {/* <div className="headerNew"> */}
-      {/* <div id="navcontainer"> */}
-      <header style={{color: "black" , paddingTop: "Opx"}} >
+      <div className="headerNew">
+      <div id="navcontainer">
+      <header className='buyHeader' >
         <img
           alt=""
           src={"./antk_police_black.png"}
@@ -72,8 +72,8 @@ function Dapp() {
           <FaBars size={70} />
         </button>
       </header>
-      {/* </div> */}
-      {/* </div> */}
+      </div>
+      </div>
           
 
       <MediaQuery minWidth={1000}>

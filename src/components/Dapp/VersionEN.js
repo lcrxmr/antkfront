@@ -48,7 +48,7 @@ function Dapp() {
     <div className="App">
                 <div className="headerNew">
       <div id="navcontainer">
-      <header style={{color: "black"}} >
+      <header className='buyHeader' >
         <img
           alt=""
           src={"./antk_police_black.png"}

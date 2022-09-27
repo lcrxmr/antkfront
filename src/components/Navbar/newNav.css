@@ -174,3 +174,25 @@ nav {
     transition: 0.3s linear;
 
 }
+
+.buyHeader{
+
+		width: 100% !important;
+		top: 0px;
+		height: fit-content;
+		transition: 0.3s linear;
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+		background-color:rgb(255, 177, 88);
+		/* border-bottom: 1px solid rgba(0, 0, 0, .1); */
+		z-index: 1;
+		/* box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .08); */
+		/* padding: 0 7%; */
+		padding-top: 100px;
+		padding-bottom: 20px;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;
+
+}

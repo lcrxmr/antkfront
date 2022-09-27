@@ -34,7 +34,7 @@ export default function LoveFr(props) {
     <> 
     <div className="headerNew">
       <div id="navcontainer">
-      <header style={{color: "black"}} >
+      <header className='active' >
         <img
           alt=""
           src={"./antk_police_black.png"}
