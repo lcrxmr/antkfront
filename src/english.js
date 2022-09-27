@@ -3,7 +3,6 @@ import "./App.css";
 import React, { Component, useState } from "react";
 import Timer from "./components/Countdown/enTimer";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Nav from "./components/englishNavbar";
 import { Fade } from "react-awesome-reveal";
 import Iframe from "react-iframe";
 import ReactCardSlider from "react-card-slider-component";
@@ -16,7 +15,7 @@ import { CDBNavbar } from "cdbreact";
 
 import Fadetitle from "./components/enFade";
 import Footer from "./components/enFooter";
-import Navbar from "./newNavEn";
+import Navbar from "./components/Navbar/newNavEn";
 
 import "./styles.css";
 

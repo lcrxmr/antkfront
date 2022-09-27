@@ -13,7 +13,7 @@ import "./dapp.css";
 import Calcul from "./Calculette";
 import MediaQuery from "react-responsive";
 import { FaBars, FaTimes } from "react-icons/fa";
-import "../../newNav.css";
+import "../Navbar/newNav.css";
 import { Routes, Route, Link } from "react-router-dom";
 import { useRef } from "react";
 import VersionFR from "./VersionFR";
