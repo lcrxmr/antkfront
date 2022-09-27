@@ -80,21 +80,21 @@ export default function Footer () {
               className="socialiconFooter"
               target="_blank"
               style={{ height: 80, width: 80 }}
-              bgColor="black"
+              bgColor="white"
             />
             <SocialIcon
               url="https://linktr.ee/animalnationtk"
               className="socialiconFooter"
               target="_blank"
               style={{ height: 80, width: 80 }}
-              bgColor="black"
+              bgColor="white"
             />
             <SocialIcon
               url="https://t.me/ANTKofficialchannel"
               className="socialiconFooter"
               target="_blank"
               style={{ height: 80, width: 80 }}
-              bgColor="black"
+              bgColor="white"
             />
           </div>
           <small className="text-center mt-5">
@@ -127,18 +127,18 @@ export default function Footer () {
                 </a>
               </CDBBox>
               <CDBBox>
-                <p className="h5 mb-4" style={{ fontWeight: "600" , fontSize: '30px'}}>
+                <p className="h5 mb-4" style={{ fontWeight: "600" , fontSize: '40px'}}>
                   ANTK
                 </p>
                 <CDBBox
                   flex="column"
                   style={{ cursor: "pointer", padding: "0" }}
                 >
-                  <CDBFooterLink href="#about" style={{ fontWeight: "400" , fontSize: '20px'}}>About</CDBFooterLink>
+                  <CDBFooterLink href="#about" style={{ fontWeight: "400" , fontSize: '30px'}}>About</CDBFooterLink>
                 </CDBBox>
               </CDBBox>
               <CDBBox>
-                <p className="h5 mb-4" style={{ fontWeight: "600" , fontSize: '30px'}}>
+                <p className="h5 mb-4" style={{ fontWeight: "600" , fontSize: '40px'}}>
                   Contact
                 </p>
                 <CDBBox
@@ -147,24 +147,24 @@ export default function Footer () {
                 >
                   <CDBFooterLink
                     onClick={() => (window.location = "mailto:info@antk.io")}
-                    id="email" style={{ fontWeight: "400" , fontSize: '20px'}}
+                    id="email" style={{ fontWeight: "400" , fontSize: '30px'}}
                   >
                     Email
                   </CDBFooterLink>
                 </CDBBox>
               </CDBBox>
               <CDBBox>
-                <p className="h5 mb-4" style={{ fontWeight: "600" , fontSize: '30px'}}>
+                <p className="h5 mb-4" style={{ fontWeight: "600" , fontSize: '40px'}}>
                  Help
                 </p>
                 <CDBBox
                   flex="column"
                   style={{ cursor: "pointer", padding: "0" }}
                 >
-                  <CDBFooterLink href="/cdgeng.pdf" target="_blank" style={{ fontWeight: "400" , fontSize: '20px'}}>
+                  <CDBFooterLink href="/cdgeng.pdf" target="_blank" style={{ fontWeight: "400" , fontSize: '30px'}}>
                     Terms
                   </CDBFooterLink>
-                  <CDBFooterLink href="#" style={{ fontWeight: "400" , fontSize: '20px', marginTop:'20px'}}>FAQ</CDBFooterLink>
+                  <CDBFooterLink href="#" style={{ fontWeight: "400" , fontSize: '30px', marginTop:'20px'}}>FAQ</CDBFooterLink>
                 </CDBBox>
               </CDBBox>
             </CDBBox>
@@ -175,21 +175,21 @@ export default function Footer () {
               className="socialiconFooter"
               target="_blank"
               style={{ height: 80, width: 80 }}
-              bgColor="black"
+              bgColor="white"
             />
             <SocialIcon
               url="https://linktr.ee/animalnationtk"
               className="socialiconFooter"
               target="_blank"
               style={{ height: 80, width: 80 }}
-              bgColor="black"
+              bgColor="white"
             />
             <SocialIcon
               url="https://t.me/ANTKofficialchannel"
               className="socialiconFooter"
               target="_blank"
               style={{ height: 80, width: 80 }}
-              bgColor="black"
+              bgColor="white"
             />
           </div>
           <small className="text-center mt-5" style={{ fontWeight: "400" , fontSize: '20px'}}>

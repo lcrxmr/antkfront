@@ -43,7 +43,7 @@ function Navbar() {
         </a>
         <MediaQuery minWidth={1000}>
         <a href="/how-to-buy-eng.pdf" target="_blank" onClick={hideNavbar}>
-          <button className="howTo">HOW TO BUY</button>
+        <h6 className="howTo">HOW TO BUY</h6>
         </a>
         <a href="/private" onClick={hideNavbar}>
           <button className="button">BUY</button>
