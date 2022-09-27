@@ -1,16 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { Component, useState } from "react";
 import Timer from "./components/Countdown/Timer";
 import "bootstrap/dist/css/bootstrap.min.css"; 
 import { Fade, AttentionSeeker } from "react-awesome-reveal";
 import Iframe from "react-iframe";
-import ReactCardSlider from "react-card-slider-component";
-import { Routes, Route, Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import MediaQuery from "react-responsive";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 import { Slide } from "react-awesome-reveal";
 
 import Fadetitle from "./components/Fade";

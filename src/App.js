@@ -12,7 +12,6 @@ import LoveEn from "./loveen"
 import FindEn from "./finden";
 import KeepEn from "./keepen";
 import PlayEn from "./playen";
-import BuyFr from "./buyfr"
 
 export default function App() {
   return (
