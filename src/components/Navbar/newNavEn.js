@@ -110,6 +110,7 @@ function Navbar() {
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes size={70} />
         </button>
+      
       </nav>
       <button className="nav-btn" onClick={showNavbar}>
         <FaBars size={70} />

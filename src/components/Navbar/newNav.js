@@ -44,7 +44,7 @@ function Navbar() {
   }
 
 	return (
-		<header className={`active ${show && 'hidden'}`} >
+		<header className={`active ${show && 'hidden'}`}>
             <img
             alt=""
             src={"./antk_police_black.png"}
@@ -54,6 +54,7 @@ function Navbar() {
             id="navlogo"
           />
 			<nav ref={navRef}  >
+
 				<a href="#produit" onClick={hideNavbar}>Produits</a>
 				<a href="/white-fr.pdf" target="_blank" onClick={hideNavbar}>Whitepaper</a>
 				<a href="#tokenomics" onClick={hideNavbar} >Tokenomics</a>
@@ -94,7 +95,7 @@ function Navbar() {
             <h5 className="buyLangButtonMobile">{""} |{""}</h5>
             <a href="/eng"><h5 className="buyLangButtonMobile" >
               en
-            </h5></a>
+            </h5></a> 
           </MediaQuery>
         </div>
 				<button
@@ -102,6 +103,7 @@ function Navbar() {
 					onClick={showNavbar}>
 					<FaTimes size={70}/>
 				</button>
+
 			</nav>
 			<button className="nav-btn" onClick={showNavbar}>
 				<FaBars size={70} />

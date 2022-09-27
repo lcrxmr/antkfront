@@ -1054,17 +1054,19 @@ border-radius: 50%;
   right: 50px;
   padding-top: 5px;
   z-index: 9;
+  /* position: absolute;
+  top: 60px;
+  left: 500px;
+  z-index: 9; */
   font-family: 'Dosis', sans-serif;
 }
 
 .holocat{
   position: absolute;
-  /* top: 100px; */
-  /* z-index: 2; */
+  top: 130px;
   width: 800px;
   left: 30%;
   z-index: 0;
-  top: 150px;
 }
 .holocatDiv{
   position: absolute;
@@ -1083,8 +1085,8 @@ border-radius: 50%;
 }
 
 #navlogo{
-  width: 300px;
-  height: 100px;
+  width: 200px;
+  height: 50px;
   margin-right: 0px;
 }
 
