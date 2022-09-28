@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { Component, useState } from "react";
 import Timer from "./components/Countdown/Timer";
-import "bootstrap/dist/css/bootstrap.min.css"; 
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Fade, AttentionSeeker } from "react-awesome-reveal";
 import Iframe from "react-iframe";
 import { SocialIcon } from "react-social-icons";
@@ -11,19 +11,16 @@ import { Slide } from "react-awesome-reveal";
 import Fadetitle from "./components/Accroche/Fade";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/newNav";
-import Produit from "./components/Produits/ProduitsFR"
-import Menu from "./components/Menu&Banner/M&Bfr"
+import Produit from "./components/Produits/ProduitsFR";
+import Menu from "./components/Menu&Banner/M&Bfr";
 
 import "./styles.css";
 
 export default function French(props) {
-
   return (
     <div className="App">
-
       {/* // -------- menu + banner  */}
-      <Menu/>
-      
+      <Menu />
 
       {/* // ---- compte a rebours  */}
       <div className="countDiv">
@@ -33,38 +30,36 @@ export default function French(props) {
           {/* <Timer /> */}
           <br />
           <MediaQuery minWidth={1000}>
-          <div className="countbuttons">
-            <a href="/private">
-              <button className="button">BUY</button>
+            <div className="countbuttons">
+              <a href="/private">
+                <button className="button">BUY</button>
               </a>
               <a href="/how-to-buy-fr.pdf" target="_blank">
-          <button className="howToCountButton">HOW TO BUY</button>
-        </a>
+                <button className="howToCountButton">HOW TO BUY</button>
+              </a>
             </div>
           </MediaQuery>
 
           <MediaQuery minWidth={0} maxWidth={1000}>
-          <a href="/private">
+            <a href="/private">
               <button className="buttonMobile">BUY</button>
-              </a>
-              <a href="/how-to-buy-fr.pdf" target="_blank">
-          <button className="howToCountButtonMobile">HOW TO BUY</button>
-        </a>
+            </a>
+            <a href="/how-to-buy-fr.pdf" target="_blank">
+              <button className="howToCountButtonMobile">HOW TO BUY</button>
+            </a>
           </MediaQuery>
 
           {/* <ReactCardSlider slides={slides}/> */}
         </div>
-        <div className='promotion'> 
-        <img className="promoImage" src={"./prizepoolfr.png"}/>
+        <div className="promotion">
+          <img className="promoImage" src={"./prizepoolfr.png"} />
         </div>
-
       </div>
 
       {/* // ----- About  */}
 
       <div id="about">
         <MediaQuery minWidth={1000}>
-          
           <Fade duration={1000}>
             <div className="container" id="aboutDiv">
               <div className="container" id="product">
@@ -72,7 +67,7 @@ export default function French(props) {
               </div>
 
               <div>
-              <h1 id="roadmaptitle">L'APPLICATION ANIMAL NATION</h1>
+                <h1 id="roadmaptitle">L'APPLICATION ANIMAL NATION</h1>
                 <p className="description">
                   Animal Nation est une application blockchain avec un module de
                   reconnaissance animale qui va permettre d'accéder à un
@@ -96,14 +91,13 @@ export default function French(props) {
         </MediaQuery>
 
         <MediaQuery minWidth={0} maxWidth={1000}>
-          
           <Fade duration={1000}>
             <div className="container" id="produitDivMobile">
               <div className="container" id="productMobile">
                 <img className="aboutPicMobile" src={"./icone_phone.png"} />
               </div>
               <div>
-              <h1 id="roadmaptitle">L'APPLICATION ANIMAL NATION</h1>
+                <h1 id="roadmaptitle">L'APPLICATION ANIMAL NATION</h1>
                 <p className="descriptionMobile">
                   Animal Nation est une application blockchain avec un module de
                   reconnaissance animale qui va permettre d'accéder à un
@@ -129,7 +123,7 @@ export default function French(props) {
       </div>
 
       {/* // ------ produit */}
-<Produit/>
+      <Produit />
 
       {/* // ----- Roadmap */}
       <div id="roadmap">

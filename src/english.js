@@ -11,20 +11,17 @@ import { Slide } from "react-awesome-reveal";
 import Fadetitle from "./components/Accroche/enFade";
 import Footer from "./components/Footer/enFooter";
 import Navbar from "./components/Navbar/newNavEn";
-import Produit from "./components/Produits/ProduitsEN"
-import Menu from "./components/Menu&Banner/M&Ben"
+import Produit from "./components/Produits/ProduitsEN";
+import Menu from "./components/Menu&Banner/M&Ben";
 
 import "./styles.css";
 
 export default function English(props) {
-
   return (
     <div className="App">
+      <Menu />
 
-<Menu/>
-      
-
-      {/* // ---- compte a rebours  */} 
+      {/* // ---- compte a rebours  */}
       <div className="countDiv">
         <div className="container" id="count">
           {/* <h2 className="date">September 23rd 2022</h2> */}
@@ -33,43 +30,40 @@ export default function English(props) {
           <br />
           <MediaQuery minWidth={1000}>
             <div className="countbuttons">
-            <a href="/private">
-              <button className="button">BUY</button>
+              <a href="/private">
+                <button className="button">BUY</button>
               </a>
               <a href="/how-to-buy-eng.pdf" target="_blank">
-          <button className="howToCountButton">HOW TO BUY</button>
-        </a>
+                <button className="howToCountButton">HOW TO BUY</button>
+              </a>
             </div>
           </MediaQuery>
 
           <MediaQuery minWidth={0} maxWidth={1000}>
-          
             <a href="/private">
               <button className="buttonMobile">BUY</button>
-              </a>
-              <a href="/how-to-buy-eng.pdf" target="_blank">
-          <button className="howToCountButtonMobile">HOW TO BUY</button>
-        </a>
-            
+            </a>
+            <a href="/how-to-buy-eng.pdf" target="_blank">
+              <button className="howToCountButtonMobile">HOW TO BUY</button>
+            </a>
           </MediaQuery>
 
           {/* <ReactCardSlider slides={slides}/> */}
         </div>
-        <div className='promotion'>
-<img className="promoImage" src={"./prizepool.png"}/>
-          </div>
+        <div className="promotion">
+          <img className="promoImage" src={"./prizepool.png"} />
+        </div>
       </div>
 
       <div id="about">
         <MediaQuery minWidth={1000}>
-          
           <Fade duration={3000}>
             <div className="container" id="aboutDiv">
               <div className="container" id="product">
                 <img className="aboutPic" src={"./icone_phone.png"} />
               </div>
               <div>
-              <h1 id="roadmaptitle">THE ANIMAL NATION APP</h1>
+                <h1 id="roadmaptitle">THE ANIMAL NATION APP</h1>
                 <p className="description">
                   Animal Nation is a blockchain application with an animal
                   recognition module that will allow access to a set of
@@ -98,7 +92,7 @@ export default function English(props) {
                 <img className="aboutPicMobile" src={"./icone_phone.png"} />
               </div>
               <div>
-              <h1 id="roadmaptitle">THE ANIMAL NATION APP</h1>
+                <h1 id="roadmaptitle">THE ANIMAL NATION APP</h1>
                 <p className="descriptionMobile">
                   Animal Nation is a blockchain application with an animal
                   recognition module that will allow access to a set of
@@ -124,7 +118,7 @@ export default function English(props) {
       </div>
 
       {/* // ------ produit */}
-<Produit/>
+      <Produit />
 
       {/* // ----- Roadmap */}
       <div id="roadmap">
