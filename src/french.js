@@ -49,6 +49,8 @@ export default function French(props) {
 
   return (
     <div className="App">
+
+      {/* // -------- menu + banner  */}
       <MediaQuery minWidth={1000}>
       <div className="headerNew">
         <div id="navcontainer">
