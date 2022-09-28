@@ -14,7 +14,6 @@ import Calcul from "./Calculette";
 import MediaQuery from "react-responsive";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../Navbar/newNav.css";
-import { Routes, Route, Link } from "react-router-dom";
 import { useRef } from "react";
 import VersionFR from "./VersionFR";
 import PriceSolo from "./PriceSolo"

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Slide, Fade } from "react-awesome-reveal";
 import MediaQuery from "react-responsive";
 import { SocialIcon } from "react-social-icons";
 

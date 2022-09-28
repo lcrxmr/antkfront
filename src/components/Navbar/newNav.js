@@ -2,7 +2,6 @@ import { useRef, useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./newNav.css";
 import MediaQuery from "react-responsive";
-import { Routes, Route, Link } from "react-router-dom";
 
 function Navbar() {
 

@@ -4,13 +4,10 @@ import Timer from "./components/Countdown/Timer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Fade, AttentionSeeker } from "react-awesome-reveal";
 import Iframe from "react-iframe";
-import { SocialIcon } from "react-social-icons";
 import MediaQuery from "react-responsive";
 import { Slide } from "react-awesome-reveal";
 
-import Fadetitle from "./components/Accroche/Fade";
 import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/newNav";
 import Produit from "./components/Produits/ProduitsFR";
 import Menu from "./components/Menu&Banner/M&Bfr";
 

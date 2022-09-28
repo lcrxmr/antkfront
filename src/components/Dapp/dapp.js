@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import "./dapp.css";
 import MediaQuery from "react-responsive";
 import "../Navbar/newNav.css";
-import { Routes, Route, Link } from "react-router-dom";
 import { useRef } from "react";
 import VersionFR from "./VersionFR";
 import VersionEN from "./VersionEN";
