@@ -9,29 +9,39 @@ function Navbar() {
   const [show, setShow] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const controlNavbar = () => {
-    if (typeof window !== 'undefined') { 
-      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
-        setShow(true); 
-      } else { // if scroll up show the navbar
-        setShow(false);  
-      }
+  // ------------------------- dynamic menu
 
-      // remember current page location to use in the next move
-      setLastScrollY(window.scrollY); 
-    }
-  };
+  // const controlNavbar = () => {
+  //   if (typeof window !== 'undefined') { 
+  //     if (window.scrollY >= lastScrollY) { // if scroll down hide the navbar
+  //       setShow(true); 
+  //     } 
+  //     else { // if scroll up show the navbar
+  //       setShow(false);  
+  //     }
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlNavbar);
+  //     // remember current page location to use in the next move
+  //     setLastScrollY(window.scrollY); 
+  //   }
+  // };
 
-      // cleanup function
-      return () => {
-        window.removeEventListener('scroll', controlNavbar);
-      };
-    }
-  }, [lastScrollY]);
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     window.addEventListener('scroll', controlNavbar);
+
+  //     // cleanup function
+  //     return () => {
+  //       window.removeEventListener('scroll', controlNavbar);
+  //     };
+  //   }
+  //   // if(window.pageYOffset === 0 && console.log("back at top")){
+  //   //   setShow(false);
+  //   // }
+  // }, [lastScrollY]);
+
+
+  // -------------------- responsive navbar
+
 
 	const navRef = useRef();
 
@@ -42,6 +52,8 @@ function Navbar() {
   const hideNavbar =()=>{
     navRef.current.classList.remove("responsive_nav")
   }
+
+
 
 	return (
 		<header className={`active ${show && 'hidden'}`}>
