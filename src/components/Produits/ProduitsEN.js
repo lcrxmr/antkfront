@@ -2,7 +2,7 @@ import React from 'react';
 import { Slide, Fade } from "react-awesome-reveal";
 import MediaQuery from "react-responsive";
 
-export default function ProduitsFR () {
+export default function ProduitsEN () {
   return (
     <div id="produit">
     <h1 id="roadmaptitle">PRODUCTS</h1>

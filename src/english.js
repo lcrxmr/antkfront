@@ -12,6 +12,7 @@ import Fadetitle from "./components/Accroche/enFade";
 import Footer from "./components/Footer/enFooter";
 import Navbar from "./components/Navbar/newNavEn";
 import Produit from "./components/Produits/ProduitsEN"
+import Menu from "./components/Menu&Banner/M&Ben"
 
 import "./styles.css";
 
@@ -19,86 +20,8 @@ export default function English(props) {
 
   return (
     <div className="App">
-      <MediaQuery minWidth={1000}>
-      <div className="headerNew">
 
-        <div  id="navcontainer">
-          {/* <Nav /> */}
-          <Navbar/>
-        </div>
-        {/* // ------ banner */}
-        <div id="banner">
-          <div className="accroche">
-            <Fadetitle />
-            <img src={"./holocat.png"} className='holocat' />
-            <div id="socials">
-            <SocialIcon
-                url="https://twitter.com/animalnationtk"
-                className="socialicon"
-                target="_blank"
-                style={{ height: 80, width: 80 }}
-                bgColor="rgb(247, 147, 30)"
-              />
-              <SocialIcon
-                url="https://linktr.ee/animalnationtk"
-                className="socialicon"
-                target="_blank"
-                style={{ height: 80, width: 80 }}
-                bgColor="rgb(247, 147, 30)"
-              />
-              <SocialIcon
-                url="https://t.me/ANTKofficialchannel"
-                className="socialicon2"
-                target="_blank"
-                style={{ height: 80, width: 80 }}
-                bgColor="rgb(247, 147, 30)"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      </MediaQuery>
-      
-      <MediaQuery minWidth={0} maxWidth={1000}>
-      <div className="headerNewMobile">
-       
-
-        <div id="navcontainer">
-          {/* <Nav /> */}
-          <Navbar/>
-        </div>
-        {/* // ------ banner */}
-        <div id="bannerMobile">
-          <div className="accroche">
-            <Fadetitle />
-            <img src={"./holocat.png"} className='holocatMobile' />
-            <div id="socials">
-            <SocialIcon
-                url="https://twitter.com/animalnationtk"
-                className="socialicon"
-                target="_blank"
-                style={{ height: 80, width: 80 }}
-                bgColor="rgb(247, 147, 30)"
-              />
-              <SocialIcon
-                url="https://linktr.ee/animalnationtk"
-                className="socialicon"
-                target="_blank"
-                style={{ height: 80, width: 80 }}
-                bgColor="rgb(247, 147, 30)"
-              />
-              <SocialIcon
-                url="https://t.me/ANTKofficialchannel"
-                className="socialicon2"
-                target="_blank"
-                style={{ height: 80, width: 80 }}
-                bgColor="rgb(247, 147, 30)"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      </MediaQuery>
+<Menu/>
       
 
       {/* // ---- compte a rebours  */} 
