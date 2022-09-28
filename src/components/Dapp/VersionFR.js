@@ -8,7 +8,7 @@ import Whitelist from "./Whitelist";
 import Buy from "./Buy";
 import Amounts from "./Amounts";
 import Account from "./Account";
-import Footer from "../Footer";
+import Footer from "../Footer/Footer";
 import "./dapp.css";
 import Calcul from "./Calculette";
 import MediaQuery from "react-responsive";

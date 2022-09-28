@@ -63,7 +63,7 @@
     margin-bottom: 50px;
     background-position:center;
     background-size: cover;
-    background-image: url("../public/banner.JPG");
+    background-image: url("../../public/banner.JPG");
     display: flex;
     flex-direction: row;
     justify-content: flex-start;

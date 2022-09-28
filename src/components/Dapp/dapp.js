@@ -1,18 +1,7 @@
 import { EthProvider } from "../../contexts/EthContext";
-import NetWork from "./Network";
 import { useState, useEffect } from "react";
-import SalesStatus from "./SalesStatus";
-import Header from "./Header";
-import Devise from "./Devise";
-import Whitelist from "./Whitelist";
-import Buy from "./Buy";
-import Amounts from "./Amounts";
-import Account from "./Account";
-import Footer from "../Footer";
 import "./dapp.css";
-import Calcul from "./Calculette";
 import MediaQuery from "react-responsive";
-import { FaBars, FaTimes } from "react-icons/fa";
 import "../Navbar/newNav.css";
 import { Routes, Route, Link } from "react-router-dom";
 import { useRef } from "react";

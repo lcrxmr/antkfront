@@ -4,14 +4,14 @@ import "./App.css";
 import French from './french'
 import English from './english'
 import Dapp from './components/Dapp/dapp'
-import Lovefr from "./lovefr"
-import Findfr from "./findfr"
-import Keepfr from "./keepfr"
-import Playfr from "./playfr"
-import LoveEn from "./loveen"
-import FindEn from "./finden";
-import KeepEn from "./keepen";
-import PlayEn from "./playen";
+import Lovefr from "../src/InfoPages/lovefr"
+import Findfr from "../src/InfoPages/findfr"
+import Keepfr from "../src/InfoPages/keepfr"
+import Playfr from "../src/InfoPages/playfr"
+import LoveEn from "../src/InfoPages/loveen"
+import FindEn from "../src/InfoPages/finden";
+import KeepEn from "../src/InfoPages/keepen";
+import PlayEn from "../src/InfoPages/playen";
 
 export default function App() {
   return (

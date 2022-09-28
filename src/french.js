@@ -8,8 +8,8 @@ import { SocialIcon } from "react-social-icons";
 import MediaQuery from "react-responsive";
 import { Slide } from "react-awesome-reveal";
 
-import Fadetitle from "./components/Fade";
-import Footer from "./components/Footer";
+import Fadetitle from "./components/Accroche/Fade";
+import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/newNav";
 
 import "./styles.css";
