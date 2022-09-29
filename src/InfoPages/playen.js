@@ -24,7 +24,6 @@ export default function PlayEn(props) {
   return (
     <>
     <div className="headerNew">
-      <div id="navcontainer">
       <header className='active' >
         <img
           alt=""
@@ -49,7 +48,6 @@ export default function PlayEn(props) {
           <FaBars size={70} />
         </button>
       </header>
-      </div>
       </div>
       <MediaQuery minWidth={1000}>
         <br/>

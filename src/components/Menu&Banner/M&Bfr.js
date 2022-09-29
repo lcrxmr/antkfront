@@ -9,10 +9,10 @@ export default function ProduitsEN () {
   return (
 <>
 <MediaQuery minWidth={1000}>
-      <div className="headerNew">
-        <div id="navcontainer">
+      <div className="headerNew"> 
+        {/* <div id="navcontainer"> */}
           <Navbar/>
-        </div>
+        {/* </div> */}
         {/* // ------ banner */}
         <div id="banner">
           <div className="accroche">
@@ -47,9 +47,10 @@ export default function ProduitsEN () {
       </MediaQuery>
       <MediaQuery minWidth={0} maxWidth={1000}>
       <div className="headerNewMobile">
-        <div id="navcontainer">
+        {/* <div id="navcontainer"> */}
           {/* <Nav /> */}
           <Navbar/>
+          {/* </div> */}
         </div>
         {/* // ------ banner */}
         <div id="bannerMobile">
@@ -80,7 +81,7 @@ export default function ProduitsEN () {
                 bgColor="rgb(247, 147, 30)"
               />
             </div>
-          </div>
+          
         </div>
       </div>
       </MediaQuery>

@@ -52,10 +52,8 @@ function Navbar() {
     <header className={`active ${show && 'hidden'}`}>
       <img
         alt=""
-        src={"./antk_police_black.png"}
-        width={80}
-        height={80}
-        className="d-inline-block align-top"
+        src={"./logo-white.png"}
+        // className="d-inline-block align-top"
         id="navlogo"
       />
       <nav ref={navRef}>

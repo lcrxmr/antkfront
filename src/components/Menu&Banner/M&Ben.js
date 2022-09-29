@@ -2,7 +2,7 @@ import React from 'react';
 import MediaQuery from "react-responsive";
 import { SocialIcon } from "react-social-icons";
 
-import Navbar from "../Navbar/newNav"
+import Navbar from "../Navbar/newNavEn"
 import Fadetitle from "../Accroche/Fade"
 
 export default function MenuEN () {
@@ -11,10 +11,10 @@ export default function MenuEN () {
 <MediaQuery minWidth={1000}>
       <div className="headerNew">
 
-        <div  id="navcontainer">
+        {/* <div  id="navcontainer"> */}
           {/* <Nav /> */}
           <Navbar/>
-        </div>
+        {/* </div> */}
         {/* // ------ banner */}
         <div id="banner">
           <div className="accroche">
@@ -52,10 +52,10 @@ export default function MenuEN () {
       <div className="headerNewMobile">
        
 
-        <div id="navcontainer">
+        {/* <div id="navcontainer"> */}
           {/* <Nav /> */}
           <Navbar/>
-        </div>
+        {/* </div> */}
         {/* // ------ banner */}
         <div id="bannerMobile">
           <div className="accroche">

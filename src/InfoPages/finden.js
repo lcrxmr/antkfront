@@ -24,14 +24,10 @@ export default function FindEn(props) {
   return (
     <>
     <div className="headerNew">
-      <div id="navcontainer">
       <header className='active' >
         <img
           alt=""
-          src={"./antk_police_black.png"}
-          width={120}
-          height={120}
-          className="d-inline-block align-top"
+          src={"./logo-white.png"}
           id="navlogo"
         />
         <nav ref={navRef} style={{color: "black"}}>
@@ -49,7 +45,6 @@ export default function FindEn(props) {
           <FaBars size={70} />
         </button>
       </header>
-      </div>
       </div>
       <MediaQuery minWidth={1000}>
       <br/>

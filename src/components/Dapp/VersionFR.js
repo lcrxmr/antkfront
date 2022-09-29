@@ -46,14 +46,13 @@ function Dapp() {
   return (
     <div className="App">
       <div className="headerNew">
-      <div id="navcontainer">
       <header className='buyHeader' >
         <img
           alt=""
-          src={"./antk_police_black.png"}
-          width={120}
-          height={120}
-          className="d-inline-block align-top"
+          src={"./logo-white.png"}
+          // width={120}
+          // height={120}
+          // className="d-inline-block align-top"
           id="navlogo"
         />
         <nav ref={navRef} style={{color: "black"}}>
@@ -71,7 +70,6 @@ function Dapp() {
           <FaBars size={70} />
         </button>
       </header>
-      </div>
       </div>
           
 
