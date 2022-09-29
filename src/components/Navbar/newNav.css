@@ -193,6 +193,7 @@ nav {
 	background-color:transparent;
 	background: url(../../../public/entete.png) ;
 	background-repeat: no-repeat;
+	background-position: center;
 	background-size:cover;
     /* border-bottom: 1px solid rgba(0, 0, 0, .1); */
     z-index: 9;
