@@ -10,10 +10,16 @@ const Fade = styled.div`animation: 3s ${keyframes`${fadeIn}`} 1`
 export default class ReactAnimations extends Component {
     render() {
         return (
-            <Fade><h1 id="titre">
+            <Fade>
+            <div className="titreChat">
+            <h1 id="titre">
             Sécurisez <br /> votre animal <br />
             dans la <br />blockchain
-          </h1></Fade>
+            </h1>
+            {/* <img src={"./teteschats.png"} className="filigrane"/> */}
+            </div>
+
+          </Fade>
         )
     }
 }
