@@ -27,10 +27,7 @@ export default function PlayEn(props) {
       <header className='active' >
         <img
           alt=""
-          src={"./antk_police_black.png"}
-          width={120}
-          height={120}
-          className="d-inline-block align-top"
+          src={"./logo-white.png"}
           id="navlogo"
         />
         <nav ref={navRef} style={{color: "black"}}>

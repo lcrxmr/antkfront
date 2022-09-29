@@ -50,7 +50,7 @@ function Dapp() {
       <header className='buyHeader' >
         <img
           alt=""
-          src={"./antk_police_black.png"}
+          src={"./logo-white.png"}
           id="navlogo"
         />
         <nav ref={navRef} style={{color: "black"}}>
