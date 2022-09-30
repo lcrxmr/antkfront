@@ -26,11 +26,22 @@ export default function KeepEn(props) {
     <div className="headerNew">
 
       <header className='active' >
+      <MediaQuery minWidth={1000}>
         <img
           alt=""
           src={"./logo-white.png"}
+          // className="d-inline-block align-top"
           id="navlogo"
         />
+      </MediaQuery>
+      <MediaQuery minWidth={0} maxWidth={1000}>
+        <img
+          alt=""
+          src={"./logo-white.png"}
+          // className="d-inline-block align-top"
+          id="navlogoMobile"
+        />
+      </MediaQuery>
         <nav ref={navRef} style={{color: "black"}}>
         <a href="/" onClick={hideNavbar}>
             Home

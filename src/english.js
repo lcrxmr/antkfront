@@ -10,7 +10,8 @@ import { Slide } from "react-awesome-reveal";
 import Footer from "./components/Footer/enFooter";
 import Produit from "./components/Produits/ProduitsEN";
 import Menu from "./components/Menu&Banner/M&Ben";
-import Team from "./components/Team/Teamen"
+import Team from "./components/Team/Teamen";
+import Annonce from "./components/Annonce/AnnonceEN";
 
 import "./styles.css";
 
@@ -20,38 +21,7 @@ export default function English(props) {
       <Menu />
 
       {/* // ---- compte a rebours  */}
-      <div className="countDiv">
-        <div className="container" id="count">
-          {/* <h2 className="date">September 23rd 2022</h2> */}
-          <h1 className="vente">PRIVATE SALE</h1>
-          {/* <Timer /> */}
-          <br />
-          <MediaQuery minWidth={1000}>
-            <div className="countbuttons">
-              <a href="/private">
-                <button className="button">BUY</button>
-              </a>
-              <a href="/how-to-buy-eng.pdf" target="_blank">
-                <button className="howToCountButton">HOW TO BUY</button>
-              </a>
-            </div>
-          </MediaQuery>
-
-          <MediaQuery minWidth={0} maxWidth={1000}>
-            <a href="/private">
-              <button className="buttonMobile">BUY</button>
-            </a>
-            <a href="/how-to-buy-eng.pdf" target="_blank">
-              <button className="howToCountButtonMobile">HOW TO BUY</button>
-            </a>
-          </MediaQuery>
-
-          {/* <ReactCardSlider slides={slides}/> */}
-        </div>
-        <div className="promotion">
-          <img className="promoImage" src={"./prizepool.png"} />
-        </div>
-      </div>
+      <Annonce />
 
       <div id="about">
         <MediaQuery minWidth={1000}>
@@ -173,9 +143,8 @@ export default function English(props) {
 
       {/* // ----- team */}
 
-      <Team/>
+      <Team />
 
-      
       {/* // ----- Newsletter  */}
       {/* <div id="newsDiv">
         <h1>NEWSLETTER</h1>

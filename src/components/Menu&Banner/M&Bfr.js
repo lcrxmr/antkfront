@@ -9,7 +9,7 @@ export default function ProduitsEN () {
   return (
 <>
 <MediaQuery minWidth={1000}>
-      <div className="headerNew"> 
+      <div className="headerNew">  
         {/* <div id="navcontainer"> */}
           <Navbar/>
         {/* </div> */}

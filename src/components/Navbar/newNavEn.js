@@ -50,12 +50,22 @@ function Navbar() {
 
   return (
     <header className={`active ${show && 'hidden'}`}>
-      <img
-        alt=""
-        src={"./logo-white.png"}
-        // className="d-inline-block align-top"
-        id="navlogo"
-      />
+     <MediaQuery minWidth={1000}>
+        <img
+          alt=""
+          src={"./logo-white.png"}
+          // className="d-inline-block align-top"
+          id="navlogo"
+        />
+      </MediaQuery>
+      <MediaQuery minWidth={0} maxWidth={1000}>
+        <img
+          alt=""
+          src={"./logo-white.png"}
+          // className="d-inline-block align-top"
+          id="navlogoMobile"
+        />
+      </MediaQuery>
       <nav ref={navRef}>
         <a href="#produit" onClick={hideNavbar}>
           Products
