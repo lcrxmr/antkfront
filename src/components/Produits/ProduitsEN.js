@@ -2,6 +2,8 @@ import React from 'react';
 import { Slide, Fade } from "react-awesome-reveal";
 import MediaQuery from "react-responsive";
 
+import "../Produits/produits.css"
+
 export default function ProduitsEN () {
   return (
     <div id="produit">
@@ -12,7 +14,7 @@ export default function ProduitsEN () {
             <div
               className="container"
               id="produitDiv"
-            >
+            > 
               <div id="product">
                 <img className="animalPic" src={"./chien.png"} />
               </div>

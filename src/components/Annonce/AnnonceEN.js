@@ -6,6 +6,7 @@ import MediaQuery from "react-responsive";
 import { Slide } from "react-awesome-reveal";
 
 import Timer from "../Countdown/enTimer"
+import "../Annonce/Annonce.css"
 
 export default function AnnonceEN () {
     return (

@@ -5,6 +5,8 @@ import { SocialIcon } from "react-social-icons";
 import Navbar from "../Navbar/newNav"
 import Fadetitle from "../Accroche/Fade"
 
+import "../Menu&Banner/M&B.css"
+
 export default function ProduitsEN () {
   return (
 <>
@@ -86,5 +88,5 @@ export default function ProduitsEN () {
       </div>
       </MediaQuery>
 </>
-  );
+  ); 
 };

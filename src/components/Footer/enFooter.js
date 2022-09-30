@@ -24,7 +24,7 @@ export default function Footer () {
                 <a href="/" className="d-flex align-items-center p-0 text-dark">
                   <img
                     alt="logo"
-                    src={"./antk_police_black.png"}
+                    src={"./logo-white.png"}
                     width="200px"
                     id="logo"
                   />
@@ -119,7 +119,7 @@ export default function Footer () {
                 <a href="/" className="d-flex align-items-center p-0 text-dark">
                   <img
                     alt="logo"
-                    src={"./antk_police_black.png"}
+                    src={"./logo-white.png"}
                     width="200px"
                     id="logo"
                   />

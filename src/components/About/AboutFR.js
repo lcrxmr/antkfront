@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Fade } from "react-awesome-reveal";
 import MediaQuery from "react-responsive";
 
+import "../About/About.css"
+
 export default function AboutFR () {
     return (
         <div id="about">

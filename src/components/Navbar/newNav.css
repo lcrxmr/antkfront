@@ -154,13 +154,11 @@ nav {
     justify-content:space-between;
     align-items: center;
     /* background-color:white; */
-	background-color:transparent;
+	background: rgb(255,255,255);
 	background-image: url(../../../public/entete.png);
-	background-size:cover;
-    /* border-bottom: 1px solid rgba(0, 0, 0, .1); */
+	background-size:auto;
+	background-repeat: no-repeat;
     z-index: 9;
-    /* box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .08); */
-    /* padding: 0 7%; */
 	padding-bottom: 200px;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -206,4 +204,3 @@ nav {
 	box-sizing: border-box;
 
 }
-

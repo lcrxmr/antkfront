@@ -6,6 +6,8 @@ import Iframe from "react-iframe";
 import MediaQuery from "react-responsive";
 import { Slide } from "react-awesome-reveal";
 
+import "../Annonce/Annonce.css"
+
 import Timer from "../Countdown/Timer"
 
 export default function AnnonceFR () {

@@ -17,8 +17,9 @@
   font-family: 'Dosis', sans-serif;
   position: relative;
   color: black;
-  /* background-size: cover;
-  background-image: url(../public/fonddegrade.png); */
+  background-image: url(../public/fond.png);
+  background-position: center;
+  background-size: auto;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -webkit-overflow-scrolling: touch;
 -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -35,18 +36,10 @@ box-sizing: border-box;
   box-sizing: border-box;
 }
 
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
-
-/* @viewport {
-  zoom: 1.0;
-  min-width: extend-to-zoom;
-  max-width: 100vw;
-} */
 
 .App-header {
   background-color: #282c34;
@@ -69,17 +62,14 @@ box-sizing: border-box;
 .headerNew{
   background-position:center;
   background-size: 100% 100%;
-  /* background-image: url("../public/LAUNCHPNG.png"); */
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
-
-  }
+}
 
 .headerNewMobile{
   background-position:center;
   background-size: 130% 100%;
-  /* background-image: url("../public/LAUNCHPNG.png"); */
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
@@ -92,6 +82,7 @@ box-sizing: border-box;
   to {
     transform: rotate(360deg);
   }
+
 }
 html, body {
   position: relative;
@@ -107,15 +98,14 @@ body{
   overflow-x: hidden;
   width: 100vw;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 
 .langContainer{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
   width: 100vw;
   position: relative;
 }
@@ -125,7 +115,6 @@ body{
   flex-direction: row;
   justify-content: flex-end;
   height: 30px;
-
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
@@ -138,8 +127,6 @@ body{
   height: 30px;
   margin-top: 0px;
   margin-left: 20px;
- 
-
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
@@ -157,7 +144,6 @@ body{
   padding-top: 5px;
   padding-bottom: 5px;
   font-family: 'Dosis', sans-serif;
-  
 }
 .lang:hover,
 .lang:focus,
@@ -165,7 +151,6 @@ body{
   background-color:rgba(255, 255, 255, 0.3);
   outline: none;
 }
-
 
 .langMobile{
   font-size: 28px;
@@ -189,63 +174,6 @@ body{
   outline: none;
 }
 
-
-#navcontainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 0px;
-  padding-top: 0px;
-  padding-bottom: 100px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  font-family: 'Dosis', sans-serif;
-  width: 100vw !important;
-  height: 150px;
-  /* background-color: rgb(255, 177, 88); */
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
-       
-}
-
-#banner{
-  width: 100vw;
-  height: 600px;
-  background-position:center;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;
-  
-
-}
-#bannerMobile{
-  width: 100vw;
-  height: 500px;
-  /* background-position:center;
-  background-size: cover;
-  background-image: url("../public/banner.JPG"); */
-  margin-top: 0px;
-  margin-bottom: 0px;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;
-  
-
-}
-
-.accroche{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 20px;
-  font-family: 'Dosis', sans-serif;
-}
-
 #socials{
   display: flex;
   flex-direction: row;
@@ -253,9 +181,7 @@ body{
   margin-left: auto;
   margin-right: 50px;
   margin-top: 60px;
-  /* background-image: url(../public/fonddegrade.png); */
   border-radius: 40px;
- 
 }
 
 .socialicon{
@@ -386,8 +312,6 @@ body{
   outline: none;
 }
 
-
-
 .buttonSalesMobile{
   color: white;
   font-size: 50px;
@@ -413,89 +337,9 @@ body{
   outline: none;
 }
 
-.countDiv{
-  width: 100vw !important;
-  min-width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-size: cover;
-  margin-top: 50px;
-  /* background-image: url(../public/fonddegrade.png); */
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
-
-}
-#count{
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 50px;
-  padding-top: 20px;
-  width: 100vw !important;
-  min-width: fit-content;
-  height: fit-content;
-  max-height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;
-}
-
 .date{
   color: red; 
   font-size: 40px;
-  /* padding-top: 5px;
-  padding-bottom: 5px;
-  background: white;
-  border-radius: 10px; */
-}
-
-.vente{
-color:rgb(247, 147, 30);
-font-family: 'Dosis', sans-serif;
-}
-
-#about{
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 50px;
-  padding-top: 20px;
-  width: 100vw;
-  min-width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-size: cover;
-  /* background-image: url(../public/fonddegrade2.png); */
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;
-}
-
-#aboutDiv{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
-  background-color: white;
-  border-radius: 30px;
-  margin-bottom: 50px;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;
-  box-shadow: 0px 0px 20px 5px rgba(247, 147, 30, 0.2);
 }
 
 #roadmap{
@@ -511,12 +355,12 @@ font-family: 'Dosis', sans-serif;
   flex-direction: column;
   align-items: center;
   background-size: cover;
+  background: rgb(255,255,255);
   /* background-image: url(../public/fonddegrade2.png); */
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
 }
-
 
 #roadmapDiv{
   margin-top: 10px;
@@ -562,7 +406,6 @@ font-family: 'Dosis', sans-serif;
   
 }
 
-
 .nameTitre{
   margin-top: 0px;
   color: #000;
@@ -575,71 +418,10 @@ font-family: 'Dosis', sans-serif;
   width: 100vw;
 }
 
-
-
 a:-webkit-any-link {
   text-decoration: none;
   color: inherit;
 }
-
-#produit{
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 50px;
-  padding-top: 20px;
-  height: fit-content;
-  display: flex;
-  max-width: 100vw;
-  min-width: fit-content;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-position: center;
-  background-size: cover;
-  /* background-image: url(../public/fonddegrade_pieces.png); */
-  text-decoration: none;
-}
-
-#produitDiv{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  /* width: 800px; */
-  min-width: fit-content;
-  height: 400px;
-  /* border: solid black 2px; */
-  background-color: white;
-  /* background-position:center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(../public/teteschats.png); */
-  border-radius: 30px;
-  margin-bottom: 50px;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;
-  text-decoration: none;
-  box-shadow: 0px 0px 20px 5px rgba(247, 147, 30, 0.2);
-}
-
-/* #produitDiv:hover,
-#produitDiv:focus,
-#produitDiv:active {
-  border: solid black 3px;
-  color: #000;
-  outline: none;
-  cursor: pointer;
-} */
 
 #product{
   margin-left: 50px;
@@ -670,100 +452,6 @@ a:-webkit-any-link {
   box-sizing: border-box;
 }
 
-/* .modal-content {
-  max-width: none !important;
-}
-
-.modal-container{
-  max-width: none !important;
-  width: 90% !important;
-}
-
-.custom-modal-style {
-  width: 200px;
-  height: 802px;
-  } */
-
-
-#aboutMobile{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;
- 
-}
-
-#aboutMobile{
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;
-  margin-top: 0px;
-  padding-bottom: 50px;
-  padding-top: 10px;
-  height: fit-content;
-  display: flex;
-  max-width: 100vw;
-  min-width: fit-content;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-}
-
-#produitDivMobile{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  /* max-width: 80%;
-  min-width: fit-content; */
-  height:fit-content;
-  background-color: white;
-  /* border: solid black 2px; */
-  border-radius: 30px;
-  margin-bottom: 50px;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;
-  text-decoration: none; 
-  box-shadow: 0px 0px 20px 5px rgba(247, 147, 30, 0.2);
-}
-
-
-
-.descriptionMobile{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #000;
-  font-size: 40px;
-  margin-left: 100px;
-  margin-right: 100px;
-  font-family: 'Alata', sans-serif;
-  font-weight: 400;
-  margin-bottom: 100px;
-  margin-top: 0px;
-  text-decoration: none;
-}
-
-.nameProductMobile{
-  color: #000;
-  font-size: 50px;
-  font-weight: 600;
-}
-
-
-
 #tokenomics{
   margin-top: 0px;
   padding-bottom: 50px;
@@ -775,11 +463,11 @@ a:-webkit-any-link {
   align-items: center;
   background-position: center;
   background-size: cover;
+  background: rgb(255,255,255);
   /* background-image: url(../public/fonddegrade_pieces.png); */
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
-
 }
 
 #tokenomicsDiv{
@@ -794,7 +482,6 @@ a:-webkit-any-link {
   width: 100vw;
   min-width: fit-content;
   min-height:max max-content;
-  
   border-radius: 30px;
   overflow: hidden;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -806,11 +493,8 @@ a:-webkit-any-link {
   width: 600px;
   margin-bottom: 20px;
  }
- 
-
 
 #team{
-
   padding-top: 20px;
   margin-top: 0px;
   width: 100vw;
@@ -822,8 +506,6 @@ a:-webkit-any-link {
   /* background-image: url(../public/fonddegrade2.png); */
   font-family: 'Alata', sans-serif;
   padding-bottom: 50px;
-
-  
 }
 
 #profileDiv{
@@ -834,7 +516,6 @@ a:-webkit-any-link {
   flex-wrap: wrap;
   justify-content: space-around;
   font-family: 'Alata', sans-serif;
- 
 }
 
 .profileCard{
@@ -912,7 +593,6 @@ border-radius: 50%;
   font-family: 'Dosis', sans-serif;
 }
 
-
 .newsletter{
   margin-top: 0px;
   font-family: 'Alata', sans-serif;
@@ -923,130 +603,9 @@ border-radius: 50%;
   background-color: aquamarine;
 }
 
-.pdfClass{
-  width: 100%;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 #email{
   color: #000;
   text-decoration: underline;
-}
-
-
-.modalMobile{
-  /* position: absolute;
-  top: 50%;
-  bottom: 50%; */
-  
-  right: 14%;
-  /* transform: translate(-50%, -50%);  */
-  vertical-align: middle;
-  width: 100vw !important;
-}
-
-
-.prodInfo{
-  color: white;
-  font-size: 18px;
-  background-color:black;
-  border: solid white 3px;
-  border-radius: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  font-family: 'Dosis', sans-serif;
-}
-
-.prodInfo:hover,
-.profInfo:focus,
-.prodInfo:active {
-  background-color: rgb(247, 147, 30);
-  color: #000;
-  outline: none;
-}
-
-.prodInfoMobile{
-  color: white;
-  font-size: 25px;
-  background-color:black;
-  border: solid white 3px;
-  border-radius: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  font-family: 'Dosis', sans-serif;
-}
-
-.prodInfoMobile:hover,
-.prodInfoMobile:focus,
-.prodInfoMobile:active {
-  background-color: rgb(247, 147, 30);
-  border: solid black 3px;
-  color: #000;
-  outline: none;
-}
-
-.countbuttons{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Dosis', sans-serif;
-}
-
-.howToCountButton{
-  color: white;
-  margin-top: 20px;
-  font-size: 18px;
-  background-color:black;
-  border: none;
-  border-radius: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
-  font-family: 'Dosis', sans-serif;
-}
-
-.howToCountButton:hover{
-	background-color: rgba(247, 146, 30, 0.539);
-	color: white;
-  border: none;
-
-}
-
-.howToCountButtonMobile{
-	border-radius: 10px;
-	display: flex;
-	flex-direction: row;
-  justify-content: center;
-	width: 270px;
-	color: white;
-	font-size: 30px;
-  background-color:black;
-  border: none;
-  border-radius: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin-top: 40px;
-  font-family: 'Dosis', sans-serif;
-	
-}
-
-.howToCountButtonMobile:hover{
-	color:rgb(247, 147, 30);
-
 }
 
 .buyLangFront{
@@ -1058,10 +617,6 @@ border-radius: 50%;
   right: 50px;
   padding-top: 5px;
   z-index: 9;
-  /* position: absolute;
-  top: 60px;
-  left: 500px;
-  z-index: 9; */
   font-family: 'Dosis', sans-serif;
 }
 
@@ -1072,13 +627,6 @@ border-radius: 50%;
   left: 30%;
   z-index: 0;
 }
-/* .holocatDiv{
-  position: absolute;
-  top: 100px;
-  width: 800px; 
-  left: 10%;
-  z-index: 0;
-} */
 
 .holocatMobile{
   position: absolute;
@@ -1092,30 +640,13 @@ border-radius: 50%;
 	width: 150px;
 	height: 150px;
 	margin-right: 0px;
+
   }
 
   #navlogoMobile{
     width: 250px;
     height: 300px;
     margin-right: 0px;
+    margin-top: -50px;
   }
 
-.promotion{
-  width: fit-content;
-  max-width: 90%;
-  height: fit-content;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;
-  margin-top: 0px;
-  margin-bottom: 100px;
-  border-radius: 40px;
-  box-shadow: 0px 0px 20px 10px rgba(247, 147, 30, 0.7);
-}
-
-.promoImage{
-  object-fit: cover;
-  max-height:100%;
-  max-width:100%;
-  border-radius: 30px;
-}
