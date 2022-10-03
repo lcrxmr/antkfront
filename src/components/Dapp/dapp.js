@@ -35,22 +35,22 @@ function Dapp() {
         <div className="buyLangDapp">
           <MediaQuery minWidth={1000}>
             <h5 className="buyLangButtonDapp" onClick={() => setLangue(français)}>
-              fr
+              FR
             </h5>
             <h5>{""} |{""}</h5>
             <h5 className="buyLangButtonDapp" onClick={() => setLangue(english)}>
-              en
+              EN
             </h5>
           </MediaQuery>
         </div>
         <div className="buyLangDappMobile">
           <MediaQuery minWidth={0} maxWidth={1000}>
           <h5 className="buyLangButtonMobile" onClick={() => setLangue(français)}>
-              fr
+              FR
             </h5>
             <h5 className="buyLangButtonMobile">{""} |{""}</h5>
             <h5 className="buyLangButtonMobile" onClick={() => setLangue(english)}>
-              en
+              EN
             </h5>
           </MediaQuery>
         </div>

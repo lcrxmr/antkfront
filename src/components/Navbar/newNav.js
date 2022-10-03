@@ -103,26 +103,26 @@ function Navbar() {
         <div className="buyLangFront">
           <MediaQuery minWidth={1000}>
             <a href="/">
-              <h5 className="buyLangButton">fr</h5>
+              <h5 className="buyLangButton">FR</h5>
             </a>
             <h5>
               {""} |{""}
             </h5>
             <a href="/eng">
-              <h5 className="buyLangButton">en</h5>
+              <h5 className="buyLangButton">EN</h5>
             </a>
           </MediaQuery>
         </div>
         <div className="buyLang">
           <MediaQuery minWidth={0} maxWidth={1000}>
             <a href="/">
-              <h5 className="buyLangButtonMobile">fr</h5>
+              <h5 className="buyLangButtonMobile">FR</h5>
             </a>
             <h5 className="buyLangButtonMobile">
               {""} |{""}
             </h5>
             <a href="/eng">
-              <h5 className="buyLangButtonMobile">en</h5>
+              <h5 className="buyLangButtonMobile">EN</h5>
             </a>
           </MediaQuery>
         </div>
