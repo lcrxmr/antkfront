@@ -49,7 +49,8 @@ function Navbar() {
   };
 
   return (
-    <header className={`active ${show && 'hidden'}`}>
+    // <header className={`active ${show && 'hidden'}`}>
+    <header className='active'>
      <MediaQuery minWidth={1000}>
         <img
           alt=""

@@ -165,7 +165,7 @@ nav {
 	box-sizing: border-box;
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1800px) {
 	.active{
 		width: 100% !important;
 		/* position: fixed; */
